@@ -77,6 +77,24 @@ You can also point at a different database per-command with `--db path/to.db`.
    Claude as context so it can produce a direct, grounded answer
    (`ragkb/generate.py`).
 
+## Example dataset: Riftbound TCG cards
+
+The repo includes a worked example — the full Riftbound card database
+(card text and tags, as browsable on riftbound.gg):
+
+- `data/riftbound_cards.json` / `.csv` — 1,147 collated cards (name, rules
+  text, tags, cost, colors, set, rarity; no imagery or prices)
+- `scripts/fetch_riftbound_cards.py` — re-fetches the dataset from the
+  card API that riftbound.gg's browser uses
+- `scripts/ingest_cards_to_kb.py` — loads the cards into a ragkb knowledge
+  base (one document per card, reprints collapsed)
+
+```bash
+python scripts/ingest_cards_to_kb.py            # builds data/riftbound_kb.db
+ragkb --db data/riftbound_kb.db query "which cards counter spells?"
+ragkb --db data/riftbound_kb.db query "yordle units that draw cards"
+```
+
 ## Development
 
 ```bash
