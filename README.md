@@ -107,20 +107,29 @@ The repo includes a worked example — the full Riftbound card database
 - `data/riftbound_faq.json` — 92 judge-ruling Q&A sections collated from
   [riftboundfaq.com](https://riftboundfaq.com) (rules interactions, chain
   and priority, mechanics, per-card rulings)
+- `data/riftbound_rules.json` — 475 sections of official rules from the
+  [playriftbound.com rules hub](https://playriftbound.com/en-us/rules-hub/):
+  the Core Rules (354 numbered rules) and Tournament Rules (66 rules)
+  PDFs split per rule, plus errata and patch-notes articles
 - `scripts/fetch_riftbound_cards.py` — re-fetches the card dataset from
   the card API that riftbound.gg's browser uses
 - `scripts/fetch_riftbound_faq.py` — re-scrapes the FAQ site (discovers
   pages via its sitemap, splits articles into Q&A sections)
 - `scripts/ingest_cards_to_kb.py` — loads the cards into a ragkb knowledge
   base (one document per card, reprints collapsed)
-- `scripts/ingest_faq_to_kb.py` — adds the FAQ sections to the same KB
-  (re-runnable; replaces previously ingested FAQ entries)
+- `scripts/fetch_riftbound_rules.py` — re-fetches the official documents
+  (discovers the current PDF/article links from the rules hub page)
+- `scripts/ingest_faq_to_kb.py` / `scripts/ingest_rules_to_kb.py` — add
+  those datasets to the same KB (re-runnable; each replaces its own
+  previously ingested entries)
 
 ```bash
 python scripts/ingest_cards_to_kb.py            # builds data/riftbound_kb.db
-python scripts/ingest_faq_to_kb.py              # adds the rules FAQ to it
+python scripts/ingest_faq_to_kb.py              # adds the community rules FAQ
+python scripts/ingest_rules_to_kb.py            # adds official rules/errata/patch notes
 ragkb --db data/riftbound_kb.db query "which cards counter spells?"
 ragkb --db data/riftbound_kb.db query "when do triggered abilities trigger?"
+ragkb --db data/riftbound_kb.db query "what happens in rule 354 when playing a card?"
 ```
 
 Queries now blend both sources — asking about a card like Arcane Shift
