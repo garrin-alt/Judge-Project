@@ -30,12 +30,18 @@ def build_context(results: list[SearchResult]) -> str:
 
 
 def _build_user_message(
-    query: str, results: list[SearchResult], definitions: list[str] | None = None
+    query: str,
+    results: list[SearchResult],
+    definitions: list[str] | None = None,
+    related=None,
 ) -> str:
     parts = []
     if definitions:
         parts.append("Game term definitions:\n" + "\n".join(f"- {d}" for d in definitions))
     parts.append(f"Context:\n{build_context(results)}")
+    if related:
+        blocks = [f"[Referenced rule: {r.title}]\n{r.text}" for r in related]
+        parts.append("Rules referenced by the context:\n" + "\n\n".join(blocks))
     parts.append(f"Question: {query}")
     return "\n\n".join(parts)
 
@@ -63,13 +69,14 @@ def generate_answer(
     backend: str = "auto",
     model: str | None = None,
     definitions: list[str] | None = None,
+    related=None,
 ) -> tuple[str, str]:
     """Returns (answer, backend_used)."""
     if not results:
         raise GenerationUnavailable("No knowledge-base results to ground an answer on.")
 
     backend = resolve_backend(backend)
-    user_message = _build_user_message(query, results, definitions)
+    user_message = _build_user_message(query, results, definitions, related)
 
     if backend == "local":
         from . import localmodel

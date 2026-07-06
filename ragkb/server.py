@@ -98,6 +98,16 @@ def create_app(db_path: str | None = None) -> FastAPI:
                 }
                 for r in resp.results
             ],
+            "related": [
+                {
+                    "doc_id": r.doc_id,
+                    "title": r.title,
+                    "source": r.source,
+                    "text": r.text,
+                    "cited_by": r.cited_by,
+                }
+                for r in resp.related
+            ],
             "answer": resp.answer,
             "backend": resp.backend,
             "notice": resp.notice,

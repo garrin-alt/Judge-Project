@@ -67,6 +67,12 @@ def cmd_query(args):
         snippet = r.text if len(r.text) <= 300 else r.text[:300] + "..."
         print(f"{i}. [{r.score:.3f}] {r.title}\n   {snippet}\n")
 
+    if resp.related:
+        print("Referenced rules (cited by the matches above):\n")
+        for r in resp.related:
+            snippet = r.text if len(r.text) <= 220 else r.text[:220] + "..."
+            print(f"- {r.title}\n  {snippet}\n")
+
     if args.no_generate:
         return 0
 

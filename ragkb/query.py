@@ -6,6 +6,7 @@ enhancements to querying apply everywhere at once.
 
 from dataclasses import dataclass, field
 
+from .citations import RelatedRule, expand_citations
 from .embeddings import embed_query
 from .generate import GenerationUnavailable, generate_answer
 from .glossary import expand_prompt
@@ -18,6 +19,7 @@ class QueryResponse:
     expanded_prompt: str
     definitions: list[str] = field(default_factory=list)
     results: list[SearchResult] = field(default_factory=list)
+    related: list[RelatedRule] = field(default_factory=list)
     answer: str | None = None
     backend: str | None = None
     notice: str | None = None
@@ -47,12 +49,13 @@ def run_query(
 
     qvec = embed_query(resp.expanded_prompt)
     resp.results = store.search(qvec, top_k=top_k)
+    resp.related = expand_citations(store, resp.results)
 
     if generate != "none" and resp.results:
         try:
             resp.answer, resp.backend = generate_answer(
                 prompt, resp.results, backend=generate, model=model,
-                definitions=resp.definitions,
+                definitions=resp.definitions, related=resp.related,
             )
         except GenerationUnavailable as e:
             resp.notice = str(e)

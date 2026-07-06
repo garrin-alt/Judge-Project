@@ -127,6 +127,21 @@ class KnowledgeStore:
             "SELECT id, title FROM documents WHERE title LIKE ?", (prefix + "%",)
         ).fetchall()
 
+    def get_document_text(self, doc_id: int, max_chars: int = 1200) -> tuple[str, str | None, str]:
+        """Return (title, source, text) for a document, text capped at max_chars."""
+        doc = self.conn.execute(
+            "SELECT title, source FROM documents WHERE id = ?", (doc_id,)
+        ).fetchone()
+        if doc is None:
+            raise KeyError(f"no document #{doc_id}")
+        rows = self.conn.execute(
+            "SELECT text FROM chunks WHERE doc_id = ? ORDER BY chunk_index", (doc_id,)
+        ).fetchall()
+        text = "\n".join(r[0] for r in rows)
+        if len(text) > max_chars:
+            text = text[:max_chars].rsplit(" ", 1)[0] + "..."
+        return doc[0], doc[1], text
+
     def search(self, query_vec: np.ndarray, top_k: int = 5) -> list[SearchResult]:
         rows = self.conn.execute(
             "SELECT c.id, c.doc_id, c.text, c.embedding, d.title, d.source "

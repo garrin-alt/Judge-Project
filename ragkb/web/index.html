@@ -189,6 +189,19 @@ async function runSearch() {
     } else if (!r.notice) {
       html += `<div class="notice">No matches.</div>`;
     }
+    if (r.related && r.related.length) {
+      html += `<div class="hint" style="margin-top:16px">Referenced rules (cited by the matches above)</div>`;
+      html += `<div class="results" style="margin-top:8px">` + r.related.map((x) => `
+        <div class="result">
+          <div class="top">
+            <h3>${x.source && x.source.startsWith("http")
+              ? `<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.title)}</a>`
+              : esc(x.title)}</h3>
+            <span class="score">cited</span>
+          </div>
+          <p>${esc(x.text)}</p>
+        </div>`).join("") + `</div>`;
+    }
     $("out").innerHTML = html;
   } catch (e) {
     $("out").innerHTML = `<div class="notice">Error: ${esc(e.message)}</div>`;
