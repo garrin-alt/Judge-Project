@@ -104,16 +104,27 @@ The repo includes a worked example — the full Riftbound card database
 
 - `data/riftbound_cards.json` / `.csv` — 1,147 collated cards (name, rules
   text, tags, cost, colors, set, rarity; no imagery or prices)
-- `scripts/fetch_riftbound_cards.py` — re-fetches the dataset from the
-  card API that riftbound.gg's browser uses
+- `data/riftbound_faq.json` — 92 judge-ruling Q&A sections collated from
+  [riftboundfaq.com](https://riftboundfaq.com) (rules interactions, chain
+  and priority, mechanics, per-card rulings)
+- `scripts/fetch_riftbound_cards.py` — re-fetches the card dataset from
+  the card API that riftbound.gg's browser uses
+- `scripts/fetch_riftbound_faq.py` — re-scrapes the FAQ site (discovers
+  pages via its sitemap, splits articles into Q&A sections)
 - `scripts/ingest_cards_to_kb.py` — loads the cards into a ragkb knowledge
   base (one document per card, reprints collapsed)
+- `scripts/ingest_faq_to_kb.py` — adds the FAQ sections to the same KB
+  (re-runnable; replaces previously ingested FAQ entries)
 
 ```bash
 python scripts/ingest_cards_to_kb.py            # builds data/riftbound_kb.db
+python scripts/ingest_faq_to_kb.py              # adds the rules FAQ to it
 ragkb --db data/riftbound_kb.db query "which cards counter spells?"
-ragkb --db data/riftbound_kb.db query "yordle units that draw cards"
+ragkb --db data/riftbound_kb.db query "when do triggered abilities trigger?"
 ```
+
+Queries now blend both sources — asking about a card like Arcane Shift
+returns its card text alongside the judge rulings about how it resolves.
 
 ## Development
 
