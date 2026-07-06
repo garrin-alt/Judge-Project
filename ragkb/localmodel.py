@@ -81,5 +81,6 @@ def generate(system: str, user: str, max_tokens: int = 512) -> str:
             ],
             max_tokens=max_tokens,
             temperature=0.2,
+            repeat_penalty=1.15,
         )
     return result["choices"][0]["message"]["content"].strip()

@@ -80,11 +80,10 @@ def cmd_query(args):
     if args.no_generate:
         return 0
 
-    if resp.notice:
-        print(f"(Answer generation skipped: {resp.notice})")
-        return 0
     if resp.answer is not None:
         print(f"Answer ({resp.backend}):\n" + resp.answer)
+    elif resp.notice:
+        print(f"(Answer generation skipped: {resp.notice})")
     return 0
 
 

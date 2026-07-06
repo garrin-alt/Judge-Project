@@ -56,6 +56,7 @@ def run_query(
     if store.count_cards():
         filters = parse_filters(prompt, glossary, known_tags(store))
 
+    generation_notes = []
     if filters and filters.triggers_card_search(prompt):
         resp.card_filters = filters.describe()
         resp.results = search_cards(store, filters, qvec, top_k=top_k)
@@ -65,6 +66,11 @@ def run_query(
                 "Showing closest semantic matches instead."
             )
             resp.results = store.search(qvec, top_k=top_k)
+            generation_notes.append(
+                f"A database search found NO cards matching all of: {resp.card_filters}. "
+                "The context below contains only near-matches. State clearly that no "
+                "card satisfies the question exactly, then describe the closest options."
+            )
     else:
         resp.results = store.search(qvec, top_k=top_k)
 
@@ -79,6 +85,7 @@ def run_query(
             resp.answer, resp.backend = generate_answer(
                 prompt, resp.results, backend=generate, model=model,
                 definitions=resp.definitions, related=resp.related,
+                notes=generation_notes,
             )
         except GenerationUnavailable as e:
             resp.notice = str(e)

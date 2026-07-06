@@ -34,8 +34,11 @@ def _build_user_message(
     results: list[SearchResult],
     definitions: list[str] | None = None,
     related=None,
+    notes: list[str] | None = None,
 ) -> str:
     parts = []
+    if notes:
+        parts.append("Important notes:\n" + "\n".join(f"- {n}" for n in notes))
     if definitions:
         parts.append("Game term definitions:\n" + "\n".join(f"- {d}" for d in definitions))
     parts.append(f"Context:\n{build_context(results)}")
@@ -70,13 +73,14 @@ def generate_answer(
     model: str | None = None,
     definitions: list[str] | None = None,
     related=None,
+    notes: list[str] | None = None,
 ) -> tuple[str, str]:
     """Returns (answer, backend_used)."""
     if not results:
         raise GenerationUnavailable("No knowledge-base results to ground an answer on.")
 
     backend = resolve_backend(backend)
-    user_message = _build_user_message(query, results, definitions, related)
+    user_message = _build_user_message(query, results, definitions, related, notes)
 
     if backend == "local":
         from . import localmodel
