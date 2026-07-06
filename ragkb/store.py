@@ -29,7 +29,25 @@ CREATE TABLE IF NOT EXISTS glossary (
     term TEXT PRIMARY KEY,
     aliases TEXT NOT NULL,
     definition TEXT NOT NULL,
-    rule TEXT
+    rule TEXT,
+    kind TEXT NOT NULL DEFAULT 'term'
+);
+
+CREATE TABLE IF NOT EXISTS cards (
+    id TEXT PRIMARY KEY,
+    doc_id INTEGER REFERENCES documents(id) ON DELETE CASCADE,
+    name TEXT NOT NULL,
+    set_name TEXT,
+    rarity TEXT,
+    type TEXT,
+    supertype TEXT,
+    colors TEXT NOT NULL DEFAULT '[]',
+    cost INTEGER,
+    might INTEGER,
+    tags TEXT NOT NULL DEFAULT '[]',
+    keywords TEXT NOT NULL DEFAULT '[]',
+    effect TEXT,
+    url TEXT
 );
 """
 
@@ -51,7 +69,13 @@ class KnowledgeStore:
         self.conn = sqlite3.connect(str(self.db_path))
         self.conn.execute("PRAGMA foreign_keys = ON")
         self.conn.executescript(SCHEMA)
+        self._migrate()
         self.conn.commit()
+
+    def _migrate(self):
+        glossary_cols = {r[1] for r in self.conn.execute("PRAGMA table_info(glossary)")}
+        if "kind" not in glossary_cols:
+            self.conn.execute("ALTER TABLE glossary ADD COLUMN kind TEXT NOT NULL DEFAULT 'term'")
 
     def close(self):
         self.conn.close()
@@ -100,14 +124,15 @@ class KnowledgeStore:
         return self.conn.execute("SELECT COUNT(*) FROM chunks").fetchone()[0]
 
     def set_glossary(self, entries: list[dict]):
-        """Replace the stored glossary. Entries: {term, aliases, definition, rule}."""
+        """Replace the stored glossary. Entries: {term, aliases, definition, rule, kind}."""
         import json as _json
 
         self.conn.execute("DELETE FROM glossary")
         self.conn.executemany(
-            "INSERT INTO glossary (term, aliases, definition, rule) VALUES (?, ?, ?, ?)",
+            "INSERT INTO glossary (term, aliases, definition, rule, kind) VALUES (?, ?, ?, ?, ?)",
             [
-                (e["term"], _json.dumps(e.get("aliases", [])), e["definition"], e.get("rule"))
+                (e["term"], _json.dumps(e.get("aliases", [])), e["definition"],
+                 e.get("rule"), e.get("kind", "term"))
                 for e in entries
             ],
         )
@@ -116,11 +141,37 @@ class KnowledgeStore:
     def get_glossary(self) -> list[dict]:
         import json as _json
 
-        rows = self.conn.execute("SELECT term, aliases, definition, rule FROM glossary").fetchall()
+        rows = self.conn.execute(
+            "SELECT term, aliases, definition, rule, kind FROM glossary"
+        ).fetchall()
         return [
-            {"term": r[0], "aliases": _json.loads(r[1]), "definition": r[2], "rule": r[3]}
+            {"term": r[0], "aliases": _json.loads(r[1]), "definition": r[2],
+             "rule": r[3], "kind": r[4]}
             for r in rows
         ]
+
+    def replace_cards(self, rows: list[dict]):
+        """Replace the structured cards table. Each row mirrors the cards schema."""
+        import json as _json
+
+        self.conn.execute("DELETE FROM cards")
+        self.conn.executemany(
+            "INSERT INTO cards (id, doc_id, name, set_name, rarity, type, supertype,"
+            " colors, cost, might, tags, keywords, effect, url)"
+            " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            [
+                (r["id"], r.get("doc_id"), r["name"], r.get("set_name"), r.get("rarity"),
+                 r.get("type"), r.get("supertype"),
+                 _json.dumps(r.get("colors", [])), r.get("cost"), r.get("might"),
+                 _json.dumps(r.get("tags", [])), _json.dumps(r.get("keywords", [])),
+                 r.get("effect"), r.get("url"))
+                for r in rows
+            ],
+        )
+        self.conn.commit()
+
+    def count_cards(self) -> int:
+        return self.conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
 
     def find_documents_by_title_prefix(self, prefix: str) -> list[tuple]:
         return self.conn.execute(

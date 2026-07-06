@@ -10,11 +10,13 @@ from ragkb.server import create_app
 def client(tmp_path, monkeypatch):
     # Deterministic fake embeddings so tests don't need the real model.
     def fake_embed_texts(texts):
+        import hashlib
+
         rng = np.random.default_rng(0)
         out = []
         for t in texts:
             vec = np.zeros(8, dtype=np.float32)
-            vec[hash(t) % 8] = 1.0
+            vec[hashlib.md5(t.encode()).digest()[0] % 8] = 1.0
             vec += rng.normal(scale=0.01, size=8).astype(np.float32)
             out.append(vec)
         return np.array(out, dtype=np.float32)

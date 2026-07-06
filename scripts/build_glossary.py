@@ -56,6 +56,7 @@ def extract_domains(core: list[dict]) -> list[dict]:
             "aliases": [color],
             "definition": f"{domain} is one of the six Domains, associated with the color {color} and {symbol.strip()}.",
             "rule": "134",
+            "kind": "domain",
         })
     return entries
 
@@ -79,6 +80,7 @@ def extract_keywords(core: list[dict], cards: list[dict]) -> list[dict]:
             "aliases": [],
             "definition": _definition_snippet(rule["text"], kw),
             "rule": rule["section"],
+            "kind": "keyword",
         })
     return entries
 
@@ -98,6 +100,7 @@ def extract_definition_rules(core: list[dict]) -> list[dict]:
             "aliases": [],
             "definition": _definition_snippet(s["text"], term),
             "rule": s["section"],
+            "kind": "term",
         })
     return entries
 
@@ -124,7 +127,7 @@ def main():
         json.dumps(entries, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     print(f"Wrote {len(entries)} glossary entries to {args.out}")
-    domains = [e for e in entries if e["rule"] == "134" and e["aliases"]]
+    domains = [e for e in entries if e.get("kind") == "domain"]
     print("Domains:", ", ".join(f"{e['term']}({e['aliases'][0]})" for e in domains))
 
     if args.db:

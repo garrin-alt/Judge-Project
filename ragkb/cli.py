@@ -57,6 +57,10 @@ def cmd_query(args):
 
     if resp.expanded_prompt != resp.prompt:
         print(f"(interpreted as: {resp.expanded_prompt})\n")
+    if resp.card_filters:
+        print(f"(card filters: {resp.card_filters})\n")
+    if resp.notice and resp.results:
+        print(f"({resp.notice})\n")
 
     if not resp.results:
         print("No relevant results found.")

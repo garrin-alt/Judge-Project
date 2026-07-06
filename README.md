@@ -144,6 +144,15 @@ The query pipeline (`ragkb/query.py`) uses it to annotate prompts
 ("purple champion" → "purple (Chaos) champion") before embedding and to
 hand matched definitions to the answer model.
 
+The pipeline also does **hybrid card search**: prompts with hard
+constraints (domains/colors, cost/might comparisons, card types,
+keywords, tags — e.g. "fury units with Assault costing 2 or less") are
+parsed into SQL filters over a structured cards table and only then
+ranked semantically. Impossible combinations report "no cards match"
+with the parsed filters instead of returning look-alikes. Retrieved
+rules and FAQ answers additionally pull in the rules they cite
+("See rule 307.", "[354.2]") as labeled referenced-rule context.
+
 Queries now blend both sources — asking about a card like Arcane Shift
 returns its card text alongside the judge rulings about how it resolves.
 

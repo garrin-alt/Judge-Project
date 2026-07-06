@@ -11,9 +11,13 @@ def store(tmp_path, monkeypatch):
     s = KnowledgeStore(tmp_path / "kb.db")
 
     def fake_embed(text):
+        import hashlib
+
         vec = np.zeros(8, dtype=np.float32)
         for token in text.lower().split():
-            vec[hash(token) % 8] += 1.0
+            token = token.strip("()?,.")
+            digest = hashlib.md5(token.encode()).digest()
+            vec[digest[0] % 8] += 1.0
         norm = np.linalg.norm(vec)
         return vec / norm if norm else vec
 

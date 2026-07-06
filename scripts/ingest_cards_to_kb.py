@@ -13,10 +13,39 @@ Usage:
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 from ragkb.embeddings import embed_texts
 from ragkb.store import KnowledgeStore
+
+KEYWORD_RE = re.compile(r"\[([A-Z][a-zA-Z ]+?)(?:\s+\d+)?\]")
+
+
+def card_to_row(card: dict, doc_id: int) -> dict:
+    """Structured row for the cards table (typed columns for filtering)."""
+    def as_int(v):
+        try:
+            return int(v)
+        except (TypeError, ValueError):
+            return None
+
+    return {
+        "id": card["id"],
+        "doc_id": doc_id,
+        "name": card["name"],
+        "set_name": card.get("set_name"),
+        "rarity": card.get("rarity"),
+        "type": card.get("type") or None,
+        "supertype": card.get("supertype") or None,
+        "colors": card.get("color") or [],
+        "cost": as_int(card.get("cost")),
+        "might": as_int(card.get("might")),
+        "tags": card.get("tags") or [],
+        "keywords": sorted({m.strip() for m in KEYWORD_RE.findall(card.get("effect") or "")}),
+        "effect": card.get("effect"),
+        "url": card.get("url"),
+    }
 
 
 def card_to_text(card: dict) -> str:
@@ -76,16 +105,28 @@ def main():
     vectors = embed_texts(texts)
 
     with KnowledgeStore(args.db) as store:
+        # Re-running should refresh, not duplicate: drop previous card docs.
+        stale = [d[0] for d in store.list_documents()
+                 if (d[2] or "").startswith("https://riftbound.gg")]
+        for doc_id in stale:
+            store.remove_document(doc_id)
+        if stale:
+            print(f"Removed {len(stale)} previously ingested card document(s)")
+
+        rows = []
         for card, text, vec in zip(unique, texts, vectors):
-            store.add_document(
+            doc_id = store.add_document(
                 title=f"{card['name']} ({card['id']})",
                 source=card["url"],
                 chunks=[text],
                 embeddings=vec.reshape(1, -1),
             )
-        total = store.count_chunks()
+            rows.append(card_to_row(card, doc_id))
+        store.replace_cards(rows)
+        total = store.count_cards()
+        print(f"Structured cards table: {total} rows")
 
-    print(f"Done. {total} cards in knowledge base at {args.db}")
+    print(f"Done. {total} unique cards in knowledge base at {args.db}")
     print(f'Try: ragkb --db {args.db} query "which cards counter spells?"')
 
 

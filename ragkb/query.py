@@ -6,6 +6,7 @@ enhancements to querying apply everywhere at once.
 
 from dataclasses import dataclass, field
 
+from .cardsearch import known_tags, parse_filters, search_cards
 from .citations import RelatedRule, expand_citations
 from .embeddings import embed_query
 from .generate import GenerationUnavailable, generate_answer
@@ -20,6 +21,7 @@ class QueryResponse:
     definitions: list[str] = field(default_factory=list)
     results: list[SearchResult] = field(default_factory=list)
     related: list[RelatedRule] = field(default_factory=list)
+    card_filters: str | None = None
     answer: str | None = None
     backend: str | None = None
     notice: str | None = None
@@ -48,7 +50,24 @@ def run_query(
     resp.definitions = expansion.definitions
 
     qvec = embed_query(resp.expanded_prompt)
-    resp.results = store.search(qvec, top_k=top_k)
+
+    glossary = store.get_glossary()
+    filters = None
+    if store.count_cards():
+        filters = parse_filters(prompt, glossary, known_tags(store))
+
+    if filters and filters.triggers_card_search(prompt):
+        resp.card_filters = filters.describe()
+        resp.results = search_cards(store, filters, qvec, top_k=top_k)
+        if not resp.results:
+            resp.notice = (
+                f"No cards match the filters ({resp.card_filters}). "
+                "Showing closest semantic matches instead."
+            )
+            resp.results = store.search(qvec, top_k=top_k)
+    else:
+        resp.results = store.search(qvec, top_k=top_k)
+
     resp.related = expand_citations(store, resp.results)
 
     if generate != "none" and resp.results:

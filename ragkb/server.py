@@ -113,6 +113,7 @@ def create_app(db_path: str | None = None) -> FastAPI:
             "notice": resp.notice,
             "expanded_prompt": resp.expanded_prompt if resp.expanded_prompt != resp.prompt else None,
             "definitions": resp.definitions,
+            "card_filters": resp.card_filters,
         }
 
     @app.get("/")
