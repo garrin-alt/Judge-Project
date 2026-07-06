@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ragkb — knowledge base</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1a1d21; --muted: #6b7280;
+    --border: #e2e5ea; --accent: #4f46e5; --accent-text: #ffffff;
+    --score: #4f46e5; --notice-bg: #fef3c7; --notice-text: #92400e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101215; --panel: #191c21; --text: #e8eaed; --muted: #9aa1ab;
+      --border: #2a2f37; --accent: #818cf8; --accent-text: #101215;
+      --score: #818cf8; --notice-bg: #3a2f10; --notice-text: #fbd38d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  header h1 { font-size: 22px; font-weight: 650; }
+  header .stats { color: var(--muted); font-size: 13px; }
+  nav { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+  nav button {
+    background: none; border: none; color: var(--muted); font: inherit;
+    padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+  }
+  nav button.active { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  input[type="text"], textarea, select {
+    background: var(--bg); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 9px 12px; font: inherit; width: 100%;
+  }
+  textarea { min-height: 120px; resize: vertical; }
+  input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .row input[type="text"] { flex: 1; min-width: 240px; }
+  .row select { width: auto; }
+  button.primary {
+    background: var(--accent); color: var(--accent-text); border: none;
+    border-radius: 8px; padding: 9px 18px; font: inherit; font-weight: 600; cursor: pointer;
+  }
+  button.primary:disabled { opacity: .55; cursor: wait; }
+  .hint { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .answer {
+    margin-top: 16px; padding: 14px 16px; border-left: 3px solid var(--accent);
+    background: var(--panel); border-radius: 0 10px 10px 0;
+    border-top: 1px solid var(--border); border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border); white-space: pre-wrap;
+  }
+  .answer .tag { color: var(--muted); font-size: 12px; text-transform: uppercase;
+    letter-spacing: .05em; display: block; margin-bottom: 6px; }
+  .notice { margin-top: 16px; padding: 10px 14px; border-radius: 8px;
+    background: var(--notice-bg); color: var(--notice-text); font-size: 14px; }
+  .results { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .result { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .result .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .result h3 { font-size: 15px; font-weight: 600; }
+  .result h3 a { color: inherit; text-decoration: none; }
+  .result h3 a:hover { text-decoration: underline; }
+  .result .score { font-size: 12px; color: var(--score); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .result .bar { height: 3px; border-radius: 2px; background: var(--border); margin: 8px 0; overflow: hidden; }
+  .result .bar span { display: block; height: 100%; background: var(--score); }
+  .result p { color: var(--text); font-size: 14px; white-space: pre-wrap; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  td.num { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .del { background: none; border: 1px solid var(--border); color: var(--muted);
+    border-radius: 6px; padding: 3px 10px; cursor: pointer; font-size: 13px; }
+  .del:hover { color: #dc2626; border-color: #dc2626; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite;
+    vertical-align: -2px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .field { margin-bottom: 10px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>ragkb</h1>
+    <span class="stats" id="stats">loading…</span>
+  </header>
+
+  <nav>
+    <button id="tab-search" class="active">Search</button>
+    <button id="tab-docs">Documents</button>
+  </nav>
+
+  <section id="view-search">
+    <div class="panel">
+      <div class="row">
+        <input type="text" id="prompt" placeholder="Ask the knowledge base… (e.g. which cards counter spells?)" autofocus>
+        <select id="mode" title="Answer generation">
+          <option value="none">Matches only</option>
+          <option value="auto">Answer (auto)</option>
+          <option value="local">Answer (local model)</option>
+          <option value="claude">Answer (Claude)</option>
+        </select>
+        <select id="topk" title="Results">
+          <option>3</option><option selected>5</option><option>8</option><option>12</option>
+        </select>
+        <button class="primary" id="go">Search</button>
+      </div>
+      <div class="hint" id="search-hint">Retrieval is instant; generated answers take longer (the local model runs on CPU).</div>
+    </div>
+    <div id="out"></div>
+  </section>
+
+  <section id="view-docs" hidden>
+    <div class="panel" style="margin-bottom:16px">
+      <div class="field"><label for="new-title">Title</label>
+        <input type="text" id="new-title" placeholder="e.g. Team onboarding notes"></div>
+      <div class="field"><label for="new-text">Text</label>
+        <textarea id="new-text" placeholder="Paste any text to add it to the knowledge base…"></textarea></div>
+      <button class="primary" id="add">Add to knowledge base</button>
+      <span class="hint" id="add-hint"></span>
+    </div>
+    <div class="panel" id="doclist">loading…</div>
+  </section>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const api = async (path, opts) => {
+  const res = await fetch(path, opts);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.detail || res.statusText);
+  return body;
+};
+const esc = (s) => (s ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function refreshStatus() {
+  try {
+    const s = await api("/api/status");
+    const gen = s.backends.local ? "offline model ready" :
+                s.backends.claude ? "Claude backend ready" : "retrieval only";
+    $("stats").textContent = `${s.documents} documents · ${s.chunks} chunks · ${gen}`;
+  } catch (e) { $("stats").textContent = "server unreachable"; }
+}
+
+function show(tab) {
+  $("view-search").hidden = tab !== "search";
+  $("view-docs").hidden = tab !== "docs";
+  $("tab-search").classList.toggle("active", tab === "search");
+  $("tab-docs").classList.toggle("active", tab === "docs");
+  if (tab === "docs") loadDocs();
+}
+$("tab-search").onclick = () => show("search");
+$("tab-docs").onclick = () => show("docs");
+
+async function runSearch() {
+  const prompt = $("prompt").value.trim();
+  if (!prompt) return;
+  const mode = $("mode").value;
+  $("go").disabled = true;
+  $("out").innerHTML = `<div class="notice"><span class="spinner"></span>${
+    mode === "none" ? "Searching…" : "Searching and generating answer…"}</div>`;
+  try {
+    const r = await api("/api/query", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode}),
+    });
+    let html = "";
+    if (r.answer) html += `<div class="answer"><span class="tag">answer · ${esc(r.backend)} backend</span>${esc(r.answer)}</div>`;
+    if (r.notice) html += `<div class="notice">${esc(r.notice)}</div>`;
+    if (r.results.length) {
+      html += `<div class="results">` + r.results.map((x) => `
+        <div class="result">
+          <div class="top">
+            <h3>${x.source && x.source.startsWith("http")
+              ? `<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.title)}</a>`
+              : esc(x.title)}</h3>
+            <span class="score">${x.score.toFixed(3)}</span>
+          </div>
+          <div class="bar"><span style="width:${Math.max(2, Math.round(x.score * 100))}%"></span></div>
+          <p>${esc(x.text)}</p>
+        </div>`).join("") + `</div>`;
+    } else if (!r.notice) {
+      html += `<div class="notice">No matches.</div>`;
+    }
+    $("out").innerHTML = html;
+  } catch (e) {
+    $("out").innerHTML = `<div class="notice">Error: ${esc(e.message)}</div>`;
+  } finally {
+    $("go").disabled = false;
+  }
+}
+$("go").onclick = runSearch;
+$("prompt").addEventListener("keydown", (e) => { if (e.key === "Enter") runSearch(); });
+
+async function loadDocs() {
+  try {
+    const docs = await api("/api/documents");
+    if (!docs.length) { $("doclist").textContent = "Knowledge base is empty."; return; }
+    $("doclist").innerHTML = `<table><thead><tr>
+      <th>#</th><th>Title</th><th>Chunks</th><th></th></tr></thead><tbody>` +
+      docs.map((d) => `<tr>
+        <td class="num">${d.id}</td>
+        <td>${d.source && d.source.startsWith("http")
+          ? `<a href="${esc(d.source)}" target="_blank" rel="noopener">${esc(d.title)}</a>` : esc(d.title)}</td>
+        <td class="num">${d.chunks}</td>
+        <td><button class="del" data-id="${d.id}">remove</button></td>
+      </tr>`).join("") + `</tbody></table>`;
+    for (const btn of $("doclist").querySelectorAll(".del")) {
+      btn.onclick = async () => {
+        await api(`/api/documents/${btn.dataset.id}`, {method: "DELETE"});
+        loadDocs(); refreshStatus();
+      };
+    }
+  } catch (e) { $("doclist").textContent = `Error: ${e.message}`; }
+}
+
+$("add").onclick = async () => {
+  const title = $("new-title").value.trim();
+  const text = $("new-text").value.trim();
+  if (!title || !text) { $("add-hint").textContent = "Title and text are required."; return; }
+  $("add").disabled = true;
+  $("add-hint").innerHTML = `<span class="spinner"></span>embedding…`;
+  try {
+    const r = await api("/api/documents", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({title, text}),
+    });
+    $("add-hint").textContent = `Added #${r.id} (${r.chunks} chunk${r.chunks > 1 ? "s" : ""}).`;
+    $("new-title").value = ""; $("new-text").value = "";
+    loadDocs(); refreshStatus();
+  } catch (e) {
+    $("add-hint").textContent = `Error: ${e.message}`;
+  } finally {
+    $("add").disabled = false;
+  }
+};
+
+refreshStatus();
+</script>
+</body>
+</html>

@@ -62,12 +62,33 @@ def cmd_query(args):
         return 0
 
     try:
-        answer = generate_answer(args.prompt, results, model=args.model)
+        answer, backend = generate_answer(
+            args.prompt, results, backend=args.backend, model=args.model
+        )
     except GenerationUnavailable as e:
         print(f"(Answer generation skipped: {e})")
         return 0
 
-    print("Answer:\n" + answer)
+    print(f"Answer ({backend}):\n" + answer)
+    return 0
+
+
+def cmd_download_model(args):
+    from . import localmodel
+
+    path = localmodel.ensure_model()
+    print(f"Local model ready at {path}")
+    return 0
+
+
+def cmd_serve(args):
+    import uvicorn
+
+    from .server import create_app
+
+    app = create_app(db_path=args.db)
+    print(f"ragkb web UI: http://{args.host}:{args.port}/")
+    uvicorn.run(app, host=args.host, port=args.port, log_level="warning")
     return 0
 
 
@@ -123,8 +144,17 @@ def build_parser():
     p_query.add_argument("prompt", type=str, help="The question or prompt to search for.")
     p_query.add_argument("--top-k", type=int, default=5, help="Number of chunks to retrieve.")
     p_query.add_argument("--no-generate", action="store_true", help="Only show retrieved chunks, skip LLM answer.")
-    p_query.add_argument("--model", type=str, default=config.ANTHROPIC_MODEL, help="Anthropic model to use for generation.")
+    p_query.add_argument("--backend", type=str, default="auto", choices=["auto", "local", "claude"], help="Answer generation backend.")
+    p_query.add_argument("--model", type=str, default=None, help="Anthropic model override (claude backend).")
     p_query.set_defaults(func=cmd_query)
+
+    p_dl = sub.add_parser("download-model", help="Download the local (offline) generation model.")
+    p_dl.set_defaults(func=cmd_download_model)
+
+    p_serve = sub.add_parser("serve", help="Start the web UI / REST API server.")
+    p_serve.add_argument("--host", type=str, default="127.0.0.1")
+    p_serve.add_argument("--port", type=int, default=8000)
+    p_serve.set_defaults(func=cmd_serve)
 
     p_list = sub.add_parser("list", help="List documents in the knowledge base.")
     p_list.set_defaults(func=cmd_list)

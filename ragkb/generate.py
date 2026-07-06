@@ -1,7 +1,14 @@
-"""Generate a grounded answer from retrieved knowledge-base chunks using Claude."""
+"""Generate a grounded answer from retrieved knowledge-base chunks.
+
+Two backends:
+- "local":  fully offline via llama.cpp (see localmodel.py)
+- "claude": Anthropic API (requires ANTHROPIC_API_KEY)
+- "auto":   local if its model is cached, else Claude if a key is set
+"""
 
 import os
 
+from . import config
 from .store import SearchResult
 
 SYSTEM_PROMPT = (
@@ -12,7 +19,7 @@ SYSTEM_PROMPT = (
 
 
 class GenerationUnavailable(RuntimeError):
-    """Raised when an answer can't be generated (e.g. missing API key)."""
+    """Raised when an answer can't be generated (e.g. missing API key/model)."""
 
 
 def build_context(results: list[SearchResult]) -> str:
@@ -22,25 +29,58 @@ def build_context(results: list[SearchResult]) -> str:
     return "\n\n---\n\n".join(blocks)
 
 
-def generate_answer(query: str, results: list[SearchResult], model: str) -> str:
+def _build_user_message(query: str, results: list[SearchResult]) -> str:
+    return f"Context:\n{build_context(results)}\n\nQuestion: {query}"
+
+
+def resolve_backend(backend: str = "auto") -> str:
+    if backend in ("local", "claude"):
+        return backend
+    if backend != "auto":
+        raise ValueError(f"unknown backend: {backend}")
+    from . import localmodel
+
+    if localmodel.is_available():
+        return "local"
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return "claude"
+    raise GenerationUnavailable(
+        "No generation backend available: the local model isn't downloaded "
+        "(run `ragkb download-model`) and ANTHROPIC_API_KEY is not set."
+    )
+
+
+def generate_answer(
+    query: str,
+    results: list[SearchResult],
+    backend: str = "auto",
+    model: str | None = None,
+) -> tuple[str, str]:
+    """Returns (answer, backend_used)."""
     if not results:
         raise GenerationUnavailable("No knowledge-base results to ground an answer on.")
+
+    backend = resolve_backend(backend)
+    user_message = _build_user_message(query, results)
+
+    if backend == "local":
+        from . import localmodel
+
+        return localmodel.generate(SYSTEM_PROMPT, user_message), "local"
+
     if not os.environ.get("ANTHROPIC_API_KEY"):
         raise GenerationUnavailable(
-            "ANTHROPIC_API_KEY is not set; cannot generate an answer. "
-            "Use --no-generate to see raw retrieved chunks instead."
+            "ANTHROPIC_API_KEY is not set; cannot generate with the claude backend."
         )
 
     import anthropic
 
     client = anthropic.Anthropic()
-    context = build_context(results)
-    user_message = f"Context:\n{context}\n\nQuestion: {query}"
-
     response = client.messages.create(
-        model=model,
+        model=model or config.ANTHROPIC_MODEL,
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_message}],
     )
-    return "".join(block.text for block in response.content if block.type == "text")
+    text = "".join(block.text for block in response.content if block.type == "text")
+    return text, "claude"

@@ -1,13 +1,17 @@
 # ragkb
 
-A small, local RAG (retrieval-augmented generation) knowledge base. Store
-notes, documents, or any text as a knowledge base, then retrieve relevant
-pieces with a short prompt — optionally getting a synthesized answer back
-from Claude, grounded in what you stored.
+A small, local RAG (retrieval-augmented generation) knowledge base with a
+CLI and a web UI. Store notes, documents, or any text as a knowledge base,
+then retrieve relevant pieces with a short prompt — optionally getting a
+synthesized answer grounded in what you stored, generated fully offline by
+a local model (or by Claude via the Anthropic API).
 
 - **Storage**: local SQLite database (default `~/.ragkb/kb.db`)
 - **Embeddings**: local, offline model via [fastembed](https://github.com/qdrant/fastembed) — no per-call API key or cost. (The model itself is downloaded from Hugging Face once on first use and then cached locally.)
-- **Generation**: optional, uses the Anthropic API (Claude) to answer questions grounded in retrieved chunks
+- **Generation**: two interchangeable backends —
+  - `local`: fully offline via [llama.cpp](https://github.com/ggml-org/llama.cpp) (default model: Qwen2.5-1.5B-Instruct, ~1 GB one-time download)
+  - `claude`: Anthropic API (requires `ANTHROPIC_API_KEY`)
+- **Interfaces**: CLI, REST API, and a single-page web UI (`ragkb serve`)
 
 ## Install
 
@@ -43,6 +47,20 @@ raw matching chunks:
 ragkb query "when is the standup?" --no-generate
 ```
 
+### Web UI
+
+```bash
+pip install -e ".[local]"   # adds llama-cpp-python for offline answers
+ragkb download-model         # one-time ~1 GB model download
+ragkb serve                  # open http://127.0.0.1:8000/
+```
+
+The UI has a search tab (retrieval with optional generated answers — pick
+"local model" for fully offline operation) and a documents tab for adding
+and removing knowledge-base entries. The same server exposes a REST API:
+`GET /api/status`, `GET|POST /api/documents`, `DELETE /api/documents/{id}`,
+`POST /api/query`.
+
 ### Manage the knowledge base
 
 ```bash
@@ -59,7 +77,9 @@ Environment variables:
 |---|---|---|
 | `RAGKB_DB_PATH` | `~/.ragkb/kb.db` | Where the SQLite database lives |
 | `RAGKB_EMBEDDING_MODEL` | `BAAI/bge-small-en-v1.5` | fastembed model name |
-| `RAGKB_ANTHROPIC_MODEL` | `claude-sonnet-5` | Model used for answer generation |
+| `RAGKB_ANTHROPIC_MODEL` | `claude-sonnet-5` | Model used by the `claude` backend |
+| `RAGKB_LOCAL_MODEL_URL` | Qwen2.5-1.5B-Instruct Q4_K_M | GGUF download URL for the `local` backend |
+| `RAGKB_MODEL_DIR` | `~/.ragkb/models` | Where local model files are cached |
 | `RAGKB_CHUNK_SIZE` | `800` | Max characters per chunk |
 | `RAGKB_CHUNK_OVERLAP` | `100` | Character overlap between chunks |
 | `ANTHROPIC_API_KEY` | — | Required only for `query`'s answer-generation step |
