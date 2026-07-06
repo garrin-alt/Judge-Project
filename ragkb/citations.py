@@ -81,6 +81,49 @@ def _citing_doc_name(title: str) -> str | None:
     return m.group(1) if m else None
 
 
+def expand_keyword_rules(
+    store: KnowledgeStore,
+    results,
+    glossary: list[dict],
+    max_related: int = 2,
+    exclude: set | None = None,
+) -> list[RelatedRule]:
+    """Link keywords in retrieved card text ([Assault], [Ambush]...) to the
+    rules that define them, so a card result carries how it actually works."""
+    if not results:
+        return []
+    keyword_rules = {
+        e["term"]: e["rule"] for e in glossary
+        if e.get("kind") == "keyword" and e.get("rule")
+    }
+    if not keyword_rules:
+        return []
+    index = build_rule_index(store)
+    if not index:
+        return []
+
+    exclude = set(exclude or ())
+    exclude.update(r.doc_id for r in results)
+    related: list[RelatedRule] = []
+
+    for r in results:
+        for term, rule_number in keyword_rules.items():
+            if len(related) >= max_related:
+                return related
+            if f"[{term}" not in r.text:
+                continue
+            doc_id = resolve_rule(index, rule_number)
+            if doc_id is None or doc_id in exclude:
+                continue
+            exclude.add(doc_id)
+            title, source, text = store.get_document_text(doc_id)
+            related.append(RelatedRule(
+                doc_id=doc_id, title=title, source=source, text=text,
+                cited_by=r.title,
+            ))
+    return related
+
+
 def expand_citations(store: KnowledgeStore, results, max_related: int = 3) -> list[RelatedRule]:
     """Follow citations in retrieved results to the cited rule documents."""
     if not results:

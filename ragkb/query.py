@@ -7,7 +7,7 @@ enhancements to querying apply everywhere at once.
 from dataclasses import dataclass, field
 
 from .cardsearch import known_tags, parse_filters, search_cards
-from .citations import RelatedRule, expand_citations
+from .citations import RelatedRule, expand_citations, expand_keyword_rules
 from .embeddings import embed_query
 from .generate import GenerationUnavailable, generate_answer
 from .glossary import expand_prompt
@@ -69,6 +69,10 @@ def run_query(
         resp.results = store.search(qvec, top_k=top_k)
 
     resp.related = expand_citations(store, resp.results)
+    resp.related += expand_keyword_rules(
+        store, resp.results, glossary,
+        exclude={r.doc_id for r in resp.related},
+    )
 
     if generate != "none" and resp.results:
         try:

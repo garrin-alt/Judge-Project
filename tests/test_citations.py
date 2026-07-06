@@ -48,6 +48,32 @@ def test_expand_skips_already_retrieved(store):
     assert related == []
 
 
+def test_keyword_rules_linked_from_card_text(store):
+    from ragkb.citations import expand_keyword_rules
+
+    glossary = [
+        {"term": "Assault", "aliases": [], "definition": "d", "rule": "307", "kind": "keyword"},
+        {"term": "Heal", "aliases": [], "definition": "d", "rule": "999", "kind": "term"},
+    ]
+    results = store.search(np.ones(4, dtype=np.float32), top_k=1)
+    results[0].title = "Some Card (X-1)"
+    results[0].doc_id = -99  # pretend it's a card doc, not a rule doc
+    results[0].text = "Effect: [Assault 2] and more text"
+    related = expand_keyword_rules(store, results, glossary)
+    assert len(related) == 1
+    assert related[0].title.startswith("Riftbound Core Rules §307")
+    assert related[0].cited_by == "Some Card (X-1)"
+
+
+def test_keyword_rules_no_match_without_bracket(store):
+    from ragkb.citations import expand_keyword_rules
+
+    glossary = [{"term": "Assault", "aliases": [], "definition": "d", "rule": "307", "kind": "keyword"}]
+    results = store.search(np.ones(4, dtype=np.float32), top_k=1)
+    results[0].text = "the word assault appears unbracketed"
+    assert expand_keyword_rules(store, results, glossary) == []
+
+
 def test_tournament_numbering_preferred_for_tournament_chunks(store):
     results = store.search(np.ones(4, dtype=np.float32), top_k=1)
     results[0].title = "Riftbound Tournament Rules §205 — Conduct"
