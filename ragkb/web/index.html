@@ -171,6 +171,7 @@ async function runSearch() {
       body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode}),
     });
     let html = "";
+    if (r.expanded_prompt) html += `<div class="hint" style="margin-top:12px">interpreted as: ${esc(r.expanded_prompt)}</div>`;
     if (r.answer) html += `<div class="answer"><span class="tag">answer · ${esc(r.backend)} backend</span>${esc(r.answer)}</div>`;
     if (r.notice) html += `<div class="notice">${esc(r.notice)}</div>`;
     if (r.results.length) {

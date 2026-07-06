@@ -20,7 +20,7 @@ def client(tmp_path, monkeypatch):
         return np.array(out, dtype=np.float32)
 
     monkeypatch.setattr(server_mod, "embed_texts", fake_embed_texts)
-    monkeypatch.setattr(server_mod, "embed_query", lambda q: fake_embed_texts([q])[0])
+    monkeypatch.setattr("ragkb.query.embed_query", lambda q: fake_embed_texts([q])[0])
 
     app = create_app(db_path=str(tmp_path / "kb.db"))
     return TestClient(app)

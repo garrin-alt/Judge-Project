@@ -39,7 +39,9 @@ def card_to_text(card: dict) -> str:
         parts.append("Tags: " + ", ".join(card["tags"]) + ".")
     if card.get("effect"):
         parts.append("Effect: " + card["effect"])
-    if card.get("errata"):
+    # The feed stores current text in `errata` even when nothing changed;
+    # only keep it when it actually differs from the effect text.
+    if card.get("errata") and card["errata"].strip() != (card.get("effect") or "").strip():
         parts.append("Errata: " + card["errata"])
     if card.get("flavor"):
         parts.append("Flavor: " + card["flavor"])

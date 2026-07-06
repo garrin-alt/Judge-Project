@@ -9,8 +9,8 @@ from pydantic import BaseModel
 
 from . import config
 from .chunking import chunk_text
-from .embeddings import embed_query, embed_texts
-from .generate import GenerationUnavailable, generate_answer
+from .embeddings import embed_texts
+from .query import run_query
 from .store import KnowledgeStore
 
 WEB_DIR = Path(__file__).parent / "web"
@@ -85,13 +85,9 @@ def create_app(db_path: str | None = None) -> FastAPI:
         if not req.prompt.strip():
             raise HTTPException(status_code=400, detail="Prompt is empty.")
         with open_store() as store:
-            if store.count_chunks() == 0:
-                return {"results": [], "answer": None, "backend": None,
-                        "notice": "Knowledge base is empty."}
-            qvec = embed_query(req.prompt)
-            results = store.search(qvec, top_k=req.top_k)
+            resp = run_query(store, req.prompt, top_k=req.top_k, generate=req.generate)
 
-        payload = {
+        return {
             "results": [
                 {
                     "doc_id": r.doc_id,
@@ -100,22 +96,14 @@ def create_app(db_path: str | None = None) -> FastAPI:
                     "text": r.text,
                     "score": round(r.score, 4),
                 }
-                for r in results
+                for r in resp.results
             ],
-            "answer": None,
-            "backend": None,
-            "notice": None,
+            "answer": resp.answer,
+            "backend": resp.backend,
+            "notice": resp.notice,
+            "expanded_prompt": resp.expanded_prompt if resp.expanded_prompt != resp.prompt else None,
+            "definitions": resp.definitions,
         }
-
-        if req.generate != "none" and results:
-            try:
-                answer, backend = generate_answer(req.prompt, results, backend=req.generate)
-                payload["answer"] = answer
-                payload["backend"] = backend
-            except GenerationUnavailable as e:
-                payload["notice"] = str(e)
-
-        return payload
 
     @app.get("/")
     def index():

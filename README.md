@@ -127,10 +127,22 @@ The repo includes a worked example — the full Riftbound card database
 python scripts/ingest_cards_to_kb.py            # builds data/riftbound_kb.db
 python scripts/ingest_faq_to_kb.py              # adds the community rules FAQ
 python scripts/ingest_rules_to_kb.py            # adds official rules/errata/patch notes
+python scripts/build_glossary.py --db data/riftbound_kb.db   # game-term glossary
 ragkb --db data/riftbound_kb.db query "which cards counter spells?"
 ragkb --db data/riftbound_kb.db query "when do triggered abilities trigger?"
 ragkb --db data/riftbound_kb.db query "what happens in rule 354 when playing a card?"
 ```
+
+The rules are stored hierarchically: section headings become breadcrumbs on
+each rule ("Riftbound Core Rules §344 — Showdowns"), and short sections
+(e.g. step-by-step procedures) are kept together as one document.
+
+`build_glossary.py` extracts game vocabulary from the Core Rules — the six
+Domains with their colors (rule 134), keyword definitions (Assault,
+Ambush, ...), and definition-style rules — and installs it into the KB.
+The query pipeline (`ragkb/query.py`) uses it to annotate prompts
+("purple champion" → "purple (Chaos) champion") before embedding and to
+hand matched definitions to the answer model.
 
 Queries now blend both sources — asking about a card like Arcane Shift
 returns its card text alongside the judge rulings about how it resolves.

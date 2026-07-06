@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 """Ingest the official Riftbound rules documents into a ragkb knowledge base.
 
-Consumes data/riftbound_rules.json (from scripts/fetch_riftbound_rules.py):
-Core Rules and Tournament Rules split per numbered rule, plus errata and
-patch-notes article sections. Long sections are chunked. Re-runnable —
-previously ingested official-rules entries are replaced, not duplicated.
+Consumes data/riftbound_rules.json (from scripts/fetch_riftbound_rules.py)
+and restructures the numbered rules hierarchically before embedding:
+
+- Header rules ("341. Showdowns") are not stored as documents; they become
+  breadcrumbs on the rules they enclose, so every chunk carries its topic:
+  "Riftbound Core Rules §344 — Showdowns: 344. A Showdown begins when..."
+- Small sections (a header plus its rules, e.g. a step-by-step procedure)
+  are stored as ONE document so procedures stay together.
+- Large sections stay per-rule (still with breadcrumbs); long rules are
+  chunked.
+
+Errata and patch-notes article sections are ingested as-is (chunked).
+Re-runnable: previously ingested official-rules entries are replaced.
 
 Usage:
     python scripts/ingest_rules_to_kb.py [--rules data/riftbound_rules.json]
@@ -13,6 +22,7 @@ Usage:
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 from ragkb import config
@@ -27,13 +37,81 @@ OFFICIAL_PREFIXES = (
     "https://playriftbound.com/",
 )
 
+# One grouped section document may be at most this long; otherwise the
+# section's rules are stored individually.
+GROUP_MAX_CHARS = 3200
 
-def section_to_chunks(section: dict) -> list[str]:
-    header = f"{section['title']}\n"
-    text = header + section["text"]
-    if len(text) <= config.CHUNK_SIZE * 2:
-        return [text]
-    return [header + c for c in chunk_text(section["text"], config.CHUNK_SIZE, config.CHUNK_OVERLAP)]
+
+def is_header(section: dict) -> bool:
+    """Header rules are short noun phrases with no sentence content.
+
+    '341. Showdowns' -> header. '117. Players each draw 4.' -> content
+    (it ends with a period: an actual instruction, not a title).
+    """
+    body = re.sub(rf"^{section['section']}\.\s*", "", section["text"]).strip()
+    return len(body) <= 48 and not body.endswith(".") and f"{section['section']}.1" not in section["text"]
+
+
+def build_rule_docs(rules: list[dict]) -> list[dict]:
+    """Group a document's rules into sections with breadcrumbs.
+
+    Returns dicts: {title, text, url, sections: [rule numbers covered]}.
+    """
+    doc_name = rules[0]["doc"]
+    docs = []
+    crumb: list[str] = []
+    prev_was_header = False
+    current: list[dict] = []
+
+    def flush():
+        nonlocal current
+        if not current:
+            return
+        crumb_text = " › ".join(crumb) if crumb else None
+        numbers = [r["section"] for r in current]
+        combined = "\n".join(r["text"] for r in current)
+        span = f"§{numbers[0]}" if len(numbers) == 1 else f"§{numbers[0]}–{numbers[-1]}"
+        header_line = f"{crumb_text}\n" if crumb_text else ""
+        suffix = f" — {crumb_text}" if crumb_text else ""
+
+        if len(combined) <= GROUP_MAX_CHARS:
+            docs.append({
+                "title": f"{doc_name} {span}{suffix}",
+                "text": header_line + combined,
+                "url": current[0]["url"],
+                "sections": numbers,
+            })
+        else:
+            for r in current:
+                docs.append({
+                    "title": f"{doc_name} §{r['section']}{suffix}",
+                    "text": header_line + r["text"],
+                    "url": r["url"],
+                    "sections": [r["section"]],
+                })
+        current = []
+
+    for rule in rules:
+        if is_header(rule):
+            flush()
+            body = re.sub(rf"^{rule['section']}\.\s*", "", rule["text"]).strip()
+            # consecutive headers nest ("Game Concepts" › "Deck Construction");
+            # a header arriving after content starts a fresh breadcrumb
+            crumb = crumb + [body] if prev_was_header else [body]
+            prev_was_header = True
+        else:
+            prev_was_header = False
+            current.append(rule)
+    flush()
+    return docs
+
+
+def section_to_chunks(title: str, text: str) -> list[str]:
+    header = f"{title}\n"
+    full = header + text
+    if len(full) <= config.CHUNK_SIZE * 2:
+        return [full]
+    return [header + c for c in chunk_text(text, config.CHUNK_SIZE, config.CHUNK_OVERLAP)]
 
 
 def main():
@@ -43,10 +121,27 @@ def main():
     args = parser.parse_args()
 
     sections = json.loads(Path(args.rules).read_text(encoding="utf-8"))
-    print(f"{len(sections)} rule sections")
 
-    docs = [(s, section_to_chunks(s)) for s in sections]
-    all_chunks = [c for _, chunks in docs for c in chunks]
+    pdf_docs = []
+    article_docs = []
+    for doc_name in sorted({s["doc"] for s in sections}):
+        doc_rules = [s for s in sections if s["doc"] == doc_name]
+        if doc_name.endswith("Rules"):  # Core Rules / Tournament Rules PDFs
+            pdf_docs.extend(build_rule_docs(doc_rules))
+        else:  # errata / patch-notes articles
+            for s in doc_rules:
+                article_docs.append({
+                    "title": s["title"],
+                    "text": s["text"],
+                    "url": s["url"],
+                })
+
+    all_docs = pdf_docs + article_docs
+    print(f"{len(sections)} raw sections -> {len(all_docs)} documents "
+          f"({len(pdf_docs)} rules, {len(article_docs)} article sections)")
+
+    prepared = [(d, section_to_chunks(d["title"], d["text"])) for d in all_docs]
+    all_chunks = [c for _, chunks in prepared for c in chunks]
     print(f"Embedding {len(all_chunks)} chunk(s)...")
     vectors = embed_texts(all_chunks)
 
@@ -61,12 +156,12 @@ def main():
             print(f"Removed {len(stale)} previously ingested official-rules document(s)")
 
         offset = 0
-        for section, chunks in docs:
+        for doc, chunks in prepared:
             vecs = vectors[offset:offset + len(chunks)]
             offset += len(chunks)
             store.add_document(
-                title=section["title"],
-                source=section["url"],
+                title=doc["title"],
+                source=doc["url"],
                 chunks=chunks,
                 embeddings=vecs,
             )

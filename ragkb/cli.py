@@ -6,8 +6,7 @@ from pathlib import Path
 
 from . import config
 from .chunking import chunk_text
-from .embeddings import embed_query, embed_texts
-from .generate import GenerationUnavailable, generate_answer
+from .embeddings import embed_texts
 from .store import KnowledgeStore
 
 
@@ -41,35 +40,41 @@ def cmd_add(args):
 
 
 def cmd_query(args):
+    from .query import run_query
+
     with KnowledgeStore(args.db) as store:
-        if store.count_chunks() == 0:
-            print("Knowledge base is empty. Add something first with `ragkb add`.")
-            return 0
+        resp = run_query(
+            store,
+            args.prompt,
+            top_k=args.top_k,
+            generate="none" if args.no_generate else args.backend,
+            model=args.model,
+        )
 
-        query_vec = embed_query(args.prompt)
-        results = store.search(query_vec, top_k=args.top_k)
+    if resp.notice and not resp.results:
+        print(resp.notice)
+        return 0
 
-    if not results:
+    if resp.expanded_prompt != resp.prompt:
+        print(f"(interpreted as: {resp.expanded_prompt})\n")
+
+    if not resp.results:
         print("No relevant results found.")
         return 0
 
-    print(f"Top {len(results)} match(es):\n")
-    for i, r in enumerate(results, 1):
+    print(f"Top {len(resp.results)} match(es):\n")
+    for i, r in enumerate(resp.results, 1):
         snippet = r.text if len(r.text) <= 300 else r.text[:300] + "..."
         print(f"{i}. [{r.score:.3f}] {r.title}\n   {snippet}\n")
 
     if args.no_generate:
         return 0
 
-    try:
-        answer, backend = generate_answer(
-            args.prompt, results, backend=args.backend, model=args.model
-        )
-    except GenerationUnavailable as e:
-        print(f"(Answer generation skipped: {e})")
+    if resp.notice:
+        print(f"(Answer generation skipped: {resp.notice})")
         return 0
-
-    print(f"Answer ({backend}):\n" + answer)
+    if resp.answer is not None:
+        print(f"Answer ({resp.backend}):\n" + resp.answer)
     return 0
 
 

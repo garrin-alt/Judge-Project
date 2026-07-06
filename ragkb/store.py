@@ -24,6 +24,13 @@ CREATE TABLE IF NOT EXISTS chunks (
     text TEXT NOT NULL,
     embedding BLOB NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS glossary (
+    term TEXT PRIMARY KEY,
+    aliases TEXT NOT NULL,
+    definition TEXT NOT NULL,
+    rule TEXT
+);
 """
 
 
@@ -91,6 +98,34 @@ class KnowledgeStore:
 
     def count_chunks(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM chunks").fetchone()[0]
+
+    def set_glossary(self, entries: list[dict]):
+        """Replace the stored glossary. Entries: {term, aliases, definition, rule}."""
+        import json as _json
+
+        self.conn.execute("DELETE FROM glossary")
+        self.conn.executemany(
+            "INSERT INTO glossary (term, aliases, definition, rule) VALUES (?, ?, ?, ?)",
+            [
+                (e["term"], _json.dumps(e.get("aliases", [])), e["definition"], e.get("rule"))
+                for e in entries
+            ],
+        )
+        self.conn.commit()
+
+    def get_glossary(self) -> list[dict]:
+        import json as _json
+
+        rows = self.conn.execute("SELECT term, aliases, definition, rule FROM glossary").fetchall()
+        return [
+            {"term": r[0], "aliases": _json.loads(r[1]), "definition": r[2], "rule": r[3]}
+            for r in rows
+        ]
+
+    def find_documents_by_title_prefix(self, prefix: str) -> list[tuple]:
+        return self.conn.execute(
+            "SELECT id, title FROM documents WHERE title LIKE ?", (prefix + "%",)
+        ).fetchall()
 
     def search(self, query_vec: np.ndarray, top_k: int = 5) -> list[SearchResult]:
         rows = self.conn.execute(
