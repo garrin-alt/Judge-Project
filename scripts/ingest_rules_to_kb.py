@@ -52,10 +52,58 @@ def is_header(section: dict) -> bool:
     return len(body) <= 48 and not body.endswith(".") and f"{section['section']}.1" not in section["text"]
 
 
+def split_subrules(rule_text: str, rule_number: str) -> list[str]:
+    """Split a rule into its sub-rule units ("702.1.", "702.2.a.", ...).
+
+    Only sub-numbers of THIS rule are boundaries, so citations to other
+    rules ("See rule 307.") never cause a split. Text before the first
+    sub-rule (the rule's own statement) is its own unit.
+    """
+    pat = re.compile(rf"(?:(?<=\s)|^)({re.escape(rule_number)}(?:\.\d+|\.[a-z]+)+\.)\s")
+    matches = list(pat.finditer(rule_text))
+    if not matches:
+        return [rule_text]
+    units = []
+    head = rule_text[: matches[0].start()].strip()
+    if head:
+        units.append(head)
+    for i, m in enumerate(matches):
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(rule_text)
+        unit = rule_text[m.start():end].strip()
+        if unit:
+            units.append(unit)
+    return units
+
+
+def pack_units(units: list[str], max_chars: int) -> list[str]:
+    """Pack consecutive units into chunks of at most max_chars, cutting
+    only between units. A single oversized unit falls back to
+    sentence-aware splitting."""
+    chunks: list[str] = []
+    current = ""
+    for unit in units:
+        if len(unit) > max_chars:
+            if current:
+                chunks.append(current)
+                current = ""
+            chunks.extend(chunk_text(unit, config.CHUNK_SIZE, config.CHUNK_OVERLAP))
+            continue
+        if current and len(current) + 1 + len(unit) > max_chars:
+            chunks.append(current)
+            current = unit
+        else:
+            current = f"{current}\n{unit}" if current else unit
+    if current:
+        chunks.append(current)
+    return chunks
+
+
 def build_rule_docs(rules: list[dict]) -> list[dict]:
     """Group a document's rules into sections with breadcrumbs.
 
-    Returns dicts: {title, text, url, sections: [rule numbers covered]}.
+    Returns dicts: {title, text, url, units, sections: [rule numbers]}.
+    Units are the atomic pieces chunking may cut between: whole rules for
+    grouped sections, sub-rules for a single large rule.
     """
     doc_name = rules[0]["doc"]
     docs = []
@@ -79,6 +127,7 @@ def build_rule_docs(rules: list[dict]) -> list[dict]:
                 "title": f"{doc_name} {span}{suffix}",
                 "text": header_line + combined,
                 "url": current[0]["url"],
+                "units": [r["text"] for r in current],
                 "sections": numbers,
             })
         else:
@@ -87,6 +136,7 @@ def build_rule_docs(rules: list[dict]) -> list[dict]:
                     "title": f"{doc_name} §{r['section']}{suffix}",
                     "text": header_line + r["text"],
                     "url": r["url"],
+                    "units": split_subrules(r["text"], r["section"]),
                     "sections": [r["section"]],
                 })
         current = []
@@ -106,12 +156,19 @@ def build_rule_docs(rules: list[dict]) -> list[dict]:
     return docs
 
 
-def section_to_chunks(title: str, text: str) -> list[str]:
-    header = f"{title}\n"
-    full = header + text
-    if len(full) <= config.CHUNK_SIZE * 2:
-        return [full]
-    return [header + c for c in chunk_text(text, config.CHUNK_SIZE, config.CHUNK_OVERLAP)]
+def doc_to_chunks(doc: dict) -> list[str]:
+    """Chunk a document, cutting only at unit (rule/sub-rule) boundaries;
+    articles without units use sentence-aware splitting."""
+    header = f"{doc['title']}\n"
+    budget = config.MAX_CHUNK_CHARS - len(header)
+    if len(doc["text"]) <= budget:
+        return [header + doc["text"]]
+    units = doc.get("units")
+    if units:
+        pieces = pack_units(units, budget)
+    else:
+        pieces = chunk_text(doc["text"], config.CHUNK_SIZE, config.CHUNK_OVERLAP)
+    return [header + p for p in pieces]
 
 
 def main():
@@ -140,7 +197,7 @@ def main():
     print(f"{len(sections)} raw sections -> {len(all_docs)} documents "
           f"({len(pdf_docs)} rules, {len(article_docs)} article sections)")
 
-    prepared = [(d, section_to_chunks(d["title"], d["text"])) for d in all_docs]
+    prepared = [(d, doc_to_chunks(d)) for d in all_docs]
     all_chunks = [c for _, chunks in prepared for c in chunks]
     print(f"Embedding {len(all_chunks)} chunk(s)...")
     vectors = embed_texts(all_chunks)

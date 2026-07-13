@@ -14,3 +14,7 @@ EMBED_MODEL_URL = os.environ.get(
 ANTHROPIC_MODEL = os.environ.get("RAGKB_ANTHROPIC_MODEL", "claude-sonnet-5")
 CHUNK_SIZE = int(os.environ.get("RAGKB_CHUNK_SIZE", "800"))
 CHUNK_OVERLAP = int(os.environ.get("RAGKB_CHUNK_OVERLAP", "100"))
+# Hard cap for any single stored chunk: the embedding model reads ~512
+# tokens, so text beyond roughly this many characters would be stored but
+# invisible to search.
+MAX_CHUNK_CHARS = int(os.environ.get("RAGKB_MAX_CHUNK_CHARS", "1400"))

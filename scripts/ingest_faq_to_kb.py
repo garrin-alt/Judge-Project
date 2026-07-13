@@ -25,7 +25,7 @@ def section_to_chunks(section: dict) -> list[str]:
         f"Q: {section['question']}\n"
         f"A: {section['answer']}"
     )
-    if len(text) <= config.CHUNK_SIZE * 2:
+    if len(text) <= config.MAX_CHUNK_CHARS:
         return [text]
     header = f"Riftbound rules FAQ — {section['page']}\nQ: {section['question']}\n"
     return [header + c for c in chunk_text(section["answer"], config.CHUNK_SIZE, config.CHUNK_OVERLAP)]
