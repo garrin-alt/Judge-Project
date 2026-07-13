@@ -47,6 +47,32 @@ def test_no_glossary_hit_passes_through(store):
     assert resp.results[0].title == "Fury card"
 
 
+def test_doc_kind_classification():
+    from ragkb.query import doc_kind
+
+    assert doc_kind("Salvage (OGN-224)", "https://riftbound.gg/cards/ogn-224-salvage/") == "card"
+    assert doc_kind("FAQ: Abilities — When?", "https://www.riftboundfaq.com/general-rules/abilities") == "faq"
+    assert doc_kind("Riftbound Core Rules §344 — Showdowns", "https://cmsassets.rgpub.io/x.pdf") == "core"
+    assert doc_kind("Riftbound Tournament Rules §703", "https://cmsassets.rgpub.io/y.pdf") == "tournament"
+    assert doc_kind("Riftbound: Origins Card Errata — Salvage", "https://riftbound.leagueoflegends.com/...") == "errata"
+    # patch-notes titles also start with "Riftbound Core Rules"
+    assert doc_kind("Riftbound Core Rules: Unleashed Patch Notes — Overview", "") == "patch"
+    assert doc_kind("My own note", None) == "note"
+
+
+def test_sources_filter_restricts_results(store, monkeypatch):
+    # tag the two docs with recognizable sources
+    store.conn.execute("UPDATE documents SET source='https://riftbound.gg/cards/x/' WHERE title='Chaos card'")
+    store.conn.execute("UPDATE documents SET source='https://www.riftboundfaq.com/x' WHERE title='Fury card'")
+    store.conn.commit()
+
+    resp = run_query(store, "purple champion", top_k=5, sources=["faq"])
+    assert [r.title for r in resp.results] == ["Fury card"]
+
+    resp = run_query(store, "purple champion", top_k=5, sources=["card"])
+    assert [r.title for r in resp.results] == ["Chaos card"]
+
+
 def test_empty_store_notice(tmp_path):
     with KnowledgeStore(tmp_path / "empty.db") as s:
         resp = run_query(s, "anything")

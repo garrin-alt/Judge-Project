@@ -200,12 +200,22 @@ class KnowledgeStore:
             text = text[:max_chars].rsplit(" ", 1)[0] + "..."
         return doc[0], doc[1], text
 
-    def search(self, query_vec: np.ndarray, top_k: int = 5) -> list[SearchResult]:
-        """Top matching chunks, at most one (the best) per document."""
+    def search(
+        self,
+        query_vec: np.ndarray,
+        top_k: int = 5,
+        allowed_doc_ids: set[int] | None = None,
+    ) -> list[SearchResult]:
+        """Top matching chunks, at most one (the best) per document.
+
+        allowed_doc_ids restricts the search to those documents (None = all).
+        """
         rows = self.conn.execute(
             "SELECT c.id, c.doc_id, c.text, c.embedding, d.title, d.source "
             "FROM chunks c JOIN documents d ON d.id = c.doc_id"
         ).fetchall()
+        if allowed_doc_ids is not None:
+            rows = [r for r in rows if r[1] in allowed_doc_ids]
         if not rows:
             return []
 

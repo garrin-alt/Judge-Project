@@ -67,6 +67,14 @@
   }
   button.primary:disabled { opacity: .55; cursor: wait; }
   .hint { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+  .srcfilter { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .srcfilter button {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: none; border: 1px solid var(--border); color: var(--text-2); border-radius: 999px;
+    padding: 4px 11px 4px 9px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  }
+  .srcfilter button .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--muted)); }
+  .srcfilter button.on { border-color: var(--accent); color: var(--text); background: var(--page); box-shadow: inset 0 0 0 1px var(--accent); }
   .recent { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
   .recent button {
     background: none; border: 1px solid var(--border); color: var(--text-2); border-radius: 999px;
@@ -170,6 +178,7 @@
           </select>
           <button class="primary" id="go">Search</button>
         </div>
+        <div class="srcfilter" id="srcfilter" title="Filter by source — none selected searches everything"></div>
         <div class="recent" id="recent" hidden></div>
       </div>
     </div>
@@ -263,6 +272,29 @@ function show(tab) {
 $("tab-search").onclick = () => show("search");
 $("tab-docs").onclick = () => show("docs");
 
+// ---- source filter chips ----
+const KINDS = [
+  ["card", "Cards"], ["faq", "FAQ"], ["core", "Core rules"],
+  ["tournament", "Tournament"], ["errata", "Errata"], ["patch", "Patch notes"],
+  ["note", "Notes"],
+];
+const activeSources = new Set(JSON.parse(sessionStorage.getItem("ragkb-sources") || "[]"));
+function renderSourceFilter() {
+  const slot = {card: "card", faq: "faq", core: "core", tournament: "tourn", errata: "errata", patch: "patch"};
+  $("srcfilter").innerHTML = KINDS.map(([k, label]) => `
+    <button data-kind="${k}" class="${activeSources.has(k) ? "on" : ""}" aria-pressed="${activeSources.has(k)}">
+      <span class="dot" ${slot[k] ? `style="--dot: var(--src-${slot[k]})"` : ""}></span>${label}</button>`).join("");
+  for (const btn of $("srcfilter").querySelectorAll("button")) {
+    btn.onclick = () => {
+      const k = btn.dataset.kind;
+      activeSources.has(k) ? activeSources.delete(k) : activeSources.add(k);
+      sessionStorage.setItem("ragkb-sources", JSON.stringify([...activeSources]));
+      renderSourceFilter();
+      if ($("prompt").value.trim()) runSearch();
+    };
+  }
+}
+
 // ---- recent queries ----
 const RECENT_KEY = "ragkb-recent";
 function recent() { try { return JSON.parse(localStorage.getItem(RECENT_KEY)) || []; } catch { return []; } }
@@ -290,7 +322,8 @@ async function runSearch() {
   try {
     const r = await api("/api/query", {
       method: "POST", headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode}),
+      body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode,
+                            sources: [...activeSources]}),
     });
     pushRecent(prompt);
     let html = "";
@@ -378,6 +411,7 @@ $("add").onclick = async () => {
 };
 
 refreshStatus();
+renderSourceFilter();
 renderRecent();
 </script>
 </body>

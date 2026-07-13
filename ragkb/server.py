@@ -27,6 +27,9 @@ class QueryRequest(BaseModel):
     top_k: int = 5
     # "none" = retrieval only; "auto"/"local"/"claude" = also generate an answer
     generate: str = "none"
+    # restrict to document kinds (card/faq/core/tournament/errata/patch/note);
+    # empty = all sources
+    sources: list[str] = []
 
 
 def create_app(db_path: str | None = None) -> FastAPI:
@@ -94,7 +97,10 @@ def create_app(db_path: str | None = None) -> FastAPI:
         if not req.prompt.strip():
             raise HTTPException(status_code=400, detail="Prompt is empty.")
         with open_store() as store:
-            resp = run_query(store, req.prompt, top_k=req.top_k, generate=req.generate)
+            resp = run_query(
+                store, req.prompt, top_k=req.top_k, generate=req.generate,
+                sources=req.sources or None,
+            )
 
         with open_store() as store:
             partial = {

@@ -49,6 +49,7 @@ def cmd_query(args):
             top_k=args.top_k,
             generate="none" if args.no_generate else args.backend,
             model=args.model,
+            sources=args.sources.split(",") if args.sources else None,
         )
 
     if resp.notice and not resp.results:
@@ -160,6 +161,7 @@ def build_parser():
     p_query.add_argument("--no-generate", action="store_true", help="Only show retrieved chunks, skip LLM answer.")
     p_query.add_argument("--backend", type=str, default="auto", choices=["auto", "local", "claude"], help="Answer generation backend.")
     p_query.add_argument("--model", type=str, default=None, help="Anthropic model override (claude backend).")
+    p_query.add_argument("--sources", type=str, default=None, help="Comma-separated source kinds to search (card,faq,core,tournament,errata,patch,note).")
     p_query.set_defaults(func=cmd_query)
 
     p_dl = sub.add_parser("download-model", help="Download the local (offline) generation model.")
