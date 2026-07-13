@@ -35,9 +35,9 @@ def is_available() -> bool:
     return model_path().exists()
 
 
-def ensure_model() -> Path:
-    """Download the model file if it isn't cached yet."""
-    path = model_path()
+def download_model_file(url: str) -> Path:
+    """Download a model file into MODEL_DIR if it isn't cached yet."""
+    path = MODEL_DIR / url.rsplit("/", 1)[-1]
     if path.exists():
         return path
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
@@ -47,13 +47,18 @@ def ensure_model() -> Path:
         done = blocks * block_size
         if total > 0 and sys.stderr.isatty():
             pct = min(100, done * 100 // total)
-            print(f"\rDownloading local model: {pct}% of {total // 2**20} MiB", end="", file=sys.stderr)
+            print(f"\rDownloading model: {pct}% of {total // 2**20} MiB", end="", file=sys.stderr)
 
-    print(f"Downloading local model from {DEFAULT_MODEL_URL}", file=sys.stderr)
-    urllib.request.urlretrieve(DEFAULT_MODEL_URL, tmp, reporthook=report)
+    print(f"Downloading model from {url}", file=sys.stderr)
+    urllib.request.urlretrieve(url, tmp, reporthook=report)
     print(file=sys.stderr)
     tmp.rename(path)
     return path
+
+
+def ensure_model() -> Path:
+    """Download the generation model if it isn't cached yet."""
+    return download_model_file(DEFAULT_MODEL_URL)
 
 
 def _get_llm():

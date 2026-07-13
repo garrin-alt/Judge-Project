@@ -7,7 +7,12 @@ synthesized answer grounded in what you stored, generated fully offline by
 a local model (or by Claude via the Anthropic API).
 
 - **Storage**: local SQLite database (default `~/.ragkb/kb.db`)
-- **Embeddings**: local, offline model via [fastembed](https://github.com/qdrant/fastembed) — no per-call API key or cost. (The model itself is downloaded from Hugging Face once on first use and then cached locally.)
+- **Embeddings**: local, offline model — no per-call API key or cost. Two
+  backends: [fastembed](https://github.com/qdrant/fastembed) (desktop
+  default, install with the `[onnx]` extra) or the same model as GGUF via
+  llama.cpp (`RAGKB_EMBED_BACKEND=llama`, works on Android/Termux — see
+  [docs/ANDROID.md](docs/ANDROID.md)). The model downloads once on first
+  use and is cached locally.
 - **Generation**: two interchangeable backends —
   - `local`: fully offline via [llama.cpp](https://github.com/ggml-org/llama.cpp) (default model: Qwen2.5-1.5B-Instruct, ~1 GB one-time download)
   - `claude`: Anthropic API (requires `ANTHROPIC_API_KEY`)
@@ -18,7 +23,7 @@ a local model (or by Claude via the Anthropic API).
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -e .
+pip install -e ".[onnx]"
 ```
 
 ## Usage
@@ -77,6 +82,8 @@ Environment variables:
 |---|---|---|
 | `RAGKB_DB_PATH` | `~/.ragkb/kb.db` | Where the SQLite database lives |
 | `RAGKB_EMBEDDING_MODEL` | `BAAI/bge-small-en-v1.5` | fastembed model name |
+| `RAGKB_EMBED_BACKEND` | `fastembed` | `fastembed` (onnx) or `llama` (GGUF via llama.cpp) |
+| `RAGKB_EMBED_MODEL_URL` | bge-small-en-v1.5 Q8_0 GGUF | Embedding model for the `llama` backend |
 | `RAGKB_ANTHROPIC_MODEL` | `claude-sonnet-5` | Model used by the `claude` backend |
 | `RAGKB_LOCAL_MODEL_URL` | Qwen2.5-1.5B-Instruct Q4_K_M | GGUF download URL for the `local` backend |
 | `RAGKB_MODEL_DIR` | `~/.ragkb/models` | Where local model files are cached |
