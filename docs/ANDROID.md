@@ -37,12 +37,16 @@ pip would try to compile it from source.)
 ```bash
 git clone -b claude/rag-knowledge-base-wqbbqv https://github.com/garrin-alt/Judge-Project.git
 cd Judge-Project
+pip install setuptools wheel scikit-build-core
+CMAKE_ARGS="-DLLAMA_CURL=OFF -DGGML_OPENMP=OFF" pip install llama-cpp-python --no-build-isolation
 pip install -e ".[local]"
 ```
 
-`llama-cpp-python` and `pydantic-core` compile from source here (C++ and
-Rust respectively) — expect 15–30 minutes on a phone. This is the only
-slow step and only happens once.
+`llama-cpp-python` (C++) and `pydantic-core` (Rust) compile from source
+here — expect 15–30 minutes on a phone, once. `--no-build-isolation`
+makes pip use the system cmake/ninja from step 2: the `cmake` PyPI
+package has no Android wheel, so pip's isolated build environment would
+otherwise try (and fail) to compile CMake itself from source.
 
 Then make the llama embeddings backend the default for this device:
 
