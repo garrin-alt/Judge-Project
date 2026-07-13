@@ -131,6 +131,19 @@ python scripts/build_glossary.py --db data/riftbound_kb.db
   retry with the problem features disabled:
   `CMAKE_ARGS="-DLLAMA_CURL=OFF -DGGML_OPENMP=OFF" pip install -e ".[local]"`.
   Appending `2>&1 | tee ~/build.log` saves the full log for diagnosis.
+- **`RuntimeError: Unsupported platform` importing llama_cpp**: recent
+  Python reports `sys.platform == "android"` and llama-cpp-python's
+  loader doesn't recognize it. Patch the installed file (re-apply after
+  any llama-cpp-python upgrade):
+
+  ```bash
+  sed -i 's/sys.platform.startswith("linux")/sys.platform.startswith("linux") or sys.platform == "android"/' \
+    $PREFIX/lib/python*/site-packages/llama_cpp/_ctypes_extensions.py
+  ```
+- **`CANNOT LINK EXECUTABLE ... SSL_set_quic_tls_transport_params`** from
+  curl/cmake/pkg: mismatched Termux packages (partial upgrade). Run
+  `apt update && apt full-upgrade`, answer Y to config-file prompts, then
+  retry. If pkg itself is broken, `apt` still works.
 - **Server dies when the screen locks**: run `termux-wake-lock`, and
   exempt Termux from battery optimization (Android Settings → Apps →
   Termux → Battery → Unrestricted).
