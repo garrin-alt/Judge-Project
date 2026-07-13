@@ -26,7 +26,7 @@ In Termux:
 
 ```bash
 pkg update && pkg upgrade
-pkg install python python-numpy git cmake clang make binutils rust
+pkg install python python-numpy git cmake clang make binutils rust ninja libcurl
 ```
 
 (`python-numpy` comes prebuilt from the Termux repo; installing numpy via
@@ -122,6 +122,11 @@ python scripts/build_glossary.py --db data/riftbound_kb.db
 - **`pip install fastembed` fails**: expected on Android — don't install
   it. The llama backend replaces it; make sure `RAGKB_EMBED_BACKEND=llama`
   is exported.
+- **`CMake build failed` while building llama-cpp-python**: make sure
+  `ninja` and `libcurl` are installed (`pkg install ninja libcurl`), then
+  retry with the problem features disabled:
+  `CMAKE_ARGS="-DLLAMA_CURL=OFF -DGGML_OPENMP=OFF" pip install -e ".[local]"`.
+  Appending `2>&1 | tee ~/build.log` saves the full log for diagnosis.
 - **Server dies when the screen locks**: run `termux-wake-lock`, and
   exempt Termux from battery optimization (Android Settings → Apps →
   Termux → Battery → Unrestricted).
