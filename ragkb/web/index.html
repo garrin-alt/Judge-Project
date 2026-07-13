@@ -6,82 +6,140 @@
 <title>ragkb — knowledge base</title>
 <style>
   :root {
-    --bg: #f6f7f9; --panel: #ffffff; --text: #1a1d21; --muted: #6b7280;
-    --border: #e2e5ea; --accent: #4f46e5; --accent-text: #ffffff;
-    --score: #4f46e5; --notice-bg: #fef3c7; --notice-text: #92400e;
+    --page: #f9f9f7; --panel: #fcfcfb; --text: #0b0b0b; --text-2: #52514e;
+    --muted: #898781; --border: #e1e0d9; --ring: rgba(11,11,11,0.10);
+    --accent: #2a78d6; --accent-text: #ffffff;
+    --meter-track: #e1e0d9; --meter-fill: #2a78d6;
+    --notice-bg: #fdf3d7; --notice-text: #6b4d00;
+    --src-card: #2a78d6; --src-faq: #1baf7a; --src-core: #4a3aa7;
+    --src-tourn: #eb6834; --src-errata: #e34948; --src-patch: #eda100;
+    --st-warning-bg: rgba(250,178,25,.18); --st-warning-tx: #6b4d00;
+    --st-serious-bg: rgba(236,131,90,.18); --st-serious-tx: #7c3413;
+    --st-critical-bg: rgba(208,59,59,.15); --st-critical-tx: #8f1f1f;
+    --st-good-bg: rgba(12,163,12,.14); --st-good-tx: #006300;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #101215; --panel: #191c21; --text: #e8eaed; --muted: #9aa1ab;
-      --border: #2a2f37; --accent: #818cf8; --accent-text: #101215;
-      --score: #818cf8; --notice-bg: #3a2f10; --notice-text: #fbd38d;
+      --page: #0d0d0d; --panel: #1a1a19; --text: #ffffff; --text-2: #c3c2b7;
+      --muted: #898781; --border: #2c2c2a; --ring: rgba(255,255,255,0.10);
+      --accent: #3987e5; --accent-text: #0d0d0d;
+      --meter-track: #2c2c2a; --meter-fill: #3987e5;
+      --notice-bg: #33290e; --notice-text: #fab219;
+      --src-card: #3987e5; --src-faq: #199e70; --src-core: #9085e9;
+      --src-tourn: #d95926; --src-errata: #e66767; --src-patch: #c98500;
+      --st-warning-bg: rgba(250,178,25,.16); --st-warning-tx: #fab219;
+      --st-serious-bg: rgba(236,131,90,.16); --st-serious-tx: #ec835a;
+      --st-critical-bg: rgba(208,59,59,.2); --st-critical-tx: #ef7d7d;
+      --st-good-bg: rgba(12,163,12,.18); --st-good-tx: #35c435;
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: var(--bg); color: var(--text);
+    background: var(--page); color: var(--text);
     font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
     min-height: 100vh;
   }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
-  header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
-  header h1 { font-size: 22px; font-weight: 650; }
-  header .stats { color: var(--muted); font-size: 13px; }
-  nav { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 20px 14px 64px; }
+  header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  header h1 { font-size: 21px; font-weight: 700; letter-spacing: -.01em; }
+  header .stats { color: var(--muted); font-size: 12.5px; }
+  nav { display: flex; gap: 2px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
   nav button {
-    background: none; border: none; color: var(--muted); font: inherit;
-    padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent;
+    background: none; border: none; color: var(--text-2); font: inherit; font-size: 14px;
+    padding: 8px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
   }
   nav button.active { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
-  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+
+  .searchbox { position: sticky; top: 0; z-index: 5; background: var(--page); padding: 6px 0 10px; }
+  .panel { background: var(--panel); border: 1px solid var(--ring); border-radius: 12px; padding: 14px; }
   .row { display: flex; gap: 8px; flex-wrap: wrap; }
   input[type="text"], textarea, select {
-    background: var(--bg); color: var(--text); border: 1px solid var(--border);
-    border-radius: 8px; padding: 9px 12px; font: inherit; width: 100%;
+    background: var(--page); color: var(--text); border: 1px solid var(--border);
+    border-radius: 9px; padding: 10px 12px; font: inherit; width: 100%;
   }
   textarea { min-height: 120px; resize: vertical; }
   input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
-  .row input[type="text"] { flex: 1; min-width: 240px; }
-  .row select { width: auto; }
+  .row input[type="text"] { flex: 1 1 100%; min-width: 0; }
+  .row select { width: auto; flex: 1; }
   button.primary {
     background: var(--accent); color: var(--accent-text); border: none;
-    border-radius: 8px; padding: 9px 18px; font: inherit; font-weight: 600; cursor: pointer;
+    border-radius: 9px; padding: 10px 20px; font: inherit; font-weight: 650; cursor: pointer; flex: 0 0 auto;
   }
   button.primary:disabled { opacity: .55; cursor: wait; }
-  .hint { color: var(--muted); font-size: 13px; margin-top: 8px; }
-  .answer {
-    margin-top: 16px; padding: 14px 16px; border-left: 3px solid var(--accent);
-    background: var(--panel); border-radius: 0 10px 10px 0;
-    border-top: 1px solid var(--border); border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border); white-space: pre-wrap;
+  .hint { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+  .recent { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .recent button {
+    background: none; border: 1px solid var(--border); color: var(--text-2); border-radius: 999px;
+    padding: 4px 12px; font: inherit; font-size: 12.5px; cursor: pointer; max-width: 100%;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
-  .answer .tag { color: var(--muted); font-size: 12px; text-transform: uppercase;
-    letter-spacing: .05em; display: block; margin-bottom: 6px; }
-  .notice { margin-top: 16px; padding: 10px 14px; border-radius: 8px;
-    background: var(--notice-bg); color: var(--notice-text); font-size: 14px; }
-  .results { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-  .result { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
-  .result .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-  .result h3 { font-size: 15px; font-weight: 600; }
+  .recent button:hover { border-color: var(--accent); color: var(--text); }
+
+  .answer {
+    margin-top: 14px; padding: 13px 15px; border-left: 3px solid var(--accent);
+    background: var(--panel); border-radius: 0 12px 12px 0;
+    border-top: 1px solid var(--ring); border-right: 1px solid var(--ring);
+    border-bottom: 1px solid var(--ring); white-space: pre-wrap;
+  }
+  .answer .tag { color: var(--muted); font-size: 11px; text-transform: uppercase;
+    letter-spacing: .06em; display: block; margin-bottom: 6px; font-weight: 600; }
+  .notice { margin-top: 14px; padding: 10px 14px; border-radius: 9px;
+    background: var(--notice-bg); color: var(--notice-text); font-size: 13.5px; }
+
+  .results { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .result { background: var(--panel); border: 1px solid var(--ring); border-radius: 12px; padding: 12px 14px; }
+  .result .top { display: flex; gap: 10px; align-items: flex-start; }
+  .result h3 { font-size: 15px; font-weight: 650; flex: 1; line-height: 1.35; }
   .result h3 a { color: inherit; text-decoration: none; }
   .result h3 a:hover { text-decoration: underline; }
-  .result .score { font-size: 12px; color: var(--score); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .result .bar { height: 3px; border-radius: 2px; background: var(--border); margin: 8px 0; overflow: hidden; }
-  .result .bar span { display: block; height: 100%; background: var(--score); }
-  .result p { color: var(--text); font-size: 14px; white-space: pre-wrap; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px; flex: 0 0 auto;
+    font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 2px 9px 2px 7px;
+    white-space: nowrap; margin-top: 1px;
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--muted)); }
+  .meter { display: flex; align-items: center; gap: 8px; margin: 8px 0 9px; }
+  .meter .track { flex: 1; height: 4px; border-radius: 2px; background: var(--meter-track); overflow: hidden; }
+  .meter .fill { display: block; height: 100%; border-radius: 2px; background: var(--meter-fill); }
+  .meter .val { font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .result p { color: var(--text); font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .st { border-radius: 5px; padding: 0 5px; font-weight: 600; white-space: nowrap; }
+  .st-warning  { background: var(--st-warning-bg);  color: var(--st-warning-tx); }
+  .st-serious  { background: var(--st-serious-bg);  color: var(--st-serious-tx); }
+  .st-critical { background: var(--st-critical-bg); color: var(--st-critical-tx); }
+  .st-good     { background: var(--st-good-bg);     color: var(--st-good-tx); }
+  .ghost {
+    background: none; border: 1px solid var(--border); color: var(--text-2);
+    border-radius: 7px; padding: 5px 12px; cursor: pointer; font: inherit; font-size: 12.5px; margin-top: 9px;
+  }
+  .ghost:hover { border-color: var(--accent); color: var(--text); }
+
+  details.related { margin-top: 14px; }
+  details.related > summary {
+    cursor: pointer; color: var(--text-2); font-size: 13.5px; font-weight: 600;
+    padding: 8px 2px; list-style-position: inside;
+  }
+  details.related .results { margin-top: 6px; }
+  .cited-tag { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+
   table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; }
   td.num { color: var(--muted); font-variant-numeric: tabular-nums; }
-  .del { background: none; border: 1px solid var(--border); color: var(--muted);
-    border-radius: 6px; padding: 3px 10px; cursor: pointer; font-size: 13px; }
-  .del:hover { color: #dc2626; border-color: #dc2626; }
+  .del { background: none; border: 1px solid var(--border); color: var(--text-2);
+    border-radius: 7px; padding: 3px 10px; cursor: pointer; font-size: 12.5px; }
+  .del:hover { color: var(--st-critical-tx); border-color: var(--st-critical-tx); }
   .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border);
     border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite;
     vertical-align: -2px; margin-right: 6px; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .field { margin-bottom: 10px; }
-  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .field label { display: block; font-size: 12.5px; color: var(--text-2); margin-bottom: 4px; font-weight: 600; }
+  @media (min-width: 560px) {
+    .row input[type="text"] { flex: 1 1 auto; }
+    .row select { flex: 0 0 auto; }
+  }
 </style>
 </head>
 <body>
@@ -97,29 +155,31 @@
   </nav>
 
   <section id="view-search">
-    <div class="panel">
-      <div class="row">
-        <input type="text" id="prompt" placeholder="Ask the knowledge base… (e.g. which cards counter spells?)" autofocus>
-        <select id="mode" title="Answer generation">
-          <option value="none">Matches only</option>
-          <option value="auto">Answer (auto)</option>
-          <option value="local">Answer (local model)</option>
-          <option value="claude">Answer (Claude)</option>
-        </select>
-        <select id="topk" title="Results">
-          <option>3</option><option selected>5</option><option>8</option><option>12</option>
-        </select>
-        <button class="primary" id="go">Search</button>
+    <div class="searchbox">
+      <div class="panel">
+        <div class="row">
+          <input type="text" id="prompt" placeholder="Ask the knowledge base…" autofocus>
+          <select id="mode" title="Answer generation">
+            <option value="none">Matches only</option>
+            <option value="auto">Answer (auto)</option>
+            <option value="local">Answer (local model)</option>
+            <option value="claude">Answer (Claude)</option>
+          </select>
+          <select id="topk" title="Results">
+            <option>3</option><option selected>5</option><option>8</option><option>12</option>
+          </select>
+          <button class="primary" id="go">Search</button>
+        </div>
+        <div class="recent" id="recent" hidden></div>
       </div>
-      <div class="hint" id="search-hint">Retrieval is instant; generated answers take longer (the local model runs on CPU).</div>
     </div>
-    <div id="out"></div>
+    <div id="out"><div class="hint" style="padding:4px 2px">Retrieval is instant; generated answers take longer (the local model runs on CPU).</div></div>
   </section>
 
   <section id="view-docs" hidden>
-    <div class="panel" style="margin-bottom:16px">
+    <div class="panel" style="margin-bottom:14px">
       <div class="field"><label for="new-title">Title</label>
-        <input type="text" id="new-title" placeholder="e.g. Team onboarding notes"></div>
+        <input type="text" id="new-title" placeholder="e.g. Local tournament floor rules"></div>
       <div class="field"><label for="new-text">Text</label>
         <textarea id="new-text" placeholder="Paste any text to add it to the knowledge base…"></textarea></div>
       <button class="primary" id="add">Add to knowledge base</button>
@@ -138,6 +198,51 @@ const api = async (path, opts) => {
   return body;
 };
 const esc = (s) => (s ?? "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// ---- source identification (badge text + fixed categorical color slot) ----
+function sourceKind(x) {
+  const t = x.title || "", s = x.source || "";
+  if (t.includes("Errata") || s.includes("errata")) return {label: "Errata", slot: "errata"};
+  if (t.includes("Patch Notes") || s.includes("patch-notes")) return {label: "Patch notes", slot: "patch"};
+  if (t.startsWith("Riftbound Core Rules")) return {label: "Core rules", slot: "core"};
+  if (t.startsWith("Riftbound Tournament Rules")) return {label: "Tournament", slot: "tourn"};
+  if (t.startsWith("FAQ:") || s.includes("riftboundfaq")) return {label: "FAQ", slot: "faq"};
+  if (s.includes("riftbound.gg/cards")) return {label: "Card", slot: "card"};
+  return {label: "Note", slot: ""};
+}
+const badge = (x) => {
+  const k = sourceKind(x);
+  const dot = k.slot ? `style="--dot: var(--src-${k.slot})"` : "";
+  return `<span class="badge"><span class="dot" ${dot}></span>${k.label}</span>`;
+};
+
+// ---- penalty tags in rules text -> status chips (text is part of the chip) ----
+const STATUS = {"No Penalty": "good", "Warning": "warning", "Game Loss": "serious",
+                "Match Loss": "serious", "Disqualification": "critical"};
+function decorate(text) {
+  let html = esc(text);
+  for (const [label, cls] of Object.entries(STATUS)) {
+    html = html.replaceAll(`[ ${label} ]`, `<span class="st st-${cls}">${label}</span>`);
+  }
+  return html;
+}
+
+function resultCard(x, extraTag) {
+  const titleHtml = x.source && x.source.startsWith("http")
+    ? `<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.title)}</a>` : esc(x.title);
+  const meter = typeof x.score === "number" ? `
+    <div class="meter">
+      <span class="track"><span class="fill" style="width:${Math.max(2, Math.round(x.score * 100))}%"></span></span>
+      <span class="val">${x.score.toFixed(3)}</span>
+    </div>` : (extraTag ? `<div class="meter"><span class="cited-tag">${extraTag}</span></div>` : "");
+  return `
+    <div class="result">
+      <div class="top"><h3>${titleHtml}</h3>${badge(x)}</div>
+      ${meter}
+      <p data-doc="${x.doc_id}">${decorate(x.text)}</p>
+      ${x.partial ? `<button class="ghost expand" data-doc="${x.doc_id}">Show full text</button>` : ""}
+    </div>`;
+}
 
 async function refreshStatus() {
   try {
@@ -158,6 +263,23 @@ function show(tab) {
 $("tab-search").onclick = () => show("search");
 $("tab-docs").onclick = () => show("docs");
 
+// ---- recent queries ----
+const RECENT_KEY = "ragkb-recent";
+function recent() { try { return JSON.parse(localStorage.getItem(RECENT_KEY)) || []; } catch { return []; } }
+function pushRecent(q) {
+  const list = [q, ...recent().filter((x) => x !== q)].slice(0, 5);
+  localStorage.setItem(RECENT_KEY, JSON.stringify(list));
+  renderRecent();
+}
+function renderRecent() {
+  const list = recent();
+  $("recent").hidden = !list.length;
+  $("recent").innerHTML = list.map((q) => `<button title="${esc(q)}">${esc(q)}</button>`).join("");
+  for (const btn of $("recent").querySelectorAll("button")) {
+    btn.onclick = () => { $("prompt").value = btn.title; runSearch(); };
+  }
+}
+
 async function runSearch() {
   const prompt = $("prompt").value.trim();
   if (!prompt) return;
@@ -170,39 +292,23 @@ async function runSearch() {
       method: "POST", headers: {"Content-Type": "application/json"},
       body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode}),
     });
+    pushRecent(prompt);
     let html = "";
-    if (r.expanded_prompt) html += `<div class="hint" style="margin-top:12px">interpreted as: ${esc(r.expanded_prompt)}</div>`;
-    if (r.card_filters) html += `<div class="hint" style="margin-top:6px">card filters: ${esc(r.card_filters)}</div>`;
+    const hints = [];
+    if (r.expanded_prompt) hints.push(`interpreted as: ${esc(r.expanded_prompt)}`);
+    if (r.card_filters) hints.push(`card filters: ${esc(r.card_filters)}`);
+    if (hints.length) html += `<div class="hint" style="margin-top:10px">${hints.join(" · ")}</div>`;
     if (r.answer) html += `<div class="answer"><span class="tag">answer · ${esc(r.backend)} backend</span>${esc(r.answer)}</div>`;
     if (r.notice) html += `<div class="notice">${esc(r.notice)}</div>`;
     if (r.results.length) {
-      html += `<div class="results">` + r.results.map((x) => `
-        <div class="result">
-          <div class="top">
-            <h3>${x.source && x.source.startsWith("http")
-              ? `<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.title)}</a>`
-              : esc(x.title)}</h3>
-            <span class="score">${x.score.toFixed(3)}</span>
-          </div>
-          <div class="bar"><span style="width:${Math.max(2, Math.round(x.score * 100))}%"></span></div>
-          <p data-doc="${x.doc_id}">${esc(x.text)}</p>
-          ${x.partial ? `<button class="del expand" data-doc="${x.doc_id}">excerpt — show full text</button>` : ""}
-        </div>`).join("") + `</div>`;
+      html += `<div class="results">` + r.results.map((x) => resultCard(x)).join("") + `</div>`;
     } else if (!r.notice) {
       html += `<div class="notice">No matches.</div>`;
     }
     if (r.related && r.related.length) {
-      html += `<div class="hint" style="margin-top:16px">Referenced rules (cited by the matches above)</div>`;
-      html += `<div class="results" style="margin-top:8px">` + r.related.map((x) => `
-        <div class="result">
-          <div class="top">
-            <h3>${x.source && x.source.startsWith("http")
-              ? `<a href="${esc(x.source)}" target="_blank" rel="noopener">${esc(x.title)}</a>`
-              : esc(x.title)}</h3>
-            <span class="score">cited</span>
-          </div>
-          <p>${esc(x.text)}</p>
-        </div>`).join("") + `</div>`;
+      html += `<details class="related" open><summary>Referenced rules (${r.related.length}) — cited by the matches above</summary>
+        <div class="results">` +
+        r.related.map((x) => resultCard(x, "cited")).join("") + `</div></details>`;
     }
     $("out").innerHTML = html;
     for (const btn of $("out").querySelectorAll(".expand")) {
@@ -212,7 +318,7 @@ async function runSearch() {
         try {
           const doc = await api(`/api/documents/${btn.dataset.doc}/text`);
           const p = $("out").querySelector(`p[data-doc="${btn.dataset.doc}"]`);
-          if (p) p.textContent = doc.text;
+          if (p) p.innerHTML = decorate(doc.text);
           btn.remove();
         } catch (e) {
           btn.textContent = `error: ${e.message}`;
@@ -272,6 +378,7 @@ $("add").onclick = async () => {
 };
 
 refreshStatus();
+renderRecent();
 </script>
 </body>
 </html>
