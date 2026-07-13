@@ -20,6 +20,8 @@ a local model (or by Claude via the Anthropic API).
 
 ## Install
 
+Sharing with friends? Send them **[docs/INSTALL.md](docs/INSTALL.md)** — one page covering computer, Android, and no-install options.
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
