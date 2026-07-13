@@ -92,7 +92,13 @@ def generate_answer(
             "ANTHROPIC_API_KEY is not set; cannot generate with the claude backend."
         )
 
-    import anthropic
+    try:
+        import anthropic
+    except ImportError:
+        raise GenerationUnavailable(
+            "The anthropic package is not installed; run `pip install -e '.[claude]'` "
+            "or use the local backend."
+        ) from None
 
     client = anthropic.Anthropic()
     response = client.messages.create(

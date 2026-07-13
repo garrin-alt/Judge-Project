@@ -26,7 +26,7 @@ In Termux:
 
 ```bash
 pkg update && pkg upgrade
-pkg install python python-numpy git cmake clang make binutils
+pkg install python python-numpy git cmake clang make binutils rust
 ```
 
 (`python-numpy` comes prebuilt from the Termux repo; installing numpy via
@@ -40,8 +40,9 @@ cd Judge-Project
 pip install -e ".[local]"
 ```
 
-`llama-cpp-python` compiles from source here — expect 10–20 minutes on a
-phone. This is the only slow step and only happens once.
+`llama-cpp-python` and `pydantic-core` compile from source here (C++ and
+Rust respectively) — expect 15–30 minutes on a phone. This is the only
+slow step and only happens once.
 
 Then make the llama embeddings backend the default for this device:
 
