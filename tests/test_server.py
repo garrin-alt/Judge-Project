@@ -89,6 +89,28 @@ def test_query_generate_unavailable_falls_back(client, monkeypatch):
     assert body["results"]  # retrieval still returned
 
 
+def test_document_full_text_endpoint(client):
+    long_text = "alpha " * 200 + "omega"
+    r = client.post("/api/documents", json={"title": "Long", "text": long_text})
+    doc_id = r.json()["id"]
+    assert r.json()["chunks"] > 1
+
+    r = client.get(f"/api/documents/{doc_id}/text")
+    assert r.status_code == 200
+    assert "omega" in r.json()["text"]
+
+    assert client.get("/api/documents/99999/text").status_code == 404
+
+
+def test_query_marks_partial_results(client):
+    client.post("/api/documents", json={"title": "Long", "text": "alpha " * 200})
+    client.post("/api/documents", json={"title": "Short", "text": "beta"})
+    r = client.post("/api/query", json={"prompt": "alpha alpha", "top_k": 2})
+    by_title = {x["title"]: x for x in r.json()["results"]}
+    assert by_title["Long"]["partial"] is True
+    assert by_title["Short"]["partial"] is False
+
+
 def test_index_served(client):
     r = client.get("/")
     assert r.status_code == 200

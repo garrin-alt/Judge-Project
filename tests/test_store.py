@@ -58,6 +58,27 @@ def test_reset_clears_everything(store):
     assert store.list_documents() == []
 
 
+def test_search_returns_one_result_per_document(store):
+    # one doc with two near-identical chunks, one distinct doc
+    close = np.array([[1.0, 0.0], [0.99, 0.01]], dtype=np.float32)
+    store.add_document("Long Rule", None, ["part one", "part two"], close)
+    store.add_document("Other", None, ["other"], np.array([[0.5, 0.5]], dtype=np.float32))
+
+    results = store.search(_vec(1.0, 0.0), top_k=3)
+    titles = [r.title for r in results]
+    assert titles == ["Long Rule", "Other"]  # no duplicate doc
+
+
+def test_get_document_text_full_and_capped(store):
+    vecs = np.array([[1.0, 0.0], [0.0, 1.0]], dtype=np.float32)
+    doc_id = store.add_document("Doc", None, ["alpha " * 50, "omega " * 50], vecs)
+
+    _, _, full = store.get_document_text(doc_id, max_chars=None)
+    assert "alpha" in full and "omega" in full
+    _, _, capped = store.get_document_text(doc_id, max_chars=100)
+    assert len(capped) <= 104 and capped.endswith("...")
+
+
 def test_add_document_mismatched_lengths_raises(store):
     with pytest.raises(ValueError):
         store.add_document("Doc", None, ["a", "b"], np.array([[1.0, 0.0]], dtype=np.float32))

@@ -185,7 +185,8 @@ async function runSearch() {
             <span class="score">${x.score.toFixed(3)}</span>
           </div>
           <div class="bar"><span style="width:${Math.max(2, Math.round(x.score * 100))}%"></span></div>
-          <p>${esc(x.text)}</p>
+          <p data-doc="${x.doc_id}">${esc(x.text)}</p>
+          ${x.partial ? `<button class="del expand" data-doc="${x.doc_id}">excerpt — show full text</button>` : ""}
         </div>`).join("") + `</div>`;
     } else if (!r.notice) {
       html += `<div class="notice">No matches.</div>`;
@@ -204,6 +205,20 @@ async function runSearch() {
         </div>`).join("") + `</div>`;
     }
     $("out").innerHTML = html;
+    for (const btn of $("out").querySelectorAll(".expand")) {
+      btn.onclick = async () => {
+        btn.disabled = true;
+        btn.textContent = "loading…";
+        try {
+          const doc = await api(`/api/documents/${btn.dataset.doc}/text`);
+          const p = $("out").querySelector(`p[data-doc="${btn.dataset.doc}"]`);
+          if (p) p.textContent = doc.text;
+          btn.remove();
+        } catch (e) {
+          btn.textContent = `error: ${e.message}`;
+        }
+      };
+    }
   } catch (e) {
     $("out").innerHTML = `<div class="notice">Error: ${esc(e.message)}</div>`;
   } finally {

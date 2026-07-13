@@ -72,6 +72,15 @@ def create_app(db_path: str | None = None) -> FastAPI:
             doc_id = store.add_document(req.title, req.source, chunks, vectors)
         return {"id": doc_id, "chunks": len(chunks)}
 
+    @app.get("/api/documents/{doc_id}/text")
+    def document_text(doc_id: int):
+        with open_store() as store:
+            try:
+                title, source, text = store.get_document_text(doc_id, max_chars=None)
+            except KeyError:
+                raise HTTPException(status_code=404, detail=f"No document #{doc_id}.")
+        return {"id": doc_id, "title": title, "source": source, "text": text}
+
     @app.delete("/api/documents/{doc_id}")
     def remove_document(doc_id: int):
         with open_store() as store:
@@ -87,6 +96,11 @@ def create_app(db_path: str | None = None) -> FastAPI:
         with open_store() as store:
             resp = run_query(store, req.prompt, top_k=req.top_k, generate=req.generate)
 
+        with open_store() as store:
+            partial = {
+                r.doc_id: store.count_doc_chunks(r.doc_id) > 1 for r in resp.results
+            }
+
         return {
             "results": [
                 {
@@ -95,6 +109,7 @@ def create_app(db_path: str | None = None) -> FastAPI:
                     "source": r.source,
                     "text": r.text,
                     "score": round(r.score, 4),
+                    "partial": partial.get(r.doc_id, False),
                 }
                 for r in resp.results
             ],

@@ -178,8 +178,15 @@ class KnowledgeStore:
             "SELECT id, title FROM documents WHERE title LIKE ?", (prefix + "%",)
         ).fetchall()
 
-    def get_document_text(self, doc_id: int, max_chars: int = 1200) -> tuple[str, str | None, str]:
-        """Return (title, source, text) for a document, text capped at max_chars."""
+    def get_document_text(
+        self, doc_id: int, max_chars: int | None = 1200
+    ) -> tuple[str, str | None, str]:
+        """Return (title, source, text) for a document.
+
+        Text is capped at max_chars; pass None for the full text. Chunks
+        overlap (see chunking.py), so the concatenation may repeat a few
+        words at chunk seams.
+        """
         doc = self.conn.execute(
             "SELECT title, source FROM documents WHERE id = ?", (doc_id,)
         ).fetchone()
@@ -189,11 +196,12 @@ class KnowledgeStore:
             "SELECT text FROM chunks WHERE doc_id = ? ORDER BY chunk_index", (doc_id,)
         ).fetchall()
         text = "\n".join(r[0] for r in rows)
-        if len(text) > max_chars:
+        if max_chars is not None and len(text) > max_chars:
             text = text[:max_chars].rsplit(" ", 1)[0] + "..."
         return doc[0], doc[1], text
 
     def search(self, query_vec: np.ndarray, top_k: int = 5) -> list[SearchResult]:
+        """Top matching chunks, at most one (the best) per document."""
         rows = self.conn.execute(
             "SELECT c.id, c.doc_id, c.text, c.embedding, d.title, d.source "
             "FROM chunks c JOIN documents d ON d.id = c.doc_id"
@@ -211,10 +219,13 @@ class KnowledgeStore:
         norms[norms == 0] = 1e-12
         scores = (matrix @ query_vec) / (norms * query_norm)
 
-        order = np.argsort(-scores)[:top_k]
         results = []
-        for idx in order:
+        seen_docs = set()
+        for idx in np.argsort(-scores):
             r = rows[idx]
+            if r[1] in seen_docs:
+                continue
+            seen_docs.add(r[1])
             results.append(
                 SearchResult(
                     chunk_id=r[0],
@@ -225,4 +236,11 @@ class KnowledgeStore:
                     score=float(scores[idx]),
                 )
             )
+            if len(results) >= top_k:
+                break
         return results
+
+    def count_doc_chunks(self, doc_id: int) -> int:
+        return self.conn.execute(
+            "SELECT COUNT(*) FROM chunks WHERE doc_id = ?", (doc_id,)
+        ).fetchone()[0]
