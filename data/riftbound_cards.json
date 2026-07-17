@@ -260,7 +260,7 @@
   "cost": "4",
   "might": null,
   "tags": null,
-  "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. If this kills it, do this: draw 1.",
+  "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 3 to a unit at a battlefield. If this kills it, draw 1.",
   "flavor": "“Ashes, ashes, they all fall down.”",
   "promo": false,
   "banned": false,
@@ -709,7 +709,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "Discard 1, {Exhaust}: Choose a friendly unit. The next time it would die this turn, you may pay {Fury Rune} to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",
+  "effect": "Discard 1, {Exhaust}: Choose a friendly unit. The next time it dies this turn, you may pay {Fury Rune} to recall it exhausted instead. (Send it to base. This isn't a move.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -1365,7 +1365,7 @@
   "tags": [
    "Shurima"
   ],
-  "effect": "You may pay {Calm Rune} as an additional cost to play me.\nWhen you play me, if you paid the additional cost, draw 1.",
+  "effect": "As you play me, you may pay {Calm Rune} as an additional cost. If you do, draw 1.",
   "flavor": "It always goes back for seconds.",
   "promo": false,
   "banned": false,
@@ -2138,7 +2138,7 @@
    "Sona",
    "Demacia"
   ],
-  "effect": "At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",
+  "effect": "While I'm at a battlefield, ready 4 friendly runes at the end of your turn.",
   "flavor": "“The symphony never ends.”",
   "promo": false,
   "banned": false,
@@ -2250,7 +2250,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nIf a friendly unit would die, kill this instead. Heal that unit, exhaust it, and recall it. (Send it to base. This isn't a move.)",
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -2933,7 +2933,7 @@
   "cost": "3",
   "might": null,
   "tags": null,
-  "effect": "[Action] (Play on your turn or in showdowns.)\nBanish a friendly unit, then its owner plays it to their base, ignoring its cost.",
+  "effect": "[Action] (Play on your turn or in showdowns.)\nBanish a friendly unit, then play it to base, ignoring its cost.",
   "flavor": "“Where do the portals go? You know, I’ve never asked.” — Norra",
   "promo": false,
   "banned": false,
@@ -3061,7 +3061,7 @@
   "tags": [
    "Yordle"
   ],
-  "effect": "When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand, ignoring its cost. If it’s a unit, play it here.",
+  "effect": "When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand here, ignoring its cost.",
   "flavor": "“I brought snacks!”",
   "promo": false,
   "banned": false,
@@ -3308,7 +3308,7 @@
   "cost": "5",
   "might": null,
   "tags": null,
-  "effect": "Each player looks at the top 5 cards of their Main Deck, banishes one of them, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",
+  "effect": "Each player looks at the top 5 cards of their Main Deck, chooses one, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -3489,7 +3489,7 @@
    "Teemo",
    "Bandle City"
   ],
-  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -3513,7 +3513,7 @@
    "Teemo",
    "Bandle City"
   ],
-  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -4545,7 +4545,7 @@
   "cost": "9",
   "might": null,
   "tags": null,
-  "effect": "At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit and banish it. Play it, ignoring its cost, and recycle the rest.",
+  "effect": "At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit. Play it, ignoring its cost, and recycle the rest.",
   "flavor": "The omens offer much to those who dare to see them.",
   "promo": false,
   "banned": false,
@@ -5122,7 +5122,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "{Exhaust}: Return another friendly gear, unit, or facedown card to its owner's hand.",
+  "effect": "{Exhaust}: Return another friendly gear, unit, or [Hidden] card to its owner's hand.",
   "flavor": "“I know I put it in here somewhere...” —Teemo",
   "promo": false,
   "banned": false,
@@ -5202,7 +5202,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to its base.",
+  "effect": "{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to your base.",
   "flavor": "Without a ship, a pirate’s just another common criminal.",
   "promo": false,
   "banned": false,
@@ -5520,7 +5520,7 @@
   "tags": [
    "Nocturne"
   ],
-  "effect": "[Ganking] (I can move from battlefield to battlefield.)\nAs you look at or reveal me from the top of your deck, you may banish me. If you do, you may play me for {Any Rune}.",
+  "effect": "[Ganking] (I can move from battlefield to battlefield.)\nWhen you look at cards from the top of your deck (and don't draw them) and see me, you may play me for {Any Rune}.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -5704,7 +5704,7 @@
   "tags": [
    "Bilgewater"
   ],
-  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play me, you may choose a unit you control at another location. Move me to its location and it to my original location.",
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play me, you may choose a friendly unit. Move me to its location and it to my original location.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -6416,7 +6416,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "[Action] (Play on your turn or in showdowns.)\nYou may kill up to one gear. Draw 1.",
+  "effect": "[Action] (Play on your turn or in showdowns.)\nYou may kill a gear. Draw 1.",
   "flavor": "One person’s treasure is another one’s trash.",
   "promo": false,
   "banned": false,
@@ -6675,7 +6675,7 @@
    "Vi",
    "Ionia"
   ],
-  "effect": "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)\nWhen you recycle one or more cards to your Main Deck, buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff. Runes aren't cards.)",
+  "effect": "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)\nWhen you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff. Runes aren't cards.)",
   "flavor": "“Heart and mind as one.”",
   "promo": false,
   "banned": false,
@@ -7069,7 +7069,7 @@
   "set_name": "Origins",
   "rarity": "Rare",
   "type": "Legend",
-  "supertype": "",
+  "supertype": "Champion",
   "color": [
    "Fury",
    "Mind"
@@ -7138,7 +7138,7 @@
   "set_name": "Origins",
   "rarity": "Rare",
   "type": "Legend",
-  "supertype": "",
+  "supertype": "Champion",
   "color": [
    "Fury",
    "Body"
@@ -7345,7 +7345,7 @@
   "set_name": "Origins",
   "rarity": "Rare",
   "type": "Legend",
-  "supertype": "",
+  "supertype": "Champion",
   "color": [
    "Calm",
    "Mind"
@@ -7470,7 +7470,7 @@
   "tags": [
    "Lee Sin"
   ],
-  "effect": "Move an enemy unit. Then do this: Choose another enemy unit at its destination. They deal damage equal to their Mights to each other.",
+  "effect": "Move an enemy unit. Then choose another enemy unit at its destination. They deal damage equal to their Mights to each other.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -7483,7 +7483,7 @@
   "set_name": "Origins",
   "rarity": "Rare",
   "type": "Legend",
-  "supertype": "",
+  "supertype": "Champion",
   "color": [
    "Calm",
    "Chaos"
@@ -7782,7 +7782,7 @@
   "set_name": "Origins",
   "rarity": "Rare",
   "type": "Legend",
-  "supertype": "",
+  "supertype": "Champion",
   "color": [
    "Body",
    "Chaos"
@@ -7861,7 +7861,7 @@
   "tags": [
    "Sett"
   ],
-  "effect": "If a buffed unit you control would die, you may pay {Any Rune}, exhaust me, and spend its buff to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)\nWhen you conquer, ready me.",
+  "effect": "When a buffed unit you control would die, you may pay {Any Rune} and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)\nWhen you conquer, ready me.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -8357,7 +8357,7 @@
   "cost": null,
   "might": null,
   "tags": null,
-  "effect": "When you conquer here, you must recycle one of your runes. (This doesn’t choose anything.)",
+  "effect": "When you conquer here, recycle one of your runes.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -8417,7 +8417,7 @@
   "cost": null,
   "might": null,
   "tags": null,
-  "effect": "When you conquer here, ready up to 2 runes at the end of this turn.",
+  "effect": "When you conquer here, ready 2 runes at the end of this turn.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -8597,7 +8597,7 @@
   "cost": null,
   "might": null,
   "tags": null,
-  "effect": "Spells and abilities deal 1 Bonus Damage to units here. (Each instance of damage the spell deals to a unit here is increased by 1.)",
+  "effect": "Spells and abilities affecting units here each deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -9808,7 +9808,7 @@
   "tags": [
    "Annie"
   ],
-  "effect": "At the end of your turn, ready up to 2 runes.",
+  "effect": "At the end of your turn, ready 2 runes.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -9946,7 +9946,7 @@
   "tags": [
    "Master Yi"
   ],
-  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit. The next time it dies this turn, recall it exhausted instead. (Send it to base. This isn't a move.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -10215,7 +10215,7 @@
   "cost": "1",
   "might": null,
   "tags": null,
-  "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] {1 Energy} (You may pay the additional cost to repeat this spell's effect.)\nGive a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",
+  "effect": "[Action] (Play on your turn or in showdowns.)\n[Repeat] {1 Energy} (You may pay the additional cost to repeat this spell's effect.)\nGive a unit [Assault 2]. (+2 {Might} while it's an attacker.)",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -10787,7 +10787,7 @@
    "Rell",
    "Noxus"
   ],
-  "effect": "[Tank] (I must be assigned combat damage first.)\nWhen I attack, you may play an Equipment with Energy cost no more than {2 Energy}, ignoring its cost. If you do, then do this: Attach it to me.",
+  "effect": "[Tank] (I must be assigned combat damage first.)\nWhen I attack, you may play an Equipment with Energy cost no more than {2 Energy}, ignoring its cost, and attach it to me.",
   "flavor": "“Bones shatter and people lie, but I can always count on iron.”",
   "promo": false,
   "banned": false,
@@ -11658,7 +11658,7 @@
    "Janna",
    "Zaun"
   ],
-  "effect": "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)\nWhen you play me, heal your units here, then move up to one enemy unit from here to its base.",
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)\nWhen you play me, heal your units here, then move an enemy unit from here to its base.",
   "flavor": "“Gale winds unleashed!”",
   "promo": false,
   "banned": false,
@@ -11681,7 +11681,7 @@
    "Jax",
    "Icathia"
   ],
-  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nYour Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",
+  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nEach Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)",
   "flavor": "“Fighting words! My favorite kind.”",
   "promo": false,
   "banned": false,
@@ -11704,7 +11704,7 @@
    "Jax",
    "Icathia"
   ],
-  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nYour Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",
+  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nEach Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)",
   "flavor": "“Fighting words! My favorite kind.”",
   "promo": false,
   "banned": false,
@@ -11908,7 +11908,7 @@
    "Elite",
    "Demacia"
   ],
-  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nWhile I'm at a battlefield, opponents can't gain points.",
+  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nWhile I'm at a battlefield, opponents can't score points.",
   "flavor": "“I will stand for my country, my family, and nothing else.”",
   "promo": false,
   "banned": false,
@@ -13346,7 +13346,7 @@
   "tags": [
    "Noxus"
   ],
-  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nWhen I move to a battlefield, give another friendly unit my keywords and +{Might} equal to my Might this turn.",
+  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\nWhen I move to a battlefield, give a friendly unit my keywords and +{Might} equal to my Might this turn.",
   "flavor": "“Let’s give ‘em a good show!”",
   "promo": false,
   "banned": false,
@@ -13460,7 +13460,7 @@
    "Ionia",
    "Demon"
   ],
-  "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)\nWhen I conquer a battlefield that was uncontrolled, deal damage equal to my Might to an enemy unit in a base.",
+  "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)\nWhen I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -14121,7 +14121,7 @@
   "tags": [
    "Equipment"
   ],
-  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play this from face down, attach it to a unit you control (here).\n[Equip] {Chaos Rune} ({Chaos Rune}: Attach this to a unit you control.)",
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play this from face down, attach it to a unit you control here.\n[Equip] {Chaos Rune} ({Chaos Rune}: Attach this to a unit you control.)",
   "flavor": "Every shadow an ally.",
   "promo": false,
   "banned": false,
@@ -14825,7 +14825,7 @@
   "cost": "2",
   "might": null,
   "tags": null,
-  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nKill a friendly unit. If you do, give +{Might} equal to its Might to another friendly unit this turn.\nDraw 1.",
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nKill a friendly unit to give +{Might} equal to its Might to another friendly unit this turn. Draw 1.",
   "flavor": "“Death is my kindness.” —Mordekaiser",
   "promo": false,
   "banned": false,
@@ -14996,7 +14996,7 @@
    "Rek'Sai",
    "The Void"
   ],
-  "effect": "When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",
+  "effect": "When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here.",
   "flavor": "“KKRRKRKRKRKKK!”",
   "promo": false,
   "banned": false,
@@ -15019,7 +15019,7 @@
    "Rek'Sai",
    "The Void"
   ],
-  "effect": "When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",
+  "effect": "When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here.",
   "flavor": "“KKRRKRKRRKKRK!”",
   "promo": false,
   "banned": false,
@@ -15521,7 +15521,7 @@
   "tags": [
    "Rek'Sai"
   ],
-  "effect": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",
+  "effect": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -15544,7 +15544,7 @@
   "tags": [
    "Rek'Sai"
   ],
-  "effect": "Reveal the top 2 cards of your Main Deck. You may banish one, then play it, reducing its cost by {2 Energy}. Draw any you didn't banish.",
+  "effect": "Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by {2 Energy}. Draw any you did not play this way.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -15800,7 +15800,7 @@
   "tags": [
    "Azir"
   ],
-  "effect": "Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then do this: Ready up to two of them.",
+  "effect": "Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then ready two of them.",
   "flavor": "“The order is given!” — Azir",
   "promo": false,
   "banned": false,
@@ -16204,7 +16204,7 @@
   "cost": null,
   "might": null,
   "tags": null,
-  "effect": "When you conquer here, draw 1 for each other battlefield you or allies control.",
+  "effect": "When you conquer here, draw 1 for each other battlefield you or allies control..",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -17042,7 +17042,7 @@
   "tags": [
    "Rek'Sai"
   ],
-  "effect": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",
+  "effect": "When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",
   "flavor": "",
   "promo": false,
   "banned": false,
@@ -20425,7 +20425,7 @@
    "Yordle",
    "Mount Targon"
   ],
-  "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\n[Level 6][>] I have +1 {Might}. (While you have 6+ XP, get the effect.)",
+  "effect": "[Hunt] (When I conquer or hold, gain 1 XP.)\n[Level 6][>] I have +1 {Might}. (While you have 6+ XP, get the effect.)ambush",
   "flavor": "He's a yordle of many facets.",
   "promo": false,
   "banned": false,
@@ -25160,5 +25160,4677 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/unl-t05x-gold/"
+ },
+ {
+  "id": "VEN-001",
+  "name": "Baccai Sandspinner",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "[Empower] {5 Energy}. This ability costs {3 Energy} less if you control 4 or fewer runes. (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Deflect] and [Assault 2]. (Opponents must pay {Any Rune} to choose me with a spell or ability. +2 {Might} while I'm an attacker.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-001-baccai-sandspinner/"
+ },
+ {
+  "id": "VEN-002",
+  "name": "Blade Twirler",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Yordle",
+   "Ionia"
+  ],
+  "effect": "The first time I move each turn, choose a player. They [Burn 1]. (They put the top card of their Main Deck into their trash.)",
+  "flavor": "“Tails. I win. Heads you lose.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-002-blade-twirler/"
+ },
+ {
+  "id": "VEN-003",
+  "name": "Brittle Steel",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "Kill a gear.\n[Flow] {4 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-003-brittle-steel/"
+ },
+ {
+  "id": "VEN-004",
+  "name": "Dune Surfer",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "You ignore [Tank] while assigning combat damage here.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-004-dune-surfer/"
+ },
+ {
+  "id": "VEN-006",
+  "name": "Oasis Raider",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 {Might} and [Ganking] this turn. (I can move from battlefield to battlefield.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-006-oasis-raider/"
+ },
+ {
+  "id": "VEN-007",
+  "name": "Punching Poro",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Poro",
+   "Ionia"
+  ],
+  "effect": "[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +1 {Might}.",
+  "flavor": "Soft fur. Hard fists.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-007-punching-poro/"
+ },
+ {
+  "id": "VEN-008",
+  "name": "Ruthless Strike",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nAs an additional cost to play this, you may discard 1.\nDeal 3 to a unit at a battlefield. If you paid the additional cost, deal 5 to it instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-008-ruthless-strike/"
+ },
+ {
+  "id": "VEN-009",
+  "name": "Baccai Reaper",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "When I attack, you may pay {Fury Rune} to give me [Assault 2] this turn. (+2 {Might} while I'm an attacker.)",
+  "flavor": "The Ascended god-warriors of Shurima pity their lesser cousins.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-009-baccai-reaper/"
+ },
+ {
+  "id": "VEN-010",
+  "name": "Consuming Curse",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nDeal 2 to a unit at a battlefield. This deals 1 Bonus Damage for each card with this name in your trash.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-010-consuming-curse/"
+ },
+ {
+  "id": "VEN-011",
+  "name": "Pendulum Blade",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": [
+   "Equipment"
+  ],
+  "effect": "[Equip] {Fury Rune} ({Fury Rune}: Attach this to a unit you control.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-011-pendulum-blade/"
+ },
+ {
+  "id": "VEN-012",
+  "name": "Perfect Execution",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "Ready a unit and give it [Assault 3] this turn. (+3 {Might} while it's an attacker.)\n[Flow] {3 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-012-perfect-execution/"
+ },
+ {
+  "id": "VEN-013",
+  "name": "Shadow Assassin",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "I enter ready if you have a card with my name in your trash.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-013-shadow-assassin/"
+ },
+ {
+  "id": "VEN-015",
+  "name": "Decree of Rage",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nThis can't be countered.\nDeal 4 to an enemy Calm ({Calm Rune}) unit.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-015-decree-of-rage/"
+ },
+ {
+  "id": "VEN-016",
+  "name": "Eclipse Dragon",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "8",
+  "might": "8",
+  "tags": [
+   "Dragon",
+   "Mount Targon"
+  ],
+  "effect": "[Accelerate] (You may pay {1 Energy}{Fury Rune} as an additional cost to have me enter ready.)\nWhen I move, if you control 4 or fewer runes, draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-016-eclipse-dragon/"
+ },
+ {
+  "id": "VEN-017",
+  "name": "Morgana - Vindictive",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Demacia",
+   "Morgana"
+  ],
+  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nWhen you play me, deal damage to a unit equal to the damage marked on it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-017-morgana-vindictive/"
+ },
+ {
+  "id": "VEN-018",
+  "name": "Rage Amplifier",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] {6 Energy}{Fury Rune} ({6 Energy}{Fury Rune}: Empower this. Use only if not Empowered.)\nYour units have +1 {Might}. If I'm [Empowered], they have +2 {Might} instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-018-rage-amplifier/"
+ },
+ {
+  "id": "VEN-019",
+  "name": "Renekton - Rage Fueled",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Shurima",
+   "Renekton"
+  ],
+  "effect": "[Accelerate] (You may pay {1 Energy}{Fury Rune} as an additional cost to have me enter ready.)\nWhen I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
+  "flavor": "“There is no retreat.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-019-renekton-rage-fueled/"
+ },
+ {
+  "id": "VEN-019A",
+  "name": "Renekton - Rage Fueled",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "[Accelerate]\nWhen I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
+  "flavor": "“What? Do I have someone in my teeth?”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-019a-renekton-rage-fueled/"
+ },
+ {
+  "id": "VEN-020",
+  "name": "Twilight Reveler",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When I attack, ready another friendly unit.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-020-twilight-reveler/"
+ },
+ {
+  "id": "VEN-021",
+  "name": "Akali - Deadly Weapon",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Ionia",
+   "Akali"
+  ],
+  "effect": "[Empower] {2 Energy}{Fury Rune} ({2 Energy}{Fury Rune}: Empower me. Use only if not Empowered.)\nWhen I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.\n[Empowered][>] I have +1 {Might}.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-021-akali-deadly-weapon/"
+ },
+ {
+  "id": "VEN-021A",
+  "name": "Akali - Deadly Weapon",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Akali"
+  ],
+  "effect": "[Empower] {2 Energy}{Fury Rune}\nWhen I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.\n[Empowered][>] I have +1 {Might}..",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-021a-akali-deadly-weapon/"
+ },
+ {
+  "id": "VEN-022",
+  "name": "Endless Riches",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": null,
+  "tags": null,
+  "effect": "When you play this, banish your hand and trash, then [Burn 7].\nSkip your Draw Phase.\nYou may play cards from your trash.\nIf a card would go to your trash from anywhere other than your Main Deck, banish it instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-022-endless-riches/"
+ },
+ {
+  "id": "VEN-023",
+  "name": "Zed - From the Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Ionia",
+   "Zed"
+  ],
+  "effect": "You may discard 1 as an additional cost to play me.\nWhen you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token. (It has \"When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.\")",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-023-zed-from-the-shadows/"
+ },
+ {
+  "id": "VEN-023A",
+  "name": "Zed - From the Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Zed"
+  ],
+  "effect": "You may discard 1 as an additional cost to play me.\nWhen you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-023a-zed-from-the-shadows/"
+ },
+ {
+  "id": "VEN-024",
+  "name": "Affectionate Poro",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Poro",
+   "Noxus"
+  ],
+  "effect": "When a combat that I was in ends, if I haven't been dealt damage this turn, draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-024-affectionate-poro/"
+ },
+ {
+  "id": "VEN-025",
+  "name": "Esteemed Hierophant",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "While you control 7 or more runes, prevent all damage that enemy spells and abilities would deal to me.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-025-esteemed-hierophant/"
+ },
+ {
+  "id": "VEN-026",
+  "name": "Field Musicians",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When you play me, give a unit +3 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-026-field-musicians/"
+ },
+ {
+  "id": "VEN-027",
+  "name": "Hand Hammer",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": [
+   "Equipment"
+  ],
+  "effect": "[Equip] {Calm Rune} ({Calm Rune}: Attach this to a unit you control.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-027-hand-hammer/"
+ },
+ {
+  "id": "VEN-028",
+  "name": "Mournful Witness",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Fae",
+   "Ionia"
+  ],
+  "effect": "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)\n[Empowered][>] I have +2 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-028-mournful-witness/"
+ },
+ {
+  "id": "VEN-029",
+  "name": "Ol' Poro",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "2",
+  "might": "4",
+  "tags": [
+   "Poro",
+   "Bandle City"
+  ],
+  "effect": "I can't be played on your first, second, or third turns.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-029-ol-poro/"
+ },
+ {
+  "id": "VEN-031",
+  "name": "Twilight Shroud",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "Give a friendly unit +1 {Might} this turn. It can't be chosen by enemy spells and abilities this turn.\n[Flow] {2 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": "“I make problems … disappear.” —Akali",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-031-twilight-shroud/"
+ },
+ {
+  "id": "VEN-032",
+  "name": "Frostcoat Mother",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Dog",
+   "Freljord"
+  ],
+  "effect": "[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +3 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-032-frostcoat-mother/"
+ },
+ {
+  "id": "VEN-033",
+  "name": "Pakaa Protector",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Cat",
+   "Shurima"
+  ],
+  "effect": "When I move, reveal the top card of your Main Deck. If it's a unit, draw it. Otherwise, put it in your trash and give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-033-pakaa-protector/"
+ },
+ {
+  "id": "VEN-034",
+  "name": "Resonating Strike",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\n[Reaction] (Play on your turn or in showdowns.)\nChoose a battlefield you control and a unit you control at a different location. Move that unit to that battlefield and give it +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-034-resonating-strike/"
+ },
+ {
+  "id": "VEN-035",
+  "name": "Sanction",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose one —Empower a unit. Disempower it at end of turn.Disempower a unit that's [Empowered]. Empower it at end of turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-035-sanction/"
+ },
+ {
+  "id": "VEN-036",
+  "name": "Sandstone Chimera",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "7",
+  "might": "8",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "While I'm at a battlefield, players only channel 1 rune at the start of their Channel Phase.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-036-sandstone-chimera/"
+ },
+ {
+  "id": "VEN-037",
+  "name": "Tomb-Raider Barbara",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "When you play me, if you control 7 or more runes, choose an enemy gear. If it's [Empowered], disempower it. Otherwise, kill it.",
+  "flavor": "Wait for her signal. Don't worry, you'll know.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-037-tomb-raider-barbara/"
+ },
+ {
+  "id": "VEN-038",
+  "name": "Akali - Silent",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Ionia",
+   "Akali"
+  ],
+  "effect": "I can't be chosen by enemy spells and abilities unless I'm in combat.\nWhen I move to a battlefield, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-038-akali-silent/"
+ },
+ {
+  "id": "VEN-038A",
+  "name": "Akali - Silent",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Akali"
+  ],
+  "effect": "I can't be chosen by enemy spells and abilities unless I'm in combat.\nWhen I move to a battlefield, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-038a-akali-silent/"
+ },
+ {
+  "id": "VEN-039",
+  "name": "Crumbling Sands",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nCounter a spell if an opponent has played another spell this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-039-crumbling-sands/"
+ },
+ {
+  "id": "VEN-040",
+  "name": "Decree of Focus",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a friendly unit that's in combat with an enemy Fury ({Fury Rune}) unit or that's being chosen by an enemy Fury spell. Give it +4 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-040-decree-of-focus/"
+ },
+ {
+  "id": "VEN-041",
+  "name": "Riven - Shattered",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Noxus",
+   "Riven"
+  ],
+  "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)\nWhen I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",
+  "flavor": "“A sword mirrors its owner.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-041-riven-shattered/"
+ },
+ {
+  "id": "VEN-042",
+  "name": "Shen - Scourge of Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Shen",
+   "Ionia"
+  ],
+  "effect": "When I hold, if there is exactly one other unit you control here, draw 1.",
+  "flavor": "“Our wills align.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-042-shen-scourge-of-shadows/"
+ },
+ {
+  "id": "VEN-042A",
+  "name": "Shen - Scourge of Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Shen"
+  ],
+  "effect": "When I hold, if there is exactly one other unit you control here, draw 1.",
+  "flavor": "“Our wills align.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-042a-shen-scourge-of-shadows/"
+ },
+ {
+  "id": "VEN-043",
+  "name": "Steel Paws",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": [
+   "Cat",
+   "Piltover"
+  ],
+  "effect": "[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)\n[Empower] {7 Energy} ({7 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +7 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-043-steel-paws/"
+ },
+ {
+  "id": "VEN-044",
+  "name": "Astral Heron",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "7",
+  "might": "7",
+  "tags": [
+   "Bird",
+   "Mount Targon"
+  ],
+  "effect": "When you play your first card each turn, if I'm at a battlefield, your next card costs {2 Energy}{Any Rune}{Any Rune} less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-044-astral-heron/"
+ },
+ {
+  "id": "VEN-045",
+  "name": "Helm of Suppression",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] {4 Energy}{Calm Rune} ({4 Energy}{Calm Rune}: Empower this. Use only if not Empowered.)\nOpponents' spells cost {1 Energy} more. If this is [Empowered], they cost {1 Energy}{Any Rune} more instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-045-helm-of-suppression/"
+ },
+ {
+  "id": "VEN-046",
+  "name": "Nasus - Ascended",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "8",
+  "might": "8",
+  "tags": [
+   "Dog",
+   "Shurima",
+   "Nasus"
+  ],
+  "effect": "[Deflect 2] (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)\n[Empower] {8 Energy} ({8 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] When I conquer, you score 1 point.",
+  "flavor": "“Eternity is beyond your reach.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-046-nasus-ascended/"
+ },
+ {
+  "id": "VEN-046A",
+  "name": "Nasus - Ascended",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "8",
+  "might": "8",
+  "tags": [
+   "Dog",
+   "Nasus"
+  ],
+  "effect": "[Deflect 2]\n[Empower] {8 Energy}\n[Empowered][>] When I conquer, you score 1 point.",
+  "flavor": "“Eternity is beyond your reach.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-046a-nasus-ascended/"
+ },
+ {
+  "id": "VEN-047",
+  "name": "Apprentice Mage",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Bilgewater"
+  ],
+  "effect": "[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)\nWhen I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)\n[Empowered][>] I have +1 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-047-apprentice-mage/"
+ },
+ {
+  "id": "VEN-048",
+  "name": "Cloud Drake",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "5",
+  "tags": [
+   "Dragon",
+   "Demacia"
+  ],
+  "effect": "When you play me, draw 1.",
+  "flavor": "These things are a cirrus problem.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-048-cloud-drake/"
+ },
+ {
+  "id": "VEN-049",
+  "name": "Dredge Up",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "Draw 1.\n[Flow] {2 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-049-dredge-up/"
+ },
+ {
+  "id": "VEN-050",
+  "name": "Grumpy Rockbear",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay {Any Rune} to choose me with a spell or ability.+3 {Might} while I'm a defender.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-050-grumpy-rockbear/"
+ },
+ {
+  "id": "VEN-051",
+  "name": "Iterative Design",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "Play a 3 {Might} Mech unit token.\n[Flow] {2 Energy}{Mind Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-051-iterative-design/"
+ },
+ {
+  "id": "VEN-052",
+  "name": "Mesmerize",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-052-mesmerize/"
+ },
+ {
+  "id": "VEN-053",
+  "name": "Otterpus",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Bandle City"
+  ],
+  "effect": "If a player would score 1 point from conquering or holding during their first or second turn, they draw 1 instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-053-otterpus/"
+ },
+ {
+  "id": "VEN-054",
+  "name": "Questionable Tome",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] —  {Exhaust} (Pay the cost: Empower me. Use only if not Empowered.)\nDisempower this, {1 Energy}, {Exhaust}: Draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-054-questionable-tome/"
+ },
+ {
+  "id": "VEN-055",
+  "name": "Applied Researchers",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] Your spells cost {1 Energy}{Any Rune} less, to a minimum of {1 Energy}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-055-applied-researchers/"
+ },
+ {
+  "id": "VEN-056",
+  "name": "Clairvoyance",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "7",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\n[Predict 5]. (Look at the top 5 cards of your Main Deck. Recycle any of them and put the rest back in any order.)\nDraw 2.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-056-clairvoyance/"
+ },
+ {
+  "id": "VEN-058",
+  "name": "Patched Porobot",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Mech",
+   "Poro",
+   "Piltover"
+  ],
+  "effect": "(I enter exhausted.)\nWhen you play me, if you control 3 or more other gear, draw 1.",
+  "flavor": "Attempts to synthetically replicate a poro's whimsy and pure adorable nature have yielded mixed results.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-058-patched-porobot/"
+ },
+ {
+  "id": "VEN-060",
+  "name": "Sky Cruiser",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Piltover"
+  ],
+  "effect": "Discard a gear, {1 Energy}, {Exhaust}: Deal 4 to a unit at a battlefield.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-060-sky-cruiser/"
+ },
+ {
+  "id": "VEN-061",
+  "name": "Decree of Insight",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nIgnore [Deflect] while paying this spell's cost.\nGive an enemy Body ({Body Rune}) unit -5 {Might} this turn.",
+  "flavor": "Force is artless. Be inspired.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-061-decree-of-insight/"
+ },
+ {
+  "id": "VEN-062",
+  "name": "Hextech Formula",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "This enters exhausted.\n{Exhaust}: Empower another gear. (It becomes Empowered if it's not already.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-062-hextech-formula/"
+ },
+ {
+  "id": "VEN-063",
+  "name": "Nasus - Guardian of Knowledge",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Dog",
+   "Shurima",
+   "Nasus"
+  ],
+  "effect": "Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-063-nasus-guardian-of-knowledge/"
+ },
+ {
+  "id": "VEN-063A",
+  "name": "Nasus - Guardian of Knowledge",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Dog",
+   "Nasus"
+  ],
+  "effect": "Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-063a-nasus-guardian-of-knowledge/"
+ },
+ {
+  "id": "VEN-064",
+  "name": "Plaza Guardian",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "10",
+  "might": "8",
+  "tags": [
+   "Mech",
+   "Piltover"
+  ],
+  "effect": "I cost {1 Energy} less for each gear you control.\n[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-064-plaza-guardian/"
+ },
+ {
+  "id": "VEN-065",
+  "name": "Swain - Visionary",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Noxus",
+   "Swain",
+   "Demon"
+  ],
+  "effect": "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)\nWhen I conquer, if you've played a non-token unit, a non-token gear, and a spell this turn, you score 1 point.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-065-swain-visionary/"
+ },
+ {
+  "id": "VEN-066",
+  "name": "Temporal Breach",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nBanish a unit, then its owner plays it to the same location, ignoring its cost.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-066-temporal-breach/"
+ },
+ {
+  "id": "VEN-067",
+  "name": "Bottled Constellation",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "10",
+  "might": null,
+  "tags": null,
+  "effect": "At the start of your Main Phase, you may kill 3 other friendly units and/or gear to score 1 point.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-067-bottled-constellation/"
+ },
+ {
+  "id": "VEN-068",
+  "name": "Jayce - Brilliant Inventor",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Jayce",
+   "Piltover"
+  ],
+  "effect": "When you play me or the first time you play a non-token gear each turn, you may ready something besides me that's exhausted.",
+  "flavor": "“I will light our path.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-068-jayce-brilliant-inventor/"
+ },
+ {
+  "id": "VEN-068A",
+  "name": "Jayce - Brilliant Inventor",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Jayce"
+  ],
+  "effect": "When you play me or the first time you play a non-token gear each turn, you may ready something besides me that's exhausted.",
+  "flavor": "“I will light our path.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-068a-jayce-brilliant-inventor/"
+ },
+ {
+  "id": "VEN-069",
+  "name": "Mel - Newly Awakened",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Noxus",
+   "Mel"
+  ],
+  "effect": "When you play me, draw 1.\n[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -{Might} to a unit it chooses, it gives an additional -1 {Might}.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-069-mel-newly-awakened/"
+ },
+ {
+  "id": "VEN-069A",
+  "name": "Mel - Newly Awakened",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Mel"
+  ],
+  "effect": "When you play me, draw 1.\n[Empower] {3 Energy}\n[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -{Might} to a unit it chooses, it gives an additional -1 {Might}.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-069a-mel-newly-awakened/"
+ },
+ {
+  "id": "VEN-070",
+  "name": "Brutal Hunter",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +2 {Might} and [Ganking]. (I can move from battlefield to battlefield.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-070-brutal-hunter/"
+ },
+ {
+  "id": "VEN-071",
+  "name": "Fretful Feline",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "6",
+  "might": "5",
+  "tags": [
+   "Cat",
+   "Piltover"
+  ],
+  "effect": "When I become ready, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-071-fretful-feline/"
+ },
+ {
+  "id": "VEN-073",
+  "name": "Jagged Cutlass",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": [
+   "Equipment"
+  ],
+  "effect": "Equip {Body Rune} ({Body Rune}: Attach this to a unit you control.)",
+  "flavor": "I can’t be moved by enemy spells and abilities.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-073-jagged-cutlass/"
+ },
+ {
+  "id": "VEN-075",
+  "name": "Platewyrm Egg",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "This enters exhausted.\n[Empower] — {1 Energy}, {Exhaust} (Pay the cost: Empower this. Use only if not Empowered.)\n[Reaction][>] {Exhaust}: [Add] {1 Energy}. If this is [Empowered], [Add] {2 Energy} instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-075-platewyrm-egg/"
+ },
+ {
+  "id": "VEN-076",
+  "name": "Repair Specialist",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Zaun"
+  ],
+  "effect": "I have [Assault] equal to the number of gear you control. (+1 {Might} while I'm an attacker for each instance of Assault.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-076-repair-specialist/"
+ },
+ {
+  "id": "VEN-077",
+  "name": "Tools of Empire",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] {2 Energy} ({2 Energy}: Empower this. Use only if not Empowered.)\n{Exhaust}: Give a unit +2 {Might} this turn. If this is [Empowered], give that unit +4 {Might} this turn instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-077-tools-of-empire/"
+ },
+ {
+  "id": "VEN-079",
+  "name": "Dame the Despoiler",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "[Empower] {5 Energy}{Body Rune} ({5 Energy}{Body Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 {Might} this turn.",
+  "flavor": "“Wanna see a show?!”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-079-dame-the-despoiler/"
+ },
+ {
+  "id": "VEN-080",
+  "name": "Noxian Demolitionist",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "2",
+  "might": "1",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "When I conquer, you may kill a gear with Energy cost no more than my Might.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-080-noxian-demolitionist/"
+ },
+ {
+  "id": "VEN-081",
+  "name": "Onslaught",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "Give a unit +6 {Might} this turn.\n[Flow] {4 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-081-onslaught/"
+ },
+ {
+  "id": "VEN-082",
+  "name": "Profiteer",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "When you play me, you may disempower something you control to empower a legend, unit, or gear.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-082-profiteer/"
+ },
+ {
+  "id": "VEN-083",
+  "name": "Rampage",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "As you play this, you may pay {Body Rune} as an additional cost.\nChoose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 {Might} this turn. They deal damage equal to their Mights to each other.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-083-rampage/"
+ },
+ {
+  "id": "VEN-084",
+  "name": "Ambessa - The Wolf",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Noxus",
+   "Ambessa"
+  ],
+  "effect": "[Empower] {3 Energy}{Body Rune} ({3 Energy}{Body Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +3 {Might} and can't be dealt damage unless I'm in combat.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-084-ambessa-the-wolf/"
+ },
+ {
+  "id": "VEN-084A",
+  "name": "Ambessa - The Wolf",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "[Empower] {3 Energy}{Body Rune}\n[Empowered][>] I have +3 {Might} and can't be dealt damage unless I'm in combat.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-084a-ambessa-the-wolf/"
+ },
+ {
+  "id": "VEN-085",
+  "name": "Decree of Strength",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "Choose an opponent. They reveal their hand and you choose a Mind ({Mind Rune}) card from it. They recycle that card.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-085-decree-of-strength/"
+ },
+ {
+  "id": "VEN-086",
+  "name": "Gangplank - Naval",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Bilgewater",
+   "Gangplank"
+  ],
+  "effect": "[Empower] {Body Rune}{Body Rune} ({Body Rune}{Body Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] If a spell or ability that chooses me would stun me, give me -{Might}, or return me to hand, give me +3 {Might} instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-086-gangplank-naval/"
+ },
+ {
+  "id": "VEN-087",
+  "name": "Hextech Disc",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] — {Exhaust} (Pay the cost: Empower this. Use only if not Empowered.)\nDisempower this, {1 Energy}, {Exhaust}: Play a 3 {Might} Mech unit token to your base.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-087-hextech-disc/"
+ },
+ {
+  "id": "VEN-088",
+  "name": "Jayce - Hammer in Hand",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "5",
+  "tags": [
+   "Jayce",
+   "Piltover"
+  ],
+  "effect": "When I become ready, choose one to give me this turn —[Assault 2] (+2 {Might} while I'm an attacker.)[Deflect 2] (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-088-jayce-hammer-in-hand/"
+ },
+ {
+  "id": "VEN-088A",
+  "name": "Jayce - Hammer in Hand",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "5",
+  "tags": [
+   "Jayce"
+  ],
+  "effect": "When I become ready, choose one to give me this turn —[Assault 2][Deflect 2][Ganking]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-088a-jayce-hammer-in-hand/"
+ },
+ {
+  "id": "VEN-089",
+  "name": "Wild Claw",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "7",
+  "might": null,
+  "tags": null,
+  "effect": "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by {5 Energy}. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-089-wild-claw/"
+ },
+ {
+  "id": "VEN-090",
+  "name": "Cataclysmic Duel",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "8",
+  "might": null,
+  "tags": null,
+  "effect": "Each player chooses a unit they control. Kill the rest.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-090-cataclysmic-duel/"
+ },
+ {
+  "id": "VEN-091",
+  "name": "Corrupted Dragon",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "10",
+  "might": "10",
+  "tags": [
+   "Dragon",
+   "Shadow Isles"
+  ],
+  "effect": "If your score is not within 3 points of the Victory Score, I enter ready.\nWhen I attack, you may move any number of enemy units here each with 5 {Might} or less to their base.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-091-corrupted-dragon/"
+ },
+ {
+  "id": "VEN-092",
+  "name": "Renekton - Brute",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Shurima",
+   "Renekton"
+  ],
+  "effect": "{1 Energy}: Give me +1 {Might} this turn.\nWhen my Might becomes 10 or more, empower me. (I become Empowered if I'm not already.)\n[Empowered][>] I have [Deflect] and [Ganking]. (Opponents must pay {Any Rune} to choose me with a spell or ability. I can move from battlefield to battlefield.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-092-renekton-brute/"
+ },
+ {
+  "id": "VEN-092A",
+  "name": "Renekton - Brute",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "{1 Energy}: Give me +1 {Might} this turn.\nWhen my Might becomes 10 or more, empower me.\n[Empowered][>] I have [Deflect] and [Ganking].",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-092a-renekton-brute/"
+ },
+ {
+  "id": "VEN-093",
+  "name": "Kinkou Lifeblade",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +1 {Might} and [Ganking]. (I can move from battlefield to battlefield.)",
+  "flavor": "His life is the blade. His blade is his life.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-093-kinkou-lifeblade/"
+ },
+ {
+  "id": "VEN-094",
+  "name": "Mask Mother",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Spirit",
+   "Shadow Isles"
+  ],
+  "effect": "When you discard me, you may pay {1 Energy} to give a friendly unit +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-094-mask-mother/"
+ },
+ {
+  "id": "VEN-095",
+  "name": "Shadow Order Disciple",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When I move, you may [Burn 1] to give me +1 {Might} this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+  "flavor": "Recipients of a terrifying education.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-095-shadow-order-disciple/"
+ },
+ {
+  "id": "VEN-096",
+  "name": "Shadowblade Lurker",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "I cost {2 Energy} less for each card with my name in your trash.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-096-shadowblade-lurker/"
+ },
+ {
+  "id": "VEN-097",
+  "name": "Spiderling",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "1",
+  "tags": [
+   "Shadow Isles",
+   "Spider"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nI have +1 {Might} for each other unit you control here with my name.\nYour deck can have any number of cards named Spiderling.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-097-spiderling/"
+ },
+ {
+  "id": "VEN-098",
+  "name": "Stargazer",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Mount Targon"
+  ],
+  "effect": "Spells with [Flow] you play from your trash cost {2 Energy} less, to a minimum of {1 Energy}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-098-stargazer/"
+ },
+ {
+  "id": "VEN-100",
+  "name": "Up from the Deep",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "Play two 1 {Might} Tentacle unit tokens from Bilgewater.\n[Flow] {3 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-100-up-from-the-deep/"
+ },
+ {
+  "id": "VEN-101",
+  "name": "Gust Monk",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Yordle",
+   "Bandle City"
+  ],
+  "effect": "You may pay {1 Energy} as an additional cost to play me.\nWhen you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-101-gust-monk/"
+ },
+ {
+  "id": "VEN-102",
+  "name": "Ravenbloom Prefect",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "When an opponent plays a gear, you may banish me to banish it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-102-ravenbloom-prefect/"
+ },
+ {
+  "id": "VEN-103",
+  "name": "Shadows of the Past",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "Return up to 2 units from trashes to their owners' hands.",
+  "flavor": "“None escape their shadow.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-103-shadows-of-the-past/"
+ },
+ {
+  "id": "VEN-104",
+  "name": "Tail-Cloaked Matriarch",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Empower] {2 Energy}{Chaos Rune} ({2 Energy}{Chaos Rune}: Empower me. Use only if not Empowered.)\nWhen I become [Empowered], you may choose a unit in your trash with Energy cost no more than {3 Energy} and Power cost no more than {Any Rune}. Play it to your base, ignoring its cost.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-104-tail-cloaked-matriarch/"
+ },
+ {
+  "id": "VEN-105",
+  "name": "Twilight Step",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "Move a unit with 3 {Might} or less.\n[Flow] {4 Energy}{Chaos Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-105-twilight-step/"
+ },
+ {
+  "id": "VEN-106",
+  "name": "Wind and Ghosts",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nChoose a unit at a battlefield. If it has 3 {Might} or less, banish it. Otherwise, return it to its owner's hand.",
+  "flavor": "The best strategy is to not have an enemy.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-106-wind-and-ghosts/"
+ },
+ {
+  "id": "VEN-107",
+  "name": "Decree of Discord",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": null,
+  "effect": "Return any number of enemy Order ({Order Rune}) units with total Might 5 or less to their owners' hands.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-107-decree-of-discord/"
+ },
+ {
+  "id": "VEN-108",
+  "name": "Forgotten Relic",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": null,
+  "tags": null,
+  "effect": "When you play this or at the start of your Beginning Phase, [Burn 1]. When you burn a unit this way, do this: Give a friendly unit +{Might} equal to the burned card's Might this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-108-forgotten-relic/"
+ },
+ {
+  "id": "VEN-109",
+  "name": "Illaoi - Prophet of the Great Kraken",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "6",
+  "might": "4",
+  "tags": [
+   "Bilgewater",
+   "Illaoi"
+  ],
+  "effect": "When you play me or when I score, play a {1 Energy} {Might} Tentacle unit token from Bilgewater.\nI have +1 {Might} for each token unit you control.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-109-illaoi-prophet-of-the-great-kraken/"
+ },
+ {
+  "id": "VEN-110",
+  "name": "Mel - Defiant Soul",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Noxus",
+   "Mel"
+  ],
+  "effect": "[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)\nWhen I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-110-mel-defiant-soul/"
+ },
+ {
+  "id": "VEN-110A",
+  "name": "Mel - Defiant Soul",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Mel"
+  ],
+  "effect": "[Empower] — Discard a spell\nWhen I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-110a-mel-defiant-soul/"
+ },
+ {
+  "id": "VEN-112",
+  "name": "Zed - Without a Sound",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ionia",
+   "Zed"
+  ],
+  "effect": "When I conquer, play a 0 {Might} Shadow Clone unit token to your base. (It has \"When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.\")\n[Action][>] {1 Energy}{Chaos Rune}: Move me and a Shadow Clone you control to each other's locations.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-112-zed-without-a-sound/"
+ },
+ {
+  "id": "VEN-112A",
+  "name": "Zed - Without a Sound",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Zed"
+  ],
+  "effect": "When I conquer, play a 0 {Might} Shadow Clone unit token to your base.\n[Action][>] {1 Energy}{Chaos Rune}: Move me and a Shadow Clone you control to each other's locations.",
+  "flavor": "“The truth lies in darkness.”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-112a-zed-without-a-sound/"
+ },
+ {
+  "id": "VEN-113",
+  "name": "Kennen - Storm of Shuriken",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Yordle",
+   "Kennen"
+  ],
+  "effect": "When you play me, [Burn 2]. (Put the top 2 cards of your Main Deck into your trash.)\nWhen I conquer, give a spell in your trash [Flow] equal to its cost this turn. (You may play it from your trash for its Flow cost. Then banish it.)",
+  "flavor": "“Time to strike!”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-113-kennen-storm-of-shuriken/"
+ },
+ {
+  "id": "VEN-113A",
+  "name": "Kennen - Storm of Shuriken",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Yordle",
+   "Ionia",
+   "Kennen"
+  ],
+  "effect": "When you play me, [Burn 2].\nWhen I conquer, give a spell in your trash [Flow] equal to its cost this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-113a-kennen-storm-of-shuriken/"
+ },
+ {
+  "id": "VEN-114",
+  "name": "Kharox",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "6",
+  "might": "5",
+  "tags": [
+   "Spirit",
+   "Shadow Isles"
+  ],
+  "effect": "[Empower] {6 Energy}{Chaos Rune}{Chaos Rune} ({6 Energy}{Chaos Rune}{Chaos Rune}: Empower me. Use only if not Empowered.)\nWhen I become [Empowered], choose an opponent. They [Burn 3]. Then you may do this: Choose a unit in their trash and play it, ignoring its cost. (To Burn 3, they put the top 3 cards of their Main Deck into their trash.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-114-kharox/"
+ },
+ {
+  "id": "VEN-115",
+  "name": "Ocean Drake",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "8",
+  "might": "7",
+  "tags": [
+   "Dragon",
+   "Ionia"
+  ],
+  "effect": "You may play me to an open battlefield.\nWhen you play me, you may return a non-Dragon unit to its owner's hand.",
+  "flavor": "The pale glint of blue on blue is all the warning you’ll get.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-115-ocean-drake/"
+ },
+ {
+  "id": "VEN-116",
+  "name": "Dragon Form",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "Choose a unit. Its base Might becomes 5 this turn.\n[Flow] {3 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-116-dragon-form/"
+ },
+ {
+  "id": "VEN-117",
+  "name": "Disciple of Shen",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": "1",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nI have [Shield 3] while I'm at a battlefield with exactly one other unit you control. (+3 {Might} while I'm a defender.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-117-disciple-of-shen/"
+ },
+ {
+  "id": "VEN-118",
+  "name": "Horns of the Dragon",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Tank] (I must be assigned combat damage first.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-118-horns-of-the-dragon/"
+ },
+ {
+  "id": "VEN-119",
+  "name": "Keeper of Law",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "I cost {2 Energy}{Order Rune} less if you control a battlefield with exactly two units there.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-119-keeper-of-law/"
+ },
+ {
+  "id": "VEN-120",
+  "name": "Masa - Crashing Thunder",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Yordle",
+   "Bandle City"
+  ],
+  "effect": "You may pay {Order Rune} as an additional cost to play me.\nWhen you play me, if you paid the additional cost, [Stun] an enemy unit at a battlefield. (It doesn't deal combat damage this turn.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-120-masa-crashing-thunder/"
+ },
+ {
+  "id": "VEN-121",
+  "name": "Reluctant Leader",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When you play another unit, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-121-reluctant-leader/"
+ },
+ {
+  "id": "VEN-122",
+  "name": "Solari Sunhawk",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Bird",
+   "Mount Targon"
+  ],
+  "effect": "[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +1 {Might} and [Deflect 2]. (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-122-solari-sunhawk/"
+ },
+ {
+  "id": "VEN-124",
+  "name": "Escaped Grayback",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "[Empower] — Kill a friendly unit (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +2 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-124-escaped-grayback/"
+ },
+ {
+  "id": "VEN-125",
+  "name": "Hungry Wolf",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Dog",
+   "Freljord"
+  ],
+  "effect": "{Order Rune}: Ready me and give me +1 {Might} this turn. Use only if you've chosen an enemy unit this turn and only once each turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-125-hungry-wolf/"
+ },
+ {
+  "id": "VEN-126",
+  "name": "Ki Barrier",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. Prevent the next 7 damage that would be dealt to it this turn. (Opponents can assign it extra combat damage to kill it.)",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-126-ki-barrier/"
+ },
+ {
+  "id": "VEN-127",
+  "name": "Lacerate",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 {Might} or less.\n[Flow] {4 Energy}{Order Rune}{Order Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-127-lacerate/"
+ },
+ {
+  "id": "VEN-128",
+  "name": "Noxian Emissary",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "[Empower] {1 Energy}{Order Rune} ({1 Energy}{Order Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>][>>][Deathknell][>] Play two 1 {Might} Recruit unit tokens to your base. (When I die while Empowered, get the effect.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-128-noxian-emissary/"
+ },
+ {
+  "id": "VEN-129",
+  "name": "Sacred Protector",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "6",
+  "tags": [
+   "Fae",
+   "Ionia"
+  ],
+  "effect": "I don't deal combat damage unless I'm at a battlefield with exactly one other unit you control.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-129-sacred-protector/"
+ },
+ {
+  "id": "VEN-131",
+  "name": "Decree of Unity",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "Kill an enemy Chaos ({Chaos Rune}) unit or gear.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-131-decree-of-unity/"
+ },
+ {
+  "id": "VEN-132",
+  "name": "Fallen Feline",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": "3",
+  "tags": [
+   "Cat",
+   "Piltover"
+  ],
+  "effect": "When you play me, name a spell.\nWhile I'm at a battlefield, opponents can't play spells with that name.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-132-fallen-feline/"
+ },
+ {
+  "id": "VEN-133",
+  "name": "Glowstone",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] {Any Rune}{Any Rune} ({Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)\nDisempower this, {Exhaust}: Choose a player. They gain control of this and recall it. (Send it to their base.)\nAt the end of your turn, kill this and deal 5 to all units you control.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-133-glowstone/"
+ },
+ {
+  "id": "VEN-134",
+  "name": "Kayle - Justified",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Mount Targon",
+   "Kayle"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me.)\nI can be [Empowered] up to three times.\nI have +2 {Might} for each time I'm [Empowered].\nWhile I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-134-kayle-justified/"
+ },
+ {
+  "id": "VEN-135",
+  "name": "Kennen - Keeper of Balance",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "2",
+  "tags": [
+   "Yordle",
+   "Ionia",
+   "Kennen"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play me or I attack, you may pay {2 Energy} to [Stun] a unit. (It doesn't deal combat damage this turn.)\nWhile there's a stunned enemy unit here, I have +2 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-135-kennen-keeper-of-balance/"
+ },
+ {
+  "id": "VEN-135A",
+  "name": "Kennen - Keeper of Balance",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "2",
+  "tags": [
+   "Yordle",
+   "Kennen"
+  ],
+  "effect": "[Hidden]\nWhen you play me or I attack, you may pay {2 Energy} to [Stun] a unit.\nWhile there's a stunned enemy unit here, I have +2 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-135a-kennen-keeper-of-balance/"
+ },
+ {
+  "id": "VEN-136",
+  "name": "Ambessa - Respected and Feared",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Noxus",
+   "Ambessa"
+  ],
+  "effect": "[Empower] {1 Energy}{Order Rune}{Order Rune} ({1 Energy}{Order Rune}{Order Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Assault 2]. (+2 {Might} while I'm an attacker.)\n[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-136-ambessa-respected-and-feared/"
+ },
+ {
+  "id": "VEN-136A",
+  "name": "Ambessa - Respected and Feared",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "[Empower] {1 Energy}{Order Rune}{Order Rune}\n[Empowered][>] I have [Assault 2].\n[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+  "flavor": "“Join your ancestors!”",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-136a-ambessa-respected-and-feared/"
+ },
+ {
+  "id": "VEN-137",
+  "name": "Shady Spectacles",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Gear",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": [
+   "Equipment"
+  ],
+  "effect": "[Equip] {1 Energy}{Order Rune} ({1 Energy}{Order Rune}: Attach this to a unit you control.)\nAs this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-137-shady-spectacles/"
+ },
+ {
+  "id": "VEN-138",
+  "name": "Shen - Leader of the Kinkou Order",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "6",
+  "might": "7",
+  "tags": [
+   "Shen",
+   "Ionia"
+  ],
+  "effect": "[Shield] (+1 {Might} while I'm a defender.)\nWhen I hold, if there is exactly one other unit you control here, you score 1 point.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-138-shen-leader-of-the-kinkou-order/"
+ },
+ {
+  "id": "VEN-138A",
+  "name": "Shen - Leader of the Kinkou Order",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "6",
+  "might": "7",
+  "tags": [
+   "Shen",
+   "Ionia"
+  ],
+  "effect": "[Shield]\nWhen I hold, if there is exactly one other unit you control here, you score 1 point.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-138a-shen-leader-of-the-kinkou-order/"
+ },
+ {
+  "id": "VEN-139",
+  "name": "Akali - Rogue Assassin",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Calm"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Akali"
+  ],
+  "effect": "[Empower] {3 Energy}{Any Rune} ({3 Energy}{Any Rune}: Empower this. Use only if not Empowered.)\n[Action][>] {Exhaust}: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-139-akali-rogue-assassin/"
+ },
+ {
+  "id": "VEN-140",
+  "name": "Shuriken Flip",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Fury",
+   "Calm"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": [
+   "Akali"
+  ],
+  "effect": "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.\n[Flow] {3 Energy}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-140-shuriken-flip/"
+ },
+ {
+  "id": "VEN-141",
+  "name": "Renekton - Butcher of the Sands",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "[Reaction][>] {Any Rune}{Any Rune}, {Exhaust}: [Add] {2 Energy}. Spend this Energy only to play units or activated abilities of units.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-141-renekton-butcher-of-the-sands/"
+ },
+ {
+  "id": "VEN-142",
+  "name": "Dominus",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Fury",
+   "Body"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "[Action] (Play on your turn or in showdowns.)\nThis turn, double a unit's Might and give it \"{Any Rune}{Any Rune}: Ready me.\"",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-142-dominus/"
+ },
+ {
+  "id": "VEN-143",
+  "name": "Zed - Master of Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Zed"
+  ],
+  "effect": "When you banish a card you own, empower me. (I become Empowered if I'm not already.)\n[Action][>] Disempower me, {Exhaust}: Discard 1, then draw 1.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-143-zed-master-of-shadows/"
+ },
+ {
+  "id": "VEN-144",
+  "name": "Death Mark",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Fury",
+   "Chaos"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": [
+   "Zed"
+  ],
+  "effect": "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)\nPlay a 0 {Might} Shadow Clone unit token. (It has \"When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.\")\n[Flow] {1 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-144-death-mark/"
+ },
+ {
+  "id": "VEN-145",
+  "name": "Nasus - Curator of the Sands",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Calm",
+   "Mind"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Nasus"
+  ],
+  "effect": "When you play a unit, gear, or activated ability with Energy cost {7 Energy} or more, you may exhaust me to ready up to 2 runes.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-145-nasus-curator-of-the-sands/"
+ },
+ {
+  "id": "VEN-146",
+  "name": "Siphoning Strike",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Calm",
+   "Mind"
+  ],
+  "cost": "4",
+  "might": null,
+  "tags": [
+   "Nasus"
+  ],
+  "effect": "Deal 4 to a unit at a battlefield. If you control 7 or more runes, deal 7 to it instead. When it dies this turn, channel 1 rune exhausted.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-146-siphoning-strike/"
+ },
+ {
+  "id": "VEN-147",
+  "name": "Shen - Eye of Twilight",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Calm",
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Shen"
+  ],
+  "effect": "[Action][>] {Exhaust}: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-147-shen-eye-of-twilight/"
+ },
+ {
+  "id": "VEN-148",
+  "name": "Shadow Dash",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Calm",
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": [
+   "Shen"
+  ],
+  "effect": "Move an enemy unit to a battlefield where you have units. If you have exactly two units there, they each get +1 {Might} this turn.\n[Flow] {5 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-148-shadow-dash/"
+ },
+ {
+  "id": "VEN-149",
+  "name": "Jayce - Defender of Tomorrow",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Mind",
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Jayce"
+  ],
+  "effect": "[Empower] {2 Energy}{Any Rune}{Any Rune} ({2 Energy}{Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)\n{1 Energy}, {Exhaust}: Ready a gear.\n[Empowered][>] {1 Energy}, {Exhaust}: Ready 2 gear.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-149-jayce-defender-of-tomorrow/"
+ },
+ {
+  "id": "VEN-150",
+  "name": "Acceleration Gate",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Mind",
+   "Body"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": [
+   "Jayce"
+  ],
+  "effect": "Ready up to 4 units, gear, and/or runes.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-150-acceleration-gate/"
+ },
+ {
+  "id": "VEN-151",
+  "name": "Mel - Soul's Reflection",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Mind",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Mel"
+  ],
+  "effect": "When you empower something else, empower me. (I become Empowered if I'm not already.)\nDisempower me, {Exhaust}: Give a unit at a battlefield -2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-151-mel-souls-reflection/"
+ },
+ {
+  "id": "VEN-152",
+  "name": "Rebuttal",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Mind",
+   "Chaos"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": [
+   "Mel"
+  ],
+  "effect": "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a spell with Energy cost no more than {4 Energy}.  You may pay {Any Rune}. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-152-rebuttal/"
+ },
+ {
+  "id": "VEN-153",
+  "name": "Ambessa - Matriarch of War",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Body",
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "When you empower something else, empower me. (I become Empowered if I'm not already.)\nDisempower me, {Any Rune}, {Exhaust}: Ready a unit.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-153-ambessa-matriarch-of-war/"
+ },
+ {
+  "id": "VEN-154",
+  "name": "Public Execution",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Body",
+   "Order"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "Choose a friendly unit. Kill an enemy unit with less Might than it.\n[Flow] {5 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-154-public-execution/"
+ },
+ {
+  "id": "VEN-155",
+  "name": "Yordle - Heart of the Tempest",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Order",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Yordle",
+   "Kennen"
+  ],
+  "effect": "When you play a card from anywhere other than your hand, empower me.\n[Action][>] Disempower me, {Exhaust}: Give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-155-yordle-heart-of-the-tempest/"
+ },
+ {
+  "id": "VEN-156",
+  "name": "Lightning Rush",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Spell",
+  "supertype": "Signature",
+  "color": [
+   "Order",
+   "Chaos"
+  ],
+  "cost": "1",
+  "might": null,
+  "tags": [
+   "Kennen"
+  ],
+  "effect": "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.\n[Flow] {2 Energy}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",
+  "flavor": "“I am the wind!”—Kennen",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-156-lightning-rush/"
+ },
+ {
+  "id": "VEN-157",
+  "name": "Dragon Roost",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "Any player may pay {Any Rune}{Any Rune} as an additional cost to play a Dragon. If they do, they play it to this battlefield.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-157-dragon-roost/"
+ },
+ {
+  "id": "VEN-158",
+  "name": "Heisho - Shell of the World",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "Players ignore [Deflect] while paying for spells and abilities choosing something here.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-158-heisho-shell-of-the-world/"
+ },
+ {
+  "id": "VEN-159",
+  "name": "Kinkou Temple",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "Units here with [Tank] have +1 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-159-kinkou-temple/"
+ },
+ {
+  "id": "VEN-160",
+  "name": "Mystic Vortex",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "During showdowns here, cards with [Reaction] cost {Any Rune} more to play. (Hidden cards have [Reaction].)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-160-mystic-vortex/"
+ },
+ {
+  "id": "VEN-161",
+  "name": "Piltovan Forge",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "While you control this battlefield, the first friendly gear activated ability played each turn costs {1 Energy} less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-161-piltovan-forge/"
+ },
+ {
+  "id": "VEN-162",
+  "name": "Protective Sands",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "When you conquer here, if you control 4 or fewer runes, you may pay {1 Energy} to draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-162-protective-sands/"
+ },
+ {
+  "id": "VEN-163",
+  "name": "Risen Altar",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[Empower] costs of your units here cost {1 Energy} or {Any Rune} less.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-163-risen-altar/"
+ },
+ {
+  "id": "VEN-164",
+  "name": "Sandswept Tomb",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "Each spell that chooses one or more units here that are friendly to it costs {Any Rune} less.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-164-sandswept-tomb/"
+ },
+ {
+  "id": "VEN-166",
+  "name": "Threshold of the Gray",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "When combat starts here, the attacker and defender each [Add] {1 Energy}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-166-threshold-of-the-gray/"
+ },
+ {
+  "id": "VEN-167",
+  "name": "Vi - Destructive",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": "3",
+  "tags": [
+   "Vi"
+  ],
+  "effect": "[Ganking]\nRecycle 1 from your trash: Give me +1 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-167-vi-destructive/"
+ },
+ {
+  "id": "VEN-168",
+  "name": "Jinx - Demolitionist",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Jinx"
+  ],
+  "effect": "[Accelerate]\n[Assault 2]\nWhen you play me, discard 2.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-168-jinx-demolitionist/"
+ },
+ {
+  "id": "VEN-169",
+  "name": "Zed - From the Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Zed"
+  ],
+  "effect": "You may discard 1 as an additional cost to play me.\nWhen you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-169-zed-from-the-shadows/"
+ },
+ {
+  "id": "VEN-170",
+  "name": "Shen - Scourge of Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Shen"
+  ],
+  "effect": "When I hold, if there is exactly one other unit you control here, draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-170-shen-scourge-of-shadows/"
+ },
+ {
+  "id": "VEN-171",
+  "name": "Riven - Shattered",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Riven"
+  ],
+  "effect": "[Weaponmaster]\nWhen I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-171-riven-shattered/"
+ },
+ {
+  "id": "VEN-172",
+  "name": "Draven - Showboat",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": "3",
+  "tags": [
+   "Draven"
+  ],
+  "effect": "My Might is increased by your points.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-172-draven-showboat/"
+ },
+ {
+  "id": "VEN-173",
+  "name": "Swain - Visionary",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Swain"
+  ],
+  "effect": "[Vision]\nWhen I conquer, if you've played a non-token unit, a non-token gear, and a spell this turn, you score 1 point.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-173-swain-visionary/"
+ },
+ {
+  "id": "VEN-174",
+  "name": "Irelia - Fervent",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Irelia",
+   "Ionia"
+  ],
+  "effect": "[Deflect]\nWhen you choose or ready me, give me +1 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-174-irelia-fervent/"
+ },
+ {
+  "id": "VEN-175",
+  "name": "Jayce - Man of Progress",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Jayce",
+   "Piltover"
+  ],
+  "effect": "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than {7 Energy} from hand this turn, ignoring its Energy cost.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-175-jayce-man-of-progress/"
+ },
+ {
+  "id": "VEN-176",
+  "name": "Viktor - Innovator",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Viktor"
+  ],
+  "effect": "When you play a card on an opponent's turn, play a 1 {Might} Recruit unit token to your base.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-176-viktor-innovator/"
+ },
+ {
+  "id": "VEN-177",
+  "name": "Renekton - Brute",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "{1 Energy}: Give me +1 {Might} this turn.\nWhen my Might becomes 10 or more, empower me.\n[Empowered][>] I have [Ganking] and [Deflect].",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-177-renekton-brute/"
+ },
+ {
+  "id": "VEN-178",
+  "name": "Nasus - Guardian of Knowledge",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Dog",
+   "Nasus"
+  ],
+  "effect": "Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-178-nasus-guardian-of-knowledge/"
+ },
+ {
+  "id": "VEN-179",
+  "name": "Rengar - Trophy Hunter",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "6",
+  "tags": [
+   "Cat",
+   "Rengar",
+   "Ixtal"
+  ],
+  "effect": "[Ambush]\nI can be played to a battlefield where there are enemy units.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-179-rengar-trophy-hunter/"
+ },
+ {
+  "id": "VEN-180",
+  "name": "Kha'Zix - Evolving Hunter",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Kha'Zix",
+   "The Void"
+  ],
+  "effect": "[Hunt]\nWhen I attack, you may spend 3 XP to deal damage equal to my Might to an enemy unit here.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-180-khazix-evolving-hunter/"
+ },
+ {
+  "id": "VEN-181",
+  "name": "Gangplank - Naval",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Gangplank"
+  ],
+  "effect": "[Empower] {Body Rune}{Body Rune}\n[Empowered][>] If a spell or ability that chooses me would stun me, give me -{Might}, or return me to hand, give me +3 {Might} instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-181-gangplank-naval/"
+ },
+ {
+  "id": "VEN-182",
+  "name": "Illaoi - Prophet of the Great Kraken",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "6",
+  "might": "4",
+  "tags": [
+   "Illaoi"
+  ],
+  "effect": "When you play me or when I score, play a {1 Energy} {Might} Tentacle unit token from Bilgewater.\nI have +1 {Might} for each token unit you control.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-182-illaoi-prophet-of-the-great-kraken/"
+ },
+ {
+  "id": "VEN-183",
+  "name": "Diana - No Longer Human",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Diana",
+   "Mount Targon"
+  ],
+  "effect": "[Ambush]\nWhen you play a spell, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-183-diana-no-longer-human/"
+ },
+ {
+  "id": "VEN-184",
+  "name": "Leona - Determined",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Leona"
+  ],
+  "effect": "[Shield]\nWhen I attack, stun an enemy unit here.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-184-leona-determined/"
+ },
+ {
+  "id": "VEN-187",
+  "name": "Ambessa - Respected and Feared",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "[Empower] {1 Energy}{Order Rune}{Order Rune}\n[Empowered][>] I have [Assault 2].\n[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-187-ambessa-respected-and-feared/"
+ },
+ {
+  "id": "VEN-188",
+  "name": "Mel - Defiant Soul",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Mel"
+  ],
+  "effect": "[Empower] — Discard a spell\nWhen I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-188-mel-defiant-soul/"
+ },
+ {
+  "id": "VEN-189",
+  "name": "Akali - Rogue Assassin",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Calm"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Akali"
+  ],
+  "effect": "[Empower] {3 Energy}{Any Rune}\n[Action][>] {Exhaust}: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-189-akali-rogue-assassin/"
+ },
+ {
+  "id": "VEN-190",
+  "name": "Renekton - Butcher of the Sands",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Renekton"
+  ],
+  "effect": "[Reaction][>] {Any Rune}{Any Rune}, {Exhaust}: [Add] {2 Energy}. Spend this Energy only to play units or activated abilities of units.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-190-renekton-butcher-of-the-sands/"
+ },
+ {
+  "id": "VEN-191",
+  "name": "Zed - Master of Shadows",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Fury",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Zed"
+  ],
+  "effect": "When you banish a card you own, empower me.\n[Action][>] Disempower me, {Exhaust}: Discard 1, then draw 1.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-191-zed-master-of-shadows/"
+ },
+ {
+  "id": "VEN-192",
+  "name": "Nasus - Curator of the Sands",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Calm",
+   "Mind"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Nasus"
+  ],
+  "effect": "When you play a unit, gear, or activated ability with Energy cost {7 Energy} or more, you may exhaust me to ready up to 2 runes.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-192-nasus-curator-of-the-sands/"
+ },
+ {
+  "id": "VEN-193",
+  "name": "Shen - Eye of Twilight",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Calm",
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Shen"
+  ],
+  "effect": "[Action][>] {Exhaust}: Give a friendly unit [Tank] this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-193-shen-eye-of-twilight/"
+ },
+ {
+  "id": "VEN-194",
+  "name": "Jayce - Defender of Tomorrow",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Mind",
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Jayce"
+  ],
+  "effect": "[Empower] {2 Energy}{Any Rune}{Any Rune}\n{1 Energy}, {Exhaust}: Ready a gear.\n[Empowered][>] {1 Energy}, {Exhaust}: Ready 2 gear.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-194-jayce-defender-of-tomorrow/"
+ },
+ {
+  "id": "VEN-195",
+  "name": "Mel - Soul's Reflection",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Mind",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Mel"
+  ],
+  "effect": "When you empower something else, empower me.\nDisempower me, {Exhaust}: Give a unit at a battlefield -2 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-195-mel-souls-reflection/"
+ },
+ {
+  "id": "VEN-196",
+  "name": "Ambessa - Matriarch of War",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Body",
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Ambessa"
+  ],
+  "effect": "When you empower something else, empower me.\nDisempower me, {Any Rune}, {Exhaust}: Ready a unit.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-196-ambessa-matriarch-of-war/"
+ },
+ {
+  "id": "VEN-197",
+  "name": "Yordle - Heart of the Tempest",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Legend",
+  "supertype": "",
+  "color": [
+   "Order",
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": [
+   "Yordle",
+   "Kennen"
+  ],
+  "effect": "When you play a card from anywhere other than your hand, empower me.\n[Action][>] Disempower me, {Exhaust}: Give a unit [Assault 2] this turn.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-197-yordle-heart-of-the-tempest/"
+ },
+ {
+  "id": "VEN-R01",
+  "name": "Fury Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Fury"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r01-fury-rune/"
+ },
+ {
+  "id": "VEN-R02",
+  "name": "Calm Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Calm"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r02-calm-rune/"
+ },
+ {
+  "id": "VEN-R03",
+  "name": "Mind Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Mind"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r03-mind-rune/"
+ },
+ {
+  "id": "VEN-R04",
+  "name": "Body Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r04-body-rune/"
+ },
+ {
+  "id": "VEN-R05",
+  "name": "Chaos Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r05-chaos-rune/"
+ },
+ {
+  "id": "VEN-R06",
+  "name": "Order Rune",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r06-order-rune/"
+ },
+ {
+  "id": "VEN-SP1",
+  "name": "Kai'Sa - Survivor",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Kai'Sa"
+  ],
+  "effect": "[Accelerate]\nWhen I conquer, draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp1-kaisa-survivor/"
+ },
+ {
+  "id": "VEN-SP2",
+  "name": "Sona - Harmonious",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Sona"
+  ],
+  "effect": "At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp2-sona-harmonious/"
+ },
+ {
+  "id": "VEN-SP3",
+  "name": "Ahri - Inquisitive",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Ahri",
+   "Ionia"
+  ],
+  "effect": "When I attack or defend, give an enemy unit here -2 {Might} this turn, to a minimum of 1 {Might}.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp3-ahri-inquisitive/"
+ },
+ {
+  "id": "VEN-SP4",
+  "name": "Sett - Brawler",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Body"
+  ],
+  "cost": "5",
+  "might": "4",
+  "tags": [
+   "Sett"
+  ],
+  "effect": "When you play me or when I conquer, buff me.\nSpend my buff: Give me +4 {Might} this turn.",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp4-sett-brawler/"
+ },
+ {
+  "id": "VEN-SP5",
+  "name": "Ezreal - Prodigy",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Ezreal",
+   "Piltover"
+  ],
+  "effect": "When you play me, discard 1, then draw 2.\nOptional additional costs you pay cost {1 Energy} or {Any Rune} less.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp5-ezreal-prodigy/"
+ },
+ {
+  "id": "VEN-SP6",
+  "name": "Lux - Crownguard",
+  "set_name": "Vendetta",
+  "rarity": "Epic",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "2",
+  "tags": [
+   "Lux"
+  ],
+  "effect": "{Exhaust}: [Reaction] — [Add] {2 Energy}. Spend this Energy only to play spells.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-sp6-lux-crownguard/"
+ },
+ {
+  "id": "VEN-T04",
+  "name": "Recruit (NX)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "Token",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": "1",
+  "tags": [
+   "Recruit"
+  ],
+  "effect": "",
+  "flavor": "Few earn the right to call themselves Trifarian.",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-t04-recruit-nx/"
  }
 ]

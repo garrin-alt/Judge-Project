@@ -2,28 +2,28 @@
  {
   "term": "Accelerate",
   "aliases": [],
-  "definition": "Accelerate is a Unit ability. Accelerate is functionally short for \"As you play me, you may pay [1] and 1 Power as an additional cost. If you do, I enter ready.\" If the unit has a single domain, the Power portion of the Accelerate cost can be paid only with a Power that matches the domain of the...",
+  "definition": "Accelerate is a Unit ability. Accelerate is functionally short for \"As you play me, you may pay [1][C] as an additional cost. If you do, I enter ready.\" If the unit has one or more domains, the Power portion of the Accelerate cost can be paid only with a Power that matches one of the domains of the...",
   "rule": "805",
   "kind": "keyword"
  },
  {
   "term": "Action",
   "aliases": [],
-  "definition": "Action is a Permissive keyword. It can be present on Cards, Rune Abilities, Legend Abilities or Permanent Abilities. Action grants the corresponding card or effect permission to be played or activated during Showdowns, even when it is not the Controlling player's turn. Action is functionally short...",
+  "definition": "Action is a Permissive keyword. It is present on Cards, Rune Abilities, Legend Abilities or Permanent Abilities. Action grants the corresponding card or effect permission to be played or activated during Showdowns, even when it is not the Controlling player's turn. Action is functionally short for...",
   "rule": "806",
   "kind": "keyword"
  },
  {
   "term": "Add",
   "aliases": [],
-  "definition": "Adding is the action of putting resources into a player's Rune Pool. Spells, triggered abilities, and activated abilities that Add resources ﬁnalize immediately. Priority and Focus will not pass from Add abilities being ﬁnalized or resolving, and will resolve before any other outstanding items on...",
+  "definition": "Adding is the action of putting resources into a player's Rune Pool. Triggered and activated abilities that Add resources resolve as soon as they are ﬁnalized. Priority and Focus will not pass from Add abilities being ﬁnalized or resolving, and will resolve before any other outstanding items on the...",
   "rule": "429",
   "kind": "keyword"
  },
  {
   "term": "Ambush",
   "aliases": [],
-  "definition": "Ambush is a Passive Ability keyword. It is present on Units . It is functionally short for \"I may be played to a battleﬁeld where you control Units \" and “I have [ Reaction ] as long as I’m being played to a battleﬁeld where you control Units .” It is a passive ability that adds options to...",
+  "definition": "Ambush is a Passive Ability keyword. It is normally present on Units . It is functionally short for \"I may be played to a battleﬁeld where you control Units \" and “I have [ Reaction ] as long as I’m being played to a battleﬁeld where you control Units .” It is a passive ability that adds options to...",
   "rule": "822",
   "kind": "keyword"
  },
@@ -51,7 +51,7 @@
  {
   "term": "Banish",
   "aliases": [],
-  "definition": "Banishing is the action of placing a card from any zone to Banishment. See Banishment for more information. When a card is Banished it is placed directly into the Banishment zone from its origin. Banish is not a subset of Kill. Banish is not a subset of Discard. Cards and effects can refer to cards...",
+  "definition": "Banishing is the action of placing a card from any other zone into Banishment. See Banishment for more information. When a card is Banished it is placed directly into the Banishment zone from its origin. Banish is not a subset of Kill. Banish is not a subset of Discard. Cards and effects can refer...",
   "rule": "427",
   "kind": "term"
  },
@@ -59,7 +59,7 @@
   "term": "Basic Runes",
   "aliases": [],
   "definition": "There are six Basic Runes , each with a Domain corresponding to its name: Fury Rune Calm Rune Mind Rune Body Rune Chaos Rune Order Rune A Basic Rune always has the following two Abilities : [E]: [Reaction] — Add [1]. Recycle this: [Reaction] — Add [C]. The Power added this way corresponds to the...",
-  "rule": "163",
+  "rule": "164",
   "kind": "term"
  },
  {
@@ -74,14 +74,21 @@
  {
   "term": "Buff",
   "aliases": [],
-  "definition": "Bufﬁng is the action of placing a Buff counter on a Unit . See rule 701. Buffs for more information. A Buff is also an object. To Buff a unit, place a Buff Counter on it if it does not have one already If the unit already has a Buff Counter on it, it does not get another one. Units with Buff...",
+  "definition": "Bufﬁng is the action of placing a Buff counter on a Unit . See rule 701. Buffs for more information. A Buff is also an object. To Buff a unit, place a Buff Counter on it if it does not have one already If the unit already has a Buff Counter on it, it does not get another one. Some effects may grant...",
   "rule": "426",
+  "kind": "keyword"
+ },
+ {
+  "term": "Burn",
+  "aliases": [],
+  "definition": "Out Burning Out is an action a player must perform if they attempt to move one or more cards from their Main Deck to any other zone in excess of the number of cards remaining in their Main Deck: If a player must Draw cards in excess to the number of cards in their Main Deck, they will Draw as many...",
+  "rule": "431",
   "kind": "keyword"
  },
  {
   "term": "Burn Out",
   "aliases": [],
-  "definition": "Burning Out is an action a player must perform if they attempt to move one or more cards from their Main Deck to any other zone in excess of the number of cards remaining in their Main Deck: If a player must Draw cards in excess to the number of cards in their deck, they will Draw as many as...",
+  "definition": "Burning Out is an action a player must perform if they attempt to move one or more cards from their Main Deck to any other zone in excess of the number of cards remaining in their Main Deck: If a player must Draw cards in excess to the number of cards in their Main Deck, they will Draw as many as...",
   "rule": "431",
   "kind": "term"
  },
@@ -120,14 +127,14 @@
  {
   "term": "Cost",
   "aliases": [],
-  "definition": "Main Deck cards have a Cost , listed in the upper left corner of the front face of the card. See rule 164. Rune Pools for more information. Energy Cost The numeral listed in the Cost element in the upper left corner of the card. Power cost The symbols, listed vertically, in the Cost element in the...",
+  "definition": "Main Deck cards have a Cost , listed in the upper left corner of the front face of the card. See rule 165. Rune Pools for more information. Energy Cost The numeral listed in the Cost element in the upper left corner of the card. Power cost The symbols, listed vertically, in the Cost element in the...",
   "rule": "131",
   "kind": "term"
  },
  {
   "term": "Counter",
   "aliases": [],
-  "definition": "Countering is the act of negating the execution, activation, or otherwise playing of a card or ability by a player. A card or ability that is Countered does nothing and is cleared from the chain. A card that is Countered is not considered to have been played. Countering does not refund any costs...",
+  "definition": "Countering is the act of negating the execution, activation, or otherwise playing of a card or ability by a player. A card or ability that is Countered does nothing and is cleared from the chain. Cards that are cleared from the chain in this way are placed in the trash. A card that is Countered is...",
   "rule": "425",
   "kind": "term"
  },
@@ -167,6 +174,13 @@
   "kind": "term"
  },
  {
+  "term": "Disempower",
+  "aliases": [],
+  "definition": "Disempowering is the act of removing the Empowered status from one or more Game Objects. Disempowering affects only cards that are currently Empowered. Game effects that instruct a player to Disempower a card that is not currently Empowered will do nothing. Disempowering is a Limited Action....",
+  "rule": "442",
+  "kind": "term"
+ },
+ {
   "term": "Domain",
   "aliases": [],
   "definition": "Most cards belong to one or more of six Domains , identiﬁed by one or more symbols in the lower right corner. Each Domain has an associated color, a unique symbol, and a shorthand used to represent that symbol in written text. Fury is associated with the color red and represented by a circular...",
@@ -183,7 +197,7 @@
  {
   "term": "Draw",
   "aliases": [],
-  "definition": "Drawing a card takes a single card from a zone and adding it to the player's Hand. Unless speciﬁed otherwise, drawing takes cards from the Main Deck. This is a Limited Action. Each player draws 1 during the Draw Step of their Beginning Phase. The player may draw cards when instructed to do so by...",
+  "definition": "Drawing a card takes a single card from a zone and adds it to the player's Hand. Unless speciﬁed otherwise, drawing takes cards from the top of the Main Deck. This is a Limited Action. Each player draws 1 during the Draw Phase on their turn. The player may draw cards when instructed to do so by...",
   "rule": "413",
   "kind": "term"
  },
@@ -195,30 +209,44 @@
   "kind": "term"
  },
  {
+  "term": "Empower",
+  "aliases": [],
+  "definition": "Empowering is the act of rendering one or more Game Objects Empowered. Empowered is a binary state. A Game Object is Empowered or it isn’t. An Empowered Game Object can not be Empowered. If a Game Object is instructed to be Empowered when it is already Empowered , nothing additional happens. Some...",
+  "rule": "441",
+  "kind": "keyword"
+ },
+ {
+  "term": "Empowered",
+  "aliases": [],
+  "definition": "Empowered is a Dependent Keyword. It is formatted as “[Empowered][>] [Text].” Starting from the keyword to the end of the clause, the entire statement is the Empowered Ability. It is functionally short for “While I have the Empowered status, this card gains ‘[Text]’.” The [Text] here is the...",
+  "rule": "828",
+  "kind": "keyword"
+ },
+ {
   "term": "Ending Phase",
   "aliases": [],
-  "definition": "Ending Step At the end of the turn Game Effects take place. Speciﬁc game effects and abilities will reference this timing and phase as necessary. Expiration Step Invoke an Ending Special Cleanup. See rule 318. Cleanups for more information. Insert “2c. Heal all Units .” Insert “2d. All ‘this turn’...",
+  "definition": "Ending Step At the end of the turn Game Effects take place. Speciﬁc game effects and abilities will reference this timing and phase as necessary. Expiration Step Invoke an Ending Special Cleanup. See rule 318. Cleanups for more information. Insert “3c. Heal all Units .” Insert “3d. All ‘this turn’...",
   "rule": "317",
   "kind": "term"
  },
  {
   "term": "Equip",
   "aliases": [],
-  "definition": "Equip is an Activated Ability keyword. Equip is normally present on Gear with the tag Equipment. Equip has a cost to activate and Attaches the card with Equip to a chosen Unit when the cost is paid. Equip’s choice is a Target. The chosen Unit will become the Top-Most Card for the Attach action....",
+  "definition": "Equip is an Activated Ability keyword. Equip is present on Gear with the tag Equipment. Equip has a cost to activate and Attaches the card with Equip to a chosen Unit when the cost is paid. Equip’s choice is a Target. The chosen Unit will become the Top-Most Card for the Attach action. Equip is...",
   "rule": "818",
   "kind": "keyword"
  },
  {
   "term": "Everything Else",
   "aliases": [],
-  "definition": "When a player Plays a Card or other Game Object , they are established as that Game Object's Controller. For Spells , they are the Spell's Controller. That player chooses targets. That player chooses modes. That player pays costs. For Permanents and Runes , when they Enter the Board , that player...",
-  "rule": "188",
+  "definition": "When a player Plays, Hides, or Creates a Card or other Game Object , they are established as that Game Object's Controller. For Spells , they are the Spell's Controller. That player chooses targets. That player chooses modes. That player pays costs. For Permanents and Runes , when they Enter the...",
+  "rule": "191",
   "kind": "term"
  },
  {
   "term": "Exhaust",
   "aliases": [],
-  "definition": "Exhausting is an action that marks a non-spell Game Object on the board as \"spent.\" To mark it, rotate the card 90 degrees opposite of Readying , so that the orientation of the card is lengthwise in front of you. A Unit that is already Exhausted cannot be Exhausted again. If a Unit is instructed to...",
+  "definition": "Exhausting is an action that marks a non-spell Game Object on the board as \"spent.\" To mark it, rotate the card 90 degrees opposite of Readying , so that the orientation of the card is lengthwise in front of you. A Game Object that is already Exhausted cannot be Exhausted again. If a Game Object is...",
   "rule": "414",
   "kind": "term"
  },
@@ -228,6 +256,13 @@
   "definition": "Flavor text is text that appears at the bottom of some cards to provide aesthetic enjoyment. It conveys no gameplay information. Example: The card Void Seeker features a quote from the character Kai'Sa. It does not have the Kai'Sa tag and has no gameplay connection to the Champion unit Kai'Sa....",
   "rule": "138",
   "kind": "term"
+ },
+ {
+  "term": "Flow",
+  "aliases": [],
+  "definition": "Flow is a passive ability keyword. Flow is present on Spells. It is functionally short for “You may play this from your trash for its ﬂow cost. Then banish it.” Banishing the spell in this way is a delayed replacement effect. If the spell would leave the chain after becoming a ﬁnalized chain item,...",
+  "rule": "829",
+  "kind": "keyword"
  },
  {
   "term": "Fury",
@@ -283,7 +318,7 @@
  {
   "term": "Kill",
   "aliases": [],
-  "definition": "Killing is the action of a Permanent going to the trash from the board. This can be Active or Passive. Active Kill is when the action is taken when instructed by a game effect or as a cost for a card or ability. This is referred to as a Kill Instruction. When a unit with a Deathknell is to be put...",
+  "definition": "Killing is the action of a Permanent going to the trash from the board. This can be Active or Passive. Active Kill is when the action is taken when instructed by a game effect or as a cost for a card or ability. This is referred to as a Kill Instruction. When a unit with a Deathknell or other...",
   "rule": "428",
   "kind": "term"
  },
@@ -297,14 +332,14 @@
  {
   "term": "Level",
   "aliases": [],
-  "definition": "Level is a Dependent Keyword. It is formatted as \"[Level [N]][>] [Text]\". Starting from the Keyword to the end of the clause, the entire statement is the Level Ability . It is functionally short for “While you have [N] or more XP, this card gains “[Text]”.” The [Text] here is the Dependent Ability...",
+  "definition": "Level is a Dependent Keyword. It is formatted as \"[Level [N][>] [Text]\". Starting from the Keyword to the end of the clause, the entire statement is the Level Ability . It is functionally short for “While you have [N] or more XP, this card gains ‘[Text]’.” The [Text] here is the Dependent Ability...",
   "rule": "824",
   "kind": "keyword"
  },
  {
   "term": "Main Phase",
   "aliases": [],
-  "definition": "When all steps of the Start of Turn have been completed, the Main Phase begins. The Main Phase has no deﬁned structure. A player may take any number of Discretionary Actions they are able to perform during this phase. See rule Discretionary Actions for more information. This is denoted as a Neutral...",
+  "definition": "When all steps of the Start of Turn have been completed, the Main Phase begins. The following Tasks become Outstanding in the speciﬁed order: 1. Each player's Rune Pool empties. Any unspent Energy and Power are lost. See rule 165. Rune Pools for more information. 2. At the start of Main Phase game...",
   "rule": "316",
   "kind": "term"
  },
@@ -334,8 +369,15 @@
  {
   "term": "Move",
   "aliases": [],
-  "definition": "Moving is the act of a Game Object moving between two Locations on The Board. See rule 440. Movement for more information on movement. Moving is a Limited Action. Players may only move Game Objects when instructed to do so by Game Effects or costs. The Standard Move inherent to Units may also cause...",
+  "definition": "Moving is the act of a Game Object moving between two Locations on The Board. See rule 445. Movement for more information on movement. Moving is a Limited Action. Players may only move Game Objects when instructed to do so by Game Effects or costs. The Standard Move inherent to Units may also cause...",
   "rule": "420",
+  "kind": "term"
+ },
+ {
+  "term": "Non-Board Zones",
+  "aliases": [],
+  "definition": "The Chain Cards and abilities are placed here as part of the process of being played. See rule 327. Chains for more information. Cards and abilities on the Chain are Public Information. Trashes Each player has their own Trash. This space is where cards are placed when they are killed or discarded,...",
+  "rule": "108",
   "kind": "term"
  },
  {
@@ -350,14 +392,21 @@
  {
   "term": "Ownership",
   "aliases": [],
-  "definition": "For gameplay purposes, a card's Owner is the player who brought it into the game, either as their Champion Legend , one of their Battleﬁelds , or part of their Main Deck or Rune Deck . The legal owner of a card doesn't matter during gameplay. Example: Bo didn't bring a deck, so Alice loans him a...",
+  "definition": "For gameplay purposes, a card's Owner is the player who brought it into the game, either as their Champion Legend , one of their Battleﬁelds , as part of their Main Deck or Rune Deck, or Created during the process of play. The legal owner of a card doesn't matter during gameplay. Example: Bo didn't...",
   "rule": "127",
+  "kind": "term"
+ },
+ {
+  "term": "Pay",
+  "aliases": [],
+  "definition": "Paying a resource is the act of removing that resource from your Rune Pool. Pay is an action that interacts with Energy and Power. When a player is instructed to Pay a resource, that player may remove that resource from their Rune Pool if it exists there. If they choose not to, the instruction is...",
+  "rule": "444",
   "kind": "term"
  },
  {
   "term": "Predict",
   "aliases": [],
-  "definition": "Predicting a card is the act of looking at a single card from the top of the Main Deck and choosing whether or not to Recycle it. When more than one card is Predicted , the Predicting player looks at that many cards and Recycles any number of them. The Player who performs the game action may...",
+  "definition": "Predicting a card is the act of looking at a single card from the top of the Main Deck and choosing whether or not to Recycle it. When more than one card is Predicted , the Predicting player looks at that many cards and Recycles any number of them before putting the rest back on top of their Main...",
   "rule": "436",
   "kind": "keyword"
  },
@@ -371,14 +420,14 @@
  {
   "term": "Prevent",
   "aliases": [],
-  "definition": "Preventing damage is the act of reducing the Damage a set of game objects would take. Prevent is an action that interacts with Damage. Prevent appears in statements that deﬁne an amount of damage and the source of the damage it will affect, as well as the timespan it will be relevant for. Prevent...",
+  "definition": "Preventing damage is the act of reducing the Damage a set of game objects would take. Prevent is an action that interacts with Damage. Prevent includes any applied Bonus Damage when determining the total damage being prevented. Prevent appears in statements that deﬁne an amount of damage and the...",
   "rule": "437",
   "kind": "term"
  },
  {
   "term": "Privacy",
   "aliases": [],
-  "definition": "A card will always exist in one of the many Zones described during Setup. A card will have a different level of Privacy based on where it resides at a given time Secret: This level of Privacy indicates that no player may read or look at the face of the card. Private: This level of Privacy indicates...",
+  "definition": "A card will always exist in one of the many Zones described during Setup. A card will have a different level of Privacy based on its state or where it resides at a given time. Unless speciﬁed otherwise by the state of the card, a card’s Privacy is the same as the zone it is located in. Secret: This...",
   "rule": "128",
   "kind": "term"
  },
@@ -413,21 +462,21 @@
  {
   "term": "Repeat",
   "aliases": [],
-  "definition": "Repeat is an Optional Additional Cost keyword. Repeat is present on Spells. Repeat is an optional cost that a player may pay to execute the effect of their spells a second time. Repeat is formatted as “ Repeat [Cost]” The Cost is an Additional Cost to be paid during the steps of playing the spell....",
+  "definition": "Repeat is an Optional Additional Cost keyword. Repeat is present on Spells and Abilities. Repeat is an optional cost that a player may pay to execute the effect of their spells and abilities a second time. Repeat is formatted as “ Repeat [Cost]” The Cost is an Additional Cost to be paid during the...",
   "rule": "820",
   "kind": "keyword"
  },
  {
   "term": "Replace",
   "aliases": [],
-  "definition": "Replacing is the act of Creating a token in the place of another card or token without playing it while inheriting all effects or statuses of the game object it replaced. Replacing is a Limited Action. The player may Replace cards and tokens when instructed to do so by other game effects. This...",
+  "definition": "Replacing is the act of Creating a token in the place of another card or token without playing it while inheriting all effects or statuses of the game object it replaced. The replacing token is treated as the same Game Object as the card or token it replaced for the purposes of Game Effects that...",
   "rule": "438",
   "kind": "term"
  },
  {
   "term": "Responsibility",
   "aliases": [],
-  "definition": "Game Actions may be the responsibility of up to one player. The player that performs the Game Action is responsible for it. In the case where a Game Action is performed by procedures of the game and not by any player, that Game Action is not the responsibility of any player. Certain rules assign...",
+  "definition": "Game Actions may be the responsibility of up to one player. The player that performs the Game Action is responsible for it. Example: Cull the Weak is a spell that reads “Each player kills one of their units.” When the spell resolves, each player chooses a unit they control and kills that unit. They...",
   "rule": "411",
   "kind": "term"
  },
@@ -453,6 +502,13 @@
   "kind": "keyword"
  },
  {
+  "term": "Skip",
+  "aliases": [],
+  "definition": "Skipping an event is the act of replacing that event with nothing. Skip is an action that interacts with events and procedures of the turn. Example: A card reads in part “Choose an enemy unit. Skip the next time that unit would move this turn.” This is a replacement effect that replaces the event...",
+  "rule": "443",
+  "kind": "term"
+ },
+ {
   "term": "Start of Turn",
   "aliases": [],
   "definition": "Awaken Phase The following Task becomes Outstanding : 1. The Turn Player readies all Game Objects they control that are able to be readied. See rule 415. Ready for more information. Beginning Phase Beginning Step At the start of Beginning Phase game effects take place. Scoring Step The following...",
@@ -469,7 +525,7 @@
  {
   "term": "Swap",
   "aliases": [],
-  "definition": "Swapping is the act of increasing one numeric value and decreasing another numeric value on some number of Game Objects such that their values are reversed. Swapping creates two different effects that apply to each attribute. One that Increases one value and one that Decreases the other. To...",
+  "definition": "Swapping is the act of increasing one numeric value and decreasing another numeric value on some number of Game Objects such that their values are reversed. Swapping creates two different effects that apply to each attribute. One that Increases one value and one that Decreases the other. These...",
   "rule": "433",
   "kind": "term"
  },
@@ -490,14 +546,14 @@
  {
   "term": "Unique",
   "aliases": [],
-  "definition": "Unique is a Deck Constraint Permission. Unique is not functionally short for any rules text, and instead provides a restriction to players during Deck Construction. A Deck can contain only one card of a given name if the card has Unique If a card is a Signature card and is also Unique , then that...",
+  "definition": "Unique is a Deck Constraint Permission. It is normally present on main deck cards. Unique is not functionally short for any rules text, and instead provides a restriction to players during Deck Construction. A deck can contain only one card of a given name if the card has Unique If a card is a...",
   "rule": "825",
   "kind": "keyword"
  },
  {
   "term": "Vision",
   "aliases": [],
-  "definition": "Vision is a Triggered Ability keyword. It is present on Permanents. It is functionally short for \"When this is played, look at the top card of your Main Deck. You may recycle it.\" The trigger is the permanent entering the Board. Multiple instances of Vision trigger separately. The player may choose...",
+  "definition": "Vision is a Triggered Ability keyword. It is present on Permanents. It is functionally short for \"When this is played, predict.” The trigger is the permanent entering the Board. Multiple instances of Vision trigger separately. The player may choose to recycle or not recycle for each instance of...",
   "rule": "817",
   "kind": "keyword"
  },

@@ -16,7 +16,7 @@ When you play me, discard 1.","“Knock, knock.”",False,False,,https://riftbou
 OGN-004,Cleave,Origins,Common,Spell,,Fury,1,,,"[Action] (Play on your turn or in showdowns.)
 Give a unit [Assault 3] this turn. (+3 {Might} while it's an attacker.)",Nobody ever won a war without attacking.,False,False,,https://riftbound.gg/cards/ogn-004-cleave/
 OGN-005,Disintegrate,Origins,Common,Spell,,Fury,4,,,"[Action] (Play on your turn or in showdowns.)
-Deal 3 to a unit at a battlefield. If this kills it, do this: draw 1.","“Ashes, ashes, they all fall down.”",False,False,"[Action] (Play on your turn or in showdowns.)
+Deal 3 to a unit at a battlefield. If this kills it, draw 1.","“Ashes, ashes, they all fall down.”",False,False,"[Action] (Play on your turn or in showdowns.)
 Deal 3 to a unit at a battlefield. If this kills it, do this: draw 1.",https://riftbound.gg/cards/ogn-005-disintegrate/
 OGN-006,Flame Chompers,Origins,Common,Unit,,Fury,3,3,Zaun,"When you discard me, you may pay {Fury Rune} to play me.","""GET 'EM, CHOMPIES!""",False,False,,https://riftbound.gg/cards/ogn-006-flame-chompers/
 OGN-007,Fury Rune,Origins,Common,Rune,Basic,Fury,,,,,,False,False,,https://riftbound.gg/cards/ogn-007-fury-rune/
@@ -45,7 +45,7 @@ OGN-021,Sun Disc,Origins,Uncommon,Gear,,Fury,2,,,{Exhaust}: [Legion] — The nex
 – Azir",False,False,,https://riftbound.gg/cards/ogn-021-sun-disc/
 OGN-022,Thermo Beam,Origins,Uncommon,Spell,,Fury,5,,,"[Action] (Play on your turn or in showdowns.)
 Kill all gear.","“Turn the limiter off, the beam is totally stable.” —Common last words",False,False,,https://riftbound.gg/cards/ogn-022-thermo-beam/
-OGN-023,Unlicensed Armory,Origins,Uncommon,Gear,,Fury,2,,,"Discard 1, {Exhaust}: Choose a friendly unit. The next time it would die this turn, you may pay {Fury Rune} to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",,False,False,"Discard 1, {Exhaust}: Choose a friendly unit. The next time it would die this turn, you may pay {Fury Rune} to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",https://riftbound.gg/cards/ogn-023-unlicensed-armory/
+OGN-023,Unlicensed Armory,Origins,Uncommon,Gear,,Fury,2,,,"Discard 1, {Exhaust}: Choose a friendly unit. The next time it dies this turn, you may pay {Fury Rune} to recall it exhausted instead. (Send it to base. This isn't a move.)",,False,False,"Discard 1, {Exhaust}: Choose a friendly unit. The next time it would die this turn, you may pay {Fury Rune} to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",https://riftbound.gg/cards/ogn-023-unlicensed-armory/
 OGN-024,Void Seeker,Origins,Uncommon,Spell,,Fury,3,,,"[Action] (Play on your turn or in showdowns.)
 Deal 4 to a unit at a battlefield. Draw 1.",“It’s a good day for a hunt.” —Kai’Sa,False,False,,https://riftbound.gg/cards/ogn-024-void-seeker/
 OGN-024-P,Void Seeker (Origins Nexus Night Promo),Origins,Uncommon,Spell,,Fury,3,,,"[Action] (Play on your turn or in showdowns.)
@@ -96,8 +96,7 @@ OGN-042a,Calm Rune,Origins,Showcase,Rune,Basic,Calm,,,,,,False,False,,https://ri
 OGN-042b,Calm Rune (Origins Nexus Night Promo),Origins,Showcase,Rune,,Calm,,,,,,True,False,,https://riftbound.gg/cards/ogn-042b-calm-rune/
 OGN-043,Charm,Origins,Common,Spell,,Calm,1,,,Move an enemy unit.,"“There’s no harm in looking.”  
 — Common last words",False,False,,https://riftbound.gg/cards/ogn-043-charm/
-OGN-044,Clockwork Keeper,Origins,Common,Unit,,Calm,2,2,Shurima,"You may pay {Calm Rune} as an additional cost to play me.
-When you play me, if you paid the additional cost, draw 1.",It always goes back for seconds.,False,False,"You may pay {Calm Rune} as an additional cost to play me.
+OGN-044,Clockwork Keeper,Origins,Common,Unit,,Calm,2,2,Shurima,"As you play me, you may pay {Calm Rune} as an additional cost. If you do, draw 1.",It always goes back for seconds.,False,False,"You may pay {Calm Rune} as an additional cost to play me.
 When you play me, if you paid the additional cost, draw 1.",https://riftbound.gg/cards/ogn-044-clockwork-keeper/
 OGN-045,Defy,Origins,Common,Spell,,Calm,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Counter a spell that costs no more than {4 Energy} and no more than {Any Rune}.",“No.”,False,False,,https://riftbound.gg/cards/ogn-045-defy/
@@ -157,7 +156,7 @@ OGN-070,Mageseeker Warden,Origins,Rare,Unit,,Calm,6,5,Demacia,"While I'm at a ba
 While I'm at a battlefield, spells and abilities can't ready enemy units and gear.",,False,False,,https://riftbound.gg/cards/ogn-070-mageseeker-warden/
 OGN-071,Party Favors,Origins,Rare,Spell,,Calm,3,,,"Each other player chooses Cards or Runes. For each player that chooses Cards, you and that player each draw 1. For each player that chooses Runes, you and that player each channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ogn-071-party-favors/
 OGN-072,Solari Shrine,Origins,Rare,Gear,,Calm,3,,,"When you kill a stunned enemy unit, you may exhaust this to draw 1.",The names of the fallen are a lesson for our descendants.,False,False,,https://riftbound.gg/cards/ogn-072-solari-shrine/
-OGN-073,Sona - Harmonious,Origins,Rare,Unit,Champion,Calm,4,4,Sona; Demacia,"At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",“The symphony never ends.”,False,False,"At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",https://riftbound.gg/cards/ogn-073-sona-harmonious/
+OGN-073,Sona - Harmonious,Origins,Rare,Unit,Champion,Calm,4,4,Sona; Demacia,"While I'm at a battlefield, ready 4 friendly runes at the end of your turn.",“The symphony never ends.”,False,False,"At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",https://riftbound.gg/cards/ogn-073-sona-harmonious/
 OGN-074,Taric - Protector,Origins,Rare,Unit,Champion,Calm,4,4,Taric; Mount Targon,"[Shield] (+1 {Might} while I'm a defender.)
 [Tank] (I must be assigned combat damage first.)
 Other friendly units here have [Shield].",“Each life is a rare jewel.”,False,False,,https://riftbound.gg/cards/ogn-074-taric-protector/
@@ -166,7 +165,7 @@ OGN-075,Tasty Faefolk,Origins,Rare,Unit,,Calm,7,6,Fae; Bandle City,"[Accelerate]
 OGN-076,Yasuo - Remorseful,Origins,Rare,Unit,Champion,Calm,6,6,Yasuo; Ionia,"When I attack, deal damage equal to my Might to an enemy unit here.",“Is a leaf’s only purpose to fall?”,False,False,,https://riftbound.gg/cards/ogn-076-yasuo-remorseful/
 OGN-076a,Yasuo - Remorseful,Origins,Showcase,Unit,Champion,Calm,6,6,Yasuo; Ionia,"When I attack, deal damage equal to my Might to an enemy unit here.",“Is a leaf’s only purpose to fall?”,False,False,,https://riftbound.gg/cards/ogn-076a-yasuo-remorseful/
 OGN-077,Zhonya's Hourglass,Origins,Rare,Gear,,Calm,2,,,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
-If a friendly unit would die, kill this instead. Heal that unit, exhaust it, and recall it. (Send it to base. This isn't a move.)",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+The next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 If a friendly unit would die, kill this instead. Heal that unit, exhaust it, and recall it. (Send it to base. This isn't a move.)",https://riftbound.gg/cards/ogn-077-zhonyas-hourglass/
 OGN-078,Lee Sin - Ascetic,Origins,Epic,Unit,Champion,Calm,5,5,Lee Sin; Ionia,"[Shield] (+1 {Might} while I'm a defender.)
 {Exhaust}: Buff me. (I get a +1 {Might} buff.)
@@ -225,7 +224,7 @@ Other friendly units have [Vision].",The light changes with every reflection.,Fa
 OGN-101,Mushroom Pouch,Origins,Uncommon,Gear,,Mind,2,,,"At the start of your Beginning Phase, if you control a facedown card at a battlefield, draw 1.","“A Bandle Scout is always prepared!”  
 —Teemo",False,False,,https://riftbound.gg/cards/ogn-101-mushroom-pouch/
 OGN-102,Portal Rescue,Origins,Uncommon,Spell,,Mind,3,,,"[Action] (Play on your turn or in showdowns.)
-Banish a friendly unit, then its owner plays it to their base, ignoring its cost.","“Where do the portals go? You know, I’ve never asked.” — Norra",False,False,"[Action] (Play on your turn or in showdowns.)
+Banish a friendly unit, then play it to base, ignoring its cost.","“Where do the portals go? You know, I’ve never asked.” — Norra",False,False,"[Action] (Play on your turn or in showdowns.)
 Banish a friendly unit, then its owner plays it to their base, ignoring its cost.",https://riftbound.gg/cards/ogn-102-portal-rescue/
 OGN-103,Ravenbloom Student,Origins,Uncommon,Unit,,Mind,2,2,Noxus,"When you play a spell, give me +1 {Might} this turn.",A little knowledge is a dangerous thing. A lot of knowledge is awesome.,False,False,,https://riftbound.gg/cards/ogn-103-ravenbloom-student/
 OGN-103-P,Ravenbloom Student (Origins Nexus Night Promo),Origins,Uncommon,Unit,,Mind,2,2,Noxus,"When you play a spell, give me +1 {Might} this turn.",,True,False,,https://riftbound.gg/cards/ogn-103-p-ravenbloom-student/
@@ -233,7 +232,7 @@ OGN-104,Retreat,Origins,Uncommon,Spell,,Mind,1,,,"[Reaction] (Play any time, eve
 Return a friendly unit to its owner's hand. Its owner channels 1 rune exhausted.",There’s always tomorrow.,False,False,,https://riftbound.gg/cards/ogn-104-retreat/
 OGN-105,Singularity,Origins,Uncommon,Spell,,Mind,6,,,Deal 6 to each of up to two units.,"Two fates, very briefly intertwined.",False,False,,https://riftbound.gg/cards/ogn-105-singularity/
 OGN-106,Sprite Mother,Origins,Uncommon,Unit,,Mind,4,3,Fae,"When you play me, play a ready 3 {Might} Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)","“Come, little ones.”",False,False,,https://riftbound.gg/cards/ogn-106-sprite-mother/
-OGN-107,Ava Achiever,Origins,Rare,Unit,,Mind,5,4,Yordle,"When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand, ignoring its cost. If it’s a unit, play it here.",“I brought snacks!”,False,False,"When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand, ignoring its cost. If it’s a unit, play it here.",https://riftbound.gg/cards/ogn-107-ava-achiever/
+OGN-107,Ava Achiever,Origins,Rare,Unit,,Mind,5,4,Yordle,"When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand here, ignoring its cost.",“I brought snacks!”,False,False,"When I attack, you may pay {Mind Rune} to play a card with [Hidden] from your hand, ignoring its cost. If it’s a unit, play it here.",https://riftbound.gg/cards/ogn-107-ava-achiever/
 OGN-108,Convergent Mutation,Origins,Rare,Spell,,Mind,2,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Choose a friendly unit. This turn, increase its Might to the Might of another friendly unit.","“I don’t know, I think it’s kind of cute.”",False,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Choose a friendly unit. This turn, increase its Might to the Might of another friendly unit.",https://riftbound.gg/cards/ogn-108-convergent-mutation/
@@ -250,7 +249,7 @@ OGN-112a,Kai'Sa - Evolutionary,Origins,Showcase,Unit,Champion,Mind,6,6,Kai'Sa; T
 When I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)",,False,False,,https://riftbound.gg/cards/ogn-112a-kaisa-evolutionary/
 OGN-113,Malzahar - Fanatic,Origins,Rare,Unit,Champion,Mind,4,3,Malzahar; The Void,"Kill a friendly unit or gear, {Exhaust}: [Action] — [Add] {Any Rune}{Any Rune}. (Use on your turn or in showdowns. Abilities that add resources can't be reacted to.)",“We demand sacrifice.”,False,False,,https://riftbound.gg/cards/ogn-113-malzahar-fanatic/
 OGN-114,Progress Day,Origins,Rare,Spell,,Mind,6,,,Draw 4.,"See the dreams of a thousand tomorrows, and at such a low price!",False,False,,https://riftbound.gg/cards/ogn-114-progress-day/
-OGN-115,Promising Future,Origins,Rare,Spell,,Mind,5,,,"Each player looks at the top 5 cards of their Main Deck, banishes one of them, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",,False,False,"Each player looks at the top 5 cards of their Main Deck, banishes one of them, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",https://riftbound.gg/cards/ogn-115-promising-future/
+OGN-115,Promising Future,Origins,Rare,Spell,,Mind,5,,,"Each player looks at the top 5 cards of their Main Deck, chooses one, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",,False,False,"Each player looks at the top 5 cards of their Main Deck, banishes one of them, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",https://riftbound.gg/cards/ogn-115-promising-future/
 OGN-116,Thousand-Tailed Watcher,Origins,Rare,Unit,,Mind,7,7,Ionia,"[Accelerate] (You may pay {1 Energy}{Mind Rune} as an additional cost to have me enter ready.)
 When you play me, give enemy units -3 {Might} this turn, to a minimum of 1 {Might}.",You will know when you've pushed the wilds too far.,False,False,,https://riftbound.gg/cards/ogn-116-thousand-tailed-watcher/
 OGN-117,Viktor - Innovator,Origins,Rare,Unit,Champion,Mind,4,3,Viktor; Zaun,"When you play a card on an opponent's turn, play a 1 {Might} Recruit unit token in your base.",“Join the glorious evolution.”,False,False,,https://riftbound.gg/cards/ogn-117-viktor-innovator/
@@ -260,10 +259,10 @@ OGN-119,Ahri - Inquisitive,Origins,Epic,Unit,Champion,Mind,3,3,Ahri; Ionia,"When
 OGN-119a,Ahri - Inquisitive,Origins,Showcase,Unit,Champion,Mind,3,3,Ahri; Ionia,"When I attack or defend, give an enemy unit here -2 {Might} this turn, to a minimum of 1 {Might}.",“The hunter and the hunted.”,False,False,,https://riftbound.gg/cards/ogn-119a-ahri-inquisitive/
 OGN-120,Seal of Insight,Origins,Epic,Gear,,Mind,,,,{Exhaust}: [Reaction] — [Add] {Mind Rune}. (Abilities that add resources can't be reacted to.),,False,False,,https://riftbound.gg/cards/ogn-120-seal-of-insight/
 OGN-121,Teemo - Strategist,Origins,Epic,Unit,Champion,Mind,2,2,Yordle; Teemo; Bandle City,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
-When I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 When I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",https://riftbound.gg/cards/ogn-121-teemo-strategist/
 OGN-121a,Teemo - Strategist,Origins,Showcase,Unit,Champion,Mind,2,2,Yordle; Teemo; Bandle City,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
-When I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 When I defend, choose an enemy unit here and reveal the top 5 cards of your Main Deck. Deal 1 to that unit for each card with [Hidden] revealed this way, then recycle the revealed cards.",https://riftbound.gg/cards/ogn-121a-teemo-strategist/
 OGN-122,Time Warp,Origins,Epic,Spell,,Mind,10,,,Take a turn after this one. Banish this.,“Fool me once...and I’ll just rewind.”,False,False,,https://riftbound.gg/cards/ogn-122-time-warp/
 OGN-123,Unchecked Power,Origins,Epic,Spell,,Mind,7,,,"Exhaust all friendly units, then deal 12 to ALL units at battlefields.",That’s enough.,False,False,,https://riftbound.gg/cards/ogn-123-unchecked-power/
@@ -339,7 +338,7 @@ OGN-159,Warwick - Hunter,Origins,Rare,Unit,Champion,Body,6,5,Dog; Warwick; Zaun,
 When I attack, kill all damaged enemy units here.",“The blood you spilled calls to me.”,False,False,,https://riftbound.gg/cards/ogn-159-warwick-hunter/
 OGN-159a,Warwick - Hunter (Arcane Box Set Promo),Origins,Showcase,Unit,Champion,Body,6,5,Dog; Warwick; Zaun,"I enter ready.
 When I attack, kill all damaged enemy units here.",,True,False,,https://riftbound.gg/cards/ogn-159a-warwick-hunter/
-OGN-160,Dazzling Aurora,Origins,Epic,Gear,,Body,9,,,"At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit and banish it. Play it, ignoring its cost, and recycle the rest.",The omens offer much to those who dare to see them.,False,False,"At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit and banish it. Play it, ignoring its cost, and recycle the rest.",https://riftbound.gg/cards/ogn-160-dazzling-aurora/
+OGN-160,Dazzling Aurora,Origins,Epic,Gear,,Body,9,,,"At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit. Play it, ignoring its cost, and recycle the rest.",The omens offer much to those who dare to see them.,False,False,"At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit and banish it. Play it, ignoring its cost, and recycle the rest.",https://riftbound.gg/cards/ogn-160-dazzling-aurora/
 OGN-161,Deadbloom Predator,Origins,Epic,Unit,,Body,8,8,Shadow Isles,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
 You may play me to an occupied enemy battlefield.",The souls of those who died unfulfilled coalesce into a form to sate those hungers.,False,False,,https://riftbound.gg/cards/ogn-161-deadbloom-predator/
 OGN-162,Miss Fortune - Captain,Origins,Epic,Unit,Champion,Body,5,5,Pirate; Miss Fortune; Bilgewater,"[Accelerate] (You may pay {1 Energy}{Body Rune} as an additional cost to have me enter ready.)
@@ -381,13 +380,13 @@ OGN-178,Undercover Agent,Origins,Common,Unit,,Chaos,5,5,,"[Deathknell] — Disca
 OGN-179,Acceptable Losses,Origins,Uncommon,Spell,,Chaos,1,,,"[Action] (Play on your turn or in showdowns.)
 Each player kills one of their gear.",“Never liked that sword anyway.”,False,False,,https://riftbound.gg/cards/ogn-179-acceptable-losses/
 OGN-180,Fading Memories,Origins,Uncommon,Spell,,Chaos,4,,,"Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",You too shall pass.,False,False,,https://riftbound.gg/cards/ogn-180-fading-memories/
-OGN-181,Pack of Wonders,Origins,Uncommon,Gear,,Chaos,2,,,"{Exhaust}: Return another friendly gear, unit, or facedown card to its owner's hand.",“I know I put it in here somewhere...” —Teemo,False,False,"{Exhaust}: Return another friendly gear, unit, or facedown card to its owner's hand.",https://riftbound.gg/cards/ogn-181-pack-of-wonders/
+OGN-181,Pack of Wonders,Origins,Uncommon,Gear,,Chaos,2,,,"{Exhaust}: Return another friendly gear, unit, or [Hidden] card to its owner's hand.",“I know I put it in here somewhere...” —Teemo,False,False,"{Exhaust}: Return another friendly gear, unit, or facedown card to its owner's hand.",https://riftbound.gg/cards/ogn-181-pack-of-wonders/
 OGN-182,Scrapheap,Origins,Uncommon,Gear,,Chaos,2,,,"When this is played, discarded, or killed, draw 1.",The parts that make it to the heap are the ones that DIDN’T blow up.,False,True,,https://riftbound.gg/cards/ogn-182-scrapheap/
 OGN-183,Stacked Deck,Origins,Uncommon,Spell,,Chaos,1,,,"[Action] (Play on your turn or in showdowns.)
 Look at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.","“Just lucky, I guess.”",False,False,,https://riftbound.gg/cards/ogn-183-stacked-deck/
 OGN-183-P,Stacked Deck (Origins Nexus Night Promo),Origins,Uncommon,Spell,,Chaos,1,,,"[Action] (Play on your turn or in showdowns.)
 Look at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.",,True,False,,https://riftbound.gg/cards/ogn-183-p-stacked-deck/
-OGN-184,The Syren,Origins,Uncommon,Gear,,Chaos,2,,,"{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to its base.","Without a ship, a pirate’s just another common criminal.",False,False,"{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to its base.",https://riftbound.gg/cards/ogn-184-the-syren/
+OGN-184,The Syren,Origins,Uncommon,Gear,,Chaos,2,,,"{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to your base.","Without a ship, a pirate’s just another common criminal.",False,False,"{1 Energy}, {Exhaust}: Move a friendly unit at a battlefield to its base.",https://riftbound.gg/cards/ogn-184-the-syren/
 OGN-185,Traveling Merchant,Origins,Uncommon,Unit,,Chaos,2,2,Bilgewater,"When I move, discard 1, then draw 1.","Payment first, refund never.",False,False,,https://riftbound.gg/cards/ogn-185-traveling-merchant/
 OGN-186,Treasure Trove,Origins,Uncommon,Gear,,Chaos,2,,,"When this leaves the board, draw 1 and channel 1 rune exhausted.
 {Chaos Rune}, {Exhaust}: Kill this.",“We’re gonna be rich!” — Common last words,False,False,,https://riftbound.gg/cards/ogn-186-treasure-trove/
@@ -410,7 +409,7 @@ Friendly units may be played to open battlefields.",“I always shoot first.”,
 OGN-193b,Miss Fortune - Buccaneer (Regional Qualifier Houston Champion Promo),Origins,Showcase,Unit,Champion,Chaos,4,4,Pirate; Miss Fortune; Bilgewater,"You may play me to an open battlefield.
 Friendly units may be played to open battlefields.",“I always shoot first.”,True,False,,https://riftbound.gg/cards/ogn-193b-miss-fortune-buccaneer/
 OGN-194,Nocturne - Horrifying,Origins,Rare,Unit,Champion,Chaos,4,4,Nocturne,"[Ganking] (I can move from battlefield to battlefield.)
-As you look at or reveal me from the top of your deck, you may banish me. If you do, you may play me for {Any Rune}.",,False,False,"[Ganking] (I can move from battlefield to battlefield.)
+When you look at cards from the top of your deck (and don't draw them) and see me, you may play me for {Any Rune}.",,False,False,"[Ganking] (I can move from battlefield to battlefield.)
 As you look at or reveal me from the top of your deck, you may banish me. If you do, you may play me for {Any Rune}.",https://riftbound.gg/cards/ogn-194-nocturne-horrifying/
 OGN-195,Rhasa the Sunderer,Origins,Rare,Unit,,Chaos,10,6,Spirit; Shadow Isles,I cost {1 Energy} less for each card in your trash.,"It feeds well on death, but better on madness.",False,False,,https://riftbound.gg/cards/ogn-195-rhasa-the-sunderer/
 OGN-196,Soulgorger,Origins,Rare,Unit,,Chaos,8,5,Spirit; Shadow Isles,"When you play me, you may play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)",,False,False,,https://riftbound.gg/cards/ogn-196-soulgorger/
@@ -424,7 +423,7 @@ OGN-197b,Teemo - Scout (GGEZ Origins Nexus Night Promo),Origins,Showcase,Unit,Ch
 When you play me, give me +3 {Might} this turn.",,True,False,,https://riftbound.gg/cards/ogn-197b-teemo-scout/
 OGN-198,The Harrowing,Origins,Rare,Spell,,Chaos,6,,,"Play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)",,False,False,,https://riftbound.gg/cards/ogn-198-the-harrowing/
 OGN-199,Tideturner,Origins,Rare,Unit,,Chaos,2,2,Bilgewater,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
-When you play me, you may choose a unit you control at another location. Move me to its location and it to my original location.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+When you play me, you may choose a friendly unit. Move me to its location and it to my original location.",,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 When you play me, you may choose a unit you control at another location. Move me to its location and it to my original location.",https://riftbound.gg/cards/ogn-199-tideturner/
 OGN-200,Twisted Fate - Gambler,Origins,Rare,Unit,Champion,Chaos,4,4,Twisted Fate; Bilgewater,"When I attack, reveal the top rune of your rune deck, then recycle it. Do one of the following based on its domain:{Fury Rune} — Deal 2 to an enemy unit here and 1 to all other enemy units here.{Mind Rune} — Draw 1.{Order Rune} — Stun an enemy unit.",,False,False,,https://riftbound.gg/cards/ogn-200-twisted-fate-gambler/
 OGN-201,Invert Timelines,Origins,Epic,Spell,,Chaos,3,,,"Each player discards their hand, then draws 4.","“Good a time as any to act reckless.”  
@@ -472,7 +471,7 @@ When any unit takes damage this turn, kill it.","“With a word, I end you.” �
 OGN-222,Noxian Drummer,Origins,Uncommon,Unit,,Order,3,3,Trifarian; Noxus,"When I move to a battlefield, play a 1 {Might} Recruit unit token here. (It is also at the battlefield.)",Even the Legion's musicians are hard to beat.,False,False,,https://riftbound.gg/cards/ogn-222-noxian-drummer/
 OGN-223,Peak Guardian,Origins,Uncommon,Unit,,Order,6,5,Mount Targon,"When you play me, buff me. Then, if I am at a battlefield, buff all other friendly units there. (To buff a unit, give it a +1 {Might} buff if it doesn't already have one.)",Mount Targon’s blessing is bestowed upon those who have proven they are strong enough without it.,False,False,,https://riftbound.gg/cards/ogn-223-peak-guardian/
 OGN-224,Salvage,Origins,Uncommon,Spell,,Order,2,,,"[Action] (Play on your turn or in showdowns.)
-You may kill up to one gear. Draw 1.",One person’s treasure is another one’s trash.,False,False,"[Action] (Play on your turn or in showdowns.)
+You may kill a gear. Draw 1.",One person’s treasure is another one’s trash.,False,False,"[Action] (Play on your turn or in showdowns.)
 You may kill up to one gear. Draw 1.",https://riftbound.gg/cards/ogn-224-salvage/
 OGN-225,Solari Chief,Origins,Uncommon,Unit,,Order,5,4,Mount Targon,"When you play me, choose an enemy unit. If it is stunned, kill it. Otherwise, stun it. (It doesn't deal combat damage this turn.)","The sun has many rays, each tasked with driving out the darkness.",False,False,,https://riftbound.gg/cards/ogn-225-solari-chief/
 OGN-226,Spectral Matron,Origins,Uncommon,Unit,,Order,4,4,Spirit; Shadow Isles,"When you play me, you may play a unit costing no more than {3 Energy} and no more than {Any Rune} from your trash, ignoring its cost.",“Come—there is use for you yet.”,False,False,,https://riftbound.gg/cards/ogn-226-spectral-matron/
@@ -490,7 +489,7 @@ OGN-233,Grand Strategem,Origins,Rare,Spell,,Order,6,,,"[Action] (Play on your tu
 Give friendly units +5 {Might} this turn.",You need not understand the plan—only believe in it.,False,False,,https://riftbound.gg/cards/ogn-233-grand-strategem/
 OGN-234,Harnessed Dragon,Origins,Rare,Unit,,Order,8,6,Dragon; Demacia,"When you play me, kill an enemy unit.","What bends a dragon's will is not strength, but sense of purpose.",False,False,,https://riftbound.gg/cards/ogn-234-harnessed-dragon/
 OGN-235,Karma - Channeler,Origins,Rare,Unit,Champion,Order,6,6,Vi; Ionia,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)
-When you recycle one or more cards to your Main Deck, buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff. Runes aren't cards.)",“Heart and mind as one.”,False,False,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)
+When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff. Runes aren't cards.)",“Heart and mind as one.”,False,False,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)
 When you recycle one or more cards to your Main Deck, buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff. Runes aren't cards.)",https://riftbound.gg/cards/ogn-235-karma-channeler/
 OGN-236,Karthus - Eternal,Origins,Rare,Unit,Champion,Order,3,3,Spirit; Karthus; Shadow Isles,Your [Deathknell] effects trigger an additional time.,“We all have a place among the divine. We have only to accept it.”,False,False,,https://riftbound.gg/cards/ogn-236-karthus-eternal/
 OGN-237,King's Edict,Origins,Rare,Spell,,Order,6,,,"Starting with the next player, each other player chooses a unit you don't control that hasn't been chosen for this spell. Kill those units.",Ruling is about making the hard choices. Serving is about living with the consequences.,False,False,,https://riftbound.gg/cards/ogn-237-kings-edict/
@@ -517,7 +516,7 @@ OGN-246,Viktor - Leader,Origins,Epic,Unit,Champion,Order,4,4,Viktor; Zaun,"When 
 OGN-246-P,Viktor - Leader (Origins Release Event Promo),Origins,Epic,Unit,,Order,4,4,Viktor; Zaun,"When another non-Recruit unit you control dies, play a 1 {Might} Recruit unit token into your base.",,True,False,,https://riftbound.gg/cards/ogn-246-p-viktor-leader/
 OGN-246a,Viktor - Leader,Origins,Showcase,Unit,Champion,Order,4,4,Viktor; Zaun,"When another non-Recruit unit you control dies, play a 1 {Might} Recruit unit token into your base.",“I am the first of many.”,False,False,,https://riftbound.gg/cards/ogn-246a-viktor-leader/
 OGN-246b,Viktor - Leader (Arcane Box Set Promo),Origins,Showcase,Unit,Champion,Order,4,4,Viktor; Zaun,"When another non-Recruit unit you control dies, play a 1 {Might} Recruit unit token into your base.",,True,False,,https://riftbound.gg/cards/ogn-246b-viktor-leader/
-OGN-247,Kai'Sa - Daughter of the Void,Origins,Rare,Legend,,Fury; Mind,,,Kai'Sa,{Exhaust}: [Reaction] — [Add] {Any Rune}. Use only to play spells. (Abilities that add resources can't be reacted to.),,False,False,,https://riftbound.gg/cards/ogn-247-kaisa-daughter-of-the-void/
+OGN-247,Kai'Sa - Daughter of the Void,Origins,Rare,Legend,Champion,Fury; Mind,,,Kai'Sa,{Exhaust}: [Reaction] — [Add] {Any Rune}. Use only to play spells. (Abilities that add resources can't be reacted to.),,False,False,,https://riftbound.gg/cards/ogn-247-kaisa-daughter-of-the-void/
 OGN-247-P,"Kai'Sa, Daughter of the Void (Origins Release Event Promo)",Origins,Rare,Legend,,Fury; Mind,,,Kai'Sa,{Exhaust}: [Reaction] — [Add] {Any Rune}. Use only to play spells. (Abilities that add resources can't be reacted to.),,True,False,,https://riftbound.gg/cards/ogn-247-p-kaisa-daughter-of-the-void/
 OGN-248,Icathian Rain,Origins,Epic,Spell,Signature,Fury; Mind,7,,Kai'Sa,"Deal 2 to a unit.
 Deal 2 to a unit.
@@ -530,7 +529,7 @@ Deal 2 to a unit.
 Deal 2 to a unit.
 Deal 2 to a unit.
 Deal 2 to a unit.",https://riftbound.gg/cards/ogn-248-icathian-rain/
-OGN-249,Volibear - Relentless Storm,Origins,Rare,Legend,,Fury; Body,,,Volibear,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ {Might}.)",,False,False,,https://riftbound.gg/cards/ogn-249-volibear-relentless-storm/
+OGN-249,Volibear - Relentless Storm,Origins,Rare,Legend,Champion,Fury; Body,,,Volibear,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ {Might}.)",,False,False,,https://riftbound.gg/cards/ogn-249-volibear-relentless-storm/
 OGN-249-P,Volibear - Relentless Storm (Origins Release Event Promo),Origins,Rare,Legend,,Fury; Body,,,Volibear,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ {Might}.)",,True,False,,https://riftbound.gg/cards/ogn-249-p-volibear-relentless-storm/
 OGN-250,Stormbringer,Origins,Epic,Spell,Signature,Fury; Body,6,,Volibear,"Choose a friendly unit in your base. Deal damage equal to its Might to all enemy units at a battlefield, then move your unit there.",,False,False,,https://riftbound.gg/cards/ogn-250-stormbringer/
 OGN-251,Jinx - Loose Cannon,Origins,Rare,Legend,,Fury; Chaos,,,Jinx,"At start of your Beginning Phase, draw 1 if you have one or fewer cards in your hand.",,False,False,,https://riftbound.gg/cards/ogn-251-jinx-loose-cannon/
@@ -542,15 +541,15 @@ OGN-253-P,"Darius, Hand of Noxus (Origins Release Event Promo)",Origins,Rare,Leg
 OGN-254,Noxian Guillotine,Origins,Epic,Spell,Signature,Fury; Order,4,,Darius,"[Action] (Play on your turn or in showdowns.)
 Choose a unit. Kill it the next time it takes damage this turn.
 [Legion] — Kill it now instead. (Get the effect if you've played another card this turn.)",,False,False,,https://riftbound.gg/cards/ogn-254-noxian-guillotine/
-OGN-255,Ahri - Nine-Tailed Fox,Origins,Rare,Legend,,Calm; Mind,,,Ahri,"When an enemy unit attacks a battlefield you control, give it -1 {Might} this turn, to a minimum of 1 {Might}.",,False,False,,https://riftbound.gg/cards/ogn-255-ahri-nine-tailed-fox/
+OGN-255,Ahri - Nine-Tailed Fox,Origins,Rare,Legend,Champion,Calm; Mind,,,Ahri,"When an enemy unit attacks a battlefield you control, give it -1 {Might} this turn, to a minimum of 1 {Might}.",,False,False,,https://riftbound.gg/cards/ogn-255-ahri-nine-tailed-fox/
 OGN-255-P,Ahri - Nine-Tailed Fox (Origins Release Event Promo),Origins,Rare,Legend,,Calm; Mind,,,Ahri,"When an enemy unit attacks a battlefield you control, give it -1 {Might} this turn, to a minimum of 1 {Might}.",,True,False,,https://riftbound.gg/cards/ogn-255-p-ahri-nine-tailed-fox/
 OGN-256,Fox-Fire,Origins,Epic,Spell,Signature,Calm; Mind,3,,Ahri,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 [Action] (Play on your turn or in showdowns.)
 Kill any number of units at a battlefield with total Might 4 or less.",,False,False,,https://riftbound.gg/cards/ogn-256-fox-fire/
 OGN-257,Lee Sin - Blind Monk,Origins,Rare,Legend,,Calm; Body,,,Lee Sin,"{1 Energy}, {Exhaust}: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff.)",,False,False,,https://riftbound.gg/cards/ogn-257-lee-sin-blind-monk/
 OGN-257-P,Lee Sin - Blind Monk (Origins Release Event Promo),Origins,Rare,Legend,,Calm; Body,,,Lee Sin,"{1 Energy}, {Exhaust}: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 {Might} buff.)",,True,False,,https://riftbound.gg/cards/ogn-257-p-lee-sin-blind-monk/
-OGN-258,Dragon's Rage,Origins,Epic,Spell,Signature,Calm; Body,4,,Lee Sin,Move an enemy unit. Then do this: Choose another enemy unit at its destination. They deal damage equal to their Mights to each other.,,False,False,Move an enemy unit. Then do this: Choose another enemy unit at its destination. They deal damage equal to their Mights to each other.,https://riftbound.gg/cards/ogn-258-dragons-rage/
-OGN-259,Yasuo - Unforgiven,Origins,Rare,Legend,,Calm; Chaos,,,Yasuo,"{2 Energy}, {Exhaust}: Move a friendly unit to or from its base.",,False,False,"{2 Energy}, {Exhaust}: Move a friendly unit to or from its base.",https://riftbound.gg/cards/ogn-259-yasuo-unforgiven/
+OGN-258,Dragon's Rage,Origins,Epic,Spell,Signature,Calm; Body,4,,Lee Sin,Move an enemy unit. Then choose another enemy unit at its destination. They deal damage equal to their Mights to each other.,,False,False,Move an enemy unit. Then do this: Choose another enemy unit at its destination. They deal damage equal to their Mights to each other.,https://riftbound.gg/cards/ogn-258-dragons-rage/
+OGN-259,Yasuo - Unforgiven,Origins,Rare,Legend,Champion,Calm; Chaos,,,Yasuo,"{2 Energy}, {Exhaust}: Move a friendly unit to or from its base.",,False,False,"{2 Energy}, {Exhaust}: Move a friendly unit to or from its base.",https://riftbound.gg/cards/ogn-259-yasuo-unforgiven/
 OGN-259-P,Yasuo - Unforgiven (Origins Release Event Promo),Origins,Rare,Legend,,Calm; Chaos,,,Yasuo,"{2 Energy}, {Exhaust}: Move a friendly unit to or from your base.",,True,False,"{2 Energy}, {Exhaust}: Move a friendly unit to or from its base.",https://riftbound.gg/cards/ogn-259-p-yasuo-unforgiven/
 OGN-260,Last Breath,Origins,Epic,Spell,Signature,Calm; Chaos,3,,Yasuo,"[Action] (Play on your turn or in showdowns.)
 Ready a friendly unit. It deals damage equal to its Might to an enemy unit at a battlefield.",,False,False,,https://riftbound.gg/cards/ogn-260-last-breath/
@@ -570,11 +569,11 @@ OGN-265,Viktor - Herald of the Arcane,Origins,Rare,Legend,,Mind; Order,,,Viktor,
 OGN-265-P,Viktor - Herald of the Arcane (Origins Release Event Promo),Origins,Rare,Legend,,Mind; Order,,,Viktor,"{1 Energy}, {Exhaust}: Play a 1 {Might} Recruit unit token.",,True,False,,https://riftbound.gg/cards/ogn-265-p-viktor-herald-of-the-arcane/
 OGN-266,Siphon Power,Origins,Epic,Spell,Signature,Mind; Order,2,,Viktor,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Choose a battlefield. Give friendly units there +1 {Might} this turn and enemy units there -1 {Might} this turn, to a minimum of 1 {Might}.",,False,False,,https://riftbound.gg/cards/ogn-266-siphon-power/
-OGN-267,Miss Fortune - Bounty Hunter,Origins,Rare,Legend,,Body; Chaos,,,Miss Fortune,{Exhaust}: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.),,False,False,,https://riftbound.gg/cards/ogn-267-miss-fortune-bounty-hunter/
+OGN-267,Miss Fortune - Bounty Hunter,Origins,Rare,Legend,Champion,Body; Chaos,,,Miss Fortune,{Exhaust}: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.),,False,False,,https://riftbound.gg/cards/ogn-267-miss-fortune-bounty-hunter/
 OGN-267-P,"Miss Fortune, Bounty Hunter (Origins Release Event Promo)",Origins,Rare,Legend,,Body; Chaos,,,Miss Fortune,{Exhaust}: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.),,True,False,,https://riftbound.gg/cards/ogn-267-p-miss-fortune-bounty-hunter/
 OGN-268,Bullet Time,Origins,Epic,Spell,Signature,Body; Chaos,1,,Miss Fortune,"[Action] (Play on your turn or in showdowns.)
 Pay any amount of {Any Rune} to deal that much damage to all enemy units at a battlefield.",,False,False,,https://riftbound.gg/cards/ogn-268-bullet-time/
-OGN-269,Sett - The Boss,Origins,Rare,Legend,,Body; Order,,,Sett,"If a buffed unit you control would die, you may pay {Any Rune}, exhaust me, and spend its buff to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)
+OGN-269,Sett - The Boss,Origins,Rare,Legend,,Body; Order,,,Sett,"When a buffed unit you control would die, you may pay {Any Rune} and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)
 When you conquer, ready me.",,False,False,"If a buffed unit you control would die, you may pay {Any Rune}, exhaust me, and spend its buff to heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)
 When you conquer, ready me.",https://riftbound.gg/cards/ogn-269-sett-the-boss/
 OGN-269-P,Sett - The Boss (Origins Release Event Promo),Origins,Rare,Legend,,Body; Order,,,Sett,"When a buffed unit you control would die, you may pay {Any Rune} and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)
@@ -602,10 +601,10 @@ OGN-283,Navori Fighting Pit,Origins,Uncommon,Battlefield,,Colorless,,,,"When you
 OGN-284,Obelisk of Power,Origins,Uncommon,Battlefield,,Colorless,,,,"At the start of each player's first Beginning Phase, that player channels 1 rune.",,False,True,,https://riftbound.gg/cards/ogn-284-obelisk-of-power/
 OGN-285,Reaver's Row,Origins,Uncommon,Battlefield,,Colorless,,,,"When you defend here, you may move a friendly unit here to base.",,False,True,,https://riftbound.gg/cards/ogn-285-reavers-row/
 OGN-286,Reckoner's Arena,Origins,Uncommon,Battlefield,,Colorless,,,,"When you hold here, activate the conquer effects of units here.",,False,False,,https://riftbound.gg/cards/ogn-286-reckoners-arena/
-OGN-287,Sigil of the Storm,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, you must recycle one of your runes. (This doesn’t choose anything.)",,False,False,"When you conquer here, you must recycle one of your runes. (This doesn’t choose anything.)",https://riftbound.gg/cards/ogn-287-sigil-of-the-storm/
+OGN-287,Sigil of the Storm,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, recycle one of your runes.",,False,False,"When you conquer here, you must recycle one of your runes. (This doesn’t choose anything.)",https://riftbound.gg/cards/ogn-287-sigil-of-the-storm/
 OGN-288,Startipped Peak,Origins,Uncommon,Battlefield,,Colorless,,,,"When you hold here, you may channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ogn-288-startipped-peak/
 OGN-288/298,Startipped Peak (Oversized),Origins Proving Grounds,Uncommon,Battlefield,,Colorless,,,,"When you hold here, you may channel 1 rune exhausted.",,True,False,,https://riftbound.gg/cards/ogn-288298-startipped-peak-oversized/
-OGN-289,Targon's Peak,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, ready up to 2 runes at the end of this turn.",,False,False,"When you conquer here, ready up to 2 runes at the end of this turn.",https://riftbound.gg/cards/ogn-289-targons-peak/
+OGN-289,Targon's Peak,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, ready 2 runes at the end of this turn.",,False,False,"When you conquer here, ready up to 2 runes at the end of this turn.",https://riftbound.gg/cards/ogn-289-targons-peak/
 OGN-290,The Arena's Greatest,Origins,Uncommon,Battlefield,,Colorless,,,,"At the start of each player's first Beginning Phase, that player gains 1 point.",,False,False,,https://riftbound.gg/cards/ogn-290-the-arenas-greatest/
 OGN-291,The Candlelit Sanctum,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, look at the top two cards of your Main Deck. You may recycle one or both of them. Put those you don't back in any order.",,False,False,,https://riftbound.gg/cards/ogn-291-the-candlelit-sanctum/
 OGN-292,The Dreaming Tree,Origins,Uncommon,Battlefield,,Colorless,,,,"When a player chooses a friendly unit here with a spell for the first time each turn, they draw 1.",,False,True,"When a player chooses a friendly unit here with a spell for the first time each turn, they draw 1.",https://riftbound.gg/cards/ogn-292-the-dreaming-tree/
@@ -614,7 +613,7 @@ OGN-293a,The Grand Plaza (Worlds Bundle 2025 Promo),Origins,Showcase,Battlefield
 OGN-294,Trifarian War Camp,Origins,Uncommon,Battlefield,,Colorless,,,,Units here have +1 {Might}. (This includes attackers.),,False,False,,https://riftbound.gg/cards/ogn-294-trifarian-war-camp/
 OGN-294/298,Trifarian War Camp (Oversized),Origins Proving Grounds,Uncommon,Battlefield,,Colorless,,,,Units here have +1 [might] . (Including attackers.),,True,False,,https://riftbound.gg/cards/ogn-294298-trifarian-war-camp-oversized/
 OGN-295,Vilemaw's Lair,Origins,Uncommon,Battlefield,,Colorless,,,,Units can't move from here to base.,,False,False,,https://riftbound.gg/cards/ogn-295-vilemaws-lair/
-OGN-296,Void Gate,Origins,Uncommon,Battlefield,,Colorless,,,,Spells and abilities deal 1 Bonus Damage to units here. (Each instance of damage the spell deals to a unit here is increased by 1.),,False,False,Spells and abilities deal 1 Bonus Damage to units here. (Each instance of damage the spell deals to a unit here is increased by 1.),https://riftbound.gg/cards/ogn-296-void-gate/
+OGN-296,Void Gate,Origins,Uncommon,Battlefield,,Colorless,,,,Spells and abilities affecting units here each deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.),,False,False,Spells and abilities deal 1 Bonus Damage to units here. (Each instance of damage the spell deals to a unit here is increased by 1.),https://riftbound.gg/cards/ogn-296-void-gate/
 OGN-296/298,Void Gate (Oversized),Origins Proving Grounds,Uncommon,Battlefield,,Colorless,,,,Spells and abilities affecting units here each deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.),,True,False,Spells and abilities deal 1 Bonus Damage to units here. (Each instance of damage the spell deals to a unit here is increased by 1.),https://riftbound.gg/cards/ogn-296298-void-gate-oversized/
 OGN-297,Windswept Hillock,Origins,Uncommon,Battlefield,,Colorless,,,,Units here have [Ganking]. (They can move from battlefield to battlefield.),,False,False,,https://riftbound.gg/cards/ogn-297-windswept-hillock/
 OGN-298,Zaun Warrens,Origins,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, discard 1, then draw 1.",,False,False,,https://riftbound.gg/cards/ogn-298-zaun-warrens/
@@ -682,14 +681,14 @@ OGS-014-P,Lux - Crownguard (Spiritforged Nexus Night Promo),Proving Grounds,Epic
 OGS-015,Recruit the Vanguard,Proving Grounds,Uncommon,Spell,,Order,6,,,"[Action] (Play on your turn or in showdowns.)
 Play four 1 {Might} Recruit unit tokens. (They can be played to your base or to battlefields you control.)",“My heart and sword always for Demacia.” —Garen,False,False,,https://riftbound.gg/cards/ogs-015-recruit-the-vanguard/
 OGS-016,Vanguard Attendant,Proving Grounds,Common,Unit,,Order,6,5,Elite; Demacia,I enter ready.,Even the Vanguard needs a first line of defense.,False,False,,https://riftbound.gg/cards/ogs-016-vanguard-attendant/
-OGS-017,Annie - Dark Child - Starter,Proving Grounds,Rare,Legend,Champion,Fury; Chaos,,,Annie,"At the end of your turn, ready up to 2 runes.",,False,False,"At the end of your turn, ready up to 2 runes.",https://riftbound.gg/cards/ogs-017-annie-dark-child/
+OGS-017,Annie - Dark Child - Starter,Proving Grounds,Rare,Legend,Champion,Fury; Chaos,,,Annie,"At the end of your turn, ready 2 runes.",,False,False,"At the end of your turn, ready up to 2 runes.",https://riftbound.gg/cards/ogs-017-annie-dark-child/
 OGS-017-P,Annie - Dark Child - Starter (Spiritforged Nexus Night Promo),Proving Grounds,Rare,Legend,Champion,Fury; Chaos,,,Annie,"At the end of your turn, ready 2 runes.",,True,False,"At the end of your turn, ready up to 2 runes.",https://riftbound.gg/cards/ogs-017-p-annie-dark-child/
 OGS-018,Tibbers,Proving Grounds,Epic,Unit,Signature,Fury; Chaos,8,7,Annie,"When you play me, deal 3 to all units at battlefields.",“Bear hug!” —Annie,False,False,,https://riftbound.gg/cards/ogs-018-tibbers/
 OGS-018-P,Tibbers (Spiritforged Nexus Night Promo),Proving Grounds,Epic,Unit,Signature,Fury; Chaos,8,7,Annie,"When you play me, deal 3 to all units at battlefields.",“Bear hug!” —Annie,True,False,,https://riftbound.gg/cards/ogs-018-p-tibbers/
 OGS-019,Master Yi - Wuju Bladesman - Starter,Proving Grounds,Rare,Legend,Champion,Calm; Body,,,Master Yi,"While a friendly unit defends alone, it gets +2 {Might}.",,False,False,,https://riftbound.gg/cards/ogs-019-master-yi-wuju-bladesman/
 OGS-019-P,Master Yi - Wuju Bladesman - Starter (Spiritforged Nexus Night Promo),Proving Grounds,Rare,Legend,Champion,Calm; Body,,,Master Yi,"While a friendly unit defends alone, it gets +2 {Might}.",,True,False,,https://riftbound.gg/cards/ogs-019-p-master-yi-wuju-bladesman/
 OGS-020,Highlander,Proving Grounds,Epic,Spell,Signature,Calm; Body,4,,Master Yi,"[Reaction] (Play any time, even before spells and abilities resolve.)
-Choose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",,False,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose a friendly unit. The next time it dies this turn, recall it exhausted instead. (Send it to base. This isn't a move.)",,False,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Choose a friendly unit. The next time it would die this turn, heal it, exhaust it, and recall it instead. (Send it to base. This isn't a move.)",https://riftbound.gg/cards/ogs-020-highlander/
 OGS-020-P,Highlander (Spiritforged Nexus Night Promo),Proving Grounds,Epic,Spell,Signature,Calm; Body,4,,Master Yi,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Choose a friendly unit. The next time it dies this turn, recall it exhausted instead. (Send it to base. This isn't a move.)",,True,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
@@ -712,7 +711,7 @@ SFD-002,Armed Assailant,Spiritforged,Common,Unit,,Fury,6,6,Noxus,"[Accelerate] (
 [Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)",,False,False,,https://riftbound.gg/cards/sfd-002-armed-assailant/
 SFD-003,Blood Rush,Spiritforged,Common,Spell,,Fury,1,,,"[Action] (Play on your turn or in showdowns.)
 [Repeat] {1 Energy} (You may pay the additional cost to repeat this spell's effect.)
-Give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",,False,False,"[Action] (Play on your turn or in showdowns.)
+Give a unit [Assault 2]. (+2 {Might} while it's an attacker.)",,False,False,"[Action] (Play on your turn or in showdowns.)
 [Repeat] {1 Energy} (You may pay the additional cost to repeat this spell's effect.)
 Give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",https://riftbound.gg/cards/sfd-003-blood-rush/
 SFD-004,Bushwhack,Spiritforged,Common,Spell,,Fury,2,,,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
@@ -752,7 +751,7 @@ SFD-022-P,Long Sword (Spiritforged April 2026 Summoner Skirmish Participation Pr
 SFD-023,Piercing Light,Spiritforged,Rare,Spell,,Fury,2,,,"[Repeat] {2 Energy}{Fury Rune} (You may pay the additional cost to repeat this spell's effect.)
 Deal 2 to a unit at a battlefield, then deal 2 to up to one other unit.",“I got two good reasons for you to turn back.” —Lucian,False,False,,https://riftbound.gg/cards/sfd-023-piercing-light/
 SFD-024,Rell - Magnetic,Spiritforged,Rare,Unit,Champion,Fury,4,4,Rell; Noxus,"[Tank] (I must be assigned combat damage first.)
-When I attack, you may play an Equipment with Energy cost no more than {2 Energy}, ignoring its cost. If you do, then do this: Attach it to me.","“Bones shatter and people lie, but I can always count on iron.”",False,False,"[Tank] (I must be assigned combat damage first.)
+When I attack, you may play an Equipment with Energy cost no more than {2 Energy}, ignoring its cost, and attach it to me.","“Bones shatter and people lie, but I can always count on iron.”",False,False,"[Tank] (I must be assigned combat damage first.)
 When I attack, you may play an Equipment with Energy cost no more than {2 Energy}, ignoring its cost. If you do, then do this: Attach it to me.",https://riftbound.gg/cards/sfd-024-rell-magnetic/
 SFD-025,Rengar - Pouncing,Spiritforged,Rare,Unit,Champion,Fury,3,3,Cat; Rengar; Ixtal,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)
 [Assault 2] (+2 {Might} while I'm an attacker.)
@@ -817,13 +816,13 @@ SFD-051-P,Guardian Angel (Spiritforged April 2026 Summoner Skirmish Top 8 Promo)
 SFD-051-P2,Guardian Angel (Spiritforged April 2026 Summoner Skirmish Champion Promo),Spiritforged,Rare,Gear,,Calm,2,1,Equipment,[Equip] {Calm Rune} ({Calm Rune}: Attach this to a unit you control.),,True,False,,https://riftbound.gg/cards/sfd-051-p2-guardian-angel/
 SFD-052,Heart of Dark Ice,Spiritforged,Rare,Gear,,Calm,3,,,{Exhaust}: Give a unit +3 {Might} this turn.,“All will kneel … in time.” —Lissandra,False,False,,https://riftbound.gg/cards/sfd-052-heart-of-dark-ice/
 SFD-053,Janna - Savior,Spiritforged,Rare,Unit,Champion,Calm,3,3,Janna; Zaun,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)
-When you play me, heal your units here, then move up to one enemy unit from here to its base.",“Gale winds unleashed!”,False,False,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)
+When you play me, heal your units here, then move an enemy unit from here to its base.",“Gale winds unleashed!”,False,False,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)
 When you play me, heal your units here, then move up to one enemy unit from here to its base.",https://riftbound.gg/cards/sfd-053-janna-savior/
 SFD-054,Jax - Unmatched,Spiritforged,Rare,Unit,Champion,Calm,5,5,Jax; Icathia,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
-Your Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",“Fighting words! My favorite kind.”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
+Each Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)",“Fighting words! My favorite kind.”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
 Your Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",https://riftbound.gg/cards/sfd-054-jax-unmatched/
 SFD-054A,Jax - Unmatched,Spiritforged,Showcase,Unit,Champion,Calm,5,5,Jax; Icathia,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
-Your Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",“Fighting words! My favorite kind.”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
+Each Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)",“Fighting words! My favorite kind.”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
 Your Equipment everywhere have [Quick-Draw]. (Each gains [Reaction]. When you play it, attach it to a unit you control.)",https://riftbound.gg/cards/sfd-054a-jax-unmatched/
 SFD-055,Needlessly Large Yordle,Spiritforged,Rare,Unit,,Calm,10,5,Yordle; Bandle City,"[Shield 5] (+5 {Might} while I'm a defender.)
 [Tank] (I must be assigned combat damage first.)
@@ -841,7 +840,7 @@ As this is attached to a unit, copy that unit's text to this Equipment's effect 
 SFD-059-P,Svellsongur (Judge Promo),Spiritforged,Epic,Gear,,Calm,3,,Equipment,"[Equip] {1 Energy}{Calm Rune} ({1 Energy}{Calm Rune}: Attach this to a unit you control.)
 As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",,True,False,,https://riftbound.gg/cards/sfd-059-p-svellsongur/
 SFD-060,Tianna Crownguard,Spiritforged,Epic,Unit,,Calm,7,4,Elite; Demacia,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
-While I'm at a battlefield, opponents can't gain points.","“I will stand for my country, my family, and nothing else.”",False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
+While I'm at a battlefield, opponents can't score points.","“I will stand for my country, my family, and nothing else.”",False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
 While I'm at a battlefield, opponents can't gain points.",https://riftbound.gg/cards/sfd-060-tianna-crownguard/
 SFD-061,Aspiring Engineer,Spiritforged,Common,Unit,,Mind,3,3,Piltover,"When you play me, return a gear from your trash to your hand.","“Before you know it, I’ll be running this place.”",False,False,,https://riftbound.gg/cards/sfd-061-aspiring-engineer/
 SFD-062,Bubble Bot,Spiritforged,Common,Unit,,Mind,3,3,Mech; Yordle; Bandle City,"When you play me, ready another friendly Mech.","The first Bubble Bot started as a practical joke in the scrapyard, but the Mark II soon replaced the morning wake-up bell.",False,False,,https://riftbound.gg/cards/sfd-062-bubble-bot/
@@ -955,7 +954,7 @@ SFD-111,Here to Help,Spiritforged,Rare,Spell,,Body,2,,,"[Hidden] (Hide now for {
 [Action] (Play on your turn or in showdowns.)
 You may play a unit from hand to a battlefield you control, reducing its cost by {3 Energy}.",,False,False,,https://riftbound.gg/cards/sfd-111-here-to-help/
 SFD-112,Kato the Arm,Spiritforged,Rare,Unit,,Body,4,3,Noxus,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
-When I move to a battlefield, give another friendly unit my keywords and +{Might} equal to my Might this turn.",“Let’s give ‘em a good show!”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
+When I move to a battlefield, give a friendly unit my keywords and +{Might} equal to my Might this turn.",“Let’s give ‘em a good show!”,False,False,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
 When I move to a battlefield, give another friendly unit my keywords and +{Might} equal to my Might this turn.",https://riftbound.gg/cards/sfd-112-kato-the-arm/
 SFD-113,Lucian - Merciless,Spiritforged,Rare,Unit,Champion,Body,3,3,Lucian; Demacia; Sentinel,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
 The first time I conquer each turn, ready me.",“One of us finds peace. One of us walks away.”,False,False,,https://riftbound.gg/cards/sfd-113-lucian-merciless/
@@ -966,7 +965,7 @@ SFD-114,Marching Orders,Spiritforged,Rare,Spell,,Body,3,,,"[Action] (Play on you
 Choose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.",,False,False,,https://riftbound.gg/cards/sfd-114-marching-orders/
 SFD-115,Trinity Force,Spiritforged,Rare,Gear,,Body,4,2,Equipment,[Equip] {Body Rune} ({Body Rune}: Attach this to a unit you control.),,False,False,,https://riftbound.gg/cards/sfd-115-trinity-force/
 SFD-116,Yone - Blademaster,Spiritforged,Rare,Unit,Champion,Body,5,5,Yone; Ionia; Demon,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
-When I conquer a battlefield that was uncontrolled, deal damage equal to my Might to an enemy unit in a base.",,False,False,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
+When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base.",,False,False,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
 When I conquer a battlefield that was uncontrolled, deal damage equal to my Might to an enemy unit in a base.",https://riftbound.gg/cards/sfd-116-yone-blademaster/
 SFD-116-P,Yone - Blademaster (Pre-Rift Promo),Spiritforged,Rare,Unit,Champion,Body,5,5,Yone; Ionia; Demon,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
 When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base.",,True,False,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
@@ -1013,7 +1012,7 @@ SFD-137-P,Harpoon Squad (Spiritforged Nexus Night Promo),Spiritforged,Uncommon,U
 SFD-138,Windsinger,Spiritforged,Uncommon,Unit,,Chaos,2,1,Ionia,"Hidden (Hide now for {Any Rune} to react with later for {0 Energy}.)
 When you play me, you may return another unit at a battlefield with 3 {Might} or less to its owner's hand.",She never sticks around for encores.,False,False,,https://riftbound.gg/cards/sfd-138-windsinger/
 SFD-139,Edge of Night,Spiritforged,Rare,Gear,,Chaos,3,2,Equipment,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
-When you play this from face down, attach it to a unit you control (here).
+When you play this from face down, attach it to a unit you control here.
 [Equip] {Chaos Rune} ({Chaos Rune}: Attach this to a unit you control.)",Every shadow an ally.,False,False,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
 When you play this from face down, attach it to a unit you control (here).
 [Equip] {Chaos Rune} ({Chaos Rune}: Attach this to a unit you control.)",https://riftbound.gg/cards/sfd-139-edge-of-night/
@@ -1073,8 +1072,7 @@ SFD-161,B.F. Sword,Spiritforged,Uncommon,Gear,,Order,4,3,Equipment,[Equip] {Orde
 SFD-162,Blood Money,Spiritforged,Uncommon,Spell,,Order,2,,,"[Action] (Play on your turn or in showdowns.)
 Kill a unit at a battlefield with 2 {Might} or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.","Even among the unscrupulous, betrayal costs extra.",False,False,,https://riftbound.gg/cards/sfd-162-blood-money/
 SFD-163,Deathgrip,Spiritforged,Uncommon,Spell,,Order,2,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
-Kill a friendly unit. If you do, give +{Might} equal to its Might to another friendly unit this turn.
-Draw 1.",“Death is my kindness.” —Mordekaiser,False,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Kill a friendly unit to give +{Might} equal to its Might to another friendly unit this turn. Draw 1.",“Death is my kindness.” —Mordekaiser,False,False,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Kill a friendly unit. If you do, give +{Might} equal to its Might to another friendly unit this turn.
 Draw 1.",https://riftbound.gg/cards/sfd-163-deathgrip/
 SFD-164,Drag Under,Spiritforged,Uncommon,Spell,,Order,5,,,"[Action] (Play on your turn or in showdowns.)
@@ -1089,8 +1087,8 @@ SFD-167,Unsung Hero,Spiritforged,Uncommon,Unit,,Order,2,2,Elite; Demacia,"[Death
 SFD-167-P,Unsung Hero (Spiritforged Nexus Night Promo),Spiritforged,Uncommon,Unit,,Order,2,2,Elite; Demacia,"[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ {Might}.)",She gave everything she had for the cause—even her legacy.,True,False,,https://riftbound.gg/cards/sfd-167-p-unsung-hero/
 SFD-168,Vanguard Armory,Spiritforged,Uncommon,Gear,,Order,7,,,{Exhaust}: Play three 1 {Might} Recruit unit tokens. (You may play them to different locations.),It takes more than a sword and shield to make a soldier. But it’s a good start.,False,False,,https://riftbound.gg/cards/sfd-168-vanguard-armory/
 SFD-169,Altar of Memories,Spiritforged,Rare,Gear,,Order,2,,,"When a friendly unit dies, you may exhaust me to draw 1, then put a card from your hand on the top or bottom of your Main Deck.",“The spider demands sacrifice.” —Elise,False,False,,https://riftbound.gg/cards/sfd-169-altar-of-memories/
-SFD-170,Rek'Sai - Swarm Queen,Spiritforged,Rare,Unit,Champion,Order,5,5,Rek'Sai; The Void,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",“KKRRKRKRKRKKK!”,False,False,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",https://riftbound.gg/cards/sfd-170-reksai-swarm-queen/
-SFD-170A,Rek'Sai - Swarm Queen,Spiritforged,Showcase,Unit,Champion,Order,5,5,Rek'Sai; The Void,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",“KKRRKRKRRKKRK!”,False,False,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",https://riftbound.gg/cards/sfd-170a-reksai-swarm-queen/
+SFD-170,Rek'Sai - Swarm Queen,Spiritforged,Rare,Unit,Champion,Order,5,5,Rek'Sai; The Void,"When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here.",“KKRRKRKRKRKKK!”,False,False,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",https://riftbound.gg/cards/sfd-170-reksai-swarm-queen/
+SFD-170A,Rek'Sai - Swarm Queen,Spiritforged,Showcase,Unit,Champion,Order,5,5,Rek'Sai; The Void,"When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here.",“KKRRKRKRRKKRK!”,False,False,"When I attack, you may reveal the top 2 cards of your Main Deck. You may banish one, then play it. If it is a unit, you may play it here. Recycle the rest.",https://riftbound.gg/cards/sfd-170a-reksai-swarm-queen/
 SFD-171,Renata Glasc - Industrialist,Spiritforged,Rare,Unit,Champion,Order,4,4,Renata Glasc; Zaun,Your tokens enter ready.,“Nothing’s free. All I ask is your loyalty.”,False,False,,https://riftbound.gg/cards/sfd-171-renata-glasc-industrialist/
 SFD-171A,Renata Glasc - Industrialist,Spiritforged,Showcase,Unit,Champion,Order,4,4,Renata Glasc; Zaun,Your tokens enter ready.,“Nothing’s free. All I ask is your loyalty.”,False,False,,https://riftbound.gg/cards/sfd-171a-renata-glasc-industrialist/
 SFD-172,Sacred Shears,Spiritforged,Rare,Gear,,Order,2,1,Equipment,[Equip] {Order Rune} ({Order Rune}: Attach this to a unit you control.),,False,False,,https://riftbound.gg/cards/sfd-172-sacred-shears/
@@ -1124,8 +1122,8 @@ SFD-185,Draven - Glorious Executioner,Spiritforged,Rare,Legend,,Fury; Chaos,,,Dr
 SFD-186,Spinning Axe,Spiritforged,Epic,Gear,Signature,Fury; Chaos,2,3,Draven; Equipment,"[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)
 [Equip] {Any Rune} ({Any Rune}: Attach this to a unit you control.)
 [Temporary] (If this is unattached, kill it at the start of its controller's Beginning Phase, before scoring.)","“Got axes, need victims.” —Draven",False,False,,https://riftbound.gg/cards/sfd-186-spinning-axe/
-SFD-187,Rek'Sai - Void Burrower,Spiritforged,Rare,Legend,,Fury; Order,,,Rek'Sai,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",,False,False,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",https://riftbound.gg/cards/sfd-187-reksai-void-burrower/
-SFD-188,Void Rush,Spiritforged,Epic,Spell,Signature,Fury; Order,2,,Rek'Sai,"Reveal the top 2 cards of your Main Deck. You may banish one, then play it, reducing its cost by {2 Energy}. Draw any you didn't banish.",,False,False,"Reveal the top 2 cards of your Main Deck. You may banish one, then play it, reducing its cost by {2 Energy}. Draw any you didn't banish.",https://riftbound.gg/cards/sfd-188-void-rush/
+SFD-187,Rek'Sai - Void Burrower,Spiritforged,Rare,Legend,,Fury; Order,,,Rek'Sai,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",,False,False,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",https://riftbound.gg/cards/sfd-187-reksai-void-burrower/
+SFD-188,Void Rush,Spiritforged,Epic,Spell,Signature,Fury; Order,2,,Rek'Sai,"Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by {2 Energy}. Draw any you did not play this way.",,False,False,"Reveal the top 2 cards of your Main Deck. You may banish one, then play it, reducing its cost by {2 Energy}. Draw any you didn't banish.",https://riftbound.gg/cards/sfd-188-void-rush/
 SFD-189,Ornn - Fire Below the Mountain,Spiritforged,Rare,Legend,,Calm; Mind,,,Ornn,{Exhaust}: [Reaction] — [Add] {Any Rune}. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.),,False,False,,https://riftbound.gg/cards/sfd-189-ornn-fire-below-the-mountain/
 SFD-190,Forgefire Cape,Spiritforged,Epic,Gear,Signature,Calm; Mind,4,3,Ornn; Equipment,"[Unique] (Your deck can have only 1 card with this name.)
 [Equip] {Any Rune} ({Any Rune}: Attach this to a unit you control.)",,False,False,,https://riftbound.gg/cards/sfd-190-forgefire-cape/
@@ -1146,7 +1144,7 @@ SFD-196,Defiant Dance,Spiritforged,Epic,Spell,Signature,Calm; Chaos,1,,Irelia,"[
 Give a unit +2 {Might} this turn and another unit -2 {Might} this turn.",“I am both the tranquil sea and the tempest.”,False,False,,https://riftbound.gg/cards/sfd-196-defiant-dance/
 SFD-197,Azir - Emperor of the Sands,Spiritforged,Rare,Legend,,Calm; Order,,,Azir,"Your Sand Soldiers have [Weaponmaster].
 {1 Energy}, {Exhaust}: Play a 2 {Might} Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",,False,False,,https://riftbound.gg/cards/sfd-197-azir-emperor-of-the-sands/
-SFD-198,Arise!,Spiritforged,Epic,Spell,Signature,Calm; Order,6,,Azir,Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then do this: Ready up to two of them.,“The order is given!” — Azir,False,False,Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then do this: Ready up to two of them.,https://riftbound.gg/cards/sfd-198-arise/
+SFD-198,Arise!,Spiritforged,Epic,Spell,Signature,Calm; Order,6,,Azir,Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then ready two of them.,“The order is given!” — Azir,False,False,Play a 2 {Might} Sand Soldier unit token for each Equipment you control. Then do this: Ready up to two of them.,https://riftbound.gg/cards/sfd-198-arise/
 SFD-199,Ezreal - Prodigal Explorer,Spiritforged,Rare,Legend,,Mind; Chaos,,,Ezreal,{Exhaust}: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.,,False,False,,https://riftbound.gg/cards/sfd-199-ezreal-prodigal-explorer/
 SFD-200,Arcane Shift,Spiritforged,Epic,Spell,Signature,Mind; Chaos,3,,Ezreal,"[Action] (Play on your turn or in showdowns.)
 Banish a friendly unit, then its owner plays it, ignoring its cost. Deal 3 to an enemy unit at a battlefield. Banish this.",“Hah! I can blink and still not miss.” —Ezreal,False,False,,https://riftbound.gg/cards/sfd-200-arcane-shift/
@@ -1171,7 +1169,7 @@ SFD-213,Ornn's Forge,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"While you 
 SFD-214,Power Nexus,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you hold here, you may pay {Any Rune}{Any Rune}{Any Rune}{Any Rune} to score 1 point.",,False,False,,https://riftbound.gg/cards/sfd-214-power-nexus/
 SFD-215,Ravenbloom Conservatory,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it.",,False,False,,https://riftbound.gg/cards/sfd-215-ravenbloom-conservatory/
 SFD-216,Rockfall Path,Spiritforged,Uncommon,Battlefield,,Colorless,,,,Units can't be played here.,,False,False,,https://riftbound.gg/cards/sfd-216-rockfall-path/
-SFD-217,Seat of Power,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, draw 1 for each other battlefield you or allies control.",,False,False,,https://riftbound.gg/cards/sfd-217-seat-of-power/
+SFD-217,Seat of Power,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, draw 1 for each other battlefield you or allies control..",,False,False,,https://riftbound.gg/cards/sfd-217-seat-of-power/
 SFD-218,Sunken Temple,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you conquer here with one or more [Mighty] units, you may pay {1 Energy} to draw 1. (A unit is Mighty while it has 5+ {Might}.)",,False,False,,https://riftbound.gg/cards/sfd-218-sunken-temple/
 SFD-219,The Papertree,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you hold here, each player channels 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/sfd-219-the-papertree/
 SFD-220,Treasure Hoard,Spiritforged,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, you may pay {1 Energy} to play a Gold gear token exhausted.",,False,False,,https://riftbound.gg/cards/sfd-220-treasure-hoard/
@@ -1237,7 +1235,7 @@ If another unit you control here would die, if it has less Might than me, instea
 SFD-240,Rumble - Mechanized Menace,Spiritforged,Showcase,Legend,,Fury; Mind,,,Rumble,Your Mechs have [Shield]. (+1 {Might} while they're defenders.),,False,False,,https://riftbound.gg/cards/sfd-240-rumble-mechanized-menace/
 SFD-241,Lucian - Purifier,Spiritforged,Showcase,Legend,,Fury; Body,,,Lucian,Your Equipment each give [Assault]. (+1 {Might} while equipped unit is an attacker.),,False,False,,https://riftbound.gg/cards/sfd-241-lucian-purifier/
 SFD-242,Draven - Glorious Executioner,Spiritforged,Showcase,Legend,,Fury; Chaos,,,Draven,"When you win a combat, draw 1. (You win if only your units remain after combat.)",,False,False,,https://riftbound.gg/cards/sfd-242-draven-glorious-executioner/
-SFD-243,Rek'Sai - Void Burrower,Spiritforged,Showcase,Legend,,Fury; Order,,,Rek'Sai,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest.",,False,False,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",https://riftbound.gg/cards/sfd-243-reksai-void-burrower/
+SFD-243,Rek'Sai - Void Burrower,Spiritforged,Showcase,Legend,,Fury; Order,,,Rek'Sai,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",,False,False,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may banish one, then play it. Recycle the rest.",https://riftbound.gg/cards/sfd-243-reksai-void-burrower/
 SFD-244,Ornn - Fire Below the Mountain,Spiritforged,Showcase,Legend,,Calm; Mind,,,Ornn,{Exhaust}: [Reaction] — [Add] {Any Rune}. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.),,False,False,,https://riftbound.gg/cards/sfd-244-ornn-fire-below-the-mountain/
 SFD-245,Jax - Grandmaster at Arms,Spiritforged,Showcase,Legend,,Calm; Body,,,Jax,"{1 Energy}, {Exhaust}: Attach a detached Equipment you control to a unit you control.
 {Exhaust}: Attach an attached Equipment you control to a unit you control.",,False,False,,https://riftbound.gg/cards/sfd-245-jax-grandmaster-at-arms/
@@ -1524,7 +1522,7 @@ UNL-092,Demacian Diplomat,Unleashed,Common,Unit,,Body,2,2,Demacia,"When you play
 UNL-093,Dragonsoul Sage,Unleashed,Common,Unit,,Body,2,1,Ionia,[Reaction][>] {Exhaust}: [Add] {1 Energy}. (Abilities that add resources can't be reacted to.),“The Dragon’s secrets are not mine to share. I can only share the gifts that it has given me.”,False,False,,https://riftbound.gg/cards/unl-093-dragonsoul-sage/
 UNL-093-P,Dragonsoul Sage (Unleashed Nexus Night Promo),Unleashed,Common,Unit,,Body,2,1,Ionia,[Reaction][>] {Exhaust}: [Add] {1 Energy}. (Abilities that add resources can't be reacted to.),,True,False,,https://riftbound.gg/cards/unl-093-p-dragonsoul-sage/
 UNL-094,Gemhand Hunter,Unleashed,Common,Unit,,Body,2,2,Yordle; Mount Targon,"[Hunt] (When I conquer or hold, gain 1 XP.)
-[Level 6][>] I have +1 {Might}. (While you have 6+ XP, get the effect.)",He's a yordle of many facets.,False,False,,https://riftbound.gg/cards/unl-094-gemhand-hunter/
+[Level 6][>] I have +1 {Might}. (While you have 6+ XP, get the effect.)ambush",He's a yordle of many facets.,False,False,,https://riftbound.gg/cards/unl-094-gemhand-hunter/
 UNL-095,Grim Resolve,Unleashed,Common,Spell,,Body,2,,,"[Action] (Play on your turn or in showdowns.)
 Give a friendly unit +3 {Might} this turn. When it wins a combat this turn, gain 2 XP.","“If you think losing is the best teacher, you should really give winning a try.”",False,False,,https://riftbound.gg/cards/unl-095-grim-resolve/
 UNL-096,Hunter's Machete,Unleashed,Common,Gear,,Body,3,,Equipment,[Equip] {Body Rune} ({Body Rune}: Attach this to a unit you control.),,False,False,,https://riftbound.gg/cards/unl-096-hunters-machete/
@@ -1875,3 +1873,379 @@ UNL-T04x,Buff // XP Tracker,Unleashed,Common,,Token,,0,1,,A unit may have no mor
 UNL-T05,Gold // Reflection,Unleashed,Common,Gear,Token,Colorless,0,0,,"[Reaction][>] Kill this, {Exhaust}: [Add] {Any Rune}. (Abilities that add resources can't be reacted to.)",,False,False,,https://riftbound.gg/cards/unl-t05-gold/
 UNL-T05s,Gold // Sprite,Unleashed,Common,Gear,Token,Colorless,0,0,,"[Reaction][>] Kill this, {Exhaust}: [Add] {Any Rune}. (Abilities that add resources can't be reacted to.)",,False,False,,https://riftbound.gg/cards/unl-t05s-gold/
 UNL-T05x,Gold // XP Tracker,Unleashed,Common,Gear,Token,Colorless,0,0,,"[Reaction][>] Kill this, {Exhaust}: [Add] {Any Rune}. (Abilities that add resources can't be reacted to.)",,False,False,,https://riftbound.gg/cards/unl-t05x-gold/
+VEN-001,Baccai Sandspinner,Vendetta,Common,Unit,,Fury,6,6,Shurima,"[Empower] {5 Energy}. This ability costs {3 Energy} less if you control 4 or fewer runes. (Pay the cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have [Deflect] and [Assault 2]. (Opponents must pay {Any Rune} to choose me with a spell or ability. +2 {Might} while I'm an attacker.)",,False,False,,https://riftbound.gg/cards/ven-001-baccai-sandspinner/
+VEN-002,Blade Twirler,Vendetta,Common,Unit,,Fury,4,4,Yordle; Ionia,"The first time I move each turn, choose a player. They [Burn 1]. (They put the top card of their Main Deck into their trash.)",“Tails. I win. Heads you lose.”,False,False,,https://riftbound.gg/cards/ven-002-blade-twirler/
+VEN-003,Brittle Steel,Vendetta,Common,Spell,,Fury,2,,,"Kill a gear.
+[Flow] {4 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-003-brittle-steel/
+VEN-004,Dune Surfer,Vendetta,Common,Unit,,Fury,3,3,Shurima,You ignore [Tank] while assigning combat damage here.,,False,False,,https://riftbound.gg/cards/ven-004-dune-surfer/
+VEN-006,Oasis Raider,Vendetta,Common,Unit,,Fury,4,4,Shurima,"If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 {Might} and [Ganking] this turn. (I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-006-oasis-raider/
+VEN-007,Punching Poro,Vendetta,Common,Unit,,Fury,2,2,Poro; Ionia,"[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +1 {Might}.",Soft fur. Hard fists.,False,False,,https://riftbound.gg/cards/ven-007-punching-poro/
+VEN-008,Ruthless Strike,Vendetta,Common,Spell,,Fury,3,,,"[Action] (Play on your turn or in showdowns.)
+As an additional cost to play this, you may discard 1.
+Deal 3 to a unit at a battlefield. If you paid the additional cost, deal 5 to it instead.",,False,False,,https://riftbound.gg/cards/ven-008-ruthless-strike/
+VEN-009,Baccai Reaper,Vendetta,Uncommon,Unit,,Fury,3,4,Shurima,"When I attack, you may pay {Fury Rune} to give me [Assault 2] this turn. (+2 {Might} while I'm an attacker.)",The Ascended god-warriors of Shurima pity their lesser cousins.,False,False,,https://riftbound.gg/cards/ven-009-baccai-reaper/
+VEN-010,Consuming Curse,Vendetta,Uncommon,Spell,,Fury,2,,,"[Action] (Play on your turn or in showdowns.)
+Deal 2 to a unit at a battlefield. This deals 1 Bonus Damage for each card with this name in your trash.",,False,False,,https://riftbound.gg/cards/ven-010-consuming-curse/
+VEN-011,Pendulum Blade,Vendetta,Uncommon,Gear,,Fury,3,,Equipment,[Equip] {Fury Rune} ({Fury Rune}: Attach this to a unit you control.),,False,False,,https://riftbound.gg/cards/ven-011-pendulum-blade/
+VEN-012,Perfect Execution,Vendetta,Uncommon,Spell,,Fury,3,,,"Ready a unit and give it [Assault 3] this turn. (+3 {Might} while it's an attacker.)
+[Flow] {3 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-012-perfect-execution/
+VEN-013,Shadow Assassin,Vendetta,Uncommon,Unit,,Fury,5,5,Ionia,I enter ready if you have a card with my name in your trash.,,False,False,,https://riftbound.gg/cards/ven-013-shadow-assassin/
+VEN-015,Decree of Rage,Vendetta,Rare,Spell,,Fury,1,,,"[Action] (Play on your turn or in showdowns.)
+This can't be countered.
+Deal 4 to an enemy Calm ({Calm Rune}) unit.",,False,False,,https://riftbound.gg/cards/ven-015-decree-of-rage/
+VEN-016,Eclipse Dragon,Vendetta,Rare,Unit,,Fury,8,8,Dragon; Mount Targon,"[Accelerate] (You may pay {1 Energy}{Fury Rune} as an additional cost to have me enter ready.)
+When I move, if you control 4 or fewer runes, draw 1.",,False,False,,https://riftbound.gg/cards/ven-016-eclipse-dragon/
+VEN-017,Morgana - Vindictive,Vendetta,Rare,Unit,Champion,Fury,5,5,Demacia; Morgana,"[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)
+When you play me, deal damage to a unit equal to the damage marked on it.",,False,False,,https://riftbound.gg/cards/ven-017-morgana-vindictive/
+VEN-018,Rage Amplifier,Vendetta,Rare,Gear,,Fury,4,,,"[Empower] {6 Energy}{Fury Rune} ({6 Energy}{Fury Rune}: Empower this. Use only if not Empowered.)
+Your units have +1 {Might}. If I'm [Empowered], they have +2 {Might} instead.",,False,False,,https://riftbound.gg/cards/ven-018-rage-amplifier/
+VEN-019,Renekton - Rage Fueled,Vendetta,Rare,Unit,Champion,Fury,6,6,Shurima; Renekton,"[Accelerate] (You may pay {1 Energy}{Fury Rune} as an additional cost to have me enter ready.)
+When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",“There is no retreat.”,False,False,,https://riftbound.gg/cards/ven-019-renekton-rage-fueled/
+VEN-019A,Renekton - Rage Fueled,Vendetta,Rare,Unit,Champion,Fury,6,6,Renekton,"[Accelerate]
+When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",“What? Do I have someone in my teeth?”,False,False,,https://riftbound.gg/cards/ven-019a-renekton-rage-fueled/
+VEN-020,Twilight Reveler,Vendetta,Rare,Unit,,Fury,3,3,Ionia,"When I attack, ready another friendly unit.",,False,False,,https://riftbound.gg/cards/ven-020-twilight-reveler/
+VEN-021,Akali - Deadly Weapon,Vendetta,Epic,Unit,Champion,Fury,3,3,Ionia; Akali,"[Empower] {2 Energy}{Fury Rune} ({2 Energy}{Fury Rune}: Empower me. Use only if not Empowered.)
+When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.
+[Empowered][>] I have +1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-021-akali-deadly-weapon/
+VEN-021A,Akali - Deadly Weapon,Vendetta,Epic,Unit,Champion,Fury,3,3,Akali,"[Empower] {2 Energy}{Fury Rune}
+When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.
+[Empowered][>] I have +1 {Might}..",,False,False,,https://riftbound.gg/cards/ven-021a-akali-deadly-weapon/
+VEN-022,Endless Riches,Vendetta,Epic,Gear,,Fury,5,,,"When you play this, banish your hand and trash, then [Burn 7].
+Skip your Draw Phase.
+You may play cards from your trash.
+If a card would go to your trash from anywhere other than your Main Deck, banish it instead.",,False,False,,https://riftbound.gg/cards/ven-022-endless-riches/
+VEN-023,Zed - From the Shadows,Vendetta,Epic,Unit,Champion,Fury,4,4,Ionia; Zed,"You may discard 1 as an additional cost to play me.
+When you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token. (It has ""When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn."")",,False,False,,https://riftbound.gg/cards/ven-023-zed-from-the-shadows/
+VEN-023A,Zed - From the Shadows,Vendetta,Epic,Unit,Champion,Fury,4,4,Zed,"You may discard 1 as an additional cost to play me.
+When you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token.",,False,False,,https://riftbound.gg/cards/ven-023a-zed-from-the-shadows/
+VEN-024,Affectionate Poro,Vendetta,Common,Unit,,Calm,3,3,Poro; Noxus,"When a combat that I was in ends, if I haven't been dealt damage this turn, draw 1.",,False,False,,https://riftbound.gg/cards/ven-024-affectionate-poro/
+VEN-025,Esteemed Hierophant,Vendetta,Common,Unit,,Calm,5,5,Shurima,"While you control 7 or more runes, prevent all damage that enemy spells and abilities would deal to me.",,False,False,,https://riftbound.gg/cards/ven-025-esteemed-hierophant/
+VEN-026,Field Musicians,Vendetta,Common,Unit,,Calm,4,3,Ionia,"When you play me, give a unit +3 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-026-field-musicians/
+VEN-027,Hand Hammer,Vendetta,Common,Gear,,Calm,2,,Equipment,[Equip] {Calm Rune} ({Calm Rune}: Attach this to a unit you control.),,False,False,,https://riftbound.gg/cards/ven-027-hand-hammer/
+VEN-028,Mournful Witness,Vendetta,Common,Unit,,Calm,2,2,Fae; Ionia,"When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)
+[Empowered][>] I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-028-mournful-witness/
+VEN-029,Ol' Poro,Vendetta,Common,Unit,,Calm,2,4,Poro; Bandle City,"I can't be played on your first, second, or third turns.",,False,False,,https://riftbound.gg/cards/ven-029-ol-poro/
+VEN-031,Twilight Shroud,Vendetta,Common,Spell,,Calm,1,,,"Give a friendly unit +1 {Might} this turn. It can't be chosen by enemy spells and abilities this turn.
+[Flow] {2 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",“I make problems … disappear.” —Akali,False,False,,https://riftbound.gg/cards/ven-031-twilight-shroud/
+VEN-032,Frostcoat Mother,Vendetta,Uncommon,Unit,,Calm,3,3,Dog; Freljord,"[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +3 {Might}.",,False,False,,https://riftbound.gg/cards/ven-032-frostcoat-mother/
+VEN-033,Pakaa Protector,Vendetta,Uncommon,Unit,,Calm,5,4,Cat; Shurima,"When I move, reveal the top card of your Main Deck. If it's a unit, draw it. Otherwise, put it in your trash and give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-033-pakaa-protector/
+VEN-034,Resonating Strike,Vendetta,Uncommon,Spell,,Calm,2,,,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+[Reaction] (Play on your turn or in showdowns.)
+Choose a battlefield you control and a unit you control at a different location. Move that unit to that battlefield and give it +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-034-resonating-strike/
+VEN-035,Sanction,Vendetta,Uncommon,Spell,,Calm,3,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose one —Empower a unit. Disempower it at end of turn.Disempower a unit that's [Empowered]. Empower it at end of turn.",,False,False,,https://riftbound.gg/cards/ven-035-sanction/
+VEN-036,Sandstone Chimera,Vendetta,Uncommon,Unit,,Calm,7,8,Shurima,"While I'm at a battlefield, players only channel 1 rune at the start of their Channel Phase.",,False,False,,https://riftbound.gg/cards/ven-036-sandstone-chimera/
+VEN-037,Tomb-Raider Barbara,Vendetta,Uncommon,Unit,,Calm,4,4,Shurima,"When you play me, if you control 7 or more runes, choose an enemy gear. If it's [Empowered], disempower it. Otherwise, kill it.","Wait for her signal. Don't worry, you'll know.",False,False,,https://riftbound.gg/cards/ven-037-tomb-raider-barbara/
+VEN-038,Akali - Silent,Vendetta,Rare,Unit,Champion,Calm,4,4,Ionia; Akali,"I can't be chosen by enemy spells and abilities unless I'm in combat.
+When I move to a battlefield, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-038-akali-silent/
+VEN-038A,Akali - Silent,Vendetta,Rare,Unit,Champion,Calm,4,4,Akali,"I can't be chosen by enemy spells and abilities unless I'm in combat.
+When I move to a battlefield, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-038a-akali-silent/
+VEN-039,Crumbling Sands,Vendetta,Rare,Spell,,Calm,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Counter a spell if an opponent has played another spell this turn.",,False,False,,https://riftbound.gg/cards/ven-039-crumbling-sands/
+VEN-040,Decree of Focus,Vendetta,Rare,Spell,,Calm,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose a friendly unit that's in combat with an enemy Fury ({Fury Rune}) unit or that's being chosen by an enemy Fury spell. Give it +4 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-040-decree-of-focus/
+VEN-041,Riven - Shattered,Vendetta,Rare,Unit,Champion,Calm,3,3,Noxus; Riven,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)
+When I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",“A sword mirrors its owner.”,False,False,,https://riftbound.gg/cards/ven-041-riven-shattered/
+VEN-042,Shen - Scourge of Shadows,Vendetta,Rare,Unit,Champion,Calm,5,6,Shen; Ionia,"When I hold, if there is exactly one other unit you control here, draw 1.",“Our wills align.”,False,False,,https://riftbound.gg/cards/ven-042-shen-scourge-of-shadows/
+VEN-042A,Shen - Scourge of Shadows,Vendetta,Rare,Unit,Champion,Calm,5,6,Shen,"When I hold, if there is exactly one other unit you control here, draw 1.",“Our wills align.”,False,False,,https://riftbound.gg/cards/ven-042a-shen-scourge-of-shadows/
+VEN-043,Steel Paws,Vendetta,Rare,Unit,,Calm,1,,Cat; Piltover,"[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)
+[Empower] {7 Energy} ({7 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +7 {Might}.",,False,False,,https://riftbound.gg/cards/ven-043-steel-paws/
+VEN-044,Astral Heron,Vendetta,Epic,Unit,,Calm,7,7,Bird; Mount Targon,"When you play your first card each turn, if I'm at a battlefield, your next card costs {2 Energy}{Any Rune}{Any Rune} less.",,False,False,,https://riftbound.gg/cards/ven-044-astral-heron/
+VEN-045,Helm of Suppression,Vendetta,Epic,Gear,,Calm,4,,,"[Empower] {4 Energy}{Calm Rune} ({4 Energy}{Calm Rune}: Empower this. Use only if not Empowered.)
+Opponents' spells cost {1 Energy} more. If this is [Empowered], they cost {1 Energy}{Any Rune} more instead.",,False,False,,https://riftbound.gg/cards/ven-045-helm-of-suppression/
+VEN-046,Nasus - Ascended,Vendetta,Epic,Unit,Champion,Calm,8,8,Dog; Shurima; Nasus,"[Deflect 2] (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)
+[Empower] {8 Energy} ({8 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] When I conquer, you score 1 point.",“Eternity is beyond your reach.”,False,False,,https://riftbound.gg/cards/ven-046-nasus-ascended/
+VEN-046A,Nasus - Ascended,Vendetta,Epic,Unit,Champion,Calm,8,8,Dog; Nasus,"[Deflect 2]
+[Empower] {8 Energy}
+[Empowered][>] When I conquer, you score 1 point.",“Eternity is beyond your reach.”,False,False,,https://riftbound.gg/cards/ven-046a-nasus-ascended/
+VEN-047,Apprentice Mage,Vendetta,Common,Unit,,Mind,3,3,Bilgewater,"[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)
+When I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)
+[Empowered][>] I have +1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-047-apprentice-mage/
+VEN-048,Cloud Drake,Vendetta,Common,Unit,,Mind,6,5,Dragon; Demacia,"When you play me, draw 1.",These things are a cirrus problem.,False,False,,https://riftbound.gg/cards/ven-048-cloud-drake/
+VEN-049,Dredge Up,Vendetta,Common,Spell,,Mind,2,,,"Draw 1.
+[Flow] {2 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-049-dredge-up/
+VEN-050,Grumpy Rockbear,Vendetta,Common,Unit,,Mind,4,4,Shurima,"[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay {Any Rune} to choose me with a spell or ability.+3 {Might} while I'm a defender.)",,False,False,,https://riftbound.gg/cards/ven-050-grumpy-rockbear/
+VEN-051,Iterative Design,Vendetta,Common,Spell,,Mind,4,,,"Play a 3 {Might} Mech unit token.
+[Flow] {2 Energy}{Mind Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-051-iterative-design/
+VEN-052,Mesmerize,Vendetta,Common,Spell,,Mind,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-052-mesmerize/
+VEN-053,Otterpus,Vendetta,Uncommon,Unit,,Mind,2,2,Bandle City,"If a player would score 1 point from conquering or holding during their first or second turn, they draw 1 instead.",,False,False,,https://riftbound.gg/cards/ven-053-otterpus/
+VEN-054,Questionable Tome,Vendetta,Common,Gear,,Mind,3,,,"[Empower] —  {Exhaust} (Pay the cost: Empower me. Use only if not Empowered.)
+Disempower this, {1 Energy}, {Exhaust}: Draw 1.",,False,False,,https://riftbound.gg/cards/ven-054-questionable-tome/
+VEN-055,Applied Researchers,Vendetta,Uncommon,Unit,,Mind,4,4,Shurima,"[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] Your spells cost {1 Energy}{Any Rune} less, to a minimum of {1 Energy}.",,False,False,,https://riftbound.gg/cards/ven-055-applied-researchers/
+VEN-056,Clairvoyance,Vendetta,Uncommon,Spell,,Mind,7,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+[Predict 5]. (Look at the top 5 cards of your Main Deck. Recycle any of them and put the rest back in any order.)
+Draw 2.",,False,False,,https://riftbound.gg/cards/ven-056-clairvoyance/
+VEN-058,Patched Porobot,Vendetta,Common,Unit,,Mind,2,2,Mech; Poro; Piltover,"(I enter exhausted.)
+When you play me, if you control 3 or more other gear, draw 1.",Attempts to synthetically replicate a poro's whimsy and pure adorable nature have yielded mixed results.,False,False,,https://riftbound.gg/cards/ven-058-patched-porobot/
+VEN-060,Sky Cruiser,Vendetta,Uncommon,Unit,,Mind,4,3,Piltover,"Discard a gear, {1 Energy}, {Exhaust}: Deal 4 to a unit at a battlefield.",,False,False,,https://riftbound.gg/cards/ven-060-sky-cruiser/
+VEN-061,Decree of Insight,Vendetta,Rare,Spell,,Mind,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Ignore [Deflect] while paying this spell's cost.
+Give an enemy Body ({Body Rune}) unit -5 {Might} this turn.",Force is artless. Be inspired.,False,False,,https://riftbound.gg/cards/ven-061-decree-of-insight/
+VEN-062,Hextech Formula,Vendetta,Rare,Gear,,Mind,2,,,"This enters exhausted.
+{Exhaust}: Empower another gear. (It becomes Empowered if it's not already.)",,False,False,,https://riftbound.gg/cards/ven-062-hextech-formula/
+VEN-063,Nasus - Guardian of Knowledge,Vendetta,Rare,Unit,Champion,Mind,5,6,Dog; Shurima; Nasus,"Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ven-063-nasus-guardian-of-knowledge/
+VEN-063A,Nasus - Guardian of Knowledge,Vendetta,Rare,Unit,Champion,Mind,5,6,Dog; Nasus,"Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ven-063a-nasus-guardian-of-knowledge/
+VEN-064,Plaza Guardian,Vendetta,Rare,Unit,,Mind,10,8,Mech; Piltover,"I cost {1 Energy} less for each gear you control.
+[Deflect] (Opponents must pay {Any Rune} to choose me with a spell or ability.)",,False,False,,https://riftbound.gg/cards/ven-064-plaza-guardian/
+VEN-065,Swain - Visionary,Vendetta,Rare,Unit,Champion,Mind,6,6,Noxus; Swain; Demon,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)
+When I conquer, if you've played a non-token unit, a non-token gear, and a spell this turn, you score 1 point.",,False,False,,https://riftbound.gg/cards/ven-065-swain-visionary/
+VEN-066,Temporal Breach,Vendetta,Rare,Spell,,Mind,2,,,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+Banish a unit, then its owner plays it to the same location, ignoring its cost.",,False,False,,https://riftbound.gg/cards/ven-066-temporal-breach/
+VEN-067,Bottled Constellation,Vendetta,Epic,Gear,,Mind,10,,,"At the start of your Main Phase, you may kill 3 other friendly units and/or gear to score 1 point.",,False,False,,https://riftbound.gg/cards/ven-067-bottled-constellation/
+VEN-068,Jayce - Brilliant Inventor,Vendetta,Epic,Unit,Champion,Mind,6,6,Jayce; Piltover,"When you play me or the first time you play a non-token gear each turn, you may ready something besides me that's exhausted.",“I will light our path.”,False,False,,https://riftbound.gg/cards/ven-068-jayce-brilliant-inventor/
+VEN-068A,Jayce - Brilliant Inventor,Vendetta,Epic,Unit,Champion,Mind,6,6,Jayce,"When you play me or the first time you play a non-token gear each turn, you may ready something besides me that's exhausted.",“I will light our path.”,False,False,,https://riftbound.gg/cards/ven-068a-jayce-brilliant-inventor/
+VEN-069,Mel - Newly Awakened,Vendetta,Epic,Unit,Champion,Mind,4,4,Noxus; Mel,"When you play me, draw 1.
+[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -{Might} to a unit it chooses, it gives an additional -1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-069-mel-newly-awakened/
+VEN-069A,Mel - Newly Awakened,Vendetta,Epic,Unit,Champion,Mind,4,4,Mel,"When you play me, draw 1.
+[Empower] {3 Energy}
+[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -{Might} to a unit it chooses, it gives an additional -1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-069a-mel-newly-awakened/
+VEN-070,Brutal Hunter,Vendetta,Common,Unit,,Body,3,4,Noxus,"[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +2 {Might} and [Ganking]. (I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-070-brutal-hunter/
+VEN-071,Fretful Feline,Vendetta,Common,Unit,,Body,6,5,Cat; Piltover,"When I become ready, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-071-fretful-feline/
+VEN-073,Jagged Cutlass,Vendetta,Common,Gear,,Body,3,,Equipment,Equip {Body Rune} ({Body Rune}: Attach this to a unit you control.),I can’t be moved by enemy spells and abilities.,False,False,,https://riftbound.gg/cards/ven-073-jagged-cutlass/
+VEN-075,Platewyrm Egg,Vendetta,Common,Gear,,Body,3,,,"This enters exhausted.
+[Empower] — {1 Energy}, {Exhaust} (Pay the cost: Empower this. Use only if not Empowered.)
+[Reaction][>] {Exhaust}: [Add] {1 Energy}. If this is [Empowered], [Add] {2 Energy} instead.",,False,False,,https://riftbound.gg/cards/ven-075-platewyrm-egg/
+VEN-076,Repair Specialist,Vendetta,Common,Unit,,Body,3,3,Zaun,I have [Assault] equal to the number of gear you control. (+1 {Might} while I'm an attacker for each instance of Assault.),,False,False,,https://riftbound.gg/cards/ven-076-repair-specialist/
+VEN-077,Tools of Empire,Vendetta,Common,Gear,,Body,4,,,"[Empower] {2 Energy} ({2 Energy}: Empower this. Use only if not Empowered.)
+{Exhaust}: Give a unit +2 {Might} this turn. If this is [Empowered], give that unit +4 {Might} this turn instead.",,False,False,,https://riftbound.gg/cards/ven-077-tools-of-empire/
+VEN-079,Dame the Despoiler,Vendetta,Uncommon,Unit,,Body,5,5,Noxus,"[Empower] {5 Energy}{Body Rune} ({5 Energy}{Body Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 {Might} this turn.",“Wanna see a show?!”,False,False,,https://riftbound.gg/cards/ven-079-dame-the-despoiler/
+VEN-080,Noxian Demolitionist,Vendetta,Uncommon,Unit,,Body,2,1,Noxus,"When I conquer, you may kill a gear with Energy cost no more than my Might.",,False,False,,https://riftbound.gg/cards/ven-080-noxian-demolitionist/
+VEN-081,Onslaught,Vendetta,Uncommon,Spell,,Body,4,,,"Give a unit +6 {Might} this turn.
+[Flow] {4 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-081-onslaught/
+VEN-082,Profiteer,Vendetta,Uncommon,Unit,,Body,4,4,Shurima,"When you play me, you may disempower something you control to empower a legend, unit, or gear.",,False,False,,https://riftbound.gg/cards/ven-082-profiteer/
+VEN-083,Rampage,Vendetta,Uncommon,Spell,,Body,3,,,"As you play this, you may pay {Body Rune} as an additional cost.
+Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 {Might} this turn. They deal damage equal to their Mights to each other.",,False,False,,https://riftbound.gg/cards/ven-083-rampage/
+VEN-084,Ambessa - The Wolf,Vendetta,Rare,Unit,Champion,Body,4,4,Noxus; Ambessa,"[Empower] {3 Energy}{Body Rune} ({3 Energy}{Body Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +3 {Might} and can't be dealt damage unless I'm in combat.",,False,False,,https://riftbound.gg/cards/ven-084-ambessa-the-wolf/
+VEN-084A,Ambessa - The Wolf,Vendetta,Rare,Unit,Champion,Body,4,4,Ambessa,"[Empower] {3 Energy}{Body Rune}
+[Empowered][>] I have +3 {Might} and can't be dealt damage unless I'm in combat.",,False,False,,https://riftbound.gg/cards/ven-084a-ambessa-the-wolf/
+VEN-085,Decree of Strength,Vendetta,Rare,Spell,,Body,1,,,Choose an opponent. They reveal their hand and you choose a Mind ({Mind Rune}) card from it. They recycle that card.,,False,False,,https://riftbound.gg/cards/ven-085-decree-of-strength/
+VEN-086,Gangplank - Naval,Vendetta,Rare,Unit,Champion,Body,6,6,Bilgewater; Gangplank,"[Empower] {Body Rune}{Body Rune} ({Body Rune}{Body Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] If a spell or ability that chooses me would stun me, give me -{Might}, or return me to hand, give me +3 {Might} instead.",,False,False,,https://riftbound.gg/cards/ven-086-gangplank-naval/
+VEN-087,Hextech Disc,Vendetta,Rare,Gear,,Body,4,,,"[Empower] — {Exhaust} (Pay the cost: Empower this. Use only if not Empowered.)
+Disempower this, {1 Energy}, {Exhaust}: Play a 3 {Might} Mech unit token to your base.",,False,False,,https://riftbound.gg/cards/ven-087-hextech-disc/
+VEN-088,Jayce - Hammer in Hand,Vendetta,Rare,Unit,Champion,Body,4,5,Jayce; Piltover,"When I become ready, choose one to give me this turn —[Assault 2] (+2 {Might} while I'm an attacker.)[Deflect 2] (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-088-jayce-hammer-in-hand/
+VEN-088A,Jayce - Hammer in Hand,Vendetta,Rare,Unit,Champion,Body,4,5,Jayce,"When I become ready, choose one to give me this turn —[Assault 2][Deflect 2][Ganking]",,False,False,,https://riftbound.gg/cards/ven-088a-jayce-hammer-in-hand/
+VEN-089,Wild Claw,Vendetta,Rare,Spell,,Body,7,,,"Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by {5 Energy}. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",,False,False,,https://riftbound.gg/cards/ven-089-wild-claw/
+VEN-090,Cataclysmic Duel,Vendetta,Epic,Spell,,Body,8,,,Each player chooses a unit they control. Kill the rest.,,False,False,,https://riftbound.gg/cards/ven-090-cataclysmic-duel/
+VEN-091,Corrupted Dragon,Vendetta,Epic,Unit,,Body,10,10,Dragon; Shadow Isles,"If your score is not within 3 points of the Victory Score, I enter ready.
+When I attack, you may move any number of enemy units here each with 5 {Might} or less to their base.",,False,False,,https://riftbound.gg/cards/ven-091-corrupted-dragon/
+VEN-092,Renekton - Brute,Vendetta,Epic,Unit,Champion,Body,5,4,Shurima; Renekton,"{1 Energy}: Give me +1 {Might} this turn.
+When my Might becomes 10 or more, empower me. (I become Empowered if I'm not already.)
+[Empowered][>] I have [Deflect] and [Ganking]. (Opponents must pay {Any Rune} to choose me with a spell or ability. I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-092-renekton-brute/
+VEN-092A,Renekton - Brute,Vendetta,Epic,Unit,Champion,Body,5,4,Renekton,"{1 Energy}: Give me +1 {Might} this turn.
+When my Might becomes 10 or more, empower me.
+[Empowered][>] I have [Deflect] and [Ganking].",,False,False,,https://riftbound.gg/cards/ven-092a-renekton-brute/
+VEN-093,Kinkou Lifeblade,Vendetta,Common,Unit,,Chaos,4,4,Ionia,"[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +1 {Might} and [Ganking]. (I can move from battlefield to battlefield.)",His life is the blade. His blade is his life.,False,False,,https://riftbound.gg/cards/ven-093-kinkou-lifeblade/
+VEN-094,Mask Mother,Vendetta,Uncommon,Unit,,Chaos,3,3,Spirit; Shadow Isles,"When you discard me, you may pay {1 Energy} to give a friendly unit +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-094-mask-mother/
+VEN-095,Shadow Order Disciple,Vendetta,Common,Unit,,Chaos,2,2,Ionia,"When I move, you may [Burn 1] to give me +1 {Might} this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",Recipients of a terrifying education.,False,False,,https://riftbound.gg/cards/ven-095-shadow-order-disciple/
+VEN-096,Shadowblade Lurker,Vendetta,Common,Unit,,Chaos,5,5,Ionia,I cost {2 Energy} less for each card with my name in your trash.,,False,False,,https://riftbound.gg/cards/ven-096-shadowblade-lurker/
+VEN-097,Spiderling,Vendetta,Common,Unit,,Chaos,3,1,Shadow Isles; Spider,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+I have +1 {Might} for each other unit you control here with my name.
+Your deck can have any number of cards named Spiderling.",,False,False,,https://riftbound.gg/cards/ven-097-spiderling/
+VEN-098,Stargazer,Vendetta,Common,Unit,,Chaos,5,4,Mount Targon,"Spells with [Flow] you play from your trash cost {2 Energy} less, to a minimum of {1 Energy}.",,False,False,,https://riftbound.gg/cards/ven-098-stargazer/
+VEN-100,Up from the Deep,Vendetta,Common,Spell,,Chaos,3,,,"Play two 1 {Might} Tentacle unit tokens from Bilgewater.
+[Flow] {3 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-100-up-from-the-deep/
+VEN-101,Gust Monk,Vendetta,Uncommon,Unit,,Chaos,2,2,Yordle; Bandle City,"You may pay {1 Energy} as an additional cost to play me.
+When you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",,False,False,,https://riftbound.gg/cards/ven-101-gust-monk/
+VEN-102,Ravenbloom Prefect,Vendetta,Common,Unit,,Chaos,3,3,Noxus,"When an opponent plays a gear, you may banish me to banish it.",,False,False,,https://riftbound.gg/cards/ven-102-ravenbloom-prefect/
+VEN-103,Shadows of the Past,Vendetta,Uncommon,Spell,,Chaos,3,,,Return up to 2 units from trashes to their owners' hands.,“None escape their shadow.”,False,False,,https://riftbound.gg/cards/ven-103-shadows-of-the-past/
+VEN-104,Tail-Cloaked Matriarch,Vendetta,Uncommon,Unit,,Chaos,4,4,Ionia,"[Empower] {2 Energy}{Chaos Rune} ({2 Energy}{Chaos Rune}: Empower me. Use only if not Empowered.)
+When I become [Empowered], you may choose a unit in your trash with Energy cost no more than {3 Energy} and Power cost no more than {Any Rune}. Play it to your base, ignoring its cost.",,False,False,,https://riftbound.gg/cards/ven-104-tail-cloaked-matriarch/
+VEN-105,Twilight Step,Vendetta,Uncommon,Spell,,Chaos,2,,,"Move a unit with 3 {Might} or less.
+[Flow] {4 Energy}{Chaos Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-105-twilight-step/
+VEN-106,Wind and Ghosts,Vendetta,Uncommon,Spell,,Chaos,3,,,"[Action] (Play on your turn or in showdowns.)
+Choose a unit at a battlefield. If it has 3 {Might} or less, banish it. Otherwise, return it to its owner's hand.",The best strategy is to not have an enemy.,False,False,,https://riftbound.gg/cards/ven-106-wind-and-ghosts/
+VEN-107,Decree of Discord,Vendetta,Rare,Spell,,Chaos,1,,,Return any number of enemy Order ({Order Rune}) units with total Might 5 or less to their owners' hands.,,False,False,,https://riftbound.gg/cards/ven-107-decree-of-discord/
+VEN-108,Forgotten Relic,Vendetta,Rare,Gear,,Chaos,5,,,"When you play this or at the start of your Beginning Phase, [Burn 1]. When you burn a unit this way, do this: Give a friendly unit +{Might} equal to the burned card's Might this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",,False,False,,https://riftbound.gg/cards/ven-108-forgotten-relic/
+VEN-109,Illaoi - Prophet of the Great Kraken,Vendetta,Rare,Unit,Champion,Chaos,6,4,Bilgewater; Illaoi,"When you play me or when I score, play a {1 Energy} {Might} Tentacle unit token from Bilgewater.
+I have +1 {Might} for each token unit you control.",,False,False,,https://riftbound.gg/cards/ven-109-illaoi-prophet-of-the-great-kraken/
+VEN-110,Mel - Defiant Soul,Vendetta,Rare,Unit,Champion,Chaos,5,4,Noxus; Mel,"[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)
+When I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",,False,False,,https://riftbound.gg/cards/ven-110-mel-defiant-soul/
+VEN-110A,Mel - Defiant Soul,Vendetta,Rare,Unit,Champion,Chaos,5,4,Mel,"[Empower] — Discard a spell
+When I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",,False,False,,https://riftbound.gg/cards/ven-110a-mel-defiant-soul/
+VEN-112,Zed - Without a Sound,Vendetta,Rare,Unit,Champion,Chaos,5,5,Ionia; Zed,"When I conquer, play a 0 {Might} Shadow Clone unit token to your base. (It has ""When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn."")
+[Action][>] {1 Energy}{Chaos Rune}: Move me and a Shadow Clone you control to each other's locations.",,False,False,,https://riftbound.gg/cards/ven-112-zed-without-a-sound/
+VEN-112A,Zed - Without a Sound,Vendetta,Rare,Unit,Champion,Chaos,5,5,Zed,"When I conquer, play a 0 {Might} Shadow Clone unit token to your base.
+[Action][>] {1 Energy}{Chaos Rune}: Move me and a Shadow Clone you control to each other's locations.",“The truth lies in darkness.”,False,False,,https://riftbound.gg/cards/ven-112a-zed-without-a-sound/
+VEN-113,Kennen - Storm of Shuriken,Vendetta,Epic,Unit,Champion,Chaos,3,4,Yordle; Kennen,"When you play me, [Burn 2]. (Put the top 2 cards of your Main Deck into your trash.)
+When I conquer, give a spell in your trash [Flow] equal to its cost this turn. (You may play it from your trash for its Flow cost. Then banish it.)",“Time to strike!”,False,False,,https://riftbound.gg/cards/ven-113-kennen-storm-of-shuriken/
+VEN-113A,Kennen - Storm of Shuriken,Vendetta,Epic,Unit,Champion,Chaos,3,4,Yordle; Ionia; Kennen,"When you play me, [Burn 2].
+When I conquer, give a spell in your trash [Flow] equal to its cost this turn.",,False,False,,https://riftbound.gg/cards/ven-113a-kennen-storm-of-shuriken/
+VEN-114,Kharox,Vendetta,Epic,Unit,,Chaos,6,5,Spirit; Shadow Isles,"[Empower] {6 Energy}{Chaos Rune}{Chaos Rune} ({6 Energy}{Chaos Rune}{Chaos Rune}: Empower me. Use only if not Empowered.)
+When I become [Empowered], choose an opponent. They [Burn 3]. Then you may do this: Choose a unit in their trash and play it, ignoring its cost. (To Burn 3, they put the top 3 cards of their Main Deck into their trash.)",,False,False,,https://riftbound.gg/cards/ven-114-kharox/
+VEN-115,Ocean Drake,Vendetta,Epic,Unit,,Chaos,8,7,Dragon; Ionia,"You may play me to an open battlefield.
+When you play me, you may return a non-Dragon unit to its owner's hand.",The pale glint of blue on blue is all the warning you’ll get.,False,False,,https://riftbound.gg/cards/ven-115-ocean-drake/
+VEN-116,Dragon Form,Vendetta,Uncommon,Spell,,Order,3,,,"Choose a unit. Its base Might becomes 5 this turn.
+[Flow] {3 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-116-dragon-form/
+VEN-117,Disciple of Shen,Vendetta,Common,Unit,,Order,2,1,Ionia,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+I have [Shield 3] while I'm at a battlefield with exactly one other unit you control. (+3 {Might} while I'm a defender.)",,False,False,,https://riftbound.gg/cards/ven-117-disciple-of-shen/
+VEN-118,Horns of the Dragon,Vendetta,Common,Unit,,Order,6,6,Ionia,[Tank] (I must be assigned combat damage first.),,False,False,,https://riftbound.gg/cards/ven-118-horns-of-the-dragon/
+VEN-119,Keeper of Law,Vendetta,Common,Unit,,Order,5,5,Shurima,I cost {2 Energy}{Order Rune} less if you control a battlefield with exactly two units there.,,False,False,,https://riftbound.gg/cards/ven-119-keeper-of-law/
+VEN-120,Masa - Crashing Thunder,Vendetta,Common,Unit,,Order,4,4,Yordle; Bandle City,"You may pay {Order Rune} as an additional cost to play me.
+When you play me, if you paid the additional cost, [Stun] an enemy unit at a battlefield. (It doesn't deal combat damage this turn.)",,False,False,,https://riftbound.gg/cards/ven-120-masa-crashing-thunder/
+VEN-121,Reluctant Leader,Vendetta,Common,Unit,,Order,4,3,Ionia,"When you play another unit, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-121-reluctant-leader/
+VEN-122,Solari Sunhawk,Vendetta,Common,Unit,,Order,3,3,Bird; Mount Targon,"[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +1 {Might} and [Deflect 2]. (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)",,False,False,,https://riftbound.gg/cards/ven-122-solari-sunhawk/
+VEN-124,Escaped Grayback,Vendetta,Uncommon,Unit,,Order,3,3,Noxus,"[Empower] — Kill a friendly unit (Pay the cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-124-escaped-grayback/
+VEN-125,Hungry Wolf,Vendetta,Uncommon,Unit,,Order,4,4,Dog; Freljord,{Order Rune}: Ready me and give me +1 {Might} this turn. Use only if you've chosen an enemy unit this turn and only once each turn.,,False,False,,https://riftbound.gg/cards/ven-125-hungry-wolf/
+VEN-126,Ki Barrier,Vendetta,Uncommon,Spell,,Order,2,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose a unit. Prevent the next 7 damage that would be dealt to it this turn. (Opponents can assign it extra combat damage to kill it.)",,False,False,,https://riftbound.gg/cards/ven-126-ki-barrier/
+VEN-127,Lacerate,Vendetta,Common,Spell,,Order,2,,,"Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 {Might} or less.
+[Flow] {4 Energy}{Order Rune}{Order Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-127-lacerate/
+VEN-128,Noxian Emissary,Vendetta,Uncommon,Unit,,Order,2,2,Noxus,"[Empower] {1 Energy}{Order Rune} ({1 Energy}{Order Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>][>>][Deathknell][>] Play two 1 {Might} Recruit unit tokens to your base. (When I die while Empowered, get the effect.)",,False,False,,https://riftbound.gg/cards/ven-128-noxian-emissary/
+VEN-129,Sacred Protector,Vendetta,Uncommon,Unit,,Order,4,6,Fae; Ionia,I don't deal combat damage unless I'm at a battlefield with exactly one other unit you control.,,False,False,,https://riftbound.gg/cards/ven-129-sacred-protector/
+VEN-131,Decree of Unity,Vendetta,Rare,Spell,,Order,2,,,Kill an enemy Chaos ({Chaos Rune}) unit or gear.,,False,False,,https://riftbound.gg/cards/ven-131-decree-of-unity/
+VEN-132,Fallen Feline,Vendetta,Rare,Unit,,Order,2,3,Cat; Piltover,"When you play me, name a spell.
+While I'm at a battlefield, opponents can't play spells with that name.",,False,False,,https://riftbound.gg/cards/ven-132-fallen-feline/
+VEN-133,Glowstone,Vendetta,Rare,Gear,,Order,2,,,"[Empower] {Any Rune}{Any Rune} ({Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)
+Disempower this, {Exhaust}: Choose a player. They gain control of this and recall it. (Send it to their base.)
+At the end of your turn, kill this and deal 5 to all units you control.",,False,False,,https://riftbound.gg/cards/ven-133-glowstone/
+VEN-134,Kayle - Justified,Vendetta,Rare,Unit,Champion,Order,3,3,Mount Targon; Kayle,"[Empower] {3 Energy} ({3 Energy}: Empower me.)
+I can be [Empowered] up to three times.
+I have +2 {Might} for each time I'm [Empowered].
+While I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",,False,False,,https://riftbound.gg/cards/ven-134-kayle-justified/
+VEN-135,Kennen - Keeper of Balance,Vendetta,Rare,Unit,Champion,Order,3,2,Yordle; Ionia; Kennen,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+When you play me or I attack, you may pay {2 Energy} to [Stun] a unit. (It doesn't deal combat damage this turn.)
+While there's a stunned enemy unit here, I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-135-kennen-keeper-of-balance/
+VEN-135A,Kennen - Keeper of Balance,Vendetta,Rare,Unit,Champion,Order,3,2,Yordle; Kennen,"[Hidden]
+When you play me or I attack, you may pay {2 Energy} to [Stun] a unit.
+While there's a stunned enemy unit here, I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-135a-kennen-keeper-of-balance/
+VEN-136,Ambessa - Respected and Feared,Vendetta,Epic,Unit,Champion,Order,5,5,Noxus; Ambessa,"[Empower] {1 Energy}{Order Rune}{Order Rune} ({1 Energy}{Order Rune}{Order Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have [Assault 2]. (+2 {Might} while I'm an attacker.)
+[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",,False,False,,https://riftbound.gg/cards/ven-136-ambessa-respected-and-feared/
+VEN-136A,Ambessa - Respected and Feared,Vendetta,Epic,Unit,Champion,Order,5,5,Ambessa,"[Empower] {1 Energy}{Order Rune}{Order Rune}
+[Empowered][>] I have [Assault 2].
+[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",“Join your ancestors!”,False,False,,https://riftbound.gg/cards/ven-136a-ambessa-respected-and-feared/
+VEN-137,Shady Spectacles,Vendetta,Epic,Gear,,Order,4,,Equipment,"[Equip] {1 Energy}{Order Rune} ({1 Energy}{Order Rune}: Attach this to a unit you control.)
+As this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",,False,False,,https://riftbound.gg/cards/ven-137-shady-spectacles/
+VEN-138,Shen - Leader of the Kinkou Order,Vendetta,Epic,Unit,Champion,Order,6,7,Shen; Ionia,"[Shield] (+1 {Might} while I'm a defender.)
+When I hold, if there is exactly one other unit you control here, you score 1 point.",,False,False,,https://riftbound.gg/cards/ven-138-shen-leader-of-the-kinkou-order/
+VEN-138A,Shen - Leader of the Kinkou Order,Vendetta,Epic,Unit,Champion,Order,6,7,Shen; Ionia,"[Shield]
+When I hold, if there is exactly one other unit you control here, you score 1 point.",,False,False,,https://riftbound.gg/cards/ven-138a-shen-leader-of-the-kinkou-order/
+VEN-139,Akali - Rogue Assassin,Vendetta,Rare,Legend,,Fury; Calm,,,Akali,"[Empower] {3 Energy}{Any Rune} ({3 Energy}{Any Rune}: Empower this. Use only if not Empowered.)
+[Action][>] {Exhaust}: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",,False,False,,https://riftbound.gg/cards/ven-139-akali-rogue-assassin/
+VEN-140,Shuriken Flip,Vendetta,Epic,Spell,Signature,Fury; Calm,1,,Akali,"Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.
+[Flow] {3 Energy}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-140-shuriken-flip/
+VEN-141,Renekton - Butcher of the Sands,Vendetta,Rare,Legend,,Fury; Body,,,Renekton,"[Reaction][>] {Any Rune}{Any Rune}, {Exhaust}: [Add] {2 Energy}. Spend this Energy only to play units or activated abilities of units.",,False,False,,https://riftbound.gg/cards/ven-141-renekton-butcher-of-the-sands/
+VEN-142,Dominus,Vendetta,Epic,Spell,Signature,Fury; Body,4,,Renekton,"[Action] (Play on your turn or in showdowns.)
+This turn, double a unit's Might and give it ""{Any Rune}{Any Rune}: Ready me.""",,False,False,,https://riftbound.gg/cards/ven-142-dominus/
+VEN-143,Zed - Master of Shadows,Vendetta,Rare,Legend,,Fury; Chaos,,,Zed,"When you banish a card you own, empower me. (I become Empowered if I'm not already.)
+[Action][>] Disempower me, {Exhaust}: Discard 1, then draw 1.",,False,False,,https://riftbound.gg/cards/ven-143-zed-master-of-shadows/
+VEN-144,Death Mark,Vendetta,Epic,Spell,Signature,Fury; Chaos,2,,Zed,"[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)
+Play a 0 {Might} Shadow Clone unit token. (It has ""When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn."")
+[Flow] {1 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-144-death-mark/
+VEN-145,Nasus - Curator of the Sands,Vendetta,Rare,Legend,,Calm; Mind,,,Nasus,"When you play a unit, gear, or activated ability with Energy cost {7 Energy} or more, you may exhaust me to ready up to 2 runes.",,False,False,,https://riftbound.gg/cards/ven-145-nasus-curator-of-the-sands/
+VEN-146,Siphoning Strike,Vendetta,Epic,Spell,Signature,Calm; Mind,4,,Nasus,"Deal 4 to a unit at a battlefield. If you control 7 or more runes, deal 7 to it instead. When it dies this turn, channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ven-146-siphoning-strike/
+VEN-147,Shen - Eye of Twilight,Vendetta,Rare,Legend,,Calm; Order,,,Shen,[Action][>] {Exhaust}: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.),,False,False,,https://riftbound.gg/cards/ven-147-shen-eye-of-twilight/
+VEN-148,Shadow Dash,Vendetta,Epic,Spell,Signature,Calm; Order,2,,Shen,"Move an enemy unit to a battlefield where you have units. If you have exactly two units there, they each get +1 {Might} this turn.
+[Flow] {5 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-148-shadow-dash/
+VEN-149,Jayce - Defender of Tomorrow,Vendetta,Rare,Legend,,Mind; Body,,,Jayce,"[Empower] {2 Energy}{Any Rune}{Any Rune} ({2 Energy}{Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)
+{1 Energy}, {Exhaust}: Ready a gear.
+[Empowered][>] {1 Energy}, {Exhaust}: Ready 2 gear.",,False,False,,https://riftbound.gg/cards/ven-149-jayce-defender-of-tomorrow/
+VEN-150,Acceleration Gate,Vendetta,Epic,Spell,Signature,Mind; Body,3,,Jayce,"Ready up to 4 units, gear, and/or runes.",,False,False,,https://riftbound.gg/cards/ven-150-acceleration-gate/
+VEN-151,Mel - Soul's Reflection,Vendetta,Rare,Legend,,Mind; Chaos,,,Mel,"When you empower something else, empower me. (I become Empowered if I'm not already.)
+Disempower me, {Exhaust}: Give a unit at a battlefield -2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-151-mel-souls-reflection/
+VEN-152,Rebuttal,Vendetta,Epic,Spell,Signature,Mind; Chaos,1,,Mel,"[Reaction] (Play any time, even before spells and abilities resolve.)
+Choose a spell with Energy cost no more than {4 Energy}.  You may pay {Any Rune}. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",,False,False,,https://riftbound.gg/cards/ven-152-rebuttal/
+VEN-153,Ambessa - Matriarch of War,Vendetta,Rare,Legend,,Body; Order,,,Ambessa,"When you empower something else, empower me. (I become Empowered if I'm not already.)
+Disempower me, {Any Rune}, {Exhaust}: Ready a unit.",,False,False,,https://riftbound.gg/cards/ven-153-ambessa-matriarch-of-war/
+VEN-154,Public Execution,Vendetta,Epic,Spell,Signature,Body; Order,2,,Ambessa,"Choose a friendly unit. Kill an enemy unit with less Might than it.
+[Flow] {5 Energy}{Any Rune}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-154-public-execution/
+VEN-155,Yordle - Heart of the Tempest,Vendetta,Rare,Legend,,Order; Chaos,,,Yordle; Kennen,"When you play a card from anywhere other than your hand, empower me.
+[Action][>] Disempower me, {Exhaust}: Give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",,False,False,,https://riftbound.gg/cards/ven-155-yordle-heart-of-the-tempest/
+VEN-156,Lightning Rush,Vendetta,Epic,Spell,Signature,Order; Chaos,1,,Kennen,"Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.
+[Flow] {2 Energy}{Any Rune} (You may play this from your trash for its Flow cost. Then banish it.)",“I am the wind!”—Kennen,False,False,,https://riftbound.gg/cards/ven-156-lightning-rush/
+VEN-157,Dragon Roost,Vendetta,Uncommon,Battlefield,,Colorless,,,,"Any player may pay {Any Rune}{Any Rune} as an additional cost to play a Dragon. If they do, they play it to this battlefield.",,False,False,,https://riftbound.gg/cards/ven-157-dragon-roost/
+VEN-158,Heisho - Shell of the World,Vendetta,Uncommon,Battlefield,,Colorless,,,,Players ignore [Deflect] while paying for spells and abilities choosing something here.,,False,False,,https://riftbound.gg/cards/ven-158-heisho-shell-of-the-world/
+VEN-159,Kinkou Temple,Vendetta,Uncommon,Battlefield,,Colorless,,,,Units here with [Tank] have +1 {Might}.,,False,False,,https://riftbound.gg/cards/ven-159-kinkou-temple/
+VEN-160,Mystic Vortex,Vendetta,Uncommon,Battlefield,,Colorless,,,,"During showdowns here, cards with [Reaction] cost {Any Rune} more to play. (Hidden cards have [Reaction].)",,False,False,,https://riftbound.gg/cards/ven-160-mystic-vortex/
+VEN-161,Piltovan Forge,Vendetta,Uncommon,Battlefield,,Colorless,,,,"While you control this battlefield, the first friendly gear activated ability played each turn costs {1 Energy} less.",,False,False,,https://riftbound.gg/cards/ven-161-piltovan-forge/
+VEN-162,Protective Sands,Vendetta,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, if you control 4 or fewer runes, you may pay {1 Energy} to draw 1.",,False,False,,https://riftbound.gg/cards/ven-162-protective-sands/
+VEN-163,Risen Altar,Vendetta,Uncommon,Battlefield,,Colorless,,,,[Empower] costs of your units here cost {1 Energy} or {Any Rune} less.,,False,False,,https://riftbound.gg/cards/ven-163-risen-altar/
+VEN-164,Sandswept Tomb,Vendetta,Uncommon,Battlefield,,Colorless,,,,Each spell that chooses one or more units here that are friendly to it costs {Any Rune} less.,,False,False,,https://riftbound.gg/cards/ven-164-sandswept-tomb/
+VEN-166,Threshold of the Gray,Vendetta,Uncommon,Battlefield,,Colorless,,,,"When combat starts here, the attacker and defender each [Add] {1 Energy}.",,False,False,,https://riftbound.gg/cards/ven-166-threshold-of-the-gray/
+VEN-167,Vi - Destructive,Vendetta,Rare,Unit,Champion,Fury,2,3,Vi,"[Ganking]
+Recycle 1 from your trash: Give me +1 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-167-vi-destructive/
+VEN-168,Jinx - Demolitionist,Vendetta,Rare,Unit,Champion,Fury,3,4,Jinx,"[Accelerate]
+[Assault 2]
+When you play me, discard 2.",,False,False,,https://riftbound.gg/cards/ven-168-jinx-demolitionist/
+VEN-169,Zed - From the Shadows,Vendetta,Epic,Unit,Champion,Fury,4,4,Zed,"You may discard 1 as an additional cost to play me.
+When you play me, if you paid the additional cost, play a 0 {Might} Shadow Clone unit token.",,False,False,,https://riftbound.gg/cards/ven-169-zed-from-the-shadows/
+VEN-170,Shen - Scourge of Shadows,Vendetta,Rare,Unit,Champion,Calm,5,6,Shen,"When I hold, if there is exactly one other unit you control here, draw 1.",,False,False,,https://riftbound.gg/cards/ven-170-shen-scourge-of-shadows/
+VEN-171,Riven - Shattered,Vendetta,Rare,Unit,Champion,Calm,3,3,Riven,"[Weaponmaster]
+When I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",,False,False,,https://riftbound.gg/cards/ven-171-riven-shattered/
+VEN-172,Draven - Showboat,Vendetta,Rare,Unit,Champion,Fury,5,3,Draven,My Might is increased by your points.,,False,False,,https://riftbound.gg/cards/ven-172-draven-showboat/
+VEN-173,Swain - Visionary,Vendetta,Rare,Unit,Champion,Mind,6,6,Swain,"[Vision]
+When I conquer, if you've played a non-token unit, a non-token gear, and a spell this turn, you score 1 point.",,False,False,,https://riftbound.gg/cards/ven-173-swain-visionary/
+VEN-174,Irelia - Fervent,Vendetta,Epic,Unit,Champion,Calm,5,4,Irelia; Ionia,"[Deflect]
+When you choose or ready me, give me +1 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-174-irelia-fervent/
+VEN-175,Jayce - Man of Progress,Vendetta,Rare,Unit,Champion,Mind,4,4,Jayce; Piltover,"When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than {7 Energy} from hand this turn, ignoring its Energy cost.",,False,False,,https://riftbound.gg/cards/ven-175-jayce-man-of-progress/
+VEN-176,Viktor - Innovator,Vendetta,Rare,Unit,Champion,Mind,4,3,Viktor,"When you play a card on an opponent's turn, play a 1 {Might} Recruit unit token to your base.",,False,False,,https://riftbound.gg/cards/ven-176-viktor-innovator/
+VEN-177,Renekton - Brute,Vendetta,Epic,Unit,Champion,Body,5,4,Renekton,"{1 Energy}: Give me +1 {Might} this turn.
+When my Might becomes 10 or more, empower me.
+[Empowered][>] I have [Ganking] and [Deflect].",,False,False,,https://riftbound.gg/cards/ven-177-renekton-brute/
+VEN-178,Nasus - Guardian of Knowledge,Vendetta,Rare,Unit,Champion,Mind,5,6,Dog; Nasus,"Once each turn, when an enemy unit here dies, channel 1 rune exhausted.",,False,False,,https://riftbound.gg/cards/ven-178-nasus-guardian-of-knowledge/
+VEN-179,Rengar - Trophy Hunter,Vendetta,Epic,Unit,Champion,Body,5,6,Cat; Rengar; Ixtal,"[Ambush]
+I can be played to a battlefield where there are enemy units.",,False,False,,https://riftbound.gg/cards/ven-179-rengar-trophy-hunter/
+VEN-180,Kha'Zix - Evolving Hunter,Vendetta,Epic,Unit,Champion,Body,5,5,Kha'Zix; The Void,"[Hunt]
+When I attack, you may spend 3 XP to deal damage equal to my Might to an enemy unit here.",,False,False,,https://riftbound.gg/cards/ven-180-khazix-evolving-hunter/
+VEN-181,Gangplank - Naval,Vendetta,Rare,Unit,Champion,Body,6,6,Gangplank,"[Empower] {Body Rune}{Body Rune}
+[Empowered][>] If a spell or ability that chooses me would stun me, give me -{Might}, or return me to hand, give me +3 {Might} instead.",,False,False,,https://riftbound.gg/cards/ven-181-gangplank-naval/
+VEN-182,Illaoi - Prophet of the Great Kraken,Vendetta,Rare,Unit,Champion,Chaos,6,4,Illaoi,"When you play me or when I score, play a {1 Energy} {Might} Tentacle unit token from Bilgewater.
+I have +1 {Might} for each token unit you control.",,False,False,,https://riftbound.gg/cards/ven-182-illaoi-prophet-of-the-great-kraken/
+VEN-183,Diana - No Longer Human,Vendetta,Epic,Unit,Champion,Chaos,4,3,Diana; Mount Targon,"[Ambush]
+When you play a spell, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-183-diana-no-longer-human/
+VEN-184,Leona - Determined,Vendetta,Rare,Unit,Champion,Order,4,4,Leona,"[Shield]
+When I attack, stun an enemy unit here.",,False,False,,https://riftbound.gg/cards/ven-184-leona-determined/
+VEN-187,Ambessa - Respected and Feared,Vendetta,Epic,Unit,Champion,Order,5,5,Ambessa,"[Empower] {1 Energy}{Order Rune}{Order Rune}
+[Empowered][>] I have [Assault 2].
+[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",,False,False,,https://riftbound.gg/cards/ven-187-ambessa-respected-and-feared/
+VEN-188,Mel - Defiant Soul,Vendetta,Rare,Unit,Champion,Chaos,5,4,Mel,"[Empower] — Discard a spell
+When I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",,False,False,,https://riftbound.gg/cards/ven-188-mel-defiant-soul/
+VEN-189,Akali - Rogue Assassin,Vendetta,Rare,Legend,,Fury; Calm,,,Akali,"[Empower] {3 Energy}{Any Rune}
+[Action][>] {Exhaust}: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",,False,False,,https://riftbound.gg/cards/ven-189-akali-rogue-assassin/
+VEN-190,Renekton - Butcher of the Sands,Vendetta,Rare,Legend,,Fury; Body,,,Renekton,"[Reaction][>] {Any Rune}{Any Rune}, {Exhaust}: [Add] {2 Energy}. Spend this Energy only to play units or activated abilities of units.",,False,False,,https://riftbound.gg/cards/ven-190-renekton-butcher-of-the-sands/
+VEN-191,Zed - Master of Shadows,Vendetta,Rare,Legend,,Fury; Chaos,,,Zed,"When you banish a card you own, empower me.
+[Action][>] Disempower me, {Exhaust}: Discard 1, then draw 1.",,False,False,,https://riftbound.gg/cards/ven-191-zed-master-of-shadows/
+VEN-192,Nasus - Curator of the Sands,Vendetta,Rare,Legend,,Calm; Mind,,,Nasus,"When you play a unit, gear, or activated ability with Energy cost {7 Energy} or more, you may exhaust me to ready up to 2 runes.",,False,False,,https://riftbound.gg/cards/ven-192-nasus-curator-of-the-sands/
+VEN-193,Shen - Eye of Twilight,Vendetta,Rare,Legend,,Calm; Order,,,Shen,[Action][>] {Exhaust}: Give a friendly unit [Tank] this turn.,,False,False,,https://riftbound.gg/cards/ven-193-shen-eye-of-twilight/
+VEN-194,Jayce - Defender of Tomorrow,Vendetta,Rare,Legend,,Mind; Body,,,Jayce,"[Empower] {2 Energy}{Any Rune}{Any Rune}
+{1 Energy}, {Exhaust}: Ready a gear.
+[Empowered][>] {1 Energy}, {Exhaust}: Ready 2 gear.",,False,False,,https://riftbound.gg/cards/ven-194-jayce-defender-of-tomorrow/
+VEN-195,Mel - Soul's Reflection,Vendetta,Rare,Legend,,Mind; Chaos,,,Mel,"When you empower something else, empower me.
+Disempower me, {Exhaust}: Give a unit at a battlefield -2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-195-mel-souls-reflection/
+VEN-196,Ambessa - Matriarch of War,Vendetta,Rare,Legend,,Body; Order,,,Ambessa,"When you empower something else, empower me.
+Disempower me, {Any Rune}, {Exhaust}: Ready a unit.",,False,False,,https://riftbound.gg/cards/ven-196-ambessa-matriarch-of-war/
+VEN-197,Yordle - Heart of the Tempest,Vendetta,Rare,Legend,,Order; Chaos,,,Yordle; Kennen,"When you play a card from anywhere other than your hand, empower me.
+[Action][>] Disempower me, {Exhaust}: Give a unit [Assault 2] this turn.",,False,False,,https://riftbound.gg/cards/ven-197-yordle-heart-of-the-tempest/
+VEN-R01,Fury Rune,Vendetta,Common,Rune,Basic,Fury,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r01-fury-rune/
+VEN-R02,Calm Rune,Vendetta,Common,Rune,Basic,Calm,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r02-calm-rune/
+VEN-R03,Mind Rune,Vendetta,Common,Rune,Basic,Mind,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r03-mind-rune/
+VEN-R04,Body Rune,Vendetta,Common,Rune,Basic,Body,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r04-body-rune/
+VEN-R05,Chaos Rune,Vendetta,Common,Rune,Basic,Chaos,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r05-chaos-rune/
+VEN-R06,Order Rune,Vendetta,Common,Rune,Basic,Order,,,,[NO TEXT],,False,False,,https://riftbound.gg/cards/ven-r06-order-rune/
+VEN-SP1,Kai'Sa - Survivor,Vendetta,Epic,Unit,Champion,Fury,4,4,Kai'Sa,"[Accelerate]
+When I conquer, draw 1.",,False,False,,https://riftbound.gg/cards/ven-sp1-kaisa-survivor/
+VEN-SP2,Sona - Harmonious,Vendetta,Epic,Unit,Champion,Calm,4,4,Sona,"At the end of your turn, if I'm at a battlefield, ready up to 4 friendly runes.",,False,False,,https://riftbound.gg/cards/ven-sp2-sona-harmonious/
+VEN-SP3,Ahri - Inquisitive,Vendetta,Epic,Unit,Champion,Mind,3,3,Ahri; Ionia,"When I attack or defend, give an enemy unit here -2 {Might} this turn, to a minimum of 1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-sp3-ahri-inquisitive/
+VEN-SP4,Sett - Brawler,Vendetta,Epic,Unit,Champion,Body,5,4,Sett,"When you play me or when I conquer, buff me.
+Spend my buff: Give me +4 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-sp4-sett-brawler/
+VEN-SP5,Ezreal - Prodigy,Vendetta,Epic,Unit,Champion,Chaos,3,3,Ezreal; Piltover,"When you play me, discard 1, then draw 2.
+Optional additional costs you pay cost {1 Energy} or {Any Rune} less.",,False,False,,https://riftbound.gg/cards/ven-sp5-ezreal-prodigy/
+VEN-SP6,Lux - Crownguard,Vendetta,Epic,Unit,Champion,Order,4,2,Lux,{Exhaust}: [Reaction] — [Add] {2 Energy}. Spend this Energy only to play spells.,,False,False,,https://riftbound.gg/cards/ven-sp6-lux-crownguard/
+VEN-T04,Recruit (NX),Vendetta,Common,Unit,Token,Colorless,,1,Recruit,,Few earn the right to call themselves Trifarian.,False,False,,https://riftbound.gg/cards/ven-t04-recruit-nx/
