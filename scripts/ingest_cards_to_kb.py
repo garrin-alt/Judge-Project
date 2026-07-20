@@ -19,6 +19,12 @@ from pathlib import Path
 from ragkb.embeddings import embed_texts
 from ragkb.store import KnowledgeStore
 
+
+def _file_fingerprint(path) -> str:
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
 KEYWORD_RE = re.compile(r"\[([A-Z][a-zA-Z ]+?)(?:\s+\d+)?\]")
 
 
@@ -123,6 +129,7 @@ def main():
             )
             rows.append(card_to_row(card, doc_id))
         store.replace_cards(rows)
+        store.set_meta("fingerprint:cards", _file_fingerprint(args.cards))
         total = store.count_cards()
         print(f"Structured cards table: {total} rows")
 

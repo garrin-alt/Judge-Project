@@ -133,8 +133,13 @@ def main():
     if args.db:
         from ragkb.store import KnowledgeStore
 
+        import hashlib
+
         with KnowledgeStore(args.db) as store:
             store.set_glossary(entries)
+            for name, fp in [("rules", args.rules), ("cards", args.cards)]:
+                digest = hashlib.sha256(Path(fp).read_bytes()).hexdigest()
+                store.set_meta(f"fingerprint:glossary-{name}", digest)
         print(f"Installed glossary into {args.db}")
 
 

@@ -107,6 +107,14 @@ Termux packages, the "Unsupported platform" import error, CMake issues).
 
 ## Updating when new sets or rules drop
 
+Check first — it prints exactly what (if anything) to run:
+
+```bash
+python scripts/check_updates.py
+```
+
+Full update:
+
 ```bash
 cd Judge-Project
 git pull

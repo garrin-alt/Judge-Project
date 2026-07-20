@@ -106,7 +106,15 @@ chmod +x ~/.termux/boot/ragkb.sh
 
 ## Updating the knowledge base
 
-When new sets or rules updates drop, on Wi-Fi:
+Check whether anything needs updating (on Wi-Fi):
+
+```bash
+python scripts/check_updates.py
+```
+
+It checks your KB against your data files, your copy against GitHub, and
+the live sites against your data — then prints exactly which commands to
+run (nothing, if you're current). To update everything when it says so:
 
 ```bash
 cd ~/Judge-Project

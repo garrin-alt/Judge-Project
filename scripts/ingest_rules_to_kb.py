@@ -30,6 +30,12 @@ from ragkb.chunking import chunk_text
 from ragkb.embeddings import embed_texts
 from ragkb.store import KnowledgeStore
 
+
+def _file_fingerprint(path) -> str:
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
 # Sources whose documents this script owns (removed before re-ingesting).
 OFFICIAL_PREFIXES = (
     "https://cmsassets.rgpub.io/",
@@ -222,6 +228,7 @@ def main():
                 chunks=chunks,
                 embeddings=vecs,
             )
+        store.set_meta("fingerprint:rules", _file_fingerprint(args.rules))
         total_docs = len(store.list_documents())
         total_chunks = store.count_chunks()
 

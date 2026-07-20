@@ -145,7 +145,9 @@ OGN-066a,Ahri - Alluring,Origins,Showcase,Unit,Champion,Calm,5,4,Ahri; Ionia,"Wh
 OGN-067,Blitzcrank - Impassive,Origins,Rare,Unit,Champion,Calm,5,5,Mech; Blitzcrank; Zaun,"[Tank] (I must be assigned combat damage first.)
 When you play me to a battlefield, you may move an enemy unit to here.
 When I hold, return me to my owner's hand.",,False,False,,https://riftbound.gg/cards/ogn-067-blitzcrank-impassive/
-OGN-067-P,"Blitzcrank, Impassive (Origins Summoner Skirmish Top 8 Promo)",Origins,Rare,Unit,,Calm,5,5,Mech; Blitzcrank; Zaun,"TANK (I must be assigned combat damage first.) When you play me to a battlefield, you may move an enemy unit to here. When i hold, return me to my owner's hand.",,True,False,,https://riftbound.gg/cards/ogn-067-p-blitzcrank-impassive/
+OGN-067-P,"Blitzcrank, Impassive (Origins Summoner Skirmish Top 8 Promo)",Origins,Rare,Unit,,Calm,5,5,Mech; Blitzcrank; Zaun,"[Tank] (I must be assigned combat damage first.)
+When you play me to a battlefield, you may move an enemy unit to here.
+When I hold, return me to my owner's hand.",,True,False,,https://riftbound.gg/cards/ogn-067-p-blitzcrank-impassive/
 OGN-068,Caitlyn - Patrolling,Origins,Rare,Unit,Champion,Calm,3,3,Caitlyn; Piltover,"I must be assigned combat damage last.
 {Exhaust}: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",“I never miss.”,False,False,,https://riftbound.gg/cards/ogn-068-caitlyn-patrolling/
 OGN-068a,Caitlyn - Patrolling (Arcane Box Set Promo),Origins,Showcase,Unit,Champion,Calm,3,3,Caitlyn; Piltover,"I must be assigned combat damage last.
@@ -375,7 +377,7 @@ You may play me to an open battlefield.",“Ours for the taking!”,False,False,
 OGN-175,Shipyard Skulker,Origins,Common,Unit,,Chaos,3,3,Pirate; Bilgewater,,"Few people laughed when she claimed she was a “dock pirate”—or at least, few remained.",False,False,,https://riftbound.gg/cards/ogn-175-shipyard-skulker/
 OGN-176,Sneaky Deckhand,Origins,Common,Unit,,Chaos,3,2,Pirate; Bilgewater,You may play me to an open battlefield.,“I like to think of her as a pre-boarding party.” — Miss Fortune,False,False,,https://riftbound.gg/cards/ogn-176-sneaky-deckhand/
 OGN-177,Stealthy Pursuer,Origins,Common,Unit,,Chaos,4,4,Shurima,"When a friendly unit moves from my location, I may be moved with it.","“Anywhere you can go, I can go better.”",False,False,,https://riftbound.gg/cards/ogn-177-stealthy-pursuer/
-OGN-177-P,Stealthy Pursuer (Origins Nexus Night Promo),Origins,Common,Unit,,Chaos,4,4,Shurima,"When a friendly unit moves from my location, I may be moved with it.",,True,False,,https://riftbound.gg/cards/ogn-177-p-stealthy-pursuer/
+OGN-177-P,Stealthy Pursuer (Origins Nexus Night Promo),Origins,Common,Unit,,Chaos,4,4,Shurima,"When a friendly unit moves from my location, I may be moved with it.",,True,True,,https://riftbound.gg/cards/ogn-177-p-stealthy-pursuer/
 OGN-178,Undercover Agent,Origins,Common,Unit,,Chaos,5,5,,"[Deathknell] — Discard 2, then draw 2. (When I die, get the effect.)",Even he no longer knew which side he worked for.,False,False,,https://riftbound.gg/cards/ogn-178-undercover-agent/
 OGN-179,Acceptable Losses,Origins,Uncommon,Spell,,Chaos,1,,,"[Action] (Play on your turn or in showdowns.)
 Each player kills one of their gear.",“Never liked that sword anyway.”,False,False,,https://riftbound.gg/cards/ogn-179-acceptable-losses/
@@ -1879,6 +1881,7 @@ VEN-002,Blade Twirler,Vendetta,Common,Unit,,Fury,4,4,Yordle; Ionia,"The first ti
 VEN-003,Brittle Steel,Vendetta,Common,Spell,,Fury,2,,,"Kill a gear.
 [Flow] {4 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-003-brittle-steel/
 VEN-004,Dune Surfer,Vendetta,Common,Unit,,Fury,3,3,Shurima,You ignore [Tank] while assigning combat damage here.,,False,False,,https://riftbound.gg/cards/ven-004-dune-surfer/
+VEN-005,Forsaken Baccai,Vendetta,Common,Unit,,Fury,2,2,Shurima,"If you control fewer runes than an opponent at the start of your Beginning Phase, give me +1 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-005-forsaken-baccai/
 VEN-006,Oasis Raider,Vendetta,Common,Unit,,Fury,4,4,Shurima,"If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 {Might} and [Ganking] this turn. (I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-006-oasis-raider/
 VEN-007,Punching Poro,Vendetta,Common,Unit,,Fury,2,2,Poro; Ionia,"[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)
 [Empowered][>] I have +1 {Might}.",Soft fur. Hard fists.,False,False,,https://riftbound.gg/cards/ven-007-punching-poro/
@@ -1892,6 +1895,8 @@ VEN-011,Pendulum Blade,Vendetta,Uncommon,Gear,,Fury,3,,Equipment,[Equip] {Fury R
 VEN-012,Perfect Execution,Vendetta,Uncommon,Spell,,Fury,3,,,"Ready a unit and give it [Assault 3] this turn. (+3 {Might} while it's an attacker.)
 [Flow] {3 Energy}{Fury Rune} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-012-perfect-execution/
 VEN-013,Shadow Assassin,Vendetta,Uncommon,Unit,,Fury,5,5,Ionia,I enter ready if you have a card with my name in your trash.,,False,False,,https://riftbound.gg/cards/ven-013-shadow-assassin/
+VEN-014,Shadow Fiend,Vendetta,Uncommon,Unit,,Fury,2,2,Ionia,"[Empower] {2 Energy}{Fury Rune} ({2 Energy}{Fury Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have [Assault 3]. (+3 {Might} while I'm an attacker.)",,False,False,,https://riftbound.gg/cards/ven-014-shadow-fiend/
 VEN-015,Decree of Rage,Vendetta,Rare,Spell,,Fury,1,,,"[Action] (Play on your turn or in showdowns.)
 This can't be countered.
 Deal 4 to an enemy Calm ({Calm Rune}) unit.",,False,False,,https://riftbound.gg/cards/ven-015-decree-of-rage/
@@ -1927,6 +1932,8 @@ VEN-027,Hand Hammer,Vendetta,Common,Gear,,Calm,2,,Equipment,[Equip] {Calm Rune} 
 VEN-028,Mournful Witness,Vendetta,Common,Unit,,Calm,2,2,Fae; Ionia,"When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)
 [Empowered][>] I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-028-mournful-witness/
 VEN-029,Ol' Poro,Vendetta,Common,Unit,,Calm,2,4,Poro; Bandle City,"I can't be played on your first, second, or third turns.",,False,False,,https://riftbound.gg/cards/ven-029-ol-poro/
+VEN-030,Serene Ascetic,Vendetta,Common,Unit,,Calm,3,3,Ionia,"[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay {Any Rune} to choose me with a spell or ability.+3 {Might} while I'm a defender.)",,False,False,,https://riftbound.gg/cards/ven-030-serene-ascetic/
 VEN-031,Twilight Shroud,Vendetta,Common,Spell,,Calm,1,,,"Give a friendly unit +1 {Might} this turn. It can't be chosen by enemy spells and abilities this turn.
 [Flow] {2 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",“I make problems … disappear.” —Akali,False,False,,https://riftbound.gg/cards/ven-031-twilight-shroud/
 VEN-032,Frostcoat Mother,Vendetta,Uncommon,Unit,,Calm,3,3,Dog; Freljord,"[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)
@@ -1983,8 +1990,13 @@ VEN-055,Applied Researchers,Vendetta,Uncommon,Unit,,Mind,4,4,Shurima,"[Empower] 
 VEN-056,Clairvoyance,Vendetta,Uncommon,Spell,,Mind,7,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
 [Predict 5]. (Look at the top 5 cards of your Main Deck. Recycle any of them and put the rest back in any order.)
 Draw 2.",,False,False,,https://riftbound.gg/cards/ven-056-clairvoyance/
+VEN-057,Covert Informant,Vendetta,Uncommon,Unit,,Mind,3,4,Noxus,"[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
+[Empowered][>] When I move, draw 1.",,False,False,,https://riftbound.gg/cards/ven-057-covert-informant/
 VEN-058,Patched Porobot,Vendetta,Common,Unit,,Mind,2,2,Mech; Poro; Piltover,"(I enter exhausted.)
 When you play me, if you control 3 or more other gear, draw 1.",Attempts to synthetically replicate a poro's whimsy and pure adorable nature have yielded mixed results.,False,False,,https://riftbound.gg/cards/ven-058-patched-porobot/
+VEN-059,Shock Blast,Vendetta,Uncommon,Spell,,Mind,3,,,"[Action] (Play on your turn or in showdowns.)
+This costs {2 Energy} less if you control something that's [Empowered].
+Deal 4 to a unit at a battlefield.",,False,False,,https://riftbound.gg/cards/ven-059-shock-blast/
 VEN-060,Sky Cruiser,Vendetta,Uncommon,Unit,,Mind,4,3,Piltover,"Discard a gear, {1 Energy}, {Exhaust}: Deal 4 to a unit at a battlefield.",,False,False,,https://riftbound.gg/cards/ven-060-sky-cruiser/
 VEN-061,Decree of Insight,Vendetta,Rare,Spell,,Mind,1,,,"[Reaction] (Play any time, even before spells and abilities resolve.)
 Ignore [Deflect] while paying this spell's cost.
@@ -2011,13 +2023,20 @@ VEN-069A,Mel - Newly Awakened,Vendetta,Epic,Unit,Champion,Mind,4,4,Mel,"When you
 VEN-070,Brutal Hunter,Vendetta,Common,Unit,,Body,3,4,Noxus,"[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)
 [Empowered][>] I have +2 {Might} and [Ganking]. (I can move from battlefield to battlefield.)",,False,False,,https://riftbound.gg/cards/ven-070-brutal-hunter/
 VEN-071,Fretful Feline,Vendetta,Common,Unit,,Body,6,5,Cat; Piltover,"When I become ready, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-071-fretful-feline/
+VEN-072,Guttural Roar,Vendetta,Common,Spell,,Body,2,,,"[Action] (Play on your turn or in showdowns.)
+Give a unit +2 {Might} this turn. If it's [Empowered], give it +4 {Might} this turn instead.",,False,False,,https://riftbound.gg/cards/ven-072-guttural-roar/
 VEN-073,Jagged Cutlass,Vendetta,Common,Gear,,Body,3,,Equipment,Equip {Body Rune} ({Body Rune}: Attach this to a unit you control.),I can’t be moved by enemy spells and abilities.,False,False,,https://riftbound.gg/cards/ven-073-jagged-cutlass/
+VEN-074,Legion Marauder,Vendetta,Common,Unit,,Body,2,2,Trifarian; Noxus,"[Empower] — {1 Energy} or {Body Rune} (Pay either cost: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +1 {Might}.",,False,False,,https://riftbound.gg/cards/ven-074-legion-marauder/
 VEN-075,Platewyrm Egg,Vendetta,Common,Gear,,Body,3,,,"This enters exhausted.
 [Empower] — {1 Energy}, {Exhaust} (Pay the cost: Empower this. Use only if not Empowered.)
 [Reaction][>] {Exhaust}: [Add] {1 Energy}. If this is [Empowered], [Add] {2 Energy} instead.",,False,False,,https://riftbound.gg/cards/ven-075-platewyrm-egg/
 VEN-076,Repair Specialist,Vendetta,Common,Unit,,Body,3,3,Zaun,I have [Assault] equal to the number of gear you control. (+1 {Might} while I'm an attacker for each instance of Assault.),,False,False,,https://riftbound.gg/cards/ven-076-repair-specialist/
 VEN-077,Tools of Empire,Vendetta,Common,Gear,,Body,4,,,"[Empower] {2 Energy} ({2 Energy}: Empower this. Use only if not Empowered.)
 {Exhaust}: Give a unit +2 {Might} this turn. If this is [Empowered], give that unit +4 {Might} this turn instead.",,False,False,,https://riftbound.gg/cards/ven-077-tools-of-empire/
+VEN-078,Baccai Witherclaw,Vendetta,Uncommon,Unit,,Body,4,4,Shurima,"[Empower] {1 Energy}{Any Rune}{Any Rune} ({1 Energy}{Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] I have +2 {Might}.
+[Empowered][>][>>][Deathknell][>] Channel 2 runes exhausted. (When I die while Empowered, get the effect.)",,False,False,,https://riftbound.gg/cards/ven-078-baccai-witherclaw/
 VEN-079,Dame the Despoiler,Vendetta,Uncommon,Unit,,Body,5,5,Noxus,"[Empower] {5 Energy}{Body Rune} ({5 Energy}{Body Rune}: Empower me. Use only if not Empowered.)
 [Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 {Might} this turn.",“Wanna see a show?!”,False,False,,https://riftbound.gg/cards/ven-079-dame-the-despoiler/
 VEN-080,Noxian Demolitionist,Vendetta,Uncommon,Unit,,Body,2,1,Noxus,"When I conquer, you may kill a gear with Energy cost no more than my Might.",,False,False,,https://riftbound.gg/cards/ven-080-noxian-demolitionist/
@@ -2056,6 +2075,8 @@ VEN-097,Spiderling,Vendetta,Common,Unit,,Chaos,3,1,Shadow Isles; Spider,"[Hidden
 I have +1 {Might} for each other unit you control here with my name.
 Your deck can have any number of cards named Spiderling.",,False,False,,https://riftbound.gg/cards/ven-097-spiderling/
 VEN-098,Stargazer,Vendetta,Common,Unit,,Chaos,5,4,Mount Targon,"Spells with [Flow] you play from your trash cost {2 Energy} less, to a minimum of {1 Energy}.",,False,False,,https://riftbound.gg/cards/ven-098-stargazer/
+VEN-099,Tornado Warrior,Vendetta,Common,Unit,,Chaos,3,3,Yordle; Bandle City,"[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)
+When you play me from face down, you may empower something here. Disempower it at end of turn.",,False,False,,https://riftbound.gg/cards/ven-099-tornado-warrior/
 VEN-100,Up from the Deep,Vendetta,Common,Spell,,Chaos,3,,,"Play two 1 {Might} Tentacle unit tokens from Bilgewater.
 [Flow] {3 Energy} (You may play this from your trash for its Flow cost. Then banish it.)",,False,False,,https://riftbound.gg/cards/ven-100-up-from-the-deep/
 VEN-101,Gust Monk,Vendetta,Uncommon,Unit,,Chaos,2,2,Yordle; Bandle City,"You may pay {1 Energy} as an additional cost to play me.
@@ -2076,6 +2097,7 @@ VEN-110,Mel - Defiant Soul,Vendetta,Rare,Unit,Champion,Chaos,5,4,Noxus; Mel,"[Em
 When I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",,False,False,,https://riftbound.gg/cards/ven-110-mel-defiant-soul/
 VEN-110A,Mel - Defiant Soul,Vendetta,Rare,Unit,Champion,Chaos,5,4,Mel,"[Empower] — Discard a spell
 When I become [Empowered], banish an enemy unit at a battlefield with 3 {Might} or less.",,False,False,,https://riftbound.gg/cards/ven-110a-mel-defiant-soul/
+VEN-111,Minah Swiftfoot,Vendetta,Rare,Unit,,Chaos,6,6,Ionia,"When I move to a battlefield, choose one —Each player discards 1.Each player draws 1.",,False,False,,https://riftbound.gg/cards/ven-111-minah-swiftfoot/
 VEN-112,Zed - Without a Sound,Vendetta,Rare,Unit,Champion,Chaos,5,5,Ionia; Zed,"When I conquer, play a 0 {Might} Shadow Clone unit token to your base. (It has ""When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn."")
 [Action][>] {1 Energy}{Chaos Rune}: Move me and a Shadow Clone you control to each other's locations.",,False,False,,https://riftbound.gg/cards/ven-112-zed-without-a-sound/
 VEN-112A,Zed - Without a Sound,Vendetta,Rare,Unit,Champion,Chaos,5,5,Zed,"When I conquer, play a 0 {Might} Shadow Clone unit token to your base.
@@ -2099,6 +2121,7 @@ When you play me, if you paid the additional cost, [Stun] an enemy unit at a bat
 VEN-121,Reluctant Leader,Vendetta,Common,Unit,,Order,4,3,Ionia,"When you play another unit, give me +2 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-121-reluctant-leader/
 VEN-122,Solari Sunhawk,Vendetta,Common,Unit,,Order,3,3,Bird; Mount Targon,"[Empower] {2 Energy} ({2 Energy}: Empower me. Use only if not Empowered.)
 [Empowered][>] I have +1 {Might} and [Deflect 2]. (Opponents must pay {Any Rune}{Any Rune} to choose me with a spell or ability.)",,False,False,,https://riftbound.gg/cards/ven-122-solari-sunhawk/
+VEN-123,Soulspinner,Vendetta,Common,Unit,,Order,3,3,Shadow Isles; Spider,[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.),,False,False,,https://riftbound.gg/cards/ven-123-soulspinner/
 VEN-124,Escaped Grayback,Vendetta,Uncommon,Unit,,Order,3,3,Noxus,"[Empower] — Kill a friendly unit (Pay the cost: Empower me. Use only if not Empowered.)
 [Empowered][>] I have +2 {Might}.",,False,False,,https://riftbound.gg/cards/ven-124-escaped-grayback/
 VEN-125,Hungry Wolf,Vendetta,Uncommon,Unit,,Order,4,4,Dog; Freljord,{Order Rune}: Ready me and give me +1 {Might} this turn. Use only if you've chosen an enemy unit this turn and only once each turn.,,False,False,,https://riftbound.gg/cards/ven-125-hungry-wolf/
@@ -2109,6 +2132,8 @@ VEN-127,Lacerate,Vendetta,Common,Spell,,Order,2,,,"Choose a unit. If it's [Empow
 VEN-128,Noxian Emissary,Vendetta,Uncommon,Unit,,Order,2,2,Noxus,"[Empower] {1 Energy}{Order Rune} ({1 Energy}{Order Rune}: Empower me. Use only if not Empowered.)
 [Empowered][>][>>][Deathknell][>] Play two 1 {Might} Recruit unit tokens to your base. (When I die while Empowered, get the effect.)",,False,False,,https://riftbound.gg/cards/ven-128-noxian-emissary/
 VEN-129,Sacred Protector,Vendetta,Uncommon,Unit,,Order,4,6,Fae; Ionia,I don't deal combat damage unless I'm at a battlefield with exactly one other unit you control.,,False,False,,https://riftbound.gg/cards/ven-129-sacred-protector/
+VEN-130,Aurok General,Vendetta,Rare,Unit,,Order,5,5,Trifarian; Noxus,"[Empower] {3 Energy}{Order Rune} ({3 Energy}{Order Rune}: Empower me. Use only if not Empowered.)
+[Empowered][>] Your units that are [Empowered] have +2 {Might} (including me).",,False,False,,https://riftbound.gg/cards/ven-130-aurok-general/
 VEN-131,Decree of Unity,Vendetta,Rare,Spell,,Order,2,,,Kill an enemy Chaos ({Chaos Rune}) unit or gear.,,False,False,,https://riftbound.gg/cards/ven-131-decree-of-unity/
 VEN-132,Fallen Feline,Vendetta,Rare,Unit,,Order,2,3,Cat; Piltover,"When you play me, name a spell.
 While I'm at a battlefield, opponents can't play spells with that name.",,False,False,,https://riftbound.gg/cards/ven-132-fallen-feline/
@@ -2178,6 +2203,7 @@ VEN-161,Piltovan Forge,Vendetta,Uncommon,Battlefield,,Colorless,,,,"While you co
 VEN-162,Protective Sands,Vendetta,Uncommon,Battlefield,,Colorless,,,,"When you conquer here, if you control 4 or fewer runes, you may pay {1 Energy} to draw 1.",,False,False,,https://riftbound.gg/cards/ven-162-protective-sands/
 VEN-163,Risen Altar,Vendetta,Uncommon,Battlefield,,Colorless,,,,[Empower] costs of your units here cost {1 Energy} or {Any Rune} less.,,False,False,,https://riftbound.gg/cards/ven-163-risen-altar/
 VEN-164,Sandswept Tomb,Vendetta,Uncommon,Battlefield,,Colorless,,,,Each spell that chooses one or more units here that are friendly to it costs {Any Rune} less.,,False,False,,https://riftbound.gg/cards/ven-164-sandswept-tomb/
+VEN-165,Shadow Temple,Vendetta,Uncommon,Battlefield,,Colorless,,,,"When you hold here, [Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)",,False,False,,https://riftbound.gg/cards/ven-165-shadow-temple/
 VEN-166,Threshold of the Gray,Vendetta,Uncommon,Battlefield,,Colorless,,,,"When combat starts here, the attacker and defender each [Add] {1 Energy}.",,False,False,,https://riftbound.gg/cards/ven-166-threshold-of-the-gray/
 VEN-167,Vi - Destructive,Vendetta,Rare,Unit,Champion,Fury,2,3,Vi,"[Ganking]
 Recycle 1 from your trash: Give me +1 {Might} this turn.",,False,False,,https://riftbound.gg/cards/ven-167-vi-destructive/

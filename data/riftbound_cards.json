@@ -1987,7 +1987,7 @@
    "Blitzcrank",
    "Zaun"
   ],
-  "effect": "TANK (I must be assigned combat damage first.) When you play me to a battlefield, you may move an enemy unit to here. When i hold, return me to my owner's hand.",
+  "effect": "[Tank] (I must be assigned combat damage first.)\nWhen you play me to a battlefield, you may move an enemy unit to here.\nWhen I hold, return me to my owner's hand.",
   "flavor": null,
   "promo": true,
   "banned": false,
@@ -5045,7 +5045,7 @@
   "effect": "When a friendly unit moves from my location, I may be moved with it.",
   "flavor": null,
   "promo": true,
-  "banned": false,
+  "banned": true,
   "errata": null,
   "url": "https://riftbound.gg/cards/ogn-177-p-stealthy-pursuer/"
  },
@@ -25249,6 +25249,28 @@
   "url": "https://riftbound.gg/cards/ven-004-dune-surfer/"
  },
  {
+  "id": "VEN-005",
+  "name": "Forsaken Baccai",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +1 {Might} this turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-005-forsaken-baccai/"
+ },
+ {
   "id": "VEN-006",
   "name": "Oasis Raider",
   "set_name": "Vendetta",
@@ -25418,6 +25440,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-013-shadow-assassin/"
+ },
+ {
+  "id": "VEN-014",
+  "name": "Shadow Fiend",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Fury"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Empower] {2 Energy}{Fury Rune} ({2 Energy}{Fury Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Assault 3]. (+3 {Might} while I'm an attacker.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-014-shadow-fiend/"
  },
  {
   "id": "VEN-015",
@@ -25816,6 +25860,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-029-ol-poro/"
+ },
+ {
+  "id": "VEN-030",
+  "name": "Serene Ascetic",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay {Any Rune} to choose me with a spell or ability.+3 {Might} while I'm a defender.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-030-serene-ascetic/"
  },
  {
   "id": "VEN-031",
@@ -26445,6 +26511,28 @@
   "url": "https://riftbound.gg/cards/ven-056-clairvoyance/"
  },
  {
+  "id": "VEN-057",
+  "name": "Covert Informant",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "3",
+  "might": "4",
+  "tags": [
+   "Noxus"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] When I move, draw 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-057-covert-informant/"
+ },
+ {
   "id": "VEN-058",
   "name": "Patched Porobot",
   "set_name": "Vendetta",
@@ -26467,6 +26555,26 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-058-patched-porobot/"
+ },
+ {
+  "id": "VEN-059",
+  "name": "Shock Blast",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Mind"
+  ],
+  "cost": "3",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nThis costs {2 Energy} less if you control something that's [Empowered].\nDeal 4 to a unit at a battlefield.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-059-shock-blast/"
  },
  {
   "id": "VEN-060",
@@ -26800,6 +26908,26 @@
   "url": "https://riftbound.gg/cards/ven-071-fretful-feline/"
  },
  {
+  "id": "VEN-072",
+  "name": "Guttural Roar",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Spell",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "2",
+  "might": null,
+  "tags": null,
+  "effect": "[Action] (Play on your turn or in showdowns.)\nGive a unit +2 {Might} this turn. If it's [Empowered], give it +4 {Might} this turn instead.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-072-guttural-roar/"
+ },
+ {
   "id": "VEN-073",
   "name": "Jagged Cutlass",
   "set_name": "Vendetta",
@@ -26820,6 +26948,29 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-073-jagged-cutlass/"
+ },
+ {
+  "id": "VEN-074",
+  "name": "Legion Marauder",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Trifarian",
+   "Noxus"
+  ],
+  "effect": "[Empower] — {1 Energy} or {Body Rune} (Pay either cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +1 {Might}.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-074-legion-marauder/"
  },
  {
   "id": "VEN-075",
@@ -26882,6 +27033,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-077-tools-of-empire/"
+ },
+ {
+  "id": "VEN-078",
+  "name": "Baccai Witherclaw",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "[Empower] {1 Energy}{Any Rune}{Any Rune} ({1 Energy}{Any Rune}{Any Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +2 {Might}.\n[Empowered][>][>>][Deathknell][>] Channel 2 runes exhausted. (When I die while Empowered, get the effect.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-078-baccai-witherclaw/"
  },
  {
   "id": "VEN-079",
@@ -27385,6 +27558,29 @@
   "url": "https://riftbound.gg/cards/ven-098-stargazer/"
  },
  {
+  "id": "VEN-099",
+  "name": "Tornado Warrior",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Yordle",
+   "Bandle City"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play me from face down, you may empower something here. Disempower it at end of turn.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-099-tornado-warrior/"
+ },
+ {
   "id": "VEN-100",
   "name": "Up from the Deep",
   "set_name": "Vendetta",
@@ -27638,6 +27834,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-110a-mel-defiant-soul/"
+ },
+ {
+  "id": "VEN-111",
+  "name": "Minah Swiftfoot",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Chaos"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When I move to a battlefield, choose one —Each player discards 1.Each player draws 1.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-111-minah-swiftfoot/"
  },
  {
   "id": "VEN-112",
@@ -27932,6 +28150,29 @@
   "url": "https://riftbound.gg/cards/ven-122-solari-sunhawk/"
  },
  {
+  "id": "VEN-123",
+  "name": "Soulspinner",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Shadow Isles",
+   "Spider"
+  ],
+  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-123-soulspinner/"
+ },
+ {
   "id": "VEN-124",
   "name": "Escaped Grayback",
   "set_name": "Vendetta",
@@ -28060,6 +28301,29 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-129-sacred-protector/"
+ },
+ {
+  "id": "VEN-130",
+  "name": "Aurok General",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "",
+  "color": [
+   "Order"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Trifarian",
+   "Noxus"
+  ],
+  "effect": "[Empower] {3 Energy}{Order Rune} ({3 Energy}{Order Rune}: Empower me. Use only if not Empowered.)\n[Empowered][>] Your units that are [Empowered] have +2 {Might} (including me).",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-130-aurok-general/"
  },
  {
   "id": "VEN-131",
@@ -28881,6 +29145,26 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-164-sandswept-tomb/"
+ },
+ {
+  "id": "VEN-165",
+  "name": "Shadow Temple",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Battlefield",
+  "supertype": "",
+  "color": [
+   "Colorless"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "When you hold here, [Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-165-shadow-temple/"
  },
  {
   "id": "VEN-166",

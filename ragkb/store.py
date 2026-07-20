@@ -25,6 +25,11 @@ CREATE TABLE IF NOT EXISTS chunks (
     embedding BLOB NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS meta (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS glossary (
     term TEXT PRIMARY KEY,
     aliases TEXT NOT NULL,
@@ -172,6 +177,18 @@ class KnowledgeStore:
 
     def count_cards(self) -> int:
         return self.conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
+
+    def set_meta(self, key: str, value: str):
+        self.conn.execute(
+            "INSERT INTO meta (key, value) VALUES (?, ?) "
+            "ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+            (key, value),
+        )
+        self.conn.commit()
+
+    def get_meta(self, key: str) -> str | None:
+        row = self.conn.execute("SELECT value FROM meta WHERE key = ?", (key,)).fetchone()
+        return row[0] if row else None
 
     def find_documents_by_title_prefix(self, prefix: str) -> list[tuple]:
         return self.conn.execute(

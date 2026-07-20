@@ -19,6 +19,12 @@ from ragkb.embeddings import embed_texts
 from ragkb.store import KnowledgeStore
 
 
+def _file_fingerprint(path) -> str:
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+
 def section_to_chunks(section: dict) -> list[str]:
     text = (
         f"Riftbound rules FAQ — {section['page']}\n"
@@ -63,6 +69,7 @@ def main():
                 chunks=chunks,
                 embeddings=vecs,
             )
+        store.set_meta("fingerprint:faq", _file_fingerprint(args.faq))
         total_docs = len(store.list_documents())
         total_chunks = store.count_chunks()
 
