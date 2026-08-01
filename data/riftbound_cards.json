@@ -5023,7 +5023,7 @@
   "effect": "When a friendly unit moves from my location, I may be moved with it.",
   "flavor": "“Anywhere you can go, I can go better.”",
   "promo": false,
-  "banned": false,
+  "banned": true,
   "errata": null,
   "url": "https://riftbound.gg/cards/ogn-177-stealthy-pursuer/"
  },
@@ -8080,7 +8080,7 @@
   "effect": "Increase the points needed to win the game by 1.",
   "flavor": "",
   "promo": false,
-  "banned": false,
+  "banned": true,
   "errata": null,
   "url": "https://riftbound.gg/cards/ogn-276-aspirants-climb/"
  },
@@ -8100,7 +8100,7 @@
   "effect": "Increase the points needed to win the game by 1.",
   "flavor": null,
   "promo": true,
-  "banned": false,
+  "banned": true,
   "errata": null,
   "url": "https://riftbound.gg/cards/ogn-276a-aspirants-climb/"
  },
@@ -8440,7 +8440,7 @@
   "effect": "At the start of each player's first Beginning Phase, that player gains 1 point.",
   "flavor": "",
   "promo": false,
-  "banned": false,
+  "banned": true,
   "errata": null,
   "url": "https://riftbound.gg/cards/ogn-290-the-arenas-greatest/"
  },
@@ -25207,6 +25207,29 @@
   "url": "https://riftbound.gg/cards/ven-002-blade-twirler/"
  },
  {
+  "id": "VEN-002-P",
+  "name": "Blade Twirler (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Fury"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Yordle",
+   "Ionia"
+  ],
+  "effect": "The first time I move each turn, choose a player. They [Burn 1]. (They put the top card of their Main Deck into their trash.)",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-002-p-blade-twirler-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-003",
   "name": "Brittle Steel",
   "set_name": "Vendetta",
@@ -25247,6 +25270,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-004-dune-surfer/"
+ },
+ {
+  "id": "VEN-004-P",
+  "name": "Dune Surfer (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Fury"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "You ignore [Tank] while assigning combat damage here.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-004-p-dune-surfer-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-005",
@@ -25442,6 +25487,28 @@
   "url": "https://riftbound.gg/cards/ven-013-shadow-assassin/"
  },
  {
+  "id": "VEN-013-P",
+  "name": "Shadow Assassin (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "I enter ready if you have a card with my name in your trash.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-013-p-shadow-assassin-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-014",
   "name": "Shadow Fiend",
   "set_name": "Vendetta",
@@ -25576,7 +25643,7 @@
   "id": "VEN-019A",
   "name": "Renekton - Rage Fueled",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -25643,7 +25710,7 @@
   "id": "VEN-021A",
   "name": "Akali - Deadly Weapon",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -25708,7 +25775,7 @@
   "id": "VEN-023A",
   "name": "Zed - From the Shadows",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -25794,6 +25861,28 @@
   "url": "https://riftbound.gg/cards/ven-026-field-musicians/"
  },
  {
+  "id": "VEN-026-P",
+  "name": "Field Musicians (Vendetta Nexus Night)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "3",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "When you play me, give a unit +3 {Might} this turn.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-026-p-field-musicians-vendetta-nexus-night/"
+ },
+ {
   "id": "VEN-027",
   "name": "Hand Hammer",
   "set_name": "Vendetta",
@@ -25860,6 +25949,29 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-029-ol-poro/"
+ },
+ {
+  "id": "VEN-029-P",
+  "name": "Ol' Poro (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Calm"
+  ],
+  "cost": "2",
+  "might": "4",
+  "tags": [
+   "Poro",
+   "Bandle City"
+  ],
+  "effect": "I can't be played on your first, second, or third turns.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-029-p-ol-poro-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-030",
@@ -26034,6 +26146,28 @@
   "url": "https://riftbound.gg/cards/ven-037-tomb-raider-barbara/"
  },
  {
+  "id": "VEN-037-P",
+  "name": "Tomb-Raider Barbara (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Calm"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "When you play me, if you control 7 or more runes, choose an enemy gear. If it's [Empowered], disempower it. Otherwise, kill it.",
+  "flavor": "Wait for her signal. Don't worry, you'll know.",
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-037-p-tomb-raider-barbara-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-038",
   "name": "Akali - Silent",
   "set_name": "Vendetta",
@@ -26060,7 +26194,7 @@
   "id": "VEN-038A",
   "name": "Akali - Silent",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26142,6 +26276,29 @@
   "url": "https://riftbound.gg/cards/ven-041-riven-shattered/"
  },
  {
+  "id": "VEN-041-P",
+  "name": "Riven - Shattered (Prerelease Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Rare",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Calm"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Noxus",
+   "Riven"
+  ],
+  "effect": "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for {Any Rune} less, even if it's already attached.)\nWhen I attack, choose an enemy unit here. Deal 2 to it for each Equipment attached to me.",
+  "flavor": "“A sword mirrors its owner.”",
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-041-p-riven-shattered-prerelease/"
+ },
+ {
   "id": "VEN-042",
   "name": "Shen - Scourge of Shadows",
   "set_name": "Vendetta",
@@ -26168,7 +26325,7 @@
   "id": "VEN-042A",
   "name": "Shen - Scourge of Shadows",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26280,7 +26437,7 @@
   "id": "VEN-046A",
   "name": "Nasus - Ascended",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26345,6 +26502,29 @@
   "url": "https://riftbound.gg/cards/ven-048-cloud-drake/"
  },
  {
+  "id": "VEN-048-P",
+  "name": "Cloud Drake (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Mind"
+  ],
+  "cost": "6",
+  "might": "5",
+  "tags": [
+   "Dragon",
+   "Demacia"
+  ],
+  "effect": "When you play me, draw 1.",
+  "flavor": "These things are a cirrus problem.",
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-048-p-cloud-drake-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-049",
   "name": "Dredge Up",
   "set_name": "Vendetta",
@@ -26385,6 +26565,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-050-grumpy-rockbear/"
+ },
+ {
+  "id": "VEN-050-P",
+  "name": "Grumpy Rockbear (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "[Empower] {12 Energy}. This ability costs {1 Energy} less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)\n[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay {Any Rune} to choose me with a spell or ability.+3 {Might} while I'm a defender.)",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-050-p-grumpy-rockbear-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-051",
@@ -26430,7 +26632,7 @@
   "id": "VEN-053",
   "name": "Otterpus",
   "set_name": "Vendetta",
-  "rarity": "Uncommon",
+  "rarity": "Common",
   "type": "Unit",
   "supertype": "",
   "color": [
@@ -26536,7 +26738,7 @@
   "id": "VEN-058",
   "name": "Patched Porobot",
   "set_name": "Vendetta",
-  "rarity": "Common",
+  "rarity": "Uncommon",
   "type": "Unit",
   "supertype": "",
   "color": [
@@ -26555,6 +26757,30 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-058-patched-porobot/"
+ },
+ {
+  "id": "VEN-058-P",
+  "name": "Patched Porobot (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Mind"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Mech",
+   "Poro",
+   "Piltover"
+  ],
+  "effect": "(I enter exhausted.)\nWhen you play me, if you control 3 or more other gear, draw 1.",
+  "flavor": "Attempts to synthetically replicate a poro's whimsy and pure adorable nature have yielded mixed results.",
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-058-p-patched-porobot-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-059",
@@ -26666,7 +26892,7 @@
   "id": "VEN-063A",
   "name": "Nasus - Guardian of Knowledge",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26799,7 +27025,7 @@
   "id": "VEN-068A",
   "name": "Jayce - Brilliant Inventor",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26844,7 +27070,7 @@
   "id": "VEN-069A",
   "name": "Mel - Newly Awakened",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -26861,6 +27087,29 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-069a-mel-newly-awakened/"
+ },
+ {
+  "id": "VEN-069B-P",
+  "name": "Mel - Newly Awakened (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Mind"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Noxus",
+   "Mel"
+  ],
+  "effect": "When you play me, draw 1.\n[Empower] {3 Energy} ({3 Energy}: Empower me. Use only if not Empowered.)\n[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -{Might} to a unit it chooses, it gives an additional -1 {Might}.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-069b-p-mel-newly-awakened-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-070",
@@ -26906,6 +27155,29 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-071-fretful-feline/"
+ },
+ {
+  "id": "VEN-071-P",
+  "name": "Fretful Feline (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Body"
+  ],
+  "cost": "6",
+  "might": "5",
+  "tags": [
+   "Cat",
+   "Piltover"
+  ],
+  "effect": "When I become ready, give me +2 {Might} this turn.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-071-p-fretful-feline-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-072",
@@ -27013,6 +27285,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-076-repair-specialist/"
+ },
+ {
+  "id": "VEN-076-P",
+  "name": "Repair Specialist (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Body"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Zaun"
+  ],
+  "effect": "I have [Assault] equal to the number of gear you control. (+1 {Might} while I'm an attacker for each instance of Assault.)",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-076-p-repair-specialist-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-077",
@@ -27143,6 +27437,28 @@
   "url": "https://riftbound.gg/cards/ven-082-profiteer/"
  },
  {
+  "id": "VEN-082-P",
+  "name": "Profiteer (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Body"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Shurima"
+  ],
+  "effect": "When you play me, you may disempower something you control to empower a legend, unit, or gear.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-082-p-profiteer-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-083",
   "name": "Rampage",
   "set_name": "Vendetta",
@@ -27189,7 +27505,7 @@
   "id": "VEN-084A",
   "name": "Ambessa - The Wolf",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27297,7 +27613,7 @@
   "id": "VEN-088A",
   "name": "Jayce - Hammer in Hand",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27405,7 +27721,7 @@
   "id": "VEN-092A",
   "name": "Renekton - Brute",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27449,7 +27765,7 @@
   "id": "VEN-094",
   "name": "Mask Mother",
   "set_name": "Vendetta",
-  "rarity": "Uncommon",
+  "rarity": "Common",
   "type": "Unit",
   "supertype": "",
   "color": [
@@ -27536,6 +27852,29 @@
   "url": "https://riftbound.gg/cards/ven-097-spiderling/"
  },
  {
+  "id": "VEN-097-P",
+  "name": "Spiderling (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "1",
+  "tags": [
+   "Shadow Isles",
+   "Spider"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nI have +1 {Might} for each other unit you control here with my name.\nYour deck can have any number of cards named Spiderling.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-097-p-spiderling-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-098",
   "name": "Stargazer",
   "set_name": "Vendetta",
@@ -27581,6 +27920,29 @@
   "url": "https://riftbound.gg/cards/ven-099-tornado-warrior/"
  },
  {
+  "id": "VEN-099-P",
+  "name": "Tornado Warrior (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Chaos"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Yordle",
+   "Bandle City"
+  ],
+  "effect": "[Hidden] (Hide now for {Any Rune} to react with later for {0 Energy}.)\nWhen you play me from face down, you may empower something here. Disempower it at end of turn.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-099-p-tornado-warrior-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-100",
   "name": "Up from the Deep",
   "set_name": "Vendetta",
@@ -27624,10 +27986,33 @@
   "url": "https://riftbound.gg/cards/ven-101-gust-monk/"
  },
  {
+  "id": "VEN-101-P",
+  "name": "Gust Monk (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Chaos"
+  ],
+  "cost": "2",
+  "might": "2",
+  "tags": [
+   "Yordle",
+   "Bandle City"
+  ],
+  "effect": "You may pay {1 Energy} as an additional cost to play me.\nWhen you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 {Might} while it's an attacker.)",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-101-p-gust-monk-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-102",
   "name": "Ravenbloom Prefect",
   "set_name": "Vendetta",
-  "rarity": "Common",
+  "rarity": "Uncommon",
   "type": "Unit",
   "supertype": "",
   "color": [
@@ -27817,7 +28202,7 @@
   "id": "VEN-110A",
   "name": "Mel - Defiant Soul",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27884,7 +28269,7 @@
   "id": "VEN-112A",
   "name": "Zed - Without a Sound",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27929,7 +28314,7 @@
   "id": "VEN-113A",
   "name": "Kennen - Storm of Shuriken",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -27999,7 +28384,7 @@
   "id": "VEN-116",
   "name": "Dragon Form",
   "set_name": "Vendetta",
-  "rarity": "Uncommon",
+  "rarity": "Common",
   "type": "Spell",
   "supertype": "",
   "color": [
@@ -28058,6 +28443,28 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-118-horns-of-the-dragon/"
+ },
+ {
+  "id": "VEN-118-P",
+  "name": "Horns of the Dragon (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Order"
+  ],
+  "cost": "6",
+  "might": "6",
+  "tags": [
+   "Ionia"
+  ],
+  "effect": "[Tank] (I must be assigned combat damage first.)",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-118-p-horns-of-the-dragon-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-119",
@@ -28173,6 +28580,29 @@
   "url": "https://riftbound.gg/cards/ven-123-soulspinner/"
  },
  {
+  "id": "VEN-123-P",
+  "name": "Soulspinner (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Shadow Isles",
+   "Spider"
+  ],
+  "effect": "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-123-p-soulspinner-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-124",
   "name": "Escaped Grayback",
   "set_name": "Vendetta",
@@ -28218,6 +28648,29 @@
   "url": "https://riftbound.gg/cards/ven-125-hungry-wolf/"
  },
  {
+  "id": "VEN-125-P",
+  "name": "Hungry Wolf (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Uncommon",
+  "type": "Unit",
+  "supertype": null,
+  "color": [
+   "Order"
+  ],
+  "cost": "4",
+  "might": "4",
+  "tags": [
+   "Dog",
+   "Freljord"
+  ],
+  "effect": "{Order Rune}: Ready me and give me +1 {Might} this turn. Use only if you've chosen an enemy unit this turn and only once each turn.",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-125-p-hungry-wolf-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-126",
   "name": "Ki Barrier",
   "set_name": "Vendetta",
@@ -28241,7 +28694,7 @@
   "id": "VEN-127",
   "name": "Lacerate",
   "set_name": "Vendetta",
-  "rarity": "Common",
+  "rarity": "Uncommon",
   "type": "Spell",
   "supertype": "",
   "color": [
@@ -28439,7 +28892,7 @@
   "id": "VEN-135A",
   "name": "Kennen - Keeper of Balance",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -28485,7 +28938,7 @@
   "id": "VEN-136A",
   "name": "Ambessa - Respected and Feared",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -28552,7 +29005,7 @@
   "id": "VEN-138A",
   "name": "Shen - Leader of the Kinkou Order",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -28941,7 +29394,7 @@
  },
  {
   "id": "VEN-155",
-  "name": "Yordle - Heart of the Tempest",
+  "name": "Kennen - Heart of the Tempest",
   "set_name": "Vendetta",
   "rarity": "Rare",
   "type": "Legend",
@@ -28950,8 +29403,8 @@
    "Order",
    "Chaos"
   ],
-  "cost": null,
-  "might": null,
+  "cost": "0",
+  "might": "0",
   "tags": [
    "Yordle",
    "Kennen"
@@ -28961,7 +29414,7 @@
   "promo": false,
   "banned": false,
   "errata": null,
-  "url": "https://riftbound.gg/cards/ven-155-yordle-heart-of-the-tempest/"
+  "url": "https://riftbound.gg/cards/ven-155-kennen-heart-of-the-tempest/"
  },
  {
   "id": "VEN-156",
@@ -29190,7 +29643,7 @@
   "id": "VEN-167",
   "name": "Vi - Destructive",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29212,7 +29665,7 @@
   "id": "VEN-168",
   "name": "Jinx - Demolitionist",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29234,7 +29687,7 @@
   "id": "VEN-169",
   "name": "Zed - From the Shadows",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29256,7 +29709,7 @@
   "id": "VEN-170",
   "name": "Shen - Scourge of Shadows",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29278,7 +29731,7 @@
   "id": "VEN-171",
   "name": "Riven - Shattered",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29300,7 +29753,7 @@
   "id": "VEN-172",
   "name": "Draven - Showboat",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29322,7 +29775,7 @@
   "id": "VEN-173",
   "name": "Swain - Visionary",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29344,7 +29797,7 @@
   "id": "VEN-174",
   "name": "Irelia - Fervent",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29367,7 +29820,7 @@
   "id": "VEN-175",
   "name": "Jayce - Man of Progress",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29390,7 +29843,7 @@
   "id": "VEN-176",
   "name": "Viktor - Innovator",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29412,7 +29865,7 @@
   "id": "VEN-177",
   "name": "Renekton - Brute",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29434,7 +29887,7 @@
   "id": "VEN-178",
   "name": "Nasus - Guardian of Knowledge",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29457,7 +29910,7 @@
   "id": "VEN-179",
   "name": "Rengar - Trophy Hunter",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29481,7 +29934,7 @@
   "id": "VEN-180",
   "name": "Kha'Zix - Evolving Hunter",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29504,7 +29957,7 @@
   "id": "VEN-181",
   "name": "Gangplank - Naval",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29526,7 +29979,7 @@
   "id": "VEN-182",
   "name": "Illaoi - Prophet of the Great Kraken",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29548,7 +30001,7 @@
   "id": "VEN-183",
   "name": "Diana - No Longer Human",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29571,7 +30024,7 @@
   "id": "VEN-184",
   "name": "Leona - Determined",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29590,10 +30043,54 @@
   "url": "https://riftbound.gg/cards/ven-184-leona-determined/"
  },
  {
+  "id": "VEN-185",
+  "name": "Kayle - Justified",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Order"
+  ],
+  "cost": "3",
+  "might": "3",
+  "tags": [
+   "Kayle"
+  ],
+  "effect": "[Empower] {3 Energy} ({3 Energy}: Empower me.)\nI can be [Empowered] up to three times.\nI have +2 {Might} for each time I’m [Empowered].\nWhile I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-185-kayle-justified/"
+ },
+ {
+  "id": "VEN-186",
+  "name": "Morgana - Vindictive",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Unit",
+  "supertype": "Champion",
+  "color": [
+   "Fury"
+  ],
+  "cost": "5",
+  "might": "5",
+  "tags": [
+   "Morgana"
+  ],
+  "effect": "[Ambush]\nWhen you play me, deal damage to a unit equal to the damage marked on it.",
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-186-morgana-vindictive/"
+ },
+ {
   "id": "VEN-187",
   "name": "Ambessa - Respected and Feared",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29615,7 +30112,7 @@
   "id": "VEN-188",
   "name": "Mel - Defiant Soul",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29637,7 +30134,7 @@
   "id": "VEN-189",
   "name": "Akali - Rogue Assassin",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29660,7 +30157,7 @@
   "id": "VEN-190",
   "name": "Renekton - Butcher of the Sands",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29683,7 +30180,7 @@
   "id": "VEN-191",
   "name": "Zed - Master of Shadows",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29706,7 +30203,7 @@
   "id": "VEN-192",
   "name": "Nasus - Curator of the Sands",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29729,7 +30226,7 @@
   "id": "VEN-193",
   "name": "Shen - Eye of Twilight",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29752,7 +30249,7 @@
   "id": "VEN-194",
   "name": "Jayce - Defender of Tomorrow",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29775,7 +30272,7 @@
   "id": "VEN-195",
   "name": "Mel - Soul's Reflection",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29798,7 +30295,7 @@
   "id": "VEN-196",
   "name": "Ambessa - Matriarch of War",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
@@ -29819,17 +30316,17 @@
  },
  {
   "id": "VEN-197",
-  "name": "Yordle - Heart of the Tempest",
+  "name": "Kennen - Heart of the Tempest",
   "set_name": "Vendetta",
-  "rarity": "Rare",
+  "rarity": "Showcase",
   "type": "Legend",
   "supertype": "",
   "color": [
    "Order",
    "Chaos"
   ],
-  "cost": null,
-  "might": null,
+  "cost": "0",
+  "might": "0",
   "tags": [
    "Yordle",
    "Kennen"
@@ -29839,7 +30336,7 @@
   "promo": false,
   "banned": false,
   "errata": null,
-  "url": "https://riftbound.gg/cards/ven-197-yordle-heart-of-the-tempest/"
+  "url": "https://riftbound.gg/cards/ven-197-kennen-heart-of-the-tempest/"
  },
  {
   "id": "VEN-R01",
@@ -29862,6 +30359,46 @@
   "url": "https://riftbound.gg/cards/ven-r01-fury-rune/"
  },
  {
+  "id": "VEN-R01B-P",
+  "name": "Fury Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Fury"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r01b-p-fury-rune-vendetta-nexus-night-promo/"
+ },
+ {
+  "id": "VEN-R01a",
+  "name": "Fury Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Fury"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r01a-fury-rune/"
+ },
+ {
   "id": "VEN-R02",
   "name": "Calm Rune",
   "set_name": "Vendetta",
@@ -29880,6 +30417,46 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-r02-calm-rune/"
+ },
+ {
+  "id": "VEN-R02a",
+  "name": "Calm Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Calm"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r02a-calm-rune/"
+ },
+ {
+  "id": "VEN-R02b-P",
+  "name": "Calm Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Calm"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r02b-p-calm-rune-vendetta-nexus-night-promo/"
  },
  {
   "id": "VEN-R03",
@@ -29902,6 +30479,46 @@
   "url": "https://riftbound.gg/cards/ven-r03-mind-rune/"
  },
  {
+  "id": "VEN-R03a",
+  "name": "Mind Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Mind"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r03a-mind-rune/"
+ },
+ {
+  "id": "VEN-R03b-P",
+  "name": "Mind Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Mind"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r03b-p-mind-rune-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-R04",
   "name": "Body Rune",
   "set_name": "Vendetta",
@@ -29920,6 +30537,46 @@
   "banned": false,
   "errata": null,
   "url": "https://riftbound.gg/cards/ven-r04-body-rune/"
+ },
+ {
+  "id": "VEN-R04B-P",
+  "name": "Body Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r04b-p-body-rune-vendetta-nexus-night-promo/"
+ },
+ {
+  "id": "VEN-R04a",
+  "name": "Body Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Body"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r04a-body-rune/"
  },
  {
   "id": "VEN-R05",
@@ -29942,6 +30599,46 @@
   "url": "https://riftbound.gg/cards/ven-r05-chaos-rune/"
  },
  {
+  "id": "VEN-R05a",
+  "name": "Chaos Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r05a-chaos-rune/"
+ },
+ {
+  "id": "VEN-R05b-P",
+  "name": "Chaos Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Chaos"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r05b-p-chaos-rune-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-R06",
   "name": "Order Rune",
   "set_name": "Vendetta",
@@ -29962,10 +30659,50 @@
   "url": "https://riftbound.gg/cards/ven-r06-order-rune/"
  },
  {
+  "id": "VEN-R06a",
+  "name": "Order Rune",
+  "set_name": "Vendetta",
+  "rarity": "Showcase",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": "",
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r06a-order-rune/"
+ },
+ {
+  "id": "VEN-R06b-P",
+  "name": "Order Rune (Vendetta Nexus Night Promo)",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "Rune",
+  "supertype": "Basic",
+  "color": [
+   "Order"
+  ],
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": "[NO TEXT]",
+  "flavor": null,
+  "promo": true,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-r06b-p-order-rune-vendetta-nexus-night-promo/"
+ },
+ {
   "id": "VEN-SP1",
   "name": "Kai'Sa - Survivor",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -29987,7 +30724,7 @@
   "id": "VEN-SP2",
   "name": "Sona - Harmonious",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -30009,7 +30746,7 @@
   "id": "VEN-SP3",
   "name": "Ahri - Inquisitive",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -30032,7 +30769,7 @@
   "id": "VEN-SP4",
   "name": "Sett - Brawler",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -30054,7 +30791,7 @@
   "id": "VEN-SP5",
   "name": "Ezreal - Prodigy",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -30077,7 +30814,7 @@
   "id": "VEN-SP6",
   "name": "Lux - Crownguard",
   "set_name": "Vendetta",
-  "rarity": "Epic",
+  "rarity": "Showcase",
   "type": "Unit",
   "supertype": "Champion",
   "color": [
@@ -30096,8 +30833,26 @@
   "url": "https://riftbound.gg/cards/ven-sp6-lux-crownguard/"
  },
  {
-  "id": "VEN-T04",
-  "name": "Recruit (NX)",
+  "id": "VEN-T01",
+  "name": "Empowered // Gold",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "",
+  "supertype": "Token",
+  "color": null,
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": null,
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-t01-empowered/"
+ },
+ {
+  "id": "VEN-T03",
+  "name": "Mech // Recruit (NX)",
   "set_name": "Vendetta",
   "rarity": "Common",
   "type": "Unit",
@@ -30105,16 +30860,34 @@
   "color": [
    "Colorless"
   ],
-  "cost": null,
-  "might": "1",
+  "cost": "0",
+  "might": "3",
   "tags": [
-   "Recruit"
+   "Mech"
   ],
   "effect": "",
-  "flavor": "Few earn the right to call themselves Trifarian.",
+  "flavor": null,
   "promo": false,
   "banned": false,
   "errata": null,
-  "url": "https://riftbound.gg/cards/ven-t04-recruit-nx/"
+  "url": "https://riftbound.gg/cards/ven-t03-mech/"
+ },
+ {
+  "id": "VEN-T05",
+  "name": "Shadow Clone // Tentacle",
+  "set_name": "Vendetta",
+  "rarity": "Common",
+  "type": "",
+  "supertype": "Token",
+  "color": null,
+  "cost": null,
+  "might": null,
+  "tags": null,
+  "effect": null,
+  "flavor": null,
+  "promo": false,
+  "banned": false,
+  "errata": null,
+  "url": "https://riftbound.gg/cards/ven-t05-shadow-clone/"
  }
 ]

@@ -53,7 +53,8 @@ CREATE TABLE IF NOT EXISTS cards (
     tags TEXT NOT NULL DEFAULT '[]',
     keywords TEXT NOT NULL DEFAULT '[]',
     effect TEXT,
-    url TEXT
+    url TEXT,
+    banned INTEGER NOT NULL DEFAULT 0
 );
 """
 
@@ -117,6 +118,9 @@ class KnowledgeStore:
         glossary_cols = {r[1] for r in self.conn.execute("PRAGMA table_info(glossary)")}
         if "kind" not in glossary_cols:
             self.conn.execute("ALTER TABLE glossary ADD COLUMN kind TEXT NOT NULL DEFAULT 'term'")
+        card_cols = {r[1] for r in self.conn.execute("PRAGMA table_info(cards)")}
+        if card_cols and "banned" not in card_cols:
+            self.conn.execute("ALTER TABLE cards ADD COLUMN banned INTEGER NOT NULL DEFAULT 0")
         self._ensure_fts()
 
     def _ensure_fts(self):
@@ -283,14 +287,14 @@ class KnowledgeStore:
         self.conn.execute("DELETE FROM cards")
         self.conn.executemany(
             "INSERT INTO cards (id, doc_id, name, set_name, rarity, type, supertype,"
-            " colors, cost, might, tags, keywords, effect, url)"
-            " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            " colors, cost, might, tags, keywords, effect, url, banned)"
+            " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             [
                 (r["id"], r.get("doc_id"), r["name"], r.get("set_name"), r.get("rarity"),
                  r.get("type"), r.get("supertype"),
                  _json.dumps(r.get("colors", [])), r.get("cost"), r.get("might"),
                  _json.dumps(r.get("tags", [])), _json.dumps(r.get("keywords", [])),
-                 r.get("effect"), r.get("url"))
+                 r.get("effect"), r.get("url"), r.get("banned", 0))
                 for r in rows
             ],
         )

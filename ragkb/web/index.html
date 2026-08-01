@@ -233,6 +233,9 @@ function decorate(text) {
   for (const [label, cls] of Object.entries(STATUS)) {
     html = html.replaceAll(`[ ${label} ]`, `<span class="st st-${cls}">${label}</span>`);
   }
+  // banned cards must be impossible to miss when scanning results
+  html = html.replace(/^BANNED — ([^\n]*)/m,
+                      `<span class="st st-critical">BANNED</span> $1`);
   return html;
 }
 

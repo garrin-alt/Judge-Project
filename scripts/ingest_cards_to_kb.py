@@ -51,11 +51,15 @@ def card_to_row(card: dict, doc_id: int) -> dict:
         "keywords": sorted({m.strip() for m in KEYWORD_RE.findall(card.get("effect") or "")}),
         "effect": card.get("effect"),
         "url": card.get("url"),
+        "banned": 1 if card.get("banned") else 0,
     }
 
 
 def card_to_text(card: dict) -> str:
     parts = [f"{card['name']} ({card['id']})"]
+    if card.get("banned"):
+        # First line after the name so it can't be missed in a result snippet.
+        parts.append("BANNED — this card is not legal for constructed play.")
 
     facts = []
     kind = " ".join(filter(None, [card.get("supertype"), card.get("type")]))

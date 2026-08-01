@@ -13,6 +13,7 @@ import argparse
 import json
 import re
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -25,10 +26,26 @@ USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
 CHROME_TEXTS = {"Edit this page", "Feedback", "On this page"}
 
 
-def get(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return resp.read().decode("utf-8")
+def get(url: str, attempts: int = 4) -> str:
+    """Fetch a URL, retrying transient network failures with backoff.
+
+    The site occasionally resets connections when pages are requested in
+    quick succession; a partial scrape would silently drop content, so
+    retry rather than fail the run.
+    """
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return resp.read().decode("utf-8")
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            last_error = e
+            if attempt < attempts - 1:
+                delay = 2 ** attempt
+                print(f"    retry {attempt + 1}/{attempts - 1} in {delay}s ({e})", flush=True)
+                time.sleep(delay)
+    raise RuntimeError(f"failed to fetch {url} after {attempts} attempts: {last_error}")
 
 
 def page_urls() -> list[str]:
