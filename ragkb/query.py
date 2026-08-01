@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from .cardsearch import known_tags, parse_filters, search_cards
 from .citations import RelatedRule, expand_citations, expand_keyword_rules
 from .embeddings import embed_query
+from .entities import Entity, entity_doc_ids, extract_entities, subqueries
 from .generate import GenerationUnavailable, generate_answer
 from .glossary import expand_prompt
 from .store import KnowledgeStore, SearchResult
@@ -53,9 +54,79 @@ class QueryResponse:
     results: list[SearchResult] = field(default_factory=list)
     related: list[RelatedRule] = field(default_factory=list)
     card_filters: str | None = None
+    entities: list[Entity] = field(default_factory=list)
+    subqueries: list[str] = field(default_factory=list)
     answer: str | None = None
     backend: str | None = None
     notice: str | None = None
+
+
+def _entity_aware_search(
+    store: KnowledgeStore,
+    prompt: str,
+    expanded: str,
+    qvec,
+    top_k: int,
+    allowed: set[int] | None,
+    glossary: list[dict],
+    resp: "QueryResponse",
+) -> list[SearchResult]:
+    """Retrieval that keeps a question's separate ideas separate.
+
+    Three passes, merged:
+    1. the whole question (as before);
+    2. each clause of a multi-part question, embedded on its own — the two
+       halves of "can I do X while Y is happening" pull in different
+       directions when averaged into one vector;
+    3. the documents for entities named in the question (cards, rules,
+       keywords), which are guaranteed a slot so a question about two
+       named cards can never come back with neither.
+    """
+    base = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed, keyword_query=prompt)
+
+    resp.entities = extract_entities(prompt, store, glossary)
+    resp.subqueries = subqueries(expanded)
+
+    if not resp.entities and not resp.subqueries:
+        return base
+
+    merged: list[SearchResult] = []
+    seen_docs: set[int] = set()
+
+    def take(results, limit=None):
+        added = 0
+        for r in results:
+            if r.doc_id in seen_docs:
+                continue
+            if allowed is not None and r.doc_id not in allowed:
+                continue
+            seen_docs.add(r.doc_id)
+            merged.append(r)
+            added += 1
+            if limit and added >= limit:
+                return
+
+    # the single best whole-question hit leads: when a question has a
+    # direct answer (a FAQ ruling, say), naming a card in it must not
+    # demote that answer below the card's own text
+    take(base, limit=1)
+
+    # then the named entities — guaranteed a slot, not guaranteed the top
+    anchor_ids = entity_doc_ids(store, resp.entities)
+    if anchor_ids:
+        anchors = store.search(qvec, top_k=len(anchor_ids), allowed_doc_ids=set(anchor_ids))
+        take(anchors)
+
+    # then one hit per clause, so each idea is represented
+    for clause in resp.subqueries:
+        if len(merged) >= top_k:
+            break
+        clause_hits = store.search(embed_query(clause), top_k=2, allowed_doc_ids=allowed)
+        take(clause_hits, limit=1)
+
+    # top up from the base ranking if there is room left
+    take(base)
+    return merged[:top_k]
 
 
 def run_query(
@@ -112,8 +183,9 @@ def run_query(
                 "card satisfies the question exactly, then describe the closest options."
             )
     else:
-        resp.results = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed,
-                                    keyword_query=prompt)
+        resp.results = _entity_aware_search(
+            store, prompt, resp.expanded_prompt, qvec, top_k, allowed, glossary, resp
+        )
 
     resp.related = expand_citations(store, resp.results)
     resp.related += expand_keyword_rules(
