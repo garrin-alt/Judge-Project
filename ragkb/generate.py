@@ -29,7 +29,7 @@ def build_context(results: list[SearchResult]) -> str:
     return "\n\n---\n\n".join(blocks)
 
 
-def _build_user_message(
+def build_user_message(
     query: str,
     results: list[SearchResult],
     definitions: list[str] | None = None,
@@ -80,7 +80,7 @@ def generate_answer(
         raise GenerationUnavailable("No knowledge-base results to ground an answer on.")
 
     backend = resolve_backend(backend)
-    user_message = _build_user_message(query, results, definitions, related, notes)
+    user_message = build_user_message(query, results, definitions, related, notes)
 
     if backend == "local":
         from . import localmodel

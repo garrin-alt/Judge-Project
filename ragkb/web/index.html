@@ -312,51 +312,86 @@ function renderRecent() {
   }
 }
 
+function renderResults(r) {
+  let html = "";
+  const hints = [];
+  if (r.expanded_prompt) hints.push(`interpreted as: ${esc(r.expanded_prompt)}`);
+  if (r.card_filters) hints.push(`card filters: ${esc(r.card_filters)}`);
+  if (hints.length) html += `<div class="hint" style="margin-top:10px">${hints.join(" · ")}</div>`;
+  html += `<div id="answer-slot"></div>`;
+  if (r.notice) html += `<div class="notice">${esc(r.notice)}</div>`;
+  if (r.results.length) {
+    html += `<div class="results">` + r.results.map((x) => resultCard(x)).join("") + `</div>`;
+  } else if (!r.notice) {
+    html += `<div class="notice">No matches.</div>`;
+  }
+  if (r.related && r.related.length) {
+    html += `<details class="related" open><summary>Referenced rules (${r.related.length}) — cited by the matches above</summary>
+      <div class="results">` +
+      r.related.map((x) => resultCard(x, "cited")).join("") + `</div></details>`;
+  }
+  $("out").innerHTML = html;
+  for (const btn of $("out").querySelectorAll(".expand")) {
+    btn.onclick = async () => {
+      btn.disabled = true;
+      btn.textContent = "loading…";
+      try {
+        const doc = await api(`/api/documents/${btn.dataset.doc}/text`);
+        const p = $("out").querySelector(`p[data-doc="${btn.dataset.doc}"]`);
+        if (p) p.innerHTML = decorate(doc.text);
+        btn.remove();
+      } catch (e) {
+        btn.textContent = `error: ${e.message}`;
+      }
+    };
+  }
+}
+
 async function runSearch() {
   const prompt = $("prompt").value.trim();
   if (!prompt) return;
   const mode = $("mode").value;
   $("go").disabled = true;
-  $("out").innerHTML = `<div class="notice"><span class="spinner"></span>${
-    mode === "none" ? "Searching…" : "Searching and generating answer…"}</div>`;
+  $("out").innerHTML = `<div class="notice"><span class="spinner"></span>Searching…</div>`;
   try {
-    const r = await api("/api/query", {
+    const res = await fetch("/api/query/stream", {
       method: "POST", headers: {"Content-Type": "application/json"},
       body: JSON.stringify({prompt, top_k: +$("topk").value, generate: mode,
                             sources: [...activeSources]}),
     });
+    if (!res.ok || !res.body) throw new Error(res.statusText || "request failed");
     pushRecent(prompt);
-    let html = "";
-    const hints = [];
-    if (r.expanded_prompt) hints.push(`interpreted as: ${esc(r.expanded_prompt)}`);
-    if (r.card_filters) hints.push(`card filters: ${esc(r.card_filters)}`);
-    if (hints.length) html += `<div class="hint" style="margin-top:10px">${hints.join(" · ")}</div>`;
-    if (r.answer) html += `<div class="answer"><span class="tag">answer · ${esc(r.backend)} backend</span>${esc(r.answer)}</div>`;
-    if (r.notice) html += `<div class="notice">${esc(r.notice)}</div>`;
-    if (r.results.length) {
-      html += `<div class="results">` + r.results.map((x) => resultCard(x)).join("") + `</div>`;
-    } else if (!r.notice) {
-      html += `<div class="notice">No matches.</div>`;
-    }
-    if (r.related && r.related.length) {
-      html += `<details class="related" open><summary>Referenced rules (${r.related.length}) — cited by the matches above</summary>
-        <div class="results">` +
-        r.related.map((x) => resultCard(x, "cited")).join("") + `</div></details>`;
-    }
-    $("out").innerHTML = html;
-    for (const btn of $("out").querySelectorAll(".expand")) {
-      btn.onclick = async () => {
-        btn.disabled = true;
-        btn.textContent = "loading…";
-        try {
-          const doc = await api(`/api/documents/${btn.dataset.doc}/text`);
-          const p = $("out").querySelector(`p[data-doc="${btn.dataset.doc}"]`);
-          if (p) p.innerHTML = decorate(doc.text);
-          btn.remove();
-        } catch (e) {
-          btn.textContent = `error: ${e.message}`;
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "", answer = "", backend = "";
+
+    const paint = () => {
+      const slot = $("answer-slot");
+      if (!slot) return;
+      slot.innerHTML = `<div class="answer"><span class="tag">answer · ${
+        esc(backend)} backend${answer ? "" : " · generating…"}</span>${esc(answer)}</div>`;
+    };
+
+    for (;;) {
+      const {done, value} = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, {stream: true});
+      const frames = buffer.split("\n\n");
+      buffer = frames.pop();
+      for (const frame of frames) {
+        const evt = (frame.match(/^event: (.*)$/m) || [])[1];
+        const dataLine = (frame.match(/^data: (.*)$/m) || [])[1];
+        if (!evt || !dataLine) continue;
+        const data = JSON.parse(dataLine);
+        if (evt === "results") renderResults(data);
+        else if (evt === "backend") { backend = data.backend; paint(); }
+        else if (evt === "token") { answer += data.t; paint(); }
+        else if (evt === "notice") {
+          const slot = $("answer-slot");
+          if (slot) slot.innerHTML = `<div class="notice">${esc(data.notice)}</div>`;
         }
-      };
+      }
     }
   } catch (e) {
     $("out").innerHTML = `<div class="notice">Error: ${esc(e.message)}</div>`;

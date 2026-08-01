@@ -85,6 +85,7 @@ def run_query(
     resp.definitions = expansion.definitions
 
     qvec = embed_query(resp.expanded_prompt)
+    store.check_embedding_provenance(int(qvec.shape[-1]))
 
     allowed = _allowed_doc_ids(store, sources) if sources else None
 
@@ -103,14 +104,16 @@ def run_query(
                 f"No cards match the filters ({resp.card_filters}). "
                 "Showing closest semantic matches instead."
             )
-            resp.results = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed)
+            resp.results = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed,
+                                        keyword_query=prompt)
             generation_notes.append(
                 f"A database search found NO cards matching all of: {resp.card_filters}. "
                 "The context below contains only near-matches. State clearly that no "
                 "card satisfies the question exactly, then describe the closest options."
             )
     else:
-        resp.results = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed)
+        resp.results = store.search(qvec, top_k=top_k, allowed_doc_ids=allowed,
+                                    keyword_query=prompt)
 
     resp.related = expand_citations(store, resp.results)
     resp.related += expand_keyword_rules(

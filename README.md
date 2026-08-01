@@ -172,6 +172,19 @@ pip install -e ".[dev]"
 pytest
 ```
 
+### Measuring retrieval quality
+
+`tests/eval_questions.json` holds questions with the documents they should
+retrieve; `scripts/eval_retrieval.py` reports recall@k and MRR overall and
+per question kind. Record a baseline before a retrieval change and compare
+after — several plausible-sounding ideas measurably hurt this corpus:
+
+```bash
+python scripts/eval_retrieval.py --save before.json
+# ...make a change...
+python scripts/eval_retrieval.py --compare before.json
+```
+
 Note: the first `add`/`query` call downloads the embedding model from
 Hugging Face and caches it locally — it needs network access once, after
 which everything runs fully offline.

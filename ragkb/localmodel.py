@@ -76,16 +76,34 @@ def _get_llm():
     return _llm
 
 
+def _completion_kwargs(system: str, user: str, max_tokens: int) -> dict:
+    return {
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        "max_tokens": max_tokens,
+        "temperature": 0.2,
+        "repeat_penalty": 1.15,
+    }
+
+
 def generate(system: str, user: str, max_tokens: int = 512) -> str:
     llm = _get_llm()
     with _llm_lock:
-        result = llm.create_chat_completion(
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            max_tokens=max_tokens,
-            temperature=0.2,
-            repeat_penalty=1.15,
-        )
+        result = llm.create_chat_completion(**_completion_kwargs(system, user, max_tokens))
     return result["choices"][0]["message"]["content"].strip()
+
+
+def generate_stream(system: str, user: str, max_tokens: int = 512):
+    """Yield answer text incrementally. Holds the model lock for the whole
+    stream, so concurrent callers queue rather than interleave."""
+    llm = _get_llm()
+    with _llm_lock:
+        for part in llm.create_chat_completion(
+            stream=True, **_completion_kwargs(system, user, max_tokens)
+        ):
+            delta = part["choices"][0].get("delta", {})
+            piece = delta.get("content")
+            if piece:
+                yield piece

@@ -66,5 +66,9 @@ def embed_texts(texts: list[str]) -> np.ndarray:
 
 
 def embed_query(text: str) -> np.ndarray:
-    """Embed a single query string, returning a (D,) float32 vector."""
-    return embed_texts([text])[0]
+    """Embed a single query string, returning a (D,) float32 vector.
+
+    Applies the model's query instruction prefix (see config.QUERY_PREFIX);
+    documents are embedded without it, which is what bge expects.
+    """
+    return embed_texts([config.QUERY_PREFIX + text])[0]

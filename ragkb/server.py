@@ -4,12 +4,19 @@ import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
 from . import config
 from .chunking import chunk_text
 from .embeddings import embed_texts
+from .generate import (
+    SYSTEM_PROMPT,
+    GenerationUnavailable,
+    build_user_message,
+    generate_answer,
+    resolve_backend,
+)
 from .query import run_query
 from .store import KnowledgeStore
 
@@ -136,6 +143,76 @@ def create_app(db_path: str | None = None) -> FastAPI:
             "definitions": resp.definitions,
             "card_filters": resp.card_filters,
         }
+
+    @app.post("/api/query/stream")
+    def query_stream(req: QueryRequest):
+        """Same as /api/query but server-sent events: retrieval results are
+        delivered as soon as they exist, then answer text token by token."""
+        if not req.prompt.strip():
+            raise HTTPException(status_code=400, detail="Prompt is empty.")
+
+        def events():
+            import json as _json
+
+            with open_store() as store:
+                resp = run_query(store, req.prompt, top_k=req.top_k,
+                                 generate="none", sources=req.sources or None)
+                partial = {r.doc_id: store.count_doc_chunks(r.doc_id) > 1 for r in resp.results}
+                payload = {
+                    "results": [
+                        {"doc_id": r.doc_id, "title": r.title, "source": r.source,
+                         "text": r.text, "score": round(r.score, 4),
+                         "partial": partial.get(r.doc_id, False)}
+                        for r in resp.results
+                    ],
+                    "related": [
+                        {"doc_id": r.doc_id, "title": r.title, "source": r.source,
+                         "text": r.text, "cited_by": r.cited_by}
+                        for r in resp.related
+                    ],
+                    "notice": resp.notice,
+                    "expanded_prompt": (resp.expanded_prompt
+                                        if resp.expanded_prompt != resp.prompt else None),
+                    "definitions": resp.definitions,
+                    "card_filters": resp.card_filters,
+                }
+                yield f"event: results\ndata: {_json.dumps(payload)}\n\n"
+
+                if req.generate == "none" or not resp.results:
+                    yield "event: done\ndata: {}\n\n"
+                    return
+
+                try:
+                    backend = resolve_backend(req.generate)
+                except GenerationUnavailable as e:
+                    yield f"event: notice\ndata: {_json.dumps({'notice': str(e)})}\n\n"
+                    yield "event: done\ndata: {}\n\n"
+                    return
+
+                yield f"event: backend\ndata: {_json.dumps({'backend': backend})}\n\n"
+                try:
+                    if backend == "local":
+                        from . import localmodel
+
+                        message = build_user_message(
+                            req.prompt, resp.results,
+                            definitions=resp.definitions, related=resp.related,
+                        )
+                        for piece in localmodel.generate_stream(SYSTEM_PROMPT, message):
+                            yield f"event: token\ndata: {_json.dumps({'t': piece})}\n\n"
+                    else:
+                        answer, _ = generate_answer(
+                            req.prompt, resp.results, backend=backend,
+                            definitions=resp.definitions, related=resp.related,
+                        )
+                        yield f"event: token\ndata: {_json.dumps({'t': answer})}\n\n"
+                except Exception as e:  # a failed generation must not kill the results
+                    yield f"event: notice\ndata: {_json.dumps({'notice': f'Generation failed: {e}'})}\n\n"
+                yield "event: done\ndata: {}\n\n"
+
+        return StreamingResponse(events(), media_type="text/event-stream",
+                                 headers={"Cache-Control": "no-cache",
+                                          "X-Accel-Buffering": "no"})
 
     @app.get("/")
     def index():
