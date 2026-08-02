@@ -36,3 +36,20 @@ MAX_CHUNK_CHARS = int(os.environ.get("RAGKB_MAX_CHUNK_CHARS", "1400"))
 # weight, and 2.0 is where exact card-code lookups ("OGN-224") land their
 # card at rank 1. 0 disables keyword search entirely.
 LEXICAL_WEIGHT = float(os.environ.get("RAGKB_LEXICAL_WEIGHT", "2.0"))
+
+# Cross-encoder reranking (two-stage retrieval): retrieve a wide
+# shortlist, then rescore (query, chunk) pairs jointly. This is standard
+# production advice and it does NOT pay off on this corpus — measured with
+# scripts/eval_retrieval.py over 58 questions:
+#   none (first-stage only)   recall@1 94.2%  MRR 0.968
+#   ms-marco-MiniLM-L-6-v2    recall@1 91.4%  MRR 0.943
+#   BAAI/bge-reranker-base    recall@1 84.5%  MRR 0.913
+# Both rerankers help card lookups and hurt rules/interaction questions:
+# they are trained on web-passage relevance, while our chunks are terse
+# numbered rule text where first-stage structure (breadcrumbs, entity
+# anchoring, exact identifiers) already encodes the signal. They also add
+# ~1s per query, which matters most on a phone. Set RAGKB_RERANK=auto to
+# enable — and re-measure on your own corpus before trusting it.
+RERANK_BACKEND = os.environ.get("RAGKB_RERANK", "off")
+RERANK_MODEL = os.environ.get("RAGKB_RERANK_MODEL", "Xenova/ms-marco-MiniLM-L-6-v2")
+RERANK_CANDIDATES = int(os.environ.get("RAGKB_RERANK_CANDIDATES", "24"))

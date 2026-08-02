@@ -6,6 +6,7 @@ enhancements to querying apply everywhere at once.
 
 from dataclasses import dataclass, field
 
+from . import config
 from .cardsearch import known_tags, parse_filters, search_cards
 from .citations import RelatedRule, expand_citations, expand_keyword_rules
 from .embeddings import embed_query
@@ -56,6 +57,7 @@ class QueryResponse:
     card_filters: str | None = None
     entities: list[Entity] = field(default_factory=list)
     subqueries: list[str] = field(default_factory=list)
+    reranked: bool = False
     answer: str | None = None
     backend: str | None = None
     notice: str | None = None
@@ -183,9 +185,16 @@ def run_query(
                 "card satisfies the question exactly, then describe the closest options."
             )
     else:
-        resp.results = _entity_aware_search(
-            store, prompt, resp.expanded_prompt, qvec, top_k, allowed, glossary, resp
+        # Two-stage: gather a wide shortlist, then let the cross-encoder
+        # decide the order of what's actually shown.
+        from . import rerank as _rerank
+
+        wide = max(top_k, config.RERANK_CANDIDATES) if _rerank.is_available() else top_k
+        shortlist = _entity_aware_search(
+            store, prompt, resp.expanded_prompt, qvec, wide, allowed, glossary, resp
         )
+        resp.results = _rerank.rerank(prompt, shortlist, top_k)
+        resp.reranked = len(shortlist) > len(resp.results) and _rerank.is_available()
 
     resp.related = expand_citations(store, resp.results)
     resp.related += expand_keyword_rules(

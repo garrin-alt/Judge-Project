@@ -17,6 +17,8 @@ dependencies = [
 [project.optional-dependencies]
 # desktop default embeddings (onnxruntime; not installable on Android/Termux)
 onnx = ["fastembed>=0.3,<1.0"]
+# cross-encoder reranking (desktop; ONNX like the onnx extra)
+rerank = ["fastembed>=0.3,<1.0"]
 # llama.cpp backend: offline answer generation and/or GGUF embeddings
 local = ["llama-cpp-python>=0.3"]
 # Claude API answer generation
