@@ -15,39 +15,24 @@ class TfLiteEmbeddingService @Inject constructor(
 
     private val vocab: Map<String, Int> by lazy { assetLoader.loadVocab() }
 
+    private val tokenizer: BertTokenizer by lazy {
+        BertTokenizer(vocab.entries.sortedBy { it.value }.map { it.key })
+    }
+
     private val interpreter: Interpreter by lazy {
         Interpreter(assetLoader.loadModel(), Interpreter.Options().setNumThreads(4))
     }
 
     override suspend fun embed(text: String): FloatArray = withContext(Dispatchers.Default) {
-        val inputIds = tokenize(text)
-        val attentionMask = maskFor(inputIds)
+        val (inputIds, attentionMask, _) = tokenizer.encode(text, MAX_SEQ_LEN)
         val output = Array(1) { FloatArray(EMBEDDING_DIM) }
 
         interpreter.runForMultipleInputsOutputs(
-            arrayOf(inputIds, attentionMask),
+            arrayOf(arrayOf(inputIds), arrayOf(attentionMask)),
             mapOf(0 to output)
         )
         l2Normalize(output[0])
     }
-
-    private fun tokenize(text: String): Array<IntArray> {
-        val clsId = vocab["[CLS]"] ?: 101
-        val sepId = vocab["[SEP]"] ?: 102
-        val unkId = vocab["[UNK]"] ?: 100
-
-        val tokens = mutableListOf(clsId)
-        text.lowercase().split(Regex("[\\s\\p{Punct}]+")).forEach { word ->
-            if (word.isNotEmpty()) tokens.add(vocab[word] ?: unkId)
-        }
-        tokens.add(sepId)
-
-        while (tokens.size < MAX_SEQ_LEN) tokens.add(0)
-        return arrayOf(tokens.take(MAX_SEQ_LEN).toIntArray())
-    }
-
-    private fun maskFor(inputIds: Array<IntArray>): Array<IntArray> =
-        arrayOf(IntArray(inputIds[0].size) { if (inputIds[0][it] != 0) 1 else 0 })
 
     private fun l2Normalize(vec: FloatArray): FloatArray {
         val norm = sqrt(vec.fold(0f) { acc, v -> acc + v * v })
