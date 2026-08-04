@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragkb"
+version = "0.1.0"
+description = "A local RAG knowledge base: store notes/documents and retrieve them with small prompts."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+# desktop default embeddings (onnxruntime; not installable on Android/Termux)
+onnx = ["fastembed>=0.3,<1.0"]
+# cross-encoder reranking (desktop; ONNX like the onnx extra)
+rerank = ["fastembed>=0.3,<1.0"]
+# llama.cpp backend: offline answer generation and/or GGUF embeddings
+local = ["llama-cpp-python>=0.3"]
+# Claude API answer generation
+claude = ["anthropic>=0.40"]
+dev = ["pytest>=7.0", "httpx>=0.27"]
+scrape = ["beautifulsoup4>=4.12", "pypdf>=4.0"]
+
+[project.scripts]
+ragkb = "ragkb.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ragkb*"]
+
+[tool.setuptools.package-data]
+ragkb = ["web/*.html"]
